@@ -38,7 +38,7 @@ class CollectionController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Item','RecommendItem','Webrequest','ItemsReview','UserVote');
+	public $uses = array('ItemsAccess','Item','RecommendItem','Webrequest','ItemsReview','UserVote');
 
 
 	public function beforeFilter() {
@@ -96,6 +96,9 @@ class CollectionController extends AppController {
 
 		$this->set('Pager',$pager);
 
+		$r = $this->Session->read('ItemCompare');
+		$this->set('ItemCompare',$r);
+
 		return;
 	}
 
@@ -106,11 +109,20 @@ class CollectionController extends AppController {
 		$item = $this->Item->getItemByID($id);
 		$this->set('Item',$item);
 
+		$this->Item->id = $item['Item']['id'];
+
+		$this->Item->saveField('access',$item['Item']['access']+1);
+
 		$wants = $this->Want->getItemsByItemID($id);
 		$this->set('Wants',$wants);
 
 		$reviews = $this->ItemsReview->getItemsByItemID($id);
 		$this->set('Reviews',$reviews);
+
+		$this->ItemsAccess->create();
+		$item['item_id'] = $id;
+		$this->ItemsAccess->save($item);
+
 //		var_dump($reviews);
 
 	}

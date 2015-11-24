@@ -87,6 +87,13 @@ class UsefulHelper extends AppHelper {
 	html select 用 option 生成
 	**/
 
+    public function checked($options,$set){
+        if(isset($options[$set])){
+            return 'checked';
+        }
+    }
+
+
     public function ViewselectValue($options,$set){
         if(!isset($set)){
             return '指定なし';

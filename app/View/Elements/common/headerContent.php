@@ -10,10 +10,14 @@ if($this->name == 'Index'){
 
         <div class="head-body rsp-xxoo">
             <p class="rsp-xxoo"><span class="attention">今日の紫外線度数</span><span class="attention">美容の最新ニュース</span><br class="rsp-oxxx">をお届け！<span class="wsnw">他にも特典が満載！</span></p>
+<?php if(!isset($UserData['Snsuser']['id'])):?>
             <a href="<?php echo $this->webroot?>Login/" class="button btn-rich-vpk"><span>Beauty Post メンバー登録</span></a>
 
-            <!--<div id="welcome">
-                ようこそGuestさん <a href="">ログアウト</a>
-            </div> --><!-- /#welcome -->
+<?php else:?>
+            <div id="welcome">
+                ようこそ<?php echo $UserData['Snsuser']['name']?>さん <a href="<?php echo WEBROOT?>Login/logout">ログアウト</a>
+            </div><!-- /#welcome -->
+
+<?php endif;?>
         </div><!-- /.head-body -->
     </div><!-- /.layout -->

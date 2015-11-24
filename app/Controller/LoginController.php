@@ -88,6 +88,15 @@ class LoginController extends AppController {
 	//            $this->Auth->login($data); //CakePHPのAuthログイン処理
 	    $this->redirect(REDIRECTURL); //ログイン後画面へリダイレクト
 
+	}
+
+
+	public function Logout(){
+
+		//ログイン完了
+	    $this->Session->write(SESSIONNAME,'');
+	//            $this->Auth->login($data); //CakePHPのAuthログイン処理
+	    $this->redirect(REDIRECTURL); //ログイン後画面へリダイレクト
 
 	}
 

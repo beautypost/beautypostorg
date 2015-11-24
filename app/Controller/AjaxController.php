@@ -70,5 +70,14 @@ class AjaxController extends AppController {
 		exit;
 	}
 
+	public function setCompare(){
+		$itemID = isset($this->params['url']['itemID']) ? $this->params['url']['itemID'] : '';
+		$r = $this->Session->read('ItemCompare');
+		$r[$itemID] = $itemID;
+		$this->Session->write('ItemCompare',$r);
+		echo 'OK';
+		exit;
+	}
+
 
 }

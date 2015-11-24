@@ -44,16 +44,13 @@
                             </dl>
                         </li>
                     </ul>
-                    <a href="" class="button btn-rich-pk"><span><i class="fa fa-check-square-o">&#8203;</i> チェックした商品を比較</span></a>
+                    <a href="<?php echo WEBROOT?>Compare/" class="button btn-rich-pk" target="_new"><span><i class="fa fa-check-square-o">&#8203;</i> チェックした商品を比較</span></a>
                 </div><!-- /.results-sort -->
 </form>
 
-<?php foreach($Items as $Item):?>
-<?php echo $this->element('ItemList',array('Item'=>$Item));?>
-<?php endforeach;?>
-
 <script type="text/javascript">
-            $('.star').raty( {
+    function ratystar(id){
+            $('.star'+id).raty( {
              readOnly: true,
              space:false,
              score: function() {
@@ -61,7 +58,7 @@
              },
              path: '<?php echo WEBROOT?>raty/lib/images'
             });
-            $('.starrev').raty( {
+            $('.starrev'+id).raty( {
              readOnly: true,
              space:false,
              score: function() {
@@ -69,7 +66,37 @@
              },
              path: '<?php echo WEBROOT?>raty/lib/revimages'
             });
-            </script>
+        }
+
+    function wants(id){
+            $.ajax({
+                    type: "GET",
+                    url: "<?php echo WEBROOT?>Ajax/setWant/?itemID="+id,
+                    success: function(data){
+                            if(data != '') {
+                                $("#wants").html(data)
+                            }
+                    }
+            });
+    }
+
+    function compareItem(id){
+            $.ajax({
+                    type: "GET",
+                    url: "<?php echo WEBROOT?>Ajax/setCompare/?itemID="+id,
+                    success: function(data){
+                    }
+            });
+
+    }
+
+</script>
+
+<?php foreach($Items as $Item):?>
+<?php echo $this->element('ItemList',array('Item'=>$Item));?>
+<?php endforeach;?>
+
+
                 <div class="results-sort">
                     <a href="" class="button btn-rich-pk"><span><i class="fa fa-check-square-o">&#8203;</i> チェックした商品を比較</span></a>
                     <ul>

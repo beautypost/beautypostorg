@@ -98,17 +98,17 @@
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Adminblog')?>">
                        <a href="<?php echo WEBROOT?>Adminblog">
-                            <i class="menu-icon fa fa-users"></i><span class="menu-text">お役立ち美容通信管理</span>
+                            <i class="menu-icon fa fa-file-text-o"></i><span class="menu-text">お役立ち美容通信管理</span>
                        </a>
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Admincolumn')?>">
                        <a href="<?php echo WEBROOT?>Admincolumn">
-                            <i class="menu-icon fa fa-users"></i><span class="menu-text">コラム</span>
+                            <i class="menu-icon fa fa-chevron-right"></i><span class="menu-text">コラム</span>
                        </a>
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Admintype')?>">
                        <a href="<?php echo WEBROOT?>Admintype">
-                            <i class="menu-icon fa fa-users"></i><span class="menu-text">用語集</span>
+                            <i class="menu-icon fa fa-bookmark-o"></i><span class="menu-text">用語集</span>
                        </a>
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Adminmaster')?>">
@@ -129,7 +129,7 @@
 
                     <li class="<?php $this->Beautypost->cssActive('Adminmailmagazine')?>">
                        <a href="<?php echo WEBROOT?>Adminmailmagazine">
-                            <i class="menu-icon fa fa-users"></i><span class="menu-text">メルマガ管理</span>
+                            <i class="menu-icon fa fa-envelope"></i><span class="menu-text">メルマガ管理</span>
                        </a>
                     </li>
 

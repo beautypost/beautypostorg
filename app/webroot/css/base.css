@@ -3682,16 +3682,16 @@ ul.alp > li, ol.alp > li {
 .item-taglist > li:last-child {
   margin-right: 0 !important;
 }
-.item-taglist > li.tag-new {
+.item-taglist > li.tag-0 {
   background: #F24364;
 }
-.item-taglist > li.tag-feature {
+.item-taglist > li.tag-1 {
   background: #9F8634;
 }
-.item-taglist > li.tag-popular {
+.item-taglist > li.tag-2 {
   background: #6E56B4;
 }
-.item-taglist > li.tag-sample {
+.item-taglist > li.tag-3 {
   background: #3EB6B4;
 }
 
