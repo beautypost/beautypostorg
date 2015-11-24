@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/* 
+====================================================================================================
+■ common
+■ メインビジュアル (#mainvisual)
+■ コンテンツ (#page_area)
+==================================================================================================== */
+/* 
+====================================================================================================
+■ common
+---------------------------------------------------------------------------------------------------- */
+#site-header .head-body {
+  display: block;
+}
+#site-header .head-body #welcome {
+  display: block;
+}
+@media (max-width: 767px) {
+  #site-header .head-body #welcome .button {
+    display: none;
+  }
+}
+
+#sub-area {
+  display: block !important;
+}
+
+.box-contents .box-head {
+  line-height: 3.2rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* 
+====================================================================================================
+■ メインビジュアル (#mainvisual)
+---------------------------------------------------------------------------------------------------- */
+#mainvisual {
+  background: url(../images/mv-bg.jpg) center center no-repeat;
+  -moz-background-size: auto 320px;
+  -o-background-size: auto 320px;
+  -webkit-background-size: auto 320px;
+  background-size: auto 320px;
+  color: #fff;
+}
+#mainvisual .inner {
+  margin: 0 auto;
+}
+@media (max-width: 479px) {
+  #mainvisual .inner {
+    min-width: 320px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mainvisual .inner {
+    padding-right: 250px;
+    padding-left: 270px;
+    height: 320px;
+    line-height: 320px;
+    background: url(../images/mv-catchless.jpg) left top no-repeat;
+    -moz-background-size: 1000px 320px;
+    -o-background-size: 1000px 320px;
+    -webkit-background-size: 1000px 320px;
+    background-size: 1000px 320px;
+    text-align: center;
+  }
+  #mainvisual .inner img {
+    width: 100%;
+    max-width: 284px;
+    height: auto;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 1024px) {
+  #mainvisual .inner {
+    max-width: 1000px;
+  }
+  #mainvisual .inner img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* キーワードランキングTOP5 */
+#top-keyword {
+  position: relative;
+}
+@media (max-width: 479px) {
+  #top-keyword {
+    margin-top: 0.5em;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #top-keyword {
+    margin-top: 1em;
+  }
+}
+@media (min-width: 768px) {
+  #top-keyword {
+    margin-top: -295px;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px;
+    border-radius: 10px 10px 0 0;
+    float: right;
+    width: 220px;
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+#top-keyword h2 {
+  border-bottom: 1px solid #d9d8d8;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  background: #E6E6E6;
+}
+@media (max-width: 767px) {
+  #top-keyword h2 {
+    padding-right: 3%;
+    padding-left: 3%;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  #top-keyword h2 {
+    height: 54px;
+  }
+}
+@media (max-width: 767px) {
+  #top-keyword h2 img {
+    margin-top: -8px;
+    position: relative;
+    width: 85%;
+    max-width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  #top-keyword h2 img {
+    margin: 0 -10px -4px 0;
+    position: relative;
+    width: 230px;
+    height: auto;
+  }
+}
+#top-keyword ul {
+  padding: 1px;
+  background: #fff;
+}
+#top-keyword li {
+  border-top: 1px dotted #737373;
+  line-height: 4.2rem;
+}
+#top-keyword li:first-child {
+  border: none;
+}
+@media (max-width: 767px) {
+  #top-keyword li:last-child {
+    border-bottom: 1px dotted #737373;
+  }
+}
+#top-keyword a {
+  display: block;
+  position: relative;
+  color: #272727;
+}
+#top-keyword a:hover {
+  color: #ef5368;
+}
+@media (max-width: 767px) {
+  #top-keyword a {
+    padding-right: 1em;
+  }
+}
+@media (min-width: 768px) {
+  #top-keyword a {
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 767px) {
+  #top-keyword a:after {
+    margin-top: -0.5em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    color: #f38291;
+    content: '\f138';
+    font-family: FontAwesome;
+  }
+}
+@media (min-width: 768px) {
+  #top-keyword a:after {
+    border: 3px solid #737373;
+    border-top-color: rgba(115, 115, 115, 0);
+    border-left-color: rgba(115, 115, 115, 0);
+    display: block;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    content: '';
+    -moz-transition: border-color 0.2s linear 0s;
+    -o-transition: border-color 0.2s linear 0s;
+    -webkit-transition: border-color 0.2s linear;
+    -webkit-transition-delay: 0s;
+    transition: border-color 0.2s linear 0s;
+  }
+}
+#top-keyword a:hover {
+  background: #fef6f7;
+}
+#top-keyword a:hover:after {
+  border-color: #f38291;
+  border-top-color: rgba(243, 130, 145, 0);
+  border-left-color: rgba(243, 130, 145, 0);
+}
+#top-keyword a .number {
+  margin-right: 6px;
+  float: left;
+}
+#top-keyword a .number img {
+  width: 34px;
+  height: 30px;
+  vertical-align: middle;
+}
+#top-keyword a .keyword {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* 
+====================================================================================================
+■ コンテンツ (#page_area)
+---------------------------------------------------------------------------------------------------- */
+/* 美容機器コレクション */
+#top-collection {
+  position: relative;
+}
+#top-collection h2 {
+  padding-right: 120px;
+}
+@media (max-width: 1023px) {
+  #top-collection .section-body {
+    padding-right: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  #top-collection .section-body {
+    padding-right: 180px;
+    line-height: 2;
+  }
+}
+#top-collection > img {
+  width: 180px;
+  height: auto;
+}
+@media (max-width: 1023px) {
+  #top-collection > img {
+    position: absolute;
+    top: 32px;
+    right: 4px;
+  }
+}
+@media (min-width: 1024px) {
+  #top-collection > img {
+    position: absolute;
+    top: 16px;
+    right: -32px;
+  }
+}
+
+/* 美容機器ランキング */
+#top-rank .box-contents .more {
+  position: absolute;
+  top: -9px;
+  right: 2.5%;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  overflow: hidden;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#top-rank .box-contents .more a {
+  padding-top: 0.75em;
+  padding-left: 2px;
+  display: table-cell;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background: #f61d54;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 14px;
+}
+#top-rank .box-contents .more a:hover {
+  background: #f9678c;
+}
+
+/* 詳細検索 */
+#topsearch-detail footer {
+  text-align: center;
+}
+#topsearch-detail footer .button {
+  padding: 0;
+}
+#topsearch-detail footer .button span {
+  padding-top: 40px;
+  display: block;
+  height: 0;
+  width: 180px;
+  background: url(../common-img/btn-search.png) center top no-repeat;
+  -moz-background-size: auto 40px;
+  -o-background-size: auto 40px;
+  -webkit-background-size: auto 40px;
+  background-size: auto 40px;
+}

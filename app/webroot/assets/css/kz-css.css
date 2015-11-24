@@ -1,0 +1,2160 @@
+/*********************************************
+カラーコード規約
+- 薄い青：	#0a8ae8
+- 濃い青：	#06478a
+*********************************************/
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", Osaka, "MS PGothic", "ＭＳ Ｐゴシック", sans-serif!important;
+}
+
+/* 追加フォントアイコン */
+@font-face {
+	font-family: 'icomoon';
+	src:url('../bz-fonts/icomoon.eot?-m5orsg');
+	src:url('../bz-fonts/icomoon.eot?#iefix-m5orsg') format('embedded-opentype'),
+		url('../bz-fonts/icomoon.woff?-m5orsg') format('woff'),
+		url('../bz-fonts/icomoon.ttf?-m5orsg') format('truetype'),
+		url('../bz-fonts/icomoon.svg?-m5orsg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="bz-icon-"], [class*=" bz-icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bz-icon-businessman65:before {
+	content: "\e61f";
+}
+.bz-icon-bz-logo:before {
+	content: "\e620";
+}
+.bz-icon-building33:before {
+	content: "\e61b";
+}
+.bz-icon-city21:before {
+	content: "\e61c";
+}
+.bz-icon-buildings9:before {
+	content: "\e61e";
+}
+.bz-icon-building31:before {
+	content: "\e615";
+}
+.bz-icon-businessman120:before {
+	content: "\e616";
+}
+.bz-icon-man77:before {
+	content: "\e617";
+}
+.bz-icon-man337:before {
+	content: "\e618";
+}
+.bz-icon-yen30:before {
+	content: "\e619";
+}
+.bz-icon-review3:before {
+	content: "\e60b";
+}
+.bz-icon-laptop85:before {
+	content: "\e60c";
+}
+.bz-icon-newspaper11:before {
+	content: "\e60d";
+}
+.bz-icon-paint:before {
+	content: "\e60e";
+}
+.bz-icon-paintbrush2:before {
+	content: "\e60f";
+}
+.bz-icon-review2:before {
+	content: "\e610";
+}
+.bz-icon-write13:before {
+	content: "\e611";
+}
+.bz-icon-alphabet3:before {
+	content: "\e60a";
+}
+.bz-icon-business64:before {
+	content: "\e605";
+}
+.bz-icon-computer112:before {
+	content: "\e606";
+}
+.bz-icon-google1:before {
+	content: "\e607";
+}
+.bz-icon-graduation35:before {
+	content: "\e608";
+}
+.bz-icon-social99:before {
+	content: "\e609";
+}
+.bz-icon-business133:before {
+	content: "\e600";
+}
+.bz-icon-data26:before {
+	content: "\e601";
+}
+.bz-icon-printing12:before {
+	content: "\e602";
+}
+.bz-icon-world:before {
+	content: "\e603";
+}
+.bz-icon-newspaper:before {
+	content: "\e612";
+}
+.bz-icon-pencil:before {
+	content: "\e613";
+}
+.bz-icon-pen:before {
+	content: "\e614";
+}
+.bz-icon-camera:before {
+	content: "\e61d";
+}
+.bz-icon-library:before {
+	content: "\e61a";
+}
+.bz-icon-calculate:before {
+	content: "\e604";
+}
+/* End:追加フォントアイコン */
+
+img.kz-img-vote{
+	margin-top:10px;
+}
+
+a.kz-button{
+	color:#fff;
+}
+
+.kz-top-label a{
+	line-height: 1.45 !important;
+	color:#fff !important;
+}
+
+.kz-top-img {
+	margin-top: 7px;
+	max-width: 70px!important;
+	vertical-align: middle!important;
+}
+
+.kz-top-rank-img {
+	max-width: 70px!important;
+	vertical-align: middle!important;
+}
+
+
+.kz-sm-nav{
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+
+/* ランキングの表示 */
+td.kz-rank-1 {
+	background-image: url(../img/rank/rank01.png);
+}
+
+td.kz-rank-2 {
+	background-image: url(../img/rank/rank02.png);
+}
+
+td.kz-rank-3 {
+	background-image: url(../img/rank/rank03.png);
+}
+
+td.kz-rank-4 {
+	background-image: url(../img/rank/rank04.png);
+}
+
+td.kz-rank-5 {
+	background-image: url(../img/rank/rank05.png);
+}
+
+td.kz-rank-6 {
+	background-image: url(../img/rank/rank06.png);
+}
+
+td.kz-rank-7 {
+	background-image: url(../img/rank/rank07.png);
+}
+
+td.kz-rank-8 {
+	background-image: url(../img/rank/rank08.png);
+}
+
+td.kz-rank-9 {
+	background-image: url(../img/rank/rank09.png);
+}
+
+td.kz-rank-10 {
+	background-image: url(../img/rank/rank10.png);
+}
+
+td.kz-rank-11 {
+	background-image: url(../img/rank/rank11.png);
+}
+
+td.kz-rank-12 {
+	background-image: url(../img/rank/rank12.png);
+}
+
+td.kz-rank-13 {
+	background-image: url(../img/rank/rank13.png);
+}
+
+td.kz-rank-14 {
+	background-image: url(../img/rank/rank14.png);
+}
+
+td.kz-rank-15 {
+	background-image: url(../img/rank/rank15.png);
+}
+
+td.kz-rank-16 {
+	background-image: url(../img/rank/rank16.png);
+}
+
+td.kz-rank-17 {
+	background-image: url(../img/rank/rank17.png);
+}
+
+td.kz-rank-18 {
+	background-image: url(../img/rank/rank18.png);
+}
+
+td.kz-rank-19 {
+	background-image: url(../img/rank/rank19.png);
+}
+
+td.kz-rank-20 {
+	background-image: url(../img/rank/rank20.png);
+}
+
+td.kz-rank-21 {
+	background-image: url(../img/rank/rank21.png);
+}
+
+td.kz-rank-22 {
+	background-image: url(../img/rank/rank22.png);
+}
+
+td.kz-rank-23 {
+	background-image: url(../img/rank/rank23.png);
+}
+
+td.kz-rank-24 {
+	background-image: url(../img/rank/rank24.png);
+}
+
+td.kz-rank-25 {
+	background-image: url(../img/rank/rank25.png);
+}
+
+td.kz-rank-26 {
+	background-image: url(../img/rank/rank26.png);
+}
+
+td.kz-rank-27 {
+	background-image: url(../img/rank/rank27.png);
+}
+
+td.kz-rank-28 {
+	background-image: url(../img/rank/rank28.png);
+}
+
+td.kz-rank-29 {
+	background-image: url(../img/rank/rank29.png);
+}
+
+td.kz-rank-30 {
+	background-image: url(../img/rank/rank30.png);
+}
+
+td.kz-rank-31 {
+	background-image: url(../img/rank/rank31.png);
+}
+
+td.kz-rank-32 {
+	background-image: url(../img/rank/rank32.png);
+}
+
+td.kz-rank-33 {
+	background-image: url(../img/rank/rank33.png);
+}
+
+td.kz-rank-34 {
+	background-image: url(../img/rank/rank34.png);
+}
+
+td.kz-rank-35 {
+	background-image: url(../img/rank/rank35.png);
+}
+
+td.kz-rank-36 {
+	background-image: url(../img/rank/rank36.png);
+}
+
+td.kz-rank-37 {
+	background-image: url(../img/rank/rank37.png);
+}
+
+td.kz-rank-38 {
+	background-image: url(../img/rank/rank38.png);
+}
+
+td.kz-rank-39 {
+	background-image: url(../img/rank/rank39.png);
+}
+
+td.kz-rank-40 {
+	background-image: url(../img/rank/rank40.png);
+}
+
+td.kz-rank-41 {
+	background-image: url(../img/rank/rank41.png);
+}
+
+td.kz-rank-42 {
+	background-image: url(../img/rank/rank42.png);
+}
+
+td.kz-rank-43 {
+	background-image: url(../img/rank/rank43.png);
+}
+
+td.kz-rank-44 {
+	background-image: url(../img/rank/rank44.png);
+}
+
+td.kz-rank-45 {
+	background-image: url(../img/rank/rank45.png);
+}
+
+td.kz-rank-46 {
+	background-image: url(../img/rank/rank46.png);
+}
+
+td.kz-rank-47 {
+	background-image: url(../img/rank/rank47.png);
+}
+
+td.kz-rank-48 {
+	background-image: url(../img/rank/rank48.png);
+}
+
+td.kz-rank-49 {
+	background-image: url(../img/rank/rank49.png);
+}
+
+td.kz-rank-50 {
+	background-image: url(../img/rank/rank50.png);
+}
+
+td.kz-rank-51 {
+	background-image: url(../img/rank/rank51.png);
+}
+
+td.kz-rank-52 {
+	background-image: url(../img/rank/rank52.png);
+}
+
+td.kz-rank-53 {
+	background-image: url(../img/rank/rank53.png);
+}
+
+td.kz-rank-54 {
+	background-image: url(../img/rank/rank54.png);
+}
+
+td.kz-rank-55 {
+	background-image: url(../img/rank/rank55.png);
+}
+
+td.kz-rank-56 {
+	background-image: url(../img/rank/rank56.png);
+}
+
+td.kz-rank-57 {
+	background-image: url(../img/rank/rank57.png);
+}
+
+td.kz-rank-58 {
+	background-image: url(../img/rank/rank58.png);
+}
+
+td.kz-rank-59 {
+	background-image: url(../img/rank/rank59.png);
+}
+
+td.kz-rank-60 {
+	background-image: url(../img/rank/rank60.png);
+}
+
+td.kz-rank-61 {
+	background-image: url(../img/rank/rank61.png);
+}
+
+td.kz-rank-62 {
+	background-image: url(../img/rank/rank62.png);
+}
+
+td.kz-rank-63 {
+	background-image: url(../img/rank/rank63.png);
+}
+
+td.kz-rank-64 {
+	background-image: url(../img/rank/rank64.png);
+}
+
+td.kz-rank-65 {
+	background-image: url(../img/rank/rank65.png);
+}
+
+td.kz-rank-66 {
+	background-image: url(../img/rank/rank66.png);
+}
+
+td.kz-rank-67 {
+	background-image: url(../img/rank/rank67.png);
+}
+
+td.kz-rank-68 {
+	background-image: url(../img/rank/rank68.png);
+}
+
+td.kz-rank-69 {
+	background-image: url(../img/rank/rank69.png);
+}
+
+td.kz-rank-70 {
+	background-image: url(../img/rank/rank70.png);
+}
+
+td.kz-rank-71 {
+	background-image: url(../img/rank/rank71.png);
+}
+
+td.kz-rank-72 {
+	background-image: url(../img/rank/rank72.png);
+}
+
+td.kz-rank-73 {
+	background-image: url(../img/rank/rank73.png);
+}
+
+td.kz-rank-74 {
+	background-image: url(../img/rank/rank74.png);
+}
+
+td.kz-rank-75 {
+	background-image: url(../img/rank/rank75.png);
+}
+
+td.kz-rank-76 {
+	background-image: url(../img/rank/rank76.png);
+}
+
+td.kz-rank-77 {
+	background-image: url(../img/rank/rank77.png);
+}
+
+td.kz-rank-78 {
+	background-image: url(../img/rank/rank78.png);
+}
+
+td.kz-rank-79 {
+	background-image: url(../img/rank/rank79.png);
+}
+
+td.kz-rank-80 {
+	background-image: url(../img/rank/rank80.png);
+}
+
+td.kz-rank-81 {
+	background-image: url(../img/rank/rank81.png);
+}
+
+td.kz-rank-82 {
+	background-image: url(../img/rank/rank82.png);
+}
+
+td.kz-rank-83 {
+	background-image: url(../img/rank/rank83.png);
+}
+
+td.kz-rank-84 {
+	background-image: url(../img/rank/rank84.png);
+}
+
+td.kz-rank-85 {
+	background-image: url(../img/rank/rank85.png);
+}
+
+td.kz-rank-86 {
+	background-image: url(../img/rank/rank86.png);
+}
+
+td.kz-rank-87 {
+	background-image: url(../img/rank/rank87.png);
+}
+
+td.kz-rank-88 {
+	background-image: url(../img/rank/rank88.png);
+}
+
+td.kz-rank-89 {
+	background-image: url(../img/rank/rank89.png);
+}
+
+td.kz-rank-90 {
+	background-image: url(../img/rank/rank90.png);
+}
+
+td.kz-rank-91 {
+	background-image: url(../img/rank/rank91.png);
+}
+
+td.kz-rank-92 {
+	background-image: url(../img/rank/rank92.png);
+}
+
+td.kz-rank-93 {
+	background-image: url(../img/rank/rank93.png);
+}
+
+td.kz-rank-94 {
+	background-image: url(../img/rank/rank94.png);
+}
+
+td.kz-rank-95 {
+	background-image: url(../img/rank/rank95.png);
+}
+
+td.kz-rank-96 {
+	background-image: url(../img/rank/rank96.png);
+}
+
+td.kz-rank-97 {
+	background-image: url(../img/rank/rank97.png);
+}
+
+td.kz-rank-98 {
+	background-image: url(../img/rank/rank98.png);
+}
+
+td.kz-rank-99 {
+	background-image: url(../img/rank/rank99.png);
+}
+
+td.kz-rank-100 {
+	background-image: url(../img/rank/rank100.png);
+}
+
+.kz-footer-year{
+	margin-top:10px !important;
+}
+
+.kz-nav-title{
+	padding-top:5px;
+	display:block;
+	background-color: #06478a !important;
+	color:#ffffff;
+}
+
+td.kz-col-1{width:220px;}
+td.kz-col-2{width:80px;}
+td.kz-col-3{width:110px;}
+td.kz-col-4{width:130px;}
+td.kz-col-5{width:130px;}
+td.kz-col-6{width:130px;}
+td.kz-col-7{width:130px;}
+td.kz-col-8{width:60px;}
+
+.kz-vote{font-size:-5;}
+.kz-vote-box-frame{border-width: 0px;}
+
+.kz-profile-info-name{
+	text-align: right;
+	padding: 6px 10px 6px 4px;
+	font-weight: 400;
+	color: #667E99;
+	background-color: transparent;
+	border-top: 1px dotted #D5E4F1;
+	display: table-cell;
+	width: 150px;
+	vertical-align: middle;
+}
+
+.kz-vote-star{
+	padding-right: 0;
+}
+
+.kz-vote-hint{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.kz-pagenater{
+}
+
+
+.kz-badge {
+	display: inline-block;
+	min-width: 5px;
+	padding: 3px 3px;
+	text-shadow: none;
+	font-size: 8px;
+	padding-top: 1px;
+	padding-bottom: 3px;
+	font-weight: 400;
+	line-height: 15px;
+	color: #fff;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.kz-col-clear{
+	margin :0px !important;
+	padding :0px !important;
+}
+
+.kz-m-col-clear{
+	margin :5px 0 0 0 !important;
+	padding :0 !important;
+}
+
+
+.kz-m-col-th{
+	padding-left:15px !important;
+}
+.kz-m-col-th-title{
+	vertical-align: middle !important;
+	background-color: #f5f5f5 !important;
+}
+.kz-m-col-th-title-r{
+	background-color: #f5f5f5 !important;
+}
+
+.kz-m-col-star{
+	margin :0 0 0 0 !important;
+	padding :0 0 0 0 !important;
+	vertical-align:middle !important;
+
+}
+
+.kz-star{
+	vertical-align: baseline;
+	margin-top:3px;
+
+}
+
+.kz-star-0{
+	vertical-align: baseline;
+	margin-top:-3px;
+	padding:0px !important;
+
+}
+
+
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2 {
+  width: 71px !important;
+  height: 29px !important;
+}
+/*.kz-navbar{
+background-color:#3b5997 !important;
+}
+*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.ace-nav>li>a:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	-ms-filter: "alpha(opacity=90)";
+	background: #fff;
+}
+
+.ace-nav>li>a  {
+	background-color: #06478a!important;
+}
+
+.kz-val{
+	padding-top: 5px;
+	vertical-align: middle;
+	padding-left:15px;
+	font-size:15px;
+}
+
+.dataTables_wrapper .row:first-child{
+	background-color:#fff !important;
+	padding-top:0px !important;
+}
+
+.navbar{
+	background-color:#06478a !important;
+}
+
+.kz-votebox{
+	background-color: #ffb752!important;
+	border-color: #ffb752;
+	padding: 1px 5px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+	color:#fff;
+}
+
+.kz-votebox:hover {
+	background-color: #f0ad4e!important;
+	color:#fff;
+}
+
+.kz-header-facebook{
+	color:#3b5997 !important;
+}
+
+
+.kz-header{
+	border-bottom-color: #d5e3ef;
+	font-size: 21px;
+	line-height: 28px !important;
+	margin-bottom: 16px !important;
+	margin-top: 18px !important;
+	padding-bottom: 4px !important;
+	border-bottom: 1px solid #CCC !important;
+}
+
+.kz-header-point{
+	background-color: #f5f5f5;
+	letter-spacing: 0.1em;
+	padding: 12px 0px 12px 6px!important;
+	font-size: 16px;
+	color: #555;
+	letter-spacing: 0.1em;
+}
+
+.kz-btn-minier {
+padding: 0 2px;
+line-height: 18px;
+border-width: 2px;
+font-size: 10px;
+}
+
+.kz-header-faq{
+	color:#f0ad4e !important;
+}
+
+.kz-header-about{
+	color:#87b87f !important;
+}
+
+
+.kz-header-contact{
+	color: #5293c4!important;
+}
+
+.user-info{
+	vertical-align:middle;
+	top:-2px;
+}
+.kz-nav-user-photo{
+	marign:10px !important;
+	max-width:45px !important;
+}
+
+.btn-info{
+	background-color: #3b5997!important;
+	border-color: #3b5997 !important;
+}
+
+.btn-info:hover{
+	background-color: #3b6697 !important;
+}
+
+.btn-ace {
+	background-color: #6fb3e0!important;
+	border-color: #6fb3e0;
+}
+
+.btn-ace:hover {
+	color: #fff;
+	background-color: #2a94c5!important;
+	border-color: #40a7d6;
+}
+
+.kz-voteform{
+	width:32px;
+    border:1px solid #777;
+    height:29px;
+    text-align: center;
+    padding: 5px;
+    color: #999 !important;
+    background: #fff;
+    border-radius: 5px !important;
+
+    /* Webkit */
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#eee),
+        to(#fff)
+        );
+    -webkit-border-radius: 5px;
+
+    /* Firefox */
+    background: -moz-linear-gradient(
+        top,
+        #eee,
+        #fff
+        );
+    -moz-border-radius: 5px;
+
+    /* IE */
+    filter:progid:DXImageTransform.Microsoft.gradient
+        (startColorstr=#ffeeeeee,endColorstr=#ffffffff);
+    zoom: 1;
+
+
+}
+
+
+
+.kz-btn{
+	background-color:#f0ad4e !important;
+	border-color:#F8E8D1 !important;
+}
+
+.kz-btn.active{
+	background-color:#FF6600!important;
+}
+
+.kz-infobox{
+	width:100%;
+}
+
+.kz-col{
+	padding-left:0px!important;
+	padding-right:0px!important;
+	vertical-align: middle !important;
+	text-align:center !important;
+}
+
+th{
+	text-align:center !important;
+	font-size:11px;
+}
+
+.kz-img-star{
+	vertical-align:top;
+}
+
+.kz-col-l{
+	padding-left:0px!important;
+	font-size:0px!important;
+	color:#000000!important;
+}
+.kz-col-r{
+	padding-left:5px!important;
+	padding-right:0px!important;
+}
+
+.kz-btn-facebook{
+	background-color: #3b5998 !important;
+	border-color: #3b5998 !important;
+}
+
+.kz-btn-twitter{
+	background-color: #55acee !important;
+	border-color: #55acee !important;
+}
+
+.kz-btn-blog{
+	background-color: #FB8F3D !important;
+	border-color: #FB8F3D !important;
+}
+
+.kz-btn-contact{
+	background-color: #7dcf3d !important;
+	border-color: #7dcf3d !important;
+}
+
+.kz-btn-website{
+	background-color: #4b4797 !important;
+	border-color: #4b4797 !important;
+}
+
+.kz-list-header {
+line-height: 28px;
+margin-bottom: 16px;
+margin-top: 18px;
+padding-bottom: 1px;
+border-bottom: 1px solid #CCC;
+}
+
+.kz-body{
+	background-color: #fff !important;
+}
+.kz-title{
+	font-size:14px;
+}
+
+.kz-list-title{
+	font-size:21px;
+
+}
+.kz-list-title-left{
+	margin-top: 10px;
+	vertical-align: bottom;
+}
+.kz-list-title img{
+/*	vertical-align: top !important; */
+}
+
+.kz-index-list-title{
+	font-size:18px;
+}
+
+.kz-title-img{
+	margin-top:5px;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: #3b5998;
+  font-size: 14px;
+  font-weight: normal;
+}
+.tooltip.top > .tooltip-arrow {
+  border-top-color: #3b5998;
+}
+
+.kz-index-child{
+	padding:5px;
+}
+
+.kz-list-copy{
+	font-size:12px !important;
+	border-top: 1px solid #e2e2e2;
+	padding-top:4px;
+	margin-top:3px;
+}
+
+.kz-modal-content {
+position: relative;
+background-color: #fff;
+border: 1px solid #999;
+border: 1px solid rgba(0,0,0,.2);
+border-radius: 6px;
+-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+box-shadow: 0 3px 9px rgba(0,0,0,.5);
+background-clip: padding-box;
+outline: 0;
+}
+
+.spacer { margin-top: 5px; }
+.spacer10 { margin-top: 10px; }
+.spacer15 { margin-top: 15px; }
+.spacer20 { margin-top: 20px; }
+.spacer25 { margin-top: 25px; }
+.spacer30 { margin-top: 30px; }
+.spacer35 { margin-top: 35px; }
+.spacer40 { margin-top: 40px; }
+.spacer45 { margin-top: 45px; }
+.spacer50 { margin-top: 50px; }
+.spacer100 { margin-top: 100px; }
+.spacer200 { margin-top: 200px; }
+
+/* トップページキャッチ */
+.carousel{
+	margin-bottom: 2%;
+}
+
+/* ============ スマートフォン用の設定 ================== */
+@media (max-width: 767px){
+	.sg-top-wrap {
+		background-image: url(../img/base/top-wmn.png);
+		background-repeat: no-repeat;
+		background-size: 120% auto;
+		background-position: -100% 100%;
+		background-color: #06478a;
+		height: 130px;
+	}
+	.sg-top-wrap2 {
+		background-image: url(../img/base/carousel_img02.png);
+		background-repeat: no-repeat;
+		background-size: 120% auto;
+		background-position: -100% 100%;
+		background-color: #3B5998;
+		height: 130px;
+	}
+	.sg-top-wrap3 {
+		background-image: url(../img/base/carousel_img03.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 130px;
+	}
+	.ace-nav>li>a{
+		border-left: 1px solid #042e59!important;
+		box-shadow: -1px 0px 2px #0754a2;
+		padding-left: 10px;
+	}
+	.sg-about01 p img,
+	.sg-about02 p img,
+	.sg-about03 p img,
+	.sg-about04 p img {
+		margin: 5% 0 0 0;
+	}
+	td.kz-rank-1,
+	td.kz-rank-2,
+	td.kz-rank-3,
+	td.kz-rank-4,
+	td.kz-rank-5,
+	td.kz-rank-6,
+	td.kz-rank-7,
+	td.kz-rank-8,
+	td.kz-rank-9,
+	td.kz-rank-10,
+	td.kz-rank-11,
+	td.kz-rank-12,
+	td.kz-rank-13,
+	td.kz-rank-14,
+	td.kz-rank-15,
+	td.kz-rank-16,
+	td.kz-rank-17,
+	td.kz-rank-18,
+	td.kz-rank-19,
+	td.kz-rank-20,
+	td.kz-rank-21,
+	td.kz-rank-22,
+	td.kz-rank-23,
+	td.kz-rank-24,
+	td.kz-rank-25,
+	td.kz-rank-26,
+	td.kz-rank-27,
+	td.kz-rank-28,
+	td.kz-rank-29,
+	td.kz-rank-30,
+	td.kz-rank-31,
+	td.kz-rank-32,
+	td.kz-rank-33,
+	td.kz-rank-34,
+	td.kz-rank-35,
+	td.kz-rank-36,
+	td.kz-rank-37,
+	td.kz-rank-38,
+	td.kz-rank-39,
+	td.kz-rank-40,
+	td.kz-rank-41,
+	td.kz-rank-42,
+	td.kz-rank-43,
+	td.kz-rank-44,
+	td.kz-rank-45,
+	td.kz-rank-46,
+	td.kz-rank-47,
+	td.kz-rank-48,
+	td.kz-rank-49,
+	td.kz-rank-50,
+	td.kz-rank-51,
+	td.kz-rank-52,
+	td.kz-rank-53,
+	td.kz-rank-54,
+	td.kz-rank-55,
+	td.kz-rank-56,
+	td.kz-rank-57,
+	td.kz-rank-58,
+	td.kz-rank-59,
+	td.kz-rank-60,
+	td.kz-rank-61,
+	td.kz-rank-62,
+	td.kz-rank-63,
+	td.kz-rank-64,
+	td.kz-rank-65,
+	td.kz-rank-66,
+	td.kz-rank-67,
+	td.kz-rank-68,
+	td.kz-rank-69,
+	td.kz-rank-70,
+	td.kz-rank-71,
+	td.kz-rank-72,
+	td.kz-rank-73,
+	td.kz-rank-74,
+	td.kz-rank-75,
+	td.kz-rank-76,
+	td.kz-rank-77,
+	td.kz-rank-78,
+	td.kz-rank-79,
+	td.kz-rank-80,
+	td.kz-rank-81,
+	td.kz-rank-82,
+	td.kz-rank-83,
+	td.kz-rank-84,
+	td.kz-rank-85,
+	td.kz-rank-86,
+	td.kz-rank-87,
+	td.kz-rank-88,
+	td.kz-rank-89,
+	td.kz-rank-90,
+	td.kz-rank-91,
+	td.kz-rank-92,
+	td.kz-rank-93,
+	td.kz-rank-94,
+	td.kz-rank-95,
+	td.kz-rank-96,
+	td.kz-rank-97,
+	td.kz-rank-98,
+	td.kz-rank-99,
+	td.kz-rank-100 {
+		background-repeat: no-repeat;
+		background-position: 0px 4px;
+	}
+	.rank-tag {
+		position: absolute;
+		top: 10px;
+		left: 12px;
+		z-index: 1;
+		border: none!important;
+		max-width: 90px!important;
+	}
+	.footer {
+		margin-top: 12%;
+	}
+}
+
+
+
+/* ============ タブレット用の設定 ================== */
+@media only screen and (min-width:768px) and (max-width:899px) {
+	.sg-top-wrap {
+		background-image: url(../img/base/top-wmn.png);
+		background-repeat: no-repeat;
+		background-size: 70% auto;
+		background-position: 150% 100%;
+		background-color: #06478a;
+		height: 180px;
+	}
+	.sg-top-wrap2 {
+		background-image: url(../img/base/carousel_img02.png);
+		background-repeat: no-repeat;
+		background-size: 70% auto;
+		background-position: 150% 100%;
+		background-color: #3B5998;
+		height: 180px;
+	}
+	.sg-top-wrap3 {
+		background-image: url(../img/base/carousel_img03.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 180px;
+	}
+	.ace-nav>li>a{
+		border-left: 1px solid #042e59!important;
+		box-shadow: -1px 0px 2px #0754a2;
+		padding-left: 10px;
+	}
+	.sg-about01 p img,
+	.sg-about02 p img,
+	.sg-about03 p img,
+	.sg-about04 p img {
+		margin: 5% 0 0 30%;
+	}
+	td.kz-rank-1,
+	td.kz-rank-2,
+	td.kz-rank-3,
+	td.kz-rank-4,
+	td.kz-rank-5,
+	td.kz-rank-6,
+	td.kz-rank-7,
+	td.kz-rank-8,
+	td.kz-rank-9,
+	td.kz-rank-10,
+	td.kz-rank-11,
+	td.kz-rank-12,
+	td.kz-rank-13,
+	td.kz-rank-14,
+	td.kz-rank-15,
+	td.kz-rank-16,
+	td.kz-rank-17,
+	td.kz-rank-18,
+	td.kz-rank-19,
+	td.kz-rank-20,
+	td.kz-rank-21,
+	td.kz-rank-22,
+	td.kz-rank-23,
+	td.kz-rank-24,
+	td.kz-rank-25,
+	td.kz-rank-26,
+	td.kz-rank-27,
+	td.kz-rank-28,
+	td.kz-rank-29,
+	td.kz-rank-30,
+	td.kz-rank-31,
+	td.kz-rank-32,
+	td.kz-rank-33,
+	td.kz-rank-34,
+	td.kz-rank-35,
+	td.kz-rank-36,
+	td.kz-rank-37,
+	td.kz-rank-38,
+	td.kz-rank-39,
+	td.kz-rank-40,
+	td.kz-rank-41,
+	td.kz-rank-42,
+	td.kz-rank-43,
+	td.kz-rank-44,
+	td.kz-rank-45,
+	td.kz-rank-46,
+	td.kz-rank-47,
+	td.kz-rank-48,
+	td.kz-rank-49,
+	td.kz-rank-50,
+	td.kz-rank-51,
+	td.kz-rank-52,
+	td.kz-rank-53,
+	td.kz-rank-54,
+	td.kz-rank-55,
+	td.kz-rank-56,
+	td.kz-rank-57,
+	td.kz-rank-58,
+	td.kz-rank-59,
+	td.kz-rank-60,
+	td.kz-rank-61,
+	td.kz-rank-62,
+	td.kz-rank-63,
+	td.kz-rank-64,
+	td.kz-rank-65,
+	td.kz-rank-66,
+	td.kz-rank-67,
+	td.kz-rank-68,
+	td.kz-rank-69,
+	td.kz-rank-70,
+	td.kz-rank-71,
+	td.kz-rank-72,
+	td.kz-rank-73,
+	td.kz-rank-74,
+	td.kz-rank-75,
+	td.kz-rank-76,
+	td.kz-rank-77,
+	td.kz-rank-78,
+	td.kz-rank-79,
+	td.kz-rank-80,
+	td.kz-rank-81,
+	td.kz-rank-82,
+	td.kz-rank-83,
+	td.kz-rank-84,
+	td.kz-rank-85,
+	td.kz-rank-86,
+	td.kz-rank-87,
+	td.kz-rank-88,
+	td.kz-rank-89,
+	td.kz-rank-90,
+	td.kz-rank-91,
+	td.kz-rank-92,
+	td.kz-rank-93,
+	td.kz-rank-94,
+	td.kz-rank-95,
+	td.kz-rank-96,
+	td.kz-rank-97,
+	td.kz-rank-98,
+	td.kz-rank-99,
+	td.kz-rank-100 {
+		background-repeat: no-repeat;
+		background-position: center 9px;
+		text-align: center;
+		padding: 14px 0 0 0!important;
+	}
+	.rank-tag {
+		position: absolute;
+		top: 10px;
+		left: 12px;
+		z-index: 1;
+		border: none!important;
+		max-width: 90px!important;
+	}
+	.footer {
+		margin-top: 5%;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	#unseen table td:nth-child(4),
+	#unseen table th:nth-child(4),
+	#unseen table td:nth-child(5),
+	#unseen table th:nth-child(5),
+	#unseen table th:nth-child(6),
+	#unseen table td:nth-child(6),
+	#unseen table th:nth-child(7),
+	#unseen table td:nth-child(7),
+	#unseen table th:nth-child(8),
+	#unseen table td:nth-child(8){display: none;}
+}
+
+
+/* ============ PC用の設定 ================== */
+@media only screen and (min-width:900px) {
+	.sg-top-wrap {
+		background-image: url(../img/base/top-wmn.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: #06478a;
+		height: 230px;
+		padding: 1% 5%;
+	}
+	.sg-top-wrap2 {
+		background-image: url(../img/base/carousel_img02.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		background-position-y: 80%;
+		background-color: #3B5998;
+		height: 230px;
+		padding: 1% 5%;
+	}
+	.sg-top-wrap3 {
+		background-image: url(../img/base/carousel_img03.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 230px;
+		padding: 1% 5%;
+	}
+	.ace-nav>li>a{
+		border-left: 1px solid #042e59!important;
+		box-shadow: -1px 0px 2px #0754a2;
+		padding-left: 20px;
+	}
+
+	td.kz-rank-1,
+	td.kz-rank-2,
+	td.kz-rank-3,
+	td.kz-rank-4,
+	td.kz-rank-5,
+	td.kz-rank-6,
+	td.kz-rank-7,
+	td.kz-rank-8,
+	td.kz-rank-9,
+	td.kz-rank-10,
+	td.kz-rank-11,
+	td.kz-rank-12,
+	td.kz-rank-13,
+	td.kz-rank-14,
+	td.kz-rank-15,
+	td.kz-rank-16,
+	td.kz-rank-17,
+	td.kz-rank-18,
+	td.kz-rank-19,
+	td.kz-rank-20,
+	td.kz-rank-21,
+	td.kz-rank-22,
+	td.kz-rank-23,
+	td.kz-rank-24,
+	td.kz-rank-25,
+	td.kz-rank-26,
+	td.kz-rank-27,
+	td.kz-rank-28,
+	td.kz-rank-29,
+	td.kz-rank-30,
+	td.kz-rank-31,
+	td.kz-rank-32,
+	td.kz-rank-33,
+	td.kz-rank-34,
+	td.kz-rank-35,
+	td.kz-rank-36,
+	td.kz-rank-37,
+	td.kz-rank-38,
+	td.kz-rank-39,
+	td.kz-rank-40,
+	td.kz-rank-41,
+	td.kz-rank-42,
+	td.kz-rank-43,
+	td.kz-rank-44,
+	td.kz-rank-45,
+	td.kz-rank-46,
+	td.kz-rank-47,
+	td.kz-rank-48,
+	td.kz-rank-49,
+	td.kz-rank-50,
+	td.kz-rank-51,
+	td.kz-rank-52,
+	td.kz-rank-53,
+	td.kz-rank-54,
+	td.kz-rank-55,
+	td.kz-rank-56,
+	td.kz-rank-57,
+	td.kz-rank-58,
+	td.kz-rank-59,
+	td.kz-rank-60,
+	td.kz-rank-61,
+	td.kz-rank-62,
+	td.kz-rank-63,
+	td.kz-rank-64,
+	td.kz-rank-65,
+	td.kz-rank-66,
+	td.kz-rank-67,
+	td.kz-rank-68,
+	td.kz-rank-69,
+	td.kz-rank-70,
+	td.kz-rank-71,
+	td.kz-rank-72,
+	td.kz-rank-73,
+	td.kz-rank-74,
+	td.kz-rank-75,
+	td.kz-rank-76,
+	td.kz-rank-77,
+	td.kz-rank-78,
+	td.kz-rank-79,
+	td.kz-rank-80,
+	td.kz-rank-81,
+	td.kz-rank-82,
+	td.kz-rank-83,
+	td.kz-rank-84,
+	td.kz-rank-85,
+	td.kz-rank-86,
+	td.kz-rank-87,
+	td.kz-rank-88,
+	td.kz-rank-89,
+	td.kz-rank-90,
+	td.kz-rank-91,
+	td.kz-rank-92,
+	td.kz-rank-93,
+	td.kz-rank-94,
+	td.kz-rank-95,
+	td.kz-rank-96,
+	td.kz-rank-97,
+	td.kz-rank-98,
+	td.kz-rank-99,
+	td.kz-rank-100 {
+		background-repeat: no-repeat;
+		background-position: center 20px;
+		text-align: center;
+		padding: 35px 0 0 0!important;
+	}
+	.rank-tag {
+		position: absolute;
+		top: 10px;
+		left: 12px;
+		z-index: 1;
+		border: none!important;
+		max-width: 90px!important;
+	}
+	/* サイドバナーエリア */
+	#bnr {
+		display: inline-block;
+	}
+
+.likeButton{
+transform:scale(2);-webkit-transform:scale(2);-moz-transform:scale(2);
+text-align: center;
+padding-top:10px;
+padding-left:220px;
+}
+.facebookLinkBox{
+
+width: 100%;
+margin: 40px 0;
+overflow: hidden;
+}
+
+	.left-bnr{
+		padding-left:30px;
+	}
+
+	.fixed {
+		position: fixed;
+		top: 10px;
+		width: 189px;
+		z-index: 10000;
+	}
+	.footer {
+		margin-top: 8%;
+	}
+}
+
+
+.no-skin .navbar .navbar-toggle.display, .no-skin .navbar .navbar-toggle[data-toggle=collapse]:not(.collapsed) {
+	/* background-color: #4d9dcc; */
+	box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.25);
+	border-color: rgba(255,255,255,.35);
+}
+.no-skin .navbar .navbar-toggle:hover {
+	border-color: #053d77!important;
+	box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,.25);
+	border-color: rgba(255,255,255,.35);
+}
+.no-skin .navbar .navbar-toggle:focus {
+/* background-color: #75B3D7; */
+border-color: transparent;
+}
+.no-skin .navbar .navbar-toggle {
+	background-color: #06478a!important;
+}
+@media only screen and (max-width: 479px) {
+	.navbar:not(.navbar-collapse) .ace-nav>li:first-child {
+		border-right: none!important;
+	}
+	/*.navbar:not(.navbar-collapse) .ace-nav>li:first-child {
+		border-left: 1px solid #042e59!important;
+		box-shadow: -1px 0px 2px #0754a2;
+		padding-left: 1px;
+	}*/
+}
+
+div.sg-top-wrap div.sg-top-left p.sg-bz-bgnr a img:hover {
+	opacity: 0.95;
+	filter: alpha(opacity=95);
+	-ms-filter: "alpha(opacity=95)";
+	background: #438EB9;
+}
+
+div.sg-top-wrap div.sg-top-left p.sg-bz-bgnr {
+	margin: 0!important;
+}
+
+div.sg-top-wrap2 div.sg-top-left p.sg-bz-bgnr a img:hover {
+	opacity: 0.95;
+	filter: alpha(opacity=95);
+	-ms-filter: "alpha(opacity=95)";
+	background: #3B5998;
+}
+
+div.sg-top-wrap2 div.sg-top-left p.sg-bz-bgnr {
+	margin: 0!important;
+}
+
+div.index-row {
+	line-height: 1.4em;
+}
+
+.sg-list-title span {
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+}
+
+.sg-icon img,
+.sg-list-title img {
+	max-width: 22px;
+	height: auto;
+	display: inline;
+	margin-bottom:3px;
+}
+
+ul.breadcrumb li a img,
+ul.breadcrumb li img {
+	max-width: 16px;
+	max-height: 16px;
+	margin-bottom:4px;
+	display: inline;
+}
+
+.kz-index-child a img {
+	max-width: 16px;
+	max-height: 16px;
+	display: inline;
+}
+
+.sidebar ul.nav-list li ul.submenu li a img {
+	max-width: 12px;
+	max-height: 12px;
+	display: inline;
+}
+
+.sidebar ul.nav-list li a img {
+	max-width: 20px;
+	height: auto;
+	display: inline;
+	margin: 0 4% 0 0;
+}
+
+.sg-top-clearfix:after {
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	content:".";
+}
+.sg-top-clearfix {
+	margin-bottom: 30px;
+	min-height: 1px; /*IE6、7対策*/
+}
+* html .sg-top-clearfix {
+	height: 1px;
+	/*¥*//*/ /*MAC IE5.x対策*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+.sg-rank-btn-area {
+	position: absolute;
+	right: 30px;
+	bottom: 10px;
+}
+
+.sg-rank-btn {
+	font-size: 0.9em;
+}
+
+.sg-post-btn {
+	margin-top: 5%;
+}
+
+a.sg-img-link:hover {
+	text-decoration: none;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -ms-filter: "alpha(opacity=80)";
+    background: #fff;
+}
+
+.sg-mt {
+	margin-top: 15%;
+}
+
+.sg-mt-short {
+	margin-top: 8%;
+}
+
+.sg-mb {
+	margin-bottom: 5%;
+}
+
+.sg-pd {
+	padding: 2%;
+}
+
+.sg-align-center {
+	text-align: center!important;
+}
+
+.widget-box .row,
+.guide-area .row,
+.amz-area .row {
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+
+/* ジャンル一覧ページ */
+.sg-rad-btn {
+	border-radius: 0 14px 0 0;
+}
+
+/* お問い合わせメニュー */
+.sg-btn-inq,
+.sg-btn-inq:focus {
+	background-color: #5293c4!important;
+	border-color: #5293c4!important;
+}
+
+.sg-btn-inq:hover{
+	background-color: #3a79a9!important;
+	border-color: #5293c4!important;
+}
+
+.btn-info.arrowed-in{
+	margin-left:0px;
+
+}
+.btn-info.arrowed-in:before{
+	border-left: 0px !important;
+border-right-color: #3b5997!important;
+border-color:#fff !important;
+}
+.btn-info.arrowed-right:after {
+border-left-color: #3b5997!important;
+}
+
+/* お問い合わせフォーム確認画面 */
+.sg-table-confirm tbody th {
+	font-size: 0.9em!important;
+	text-align: left!important;
+	width: 40%!important;
+}
+
+/* ランキング */
+.sg-new-label {
+	font-size:  0.7em!important;
+	line-height: 1.65!important;
+	background-color: #d15b47!important;
+}
+
+.sg-new-label:before {
+	border-color: #d15b47!important;
+	-moz-border-right-colors: #d15b47!important;
+}
+
+.sg-new-label:after {
+	border-left-color: #d15b47!important;
+	-moz-border-left-colors: #d15b47!important;
+}
+
+/* ランキング掲載ビジネスサービス募集中エリア */
+.sg-rec-title {
+	background-color: #6FB3E0;
+	text-align: center;
+	margin: 0 0 2% 0;
+}
+
+.sg-rec-title h4 img {
+	max-width: 100%;
+	height: auto;
+	display: inline;
+}
+
+.sg-rec-form {
+	margin: 2% 0 0;
+}
+
+/* 注記の表示 */
+.sg-note-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 2%;
+	font-size: 0.89em;
+	color: #34495e;
+	background-color: #f8f9f9;
+	border: 1px solid #abbac3;
+	border-radius: 5px;
+}
+
+.sg-note-list li {
+	margin: 4px 0;
+	line-height: 1.8em;
+}
+
+.sg-note-list i {
+	color: #d15b47;
+}
+
+/* Facebookログインページ */
+.sg-fb-wrap {
+	padding: 3% 5%;
+}
+
+.sg-top-left h1 img,
+.sg-fb-stp h2 img,
+.sg-fb-wrap div.well h3 img
+{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.sg-fb-stp ul {
+	margin: 3% 0;
+	list-style-type: none;
+	font-size: 1.3em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	color: #438EB9;
+	line-height: 2.5em;
+}
+
+.sg-label-bz {
+	background-color: #438EB9!important;
+}
+
+.sg-label-au {
+	background-color: #FBB800!important;
+}
+
+.sg-label-ag {
+	background-color: #C0C0C0!important;
+}
+
+.sg-label-cu {
+	background-color: #E99B00!important;
+}
+
+.sg-label-bz.arrowed-right:after {
+	border-left-color: #438EB9;
+}
+
+.sg-label-au.arrowed-right:after {
+	border-left-color: #FBB800;
+}
+
+.sg-label-ag.arrowed-right:after {
+	border-left-color: #C0C0C0;
+}
+
+.sg-label-cu.arrowed-right:after {
+	border-left-color: #E99B00;
+}
+
+.sg-bz-bgnr {
+	margin: 5% 0 3%;
+}
+
+.sg-fb-login {
+	text-align: center;
+	margin: 5% 0 0;
+}
+
+.sg-fb-login a img,
+.sg-bz-bgnr img {
+	max-width: 100%;
+	height: auto;
+	display: inline;
+}
+
+.sg-fb-login a img:hover,
+.sg-bz-bgnr a img:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	-ms-filter: "alpha(opacity=90)";
+	background: #fff;
+	border-radius: 3px;
+}
+
+.img-hover:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha(opacity=80)";
+	background: #fff;
+}
+
+h1.sg-list-title:after,
+.sg-fb-wrap:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size:0;
+	clear: both;
+	visibility:hidden;
+}
+
+/* Bizranについてページ */
+.sg-about01,
+.sg-about02,
+.sg-about03,
+.sg-about04 {
+	margin: 4% 0 5%;
+}
+
+.sg-about01 h2,
+.sg-about02 h2,
+.sg-about03 h2,
+.sg-about04 h2 {
+	letter-spacing: 0.12em;
+}
+
+.sg-about01 p,
+.sg-about02 p,
+.sg-about03 p,
+.sg-about04 p {
+	line-height: 1.8em;
+	letter-spacing: 0.12em;
+}
+
+.sg-about01 p img,
+.sg-about02 p img,
+.sg-about03 p img,
+.sg-about04 p img {
+	max-width: 100%;
+	height: auto;
+	display: inline;
+}
+
+/*CrowdWorksページ*/
+.sg-well {
+	min-height: 20px;
+	padding: 19px;
+	color: #004261;
+	margin-bottom: 20px;
+	background-color: #edf7fb;
+	border: 1px solid #a3cfe5;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.sg-well h1 {
+	margin-top: 10px!important;
+	margin-bottom: 20px!important;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #a3cfe5;
+}
+
+/* ご利用ガイド */
+.guide-step {
+	margin-top: 0;
+	margin-bottom: 0!important;
+	text-align: center;
+	background-color: #82af6f;
+	font-size: 0.9em!important;
+	padding: 1% 0!important;
+	color: #fff;
+	border-radius: 2px;
+	border-left: none!important;
+	border-bottom: none!important;
+}
+
+/* 全ジャンルブログ記事一覧 */
+.popular-rank {
+	border: none!important;
+}
+
+/* ブログ詳細ページ */
+
+.blog-area h1 {
+	line-height: 1.8em;
+	letter-spacing: 0.1em;
+	font-size: 22px;
+	font-weight: bold;
+	border-left: 5px solid #06478a;
+	padding: 5px 0 5px 15px;
+}
+
+.blog-area h2 {
+	line-height: 1.8em;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+	font-weight: bold;
+	border-left: 8px solid #06478a;
+	border-bottom: 1px dotted #738a8d;
+	padding: 5px 0 5px 15px;
+}
+
+.blog-area h3 {
+	line-height: 1.8em;
+	letter-spacing: 0.1em;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0 0 0 10px;
+	border-left: 2px solid #06478a;
+	border-bottom: 1px dotted #06478a;
+
+}
+
+.blog-area p {
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	line-height: 1.8em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.blog-area ul,
+.blog-area ol {
+	margin-left: 38px;
+
+}
+
+.blog-area ul li,
+.blog-area ol li {
+	font-size: 15px;
+	letter-spacing: 0.1em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.blog-area dl {
+	margin-left: 20px;
+}
+
+.blog-area dl dt {
+	font-size: 16px;
+	letter-spacing: 0.1em;
+	margin: 3px 0 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+
+.blog-area dl dd {
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	margin: 0 0 10px 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.blog-area blockquote {
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	line-height: 1.8em;
+	font-style: italic;
+}
+
+.blog-area span {
+	display: block;
+	min-height: 20px;
+	padding: 19px;
+	margin-top:20px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.site {
+	min-height: 20px;
+	padding: 19px;
+	margin-top:20px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.blog-area strong,
+.spacer30 strong {
+
+}
+
+.sg-tbl-mdl {
+	vertical-align: middle!important;
+}
+
+.kz-blog-title {
+line-height: 1.8em;
+letter-spacing: 0.1em;
+font-size: 22px;
+font-weight: bold;
+border-left: 5px solid #06478a;
+padding: 5px 0 5px 15px;
+}
+
+.kz-blog-invite-list{
+	padding-left:0px;
+	padding-bottom:10px;
+	padding-top:10px;
+border-bottom: 1px dotted #738a8d;
+
+}
+
+.kz-blog-list {
+display: block;
+min-height: 20px;
+padding: 19px;
+margin-top: 20px;
+margin-bottom: 20px;
+background-color: #f5f5f5;
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.kz-widget-header{
+	border-bottom:0px !important;
+	padding-left:0px !important;
+}
+
+.side-rank-tag {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	border: none!important;
+	max-width: 90px!important;
+}
+
+/* ブログ新着記事リボン */
+.new-tag {
+	position: absolute;
+	top: 16px;
+	left: 3px;
+	z-index: 1;
+	border: none!important;
+	max-width: 70px!important;
+}
+
+.sg-centering p {
+	display: table-cell!important;
+	vertical-align: middle!important;
+	margin: 0!important;
+}
+
+/* ブログ記事詳細ページ */
+.site {
+	display: block;
+}
+
+.site p {
+	display: table-cell!important;
+	vertical-align: middle!important;
+	margin: 0!important;
+}
+
+.sg-mr {
+	margin-right: 15px!important;
+}
+
+/* 運営者情報ページ */
+.company-area h2 {
+	letter-spacing: 0.1em;
+	line-height: 1.8em;
+}
+
+.company-area p {
+	letter-spacing: 0.1em;
+	line-height: 1.8em;
+}
+
+.admin {
+	text-align: center;
+}
+
+.admin p {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-top: 3%;
+	color: #06478a;
+}
+
+/* Amazonギフト券キャンペーン */
+.amz-top {
+	background-image: url(../img/campaign/amz-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.kz-footer-banner{
+
+}
+.footer-content{
+	border:0 !important;
+}
+
+/* フッター */
+.kz-footer-border{
+	margin-top:95px;
+	border-top:3px double #E5E5E5;
+}
+p.kz-footer-year span.kz-footer-year {
+	vertical-align: -11%;
+	line-height: 36px;
+	margin-left: 12px;
+}
+.addthis_native_toolbox {
+	margin: 3% 0 2%;
+}
+.sg-right {
+	text-align: right!important;
+}
+.sg-left {
+	text-align: left!important;
+}
+.footer .footer-inner .footer-content {
+	line-height: 0!important;
+}

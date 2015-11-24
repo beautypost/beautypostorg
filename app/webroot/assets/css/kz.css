@@ -1,0 +1,67 @@
+
+.confirmtext{
+	display:inline-block;
+padding-top:4px;
+
+}
+
+.kz-nav-user-photo{
+ margin : 0px !important;
+}
+
+.kz-profile-info-name{
+text-align: right;
+padding: 6px 10px 6px 4px;
+font-weight: 400;
+color: #667E99;
+background-color: transparent;
+border-top: 1px dotted #D5E4F1;
+display: table-cell;
+width: 150px;
+vertical-align: middle;
+}
+
+.kz-btn{
+	background-color:#f0ad4e !important;
+	border-color:#F8E8D1 !important;
+}
+
+.kz-btn.active{
+	background-color:#FF6600!important;
+}
+
+.kz-infobox{
+	width:100%;
+}
+
+.kz-btn-facebook{
+	background-color: #3b5998 !important;
+	border-color: #3b5998 !important;
+}
+
+.kz-btn-twitter{
+	background-color: #55acee !important;
+	border-color: #55acee !important;
+}
+
+.kz-btn-blog{
+	background-color: #FB8F3D !important;
+	border-color: #FB8F3D !important;
+}
+
+.kz-btn-contact{
+	background-color: #7dcf3d !important;
+	border-color: #7dcf3d !important;
+}
+
+.kz-btn-website{
+	background-color: #4b4797 !important;
+	border-color: #4b4797 !important;
+}
+
+.kz-body{
+	background-color: #fff !important;
+}
+
+
+

@@ -1,0 +1,2485 @@
+@charset "UTF-8";
+/* 
+====================================================================================================
+■ common
+■ ブランクページ (.page-blank) ./blank/
+■ Beauty Postとは？ (.page-about) ./about/
+■ 美容機器の基礎知識 (.page-knowladge) ./knowledge/
+◆ 美容機器用語集 (.page-glossary) ./glossary/
+◆ 美容機器コレクション (.page-collection) ./collection/
+ ◆ レビュー (.page-review) ./collection/review/
+  ◇ レビュー入力
+  ◇ レビュー表示
+ ◆ 商品比較 (.page-compare) ./collection/compare/
+■ 会員特典の説明 (.page-privilege) ./privilege/
+◆ ログイン (.page-login) ./login/
+◆ サインアップ (.page-signup) ./signup/
+◆ マイページ (.page-mypage) ./mypage/
+◆ メルマガバックナンバー (.page-magazine) ./magazine/
+◆ アンケートバックナンバー (.page-enquete) ./enquete/
+◆ お役立ち美容通信 (.page-news) ./news/
+■ 掲載ご希望の方へ (.page-maker) ./maker/
+◆ 体験者の声 (.page-report) ./report/
+◆ お問い合わせフォーム (.page-contact) ./contact/
+■ プライバシーポリシー (.page-privacy) ./privacy/
+■ 利用規約 (.page-rules) ./rules/
+■ 使い方ガイド (.page-guide) ./guide/
+■ サイトマップ (.page-sitemap) ./sitemap/
+◆ コラム (.page-column) ./column/
+==================================================================================================== */
+/* 
+====================================================================================================
+■ common
+---------------------------------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  #page-area {
+    margin-top: 1em;
+  }
+}
+
+/* 
+====================================================================================================
+■ ブランクページ (.page-blank) ./blank/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+■ Beauty Postとは？ (.page-about) ./about/
+---------------------------------------------------------------------------------------------------- */
+.page-about #main-area section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.page-about #main-area section:first-child {
+  margin-top: 0;
+}
+.page-about #main-area section:last-child {
+  margin-bottom: 0;
+}
+
+#about-lead > p {
+  margin-bottom: 2.4rem;
+}
+@media (max-width: 767px) {
+  #about-lead > p {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  #about-lead > p {
+    line-height: 2;
+  }
+}
+#about-lead .lead {
+  line-height: 1.5;
+  color: #f61d54;
+}
+@media (max-width: 767px) {
+  #about-lead .lead {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #about-lead .lead {
+    font-size: 21px;
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #about-lead .lead {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+#about-lead .sub {
+  margin-top: 2.4rem;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #E6E6E6;
+  font-weight: 700;
+}
+@media (max-width: 479px) {
+  #about-lead .sub {
+    padding: 3.33333% 5%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #about-lead .sub {
+    padding: 2.08333% 4.16667%;
+  }
+}
+@media (min-width: 768px) {
+  #about-lead .sub {
+    padding: 1.38889% 2.77778%;
+  }
+}
+@media (min-width: 1024px) {
+  #about-lead .sub {
+    line-height: 1.75;
+  }
+}
+@media (min-width: 1024px) {
+  #about-lead .sub {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+#about-recommend .section-body {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: #f61d54;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+@media (max-width: 767px) {
+  #about-recommend .section-body {
+    padding: 3%;
+    background: #E6E6E6;
+  }
+}
+@media (min-width: 768px) {
+  #about-recommend .section-body {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 80px 0 0 248px;
+    width: 720px;
+    height: 330px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #E6E6E6 url(../about/images/recommend-bg.jpg) center top no-repeat;
+    -moz-background-size: 720px auto;
+    -o-background-size: 720px auto;
+    -webkit-background-size: 720px auto;
+    background-size: 720px auto;
+  }
+}
+@media (max-width: 767px) {
+  #about-recommend .section-body ul {
+    padding: 2% 5%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+  }
+}
+@media (max-width: 767px) {
+  #about-recommend .section-body li {
+    margin-left: 1.2em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    line-height: 1.25;
+  }
+  #about-recommend .section-body li .fa {
+    margin-left: -1.2em;
+    display: inline-block;
+    width: 1.2em;
+  }
+}
+@media (min-width: 768px) {
+  #about-recommend .section-body li {
+    line-height: 2.2;
+  }
+  #about-recommend .section-body li .fa {
+    margin-right: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #about-concept p, #about-concept dd {
+    line-height: 2;
+  }
+}
+#about-concept .sub {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #E6E6E6;
+}
+@media (max-width: 479px) {
+  #about-concept .sub {
+    padding: 3.33333% 5%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #about-concept .sub {
+    padding: 2.08333% 4.16667%;
+  }
+}
+@media (min-width: 768px) {
+  #about-concept .sub {
+    padding: 1.38889% 2.77778%;
+  }
+}
+@media (min-width: 1024px) {
+  #about-concept .sub {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+#about-concept .sub li {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  #about-concept dl {
+    display: table;
+    width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  #about-concept dt {
+    text-align: center;
+  }
+}
+@media (min-width: 480px) {
+  #about-concept dt {
+    display: table-cell;
+    vertical-align: bottom;
+    background: url(../about/images/concept-line.png) right bottom no-repeat;
+  }
+}
+#about-concept dt span {
+  margin-bottom: 16px;
+  padding: 9px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #fff;
+  background: #272727 url(../common-img/stripe.png);
+  -moz-background-size: 12px;
+  -o-background-size: 12px;
+  -webkit-background-size: 12px;
+  background-size: 12px;
+  width: 102px;
+  height: 102px;
+  line-height: 102px;
+  text-align: center;
+}
+@media (max-width: 479px) {
+  #about-concept dt span {
+    margin-bottom: -32px;
+    display: inline-block;
+  }
+}
+@media (min-width: 480px) {
+  #about-concept dt span {
+    display: block;
+  }
+}
+#about-concept dt span img {
+  vertical-align: middle;
+}
+#about-concept dd {
+  font-weight: 700;
+}
+@media (max-width: 479px) {
+  #about-concept dd {
+    padding-top: 40px;
+    border-top: 3px double #272727;
+  }
+}
+@media (min-width: 480px) {
+  #about-concept dd {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    padding-left: 24px;
+    border-bottom: 1px solid #272727;
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+@media (min-width: 1024px) {
+  #about-concept dd {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+/* 
+====================================================================================================
+■ 美容機器の基礎知識 (.page-knowladge) ./knowledge/
+---------------------------------------------------------------------------------------------------- */
+/* --- 美容機器とは --- */
+@media (min-width: 480px) and (max-width: 1023px) {
+  #knowledge-about .eyecatch {
+    margin-right: 1em;
+    float: left;
+    width: 240px;
+  }
+}
+@media (min-width: 1024px) {
+  #knowledge-about .eyecatch {
+    padding-right: 30px;
+    width: 240px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+#knowledge-about .eyecatch img {
+  border: 1px solid #999999;
+}
+#knowledge-about .section-body {
+  padding: 2em 1.38889% 0;
+  padding-top: 0;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  #knowledge-about .section-body {
+    zoom: 1;
+  }
+  #knowledge-about .section-body:before, #knowledge-about .section-body:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 1024px) {
+  #knowledge-about .section-body p {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 2;
+  }
+}
+@media (min-width: 1024px) {
+  #knowledge-about .sub-section p {
+    line-height: 2;
+  }
+}
+
+/* --- エステサロンと美容機器の歴史 --- */
+#knowledge-history .sub-txt {
+  padding-bottom: 0.75em;
+  text-align: right;
+}
+#knowledge-history .section-body {
+  padding: 4.44444% 5.55556%;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #E6E6E6 url(../dummy/knowledge-lattice.png) center center;
+}
+#knowledge-history li {
+  margin-top: 30px;
+  position: relative;
+}
+#knowledge-history li:before {
+  position: absolute;
+  top: -1.25em;
+  left: 35px;
+  display: block;
+  content: '\f063';
+  color: #fff;
+  font-size: 24px;
+  font-family: FontAwesome;
+}
+#knowledge-history li:first-child {
+  margin-top: 0;
+}
+#knowledge-history li:first-child:before {
+  display: none;
+}
+@media (max-width: 479px) {
+  #knowledge-history dl {
+    zoom: 1;
+  }
+  #knowledge-history dl:before, #knowledge-history dl:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 480px) {
+  #knowledge-history dl {
+    display: table;
+  }
+}
+#knowledge-history dt span {
+  display: block;
+  width: 9rem;
+  height: 9rem;
+  line-height: 9rem;
+  text-align: center;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #f38291;
+  background: #fff;
+}
+@media (max-width: 479px) {
+  #knowledge-history dt {
+    margin-right: 1em;
+    float: left;
+  }
+}
+@media (min-width: 480px) {
+  #knowledge-history dt {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 479px) {
+  #knowledge-history dd {
+    overflow: hidden;
+  }
+}
+@media (min-width: 480px) {
+  #knowledge-history dd {
+    padding-left: 2em;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 9rem;
+  }
+}
+
+/* --- 美容機器のメリット --- */
+#knowledge-merit ul {
+  margin-top: 2em;
+}
+#knowledge-merit li {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+#knowledge-merit li:first-child {
+  margin-top: 0;
+}
+#knowledge-merit li:last-child {
+  margin-bottom: 0;
+}
+#knowledge-merit li .eyecatch {
+  margin-top: -16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 180px;
+}
+#knowledge-merit dl {
+  position: relative;
+}
+#knowledge-merit dl:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  width: 9rem;
+  height: 9rem;
+  line-height: 9rem;
+  text-align: center;
+  color: #fff;
+  background: #f38291;
+}
+#knowledge-merit li:nth-child(1) dl:before {
+  content: '';
+  background: url(../knowledge/images/merit01.png) center center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+@media (max-width: 479px) {
+  #knowledge-merit li:nth-child(1) dl:before {
+    width: 76px;
+    height: 76px;
+  }
+}
+@media (min-width: 480px) {
+  #knowledge-merit li:nth-child(1) dl:before {
+    width: 90px;
+    height: 90px;
+  }
+}
+#knowledge-merit li:nth-child(2) dl:before {
+  content: '';
+  background: url(../knowledge/images/merit02.png) center center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+@media (max-width: 479px) {
+  #knowledge-merit li:nth-child(2) dl:before {
+    width: 76px;
+    height: 76px;
+  }
+}
+@media (min-width: 480px) {
+  #knowledge-merit li:nth-child(2) dl:before {
+    width: 90px;
+    height: 90px;
+  }
+}
+#knowledge-merit li:nth-child(3) dl:before {
+  content: '';
+  background: url(../knowledge/images/merit03.png) center center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+@media (max-width: 479px) {
+  #knowledge-merit li:nth-child(3) dl:before {
+    width: 76px;
+    height: 76px;
+  }
+}
+@media (min-width: 480px) {
+  #knowledge-merit li:nth-child(3) dl:before {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #knowledge-merit li:nth-child(3) dd {
+    padding-right: 19rem;
+  }
+}
+#knowledge-merit dt, #knowledge-merit dd {
+  padding-left: 11rem;
+}
+#knowledge-merit dt {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px dotted #f38291;
+  color: #f38291;
+  font-weight: 700;
+}
+@media (max-width: 479px) {
+  #knowledge-merit dt {
+    padding-left: 9rem;
+  }
+}
+@media (min-width: 1024px) {
+  #knowledge-merit dt {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+#knowledge-merit dd {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  line-height: 2;
+}
+@media (max-width: 479px) {
+  #knowledge-merit dd {
+    padding-left: 0;
+  }
+}
+
+/* --- 美容機器の今後 --- */
+#knowledge-future .section-body {
+  line-height: 2;
+}
+
+/* 
+====================================================================================================
+◆ 美容機器用語集 (.page-glossary) ./glossary/
+---------------------------------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  #glossary-index .index-list li {
+    border-bottom: 1px dotted #737373;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  #glossary-index .index-list li a {
+    color: #272727;
+    display: block;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  #glossary-index .index-list li a:hover {
+    color: #f38291;
+  }
+  #glossary-index .index-list li a:after {
+    margin-top: -1rem;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #f38291;
+    font-size: 16px;
+    font-size: 1.6rem;
+    content: '\f138';
+    font-family: FontAwesome;
+  }
+}
+@media (min-width: 480px) {
+  #glossary-index .index-list {
+    letter-spacing: -.40em;
+  }
+  #glossary-index .index-list > li {
+    display: inline-block;
+    letter-spacing: normal;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 2.08333%;
+    padding-left: 2.08333%;
+  }
+  #glossary-index .index-list > li:first-child {
+    margin-left: 0 !important;
+  }
+  #glossary-index .index-list > li:last-child {
+    margin-right: 0 !important;
+  }
+  #glossary-index .index-list > li:before {
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #f38291;
+    font-size: 116.7%;
+    content: '\f138';
+    font-family: FontAwesome;
+  }
+  #glossary-index .index-list > li a {
+    color: #272727;
+  }
+  #glossary-index .index-list > li a:hover {
+    color: #f38291;
+  }
+}
+@media (min-width: 480px) and (min-width: 768px) {
+  #glossary-index .index-list > li a {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 480px) {
+  #glossary-index .index-list > li a:hover {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 480px) {
+  #glossary-detail .section-body {
+    zoom: 1;
+  }
+  #glossary-detail .section-body:before, #glossary-detail .section-body:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 480px) {
+  #glossary-detail .item-img {
+    margin-right: 2%;
+    width: 49%;
+    float: left;
+  }
+}
+#glossary-detail .user-text {
+  margin-bottom: 1.5em;
+}
+@media (max-width: 479px) {
+  #glossary-detail .user-text {
+    margin-top: 0.75em;
+  }
+}
+#glossary-detail .user-text p {
+  margin-bottom: 1.5em;
+}
+#glossary-detail .relative-words {
+  /* li {
+  	@include pv(8px); @include ps(10 / 480 * 100%);
+  	&:before {
+  		margin-right:4px;
+  		display:inline-block;
+  		vertical-align:middle;
+  		color:$c-pk;
+  		font-size:116.7%;
+  		@include fa-chevron-circle-right();
+  	}
+  	a {
+  		@include link-colors($c-txt,$c-pk);
+  		@include mqmt($bpM) { text-decoration:underline; }
+  		&:hover { text-decoration:none; }
+  	}
+  } */
+}
+@media (max-width: 479px) {
+  #glossary-detail .relative-words ul li {
+    border-bottom: 1px dotted #737373;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  #glossary-detail .relative-words ul li a {
+    color: #272727;
+    display: block;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  #glossary-detail .relative-words ul li a:hover {
+    color: #f38291;
+  }
+  #glossary-detail .relative-words ul li a:after {
+    margin-top: -1rem;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #f38291;
+    font-size: 16px;
+    font-size: 1.6rem;
+    content: '\f138';
+    font-family: FontAwesome;
+  }
+}
+@media (min-width: 480px) {
+  #glossary-detail .relative-words ul {
+    letter-spacing: -.40em;
+  }
+  #glossary-detail .relative-words ul > li {
+    display: inline-block;
+    letter-spacing: normal;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 2.08333%;
+    padding-left: 2.08333%;
+  }
+  #glossary-detail .relative-words ul > li:first-child {
+    margin-left: 0 !important;
+  }
+  #glossary-detail .relative-words ul > li:last-child {
+    margin-right: 0 !important;
+  }
+  #glossary-detail .relative-words ul > li:before {
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #f38291;
+    font-size: 116.7%;
+    content: '\f138';
+    font-family: FontAwesome;
+  }
+  #glossary-detail .relative-words ul > li a {
+    color: #272727;
+  }
+  #glossary-detail .relative-words ul > li a:hover {
+    color: #f38291;
+  }
+}
+@media (min-width: 480px) and (min-width: 768px) {
+  #glossary-detail .relative-words ul > li a {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 480px) {
+  #glossary-detail .relative-words ul > li a:hover {
+    text-decoration: none;
+  }
+}
+#glossary-detail footer {
+  margin-top: 1.5em;
+}
+
+/* 
+====================================================================================================
+◆ 美容機器コレクション (.page-collection) ./collection/
+---------------------------------------------------------------------------------------------------- */
+#collection-list > footer {
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 1px dotted #272727;
+}
+
+#collection-detail > section {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+#collection-detail > section:first-child {
+  margin-top: 0;
+}
+#collection-detail > section:last-child {
+  margin-bottom: 0;
+}
+
+/* 
+====================================================================================================
+ ◆ レビュー (.page-review) ./collection/review/
+---------------------------------------------------------------------------------------------------- */
+	/* 
+	--------------------------------------------------------------------------------------------------
+  ◇ レビュー入力
+	-------------------------------------------------------------------------------------------------- */
+#review-post form > footer {
+  padding-top: 1em;
+  border-top: 1px dotted #999999;
+  text-align: center;
+}
+#review-post form > footer a {
+  text-decoration: underline;
+  color: #f38291;
+}
+#review-post form > footer a:hover {
+  text-decoration: none;
+}
+#review-post form > footer a:hover {
+  color: #ec3c54;
+}
+#review-post .review-user {
+  margin-top: 16px;
+}
+#review-post .review-user ul {
+  margin-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  #review-post .review-user ul {
+    zoom: 1;
+  }
+  #review-post .review-user ul:before, #review-post .review-user ul:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #review-post .review-user ul > li {
+    float: left;
+    width: 50%;
+  }
+  #review-post .review-user ul > li:first-child {
+    margin-left: 0 !important;
+  }
+  #review-post .review-user ul > li:last-child {
+    margin-right: 0 !important;
+  }
+}
+#review-post .review-user ul dl {
+  zoom: 1;
+  line-height: 2;
+}
+#review-post .review-user ul dl:before, #review-post .review-user ul dl:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#review-post .review-user ul dl dt {
+  float: left;
+  width: 7em;
+  font-weight: 700;
+}
+#review-post .review-user ul dl dd {
+  overflow: hidden;
+}
+#review-post .review-user ul dl dd:before {
+  content: '：';
+}
+#review-post .review-user footer {
+  margin-top: 0.75em;
+  text-align: right;
+}
+@media (max-width: 479px) {
+  #review-post .review-user footer .button {
+    display: block;
+    text-align: center;
+  }
+}
+#review-post .review-data table {
+  width: 100%;
+  border: 1px solid #E6E6E6;
+}
+#review-post .review-data table tr {
+  border-bottom: 1px solid #E6E6E6;
+}
+@media (max-width: 767px) {
+  #review-post .review-data table th, #review-post .review-data table td {
+    padding: 12px 0;
+  }
+}
+@media (min-width: 768px) {
+  #review-post .review-data table th, #review-post .review-data table td {
+    padding: 8px;
+  }
+}
+#review-post .review-data table th {
+  font-weight: 400;
+}
+#review-post .review-data table td {
+  text-align: center;
+}
+#review-post .review-data table thead th {
+  text-align: center;
+}
+
+	/* 
+	--------------------------------------------------------------------------------------------------
+  ◇ レビュー表示
+	-------------------------------------------------------------------------------------------------- */
+#review-list .summary {
+  position: relative;
+}
+#review-list .summary h2 {
+  color: #fff;
+  background: #737373;
+}
+@media (max-width: 767px) {
+  #review-list .summary h2 {
+    margin-bottom: 0.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+}
+@media (min-width: 768px) {
+  #review-list .summary h2 {
+    padding: 0.5em 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  #review-list .summary .evaluation {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+#review-list .summary .evaluation .table-std {
+  margin-bottom: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 1023px) {
+  #review-list .summary .evaluation .table-std {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  #review-list .summary .evaluation .table-std {
+    width: 60%;
+  }
+}
+#review-list .summary .evaluation .table-std th {
+  width: 4em;
+}
+#review-list .summary > footer {
+  margin-top: 0.75em;
+  text-align: right;
+}
+@media (max-width: 479px) {
+  #review-list .summary > footer .button {
+    display: block;
+    text-align: center;
+  }
+}
+#review-list .review-entry {
+  padding-top: 1em;
+  border-top: 1px dotted #999999;
+}
+@media (min-width: 768px) {
+  #review-list .review-entry {
+    zoom: 1;
+  }
+  #review-list .review-entry:before, #review-list .review-entry:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 768px) {
+  #review-list .review-entry > header {
+    width: 58%;
+    float: right;
+  }
+}
+#review-list .review-entry > header h2 {
+  margin-left: 1.5em;
+  margin-right: 0.5em;
+  position: relative;
+}
+#review-list .review-entry > header h2:before {
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 1;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  content: '\f138';
+  font-family: FontAwesome;
+  text-align: center;
+}
+#review-list .review-entry > header > p {
+  text-align: right;
+}
+@media (max-width: 1023px) {
+  #review-list .review-entry > header > p {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+#review-list .review-entry > header .user-data {
+  margin-top: 0.75em;
+}
+#review-list .review-entry > header .post-date {
+  margin-bottom: 0.75em;
+}
+@media (min-width: 768px) {
+  #review-list .review-entry .evaluation {
+    width: 39%;
+    float: left;
+  }
+}
+#review-list .review-entry .evaluation .table-std {
+  margin-bottom: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 1023px) {
+  #review-list .review-entry .evaluation .table-std {
+    width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  #review-list .review-entry .evaluation .table-std {
+    width: 70%;
+  }
+}
+#review-list .review-entry .evaluation .table-std th {
+  width: 4em;
+}
+@media (min-width: 768px) {
+  #review-list .review-entry .user-txt {
+    width: 58%;
+    float: right;
+  }
+}
+#review-list > footer {
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 1px dotted #272727;
+}
+
+/* 
+====================================================================================================
+ ◆ 商品比較 (.page-compare) ./collection/compare/
+---------------------------------------------------------------------------------------------------- */
+.page-compare-popup {
+  height: 100%;
+  position: relative;
+}
+.page-compare-popup .tableWrap {
+  position: relative;
+}
+.page-compare-popup th, .page-compare-popup td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #999999;
+  width: 420px;
+  background: #f5f5f5;
+  text-align: left;
+}
+.page-compare-popup td {
+  border-right: 1px solid #E6E6E6;
+}
+.page-compare-popup td:not(:first-child):after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 1px;
+}
+.page-compare-popup td .item-taglist {
+  margin-left: -2px;
+  margin-right: -2px;
+  position: relative;
+  width: 204px;
+}
+.page-compare-popup td .item-taglist li {
+  margin: 4px 2px !important;
+}
+.page-compare-popup thead th {
+  border-top: 1px solid #999999;
+  border-right: 1px solid #E6E6E6;
+  background: #FEF6F6;
+  text-align: left;
+}
+.page-compare-popup table {
+  margin: 16px;
+  vertical-align: top;
+}
+.page-compare-popup table tbody.table-head tr {
+  border-bottom: 1px solid #999999;
+}
+.page-compare-popup table tbody.table-head tr td {
+  padding-left: 0;
+  border-right: none;
+  color: #f61d54;
+  background: #fff;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.page-compare-popup table tbody.table-head tr td span {
+  padding-left: 8px;
+  border-left: 5px solid #f61d54;
+}
+.page-compare-popup table tr > *:first-child {
+  background: #E6E6E6;
+  white-space: nowrap;
+}
+
+#sp-compare .compare-custom form input, #sp-compare .compare-custom form select, #sp-compare .compare-custom form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  #sp-compare .compare-custom form input, #sp-compare .compare-custom form select, #sp-compare .compare-custom form textarea {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #sp-compare .compare-custom form input, #sp-compare .compare-custom form select, #sp-compare .compare-custom form textarea {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+#sp-compare .compare-custom form input[type=checkbox] {
+  margin: 0 0.25em 2px;
+  padding: 0;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+#sp-compare .compare-custom form input[type=radio] {
+  margin: 0 0.25em 2px;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+#sp-compare .compare-custom form input[type=submit] {
+  padding: 5px 10px;
+}
+#sp-compare .compare-custom form textarea {
+  vertical-align: top;
+}
+#sp-compare .compare-custom form option {
+  padding-right: 1em;
+}
+#sp-compare .compare-custom dl {
+  margin-bottom: 1.25em;
+}
+@media (min-width: 480px) {
+  #sp-compare .compare-custom dl {
+    display: table;
+    width: 100%;
+  }
+}
+#sp-compare .compare-custom dt {
+  font-weight: 700;
+}
+@media (max-width: 479px) {
+  #sp-compare .compare-custom dt {
+    margin-bottom: 0.5em;
+  }
+}
+@media (min-width: 480px) {
+  #sp-compare .compare-custom dt {
+    padding-right: 0.5em;
+    display: table-cell;
+    vertical-align: middle;
+    width: 9.5em;
+  }
+}
+@media (min-width: 480px) {
+  #sp-compare .compare-custom dd {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+#sp-compare .compare-list li {
+  border-top: 1px dotted #737373;
+  position: relative;
+}
+#sp-compare .compare-list li:after {
+  margin-top: -0.5em;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #f38291;
+  width: 1.6rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+  content: '\f138';
+  font-family: FontAwesome;
+}
+#sp-compare .compare-list li a {
+  display: block;
+  zoom: 1;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+#sp-compare .compare-list li a:before, #sp-compare .compare-list li a:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#sp-compare .compare-list li a .photo {
+  margin-right: 1em;
+  float: left;
+  width: 30%;
+}
+#sp-compare .compare-list li a .info {
+  padding-right: 1.5em;
+  position: relative;
+  overflow: hidden;
+}
+#sp-compare .compare-list li a .info .item-name {
+  margin-bottom: 0.5em;
+  color: #f38291;
+  font-weight: 700;
+}
+#sp-compare .compare-list li a .info .compare-info {
+  color: #272727;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* 
+====================================================================================================
+■ 会員特典の説明 (.page-privilege) ./privilege/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+◆ ログイン (.page-login) ./login/
+---------------------------------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  #login-section {
+    zoom: 1;
+  }
+  #login-section:before, #login-section:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 768px) {
+  #login-form {
+    width: 48.5%;
+    float: left;
+  }
+}
+#login-form form input, #login-form form select, #login-form form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  #login-form form input, #login-form form select, #login-form form textarea {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #login-form form input, #login-form form select, #login-form form textarea {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+#login-form form input[type=checkbox] {
+  margin: 0 0.25em 2px;
+  padding: 0;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+#login-form form input[type=radio] {
+  margin: 0 0.25em 2px;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+#login-form form input[type=submit] {
+  padding: 5px 10px;
+}
+#login-form form textarea {
+  vertical-align: top;
+}
+#login-form form option {
+  padding-right: 1em;
+}
+#login-form dt {
+  margin-top: 8px;
+}
+#login-form dd {
+  margin-bottom: 20px;
+}
+#login-form .form-footer {
+  text-align: center;
+}
+#login-form .form-footer button {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+#login-form .form-footer ul {
+  margin-bottom: 2em;
+}
+#login-form .form-footer li {
+  line-height: 2;
+}
+@media (min-width: 1024px) {
+  #login-form .form-footer li {
+    margin-right: 1em;
+    margin-left: 1em;
+    display: inline-block;
+  }
+}
+#login-form .form-footer a {
+  color: #272727;
+  text-decoration: underline;
+}
+#login-form .form-footer a:hover {
+  color: #ef5368;
+}
+#login-form .form-footer a:hover {
+  text-decoration: none;
+}
+#login-form .form-footer a:before {
+  margin-right: 0.25em;
+  display: inline-block;
+  color: #f38291;
+  vertical-align: middle;
+  font-size: 16px;
+  font-size: 1.6rem;
+  content: '\f138';
+  font-family: FontAwesome;
+}
+
+@media (min-width: 768px) {
+  #login-social {
+    margin-top: 0;
+    float: right;
+    width: 48.5%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #login-social .section-body ul {
+    margin-right: auto;
+    margin-left: auto;
+    width: 75%;
+  }
+}
+@media (min-width: 1024px) {
+  #login-social .section-body ul {
+    margin-right: auto;
+    margin-left: auto;
+    width: 75%;
+  }
+}
+#login-social .section-body li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#login-social .section-body li .button {
+  display: block;
+  position: relative;
+  font-weight: 700;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  #login-social .section-body li .button {
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding-left: 20%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #login-social .section-body li .button {
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding-left: 18%;
+  }
+}
+@media (min-width: 768px) {
+  #login-social .section-body li .button {
+    font-size: 20px;
+    font-size: 2rem;
+    padding-left: 4em;
+  }
+}
+#login-social .section-body li .button .fa {
+  margin-top: -0.5em;
+  padding-right: 0.25em;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0.4em;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #login-social .section-body li .button .fa {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+}
+@media (min-width: 768px) {
+  #login-social .section-body li .button .fa {
+    border-right: 2px dotted #fff;
+    font-size: 40px;
+    font-size: 4rem;
+  }
+}
+#login-social .section-body li .button:after {
+  margin-top: -0.5em;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  text-align: center;
+  content: '\f138';
+  font-family: FontAwesome;
+}
+@media (max-width: 767px) {
+  #login-social .section-body li .button:after {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) {
+  #login-social .section-body li .button:after {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+#login-social .section-body li .button span {
+  display: block;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  #login-social .section-body li .button span {
+    font-size: 80%;
+  }
+}
+@media (min-width: 768px) {
+  #login-social .section-body li .button span {
+    font-size: 50%;
+  }
+}
+#login-social .section-body li .button.btn-google {
+  background: #dc4c3a;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UxNWY0ZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q3MzkyNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e15f4f), color-stop(100%, #d73925));
+  background-image: -moz-linear-gradient(top, #e15f4f, #d73925);
+  background-image: -webkit-linear-gradient(top, #e15f4f, #d73925);
+  background-image: linear-gradient(to bottom, #e15f4f, #d73925);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE15F4F', endColorstr='#FFD73925');
+}
+#login-social .section-body li .button.btn-google:hover {
+  background: #e47365;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U0NzM2NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U0NzM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e47365), color-stop(100%, #e47365));
+  background-image: -moz-linear-gradient(top, #e47365, #e47365);
+  background-image: -webkit-linear-gradient(top, #e47365, #e47365);
+  background-image: linear-gradient(to bottom, #e47365, #e47365);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE47365', endColorstr='#FFE47365');
+}
+#login-social .section-body li .button.btn-facebook {
+  background: #3b5998;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQyNjRhYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0NGU4NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4264aa), color-stop(100%, #344e86));
+  background-image: -moz-linear-gradient(top, #4264aa, #344e86);
+  background-image: -webkit-linear-gradient(top, #4264aa, #344e86);
+  background-image: linear-gradient(to bottom, #4264aa, #344e86);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4264AA', endColorstr='#FF344E86');
+}
+#login-social .section-body li .button.btn-facebook:hover {
+  background: #4c70ba;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRjNzBiYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzRjNzBiYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c70ba), color-stop(100%, #4c70ba));
+  background-image: -moz-linear-gradient(top, #4c70ba, #4c70ba);
+  background-image: -webkit-linear-gradient(top, #4c70ba, #4c70ba);
+  background-image: linear-gradient(to bottom, #4c70ba, #4c70ba);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4C70BA', endColorstr='#FF4C70BA');
+}
+#login-social .section-body li .button.btn-twitter {
+  background: #55acee;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZjYjdmMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlYTFlYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6cb7f0), color-stop(100%, #3ea1ec));
+  background-image: -moz-linear-gradient(top, #6cb7f0, #3ea1ec);
+  background-image: -webkit-linear-gradient(top, #6cb7f0, #3ea1ec);
+  background-image: linear-gradient(to bottom, #6cb7f0, #3ea1ec);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF6CB7F0', endColorstr='#FF3EA1EC');
+}
+#login-social .section-body li .button.btn-twitter:hover {
+  background: #83c3f3;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgzYzNmMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzgzYzNmMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #83c3f3), color-stop(100%, #83c3f3));
+  background-image: -moz-linear-gradient(top, #83c3f3, #83c3f3);
+  background-image: -webkit-linear-gradient(top, #83c3f3, #83c3f3);
+  background-image: linear-gradient(to bottom, #83c3f3, #83c3f3);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF83C3F3', endColorstr='#FF83C3F3');
+}
+#login-social footer {
+  margin-top: 1em;
+}
+@media (min-width: 1024px) {
+  #login-social footer {
+    text-align: center;
+    line-height: 2;
+  }
+}
+#login-social footer a {
+  color: #f38291;
+}
+#login-social footer a:hover {
+  color: #ec3c54;
+}
+
+@media (max-width: 767px) {
+  #visitor-section > .section-body {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+@media (min-width: 768px) {
+  #visitor-section > .section-body {
+    display: table;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #visitor-section > .section-body p {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  #visitor-section > .section-body p {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 767px) {
+  #visitor-section > .section-body .signup {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  #visitor-section > .section-body .signup {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  #visitor-section > .section-body .signup .button {
+    white-space: nowrap;
+  }
+}
+#visitor-section #privilege {
+  padding: 4px;
+  background: #E6E6E6;
+}
+#visitor-section #privilege h2 {
+  margin-bottom: 0.5em;
+}
+#visitor-section #privilege h2 img {
+  width: 100%;
+  max-width: 464px;
+  height: auto;
+}
+#visitor-section #privilege > .section-body {
+  border: 1px solid #fff;
+}
+@media (max-width: 767px) {
+  #visitor-section #privilege > .section-body {
+    padding: 1em;
+  }
+}
+@media (min-width: 768px) {
+  #visitor-section #privilege > .section-body {
+    padding: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+  #visitor-section #privilege > .section-body ul {
+    zoom: 1;
+  }
+  #visitor-section #privilege > .section-body ul:before, #visitor-section #privilege > .section-body ul:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #visitor-section #privilege > .section-body ul > li {
+    float: left;
+    margin-left: 2%;
+    margin-bottom: 0.75em;
+    width: 32%;
+  }
+  #visitor-section #privilege > .section-body ul > li:first-child {
+    margin-left: 0 !important;
+  }
+  #visitor-section #privilege > .section-body ul > li:last-child {
+    margin-right: 0 !important;
+  }
+  #visitor-section #privilege > .section-body ul > li:nth-child(3n-2) {
+    margin-left: 0;
+    clear: both;
+  }
+  #visitor-section #privilege > .section-body ul > li .image {
+    margin-bottom: 0.25em;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  #visitor-section #privilege > .section-body li {
+    position: relative;
+    display: table;
+    width: 100%;
+  }
+  #visitor-section #privilege > .section-body li .image, #visitor-section #privilege > .section-body li .txt {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: table-cell;
+    vertical-align: top;
+  }
+  #visitor-section #privilege > .section-body li .image {
+    width: 104px;
+  }
+  #visitor-section #privilege > .section-body li .txt {
+    padding-left: 0.5em;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+#visitor-section #privilege > .section-body > footer {
+  text-align: right;
+}
+
+/* 
+====================================================================================================
+◆ サインアップ (.page-signup) ./signup/
+---------------------------------------------------------------------------------------------------- */
+#signup-form form {
+  display: block;
+}
+@media (min-width: 768px) {
+  #signup-form form {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #signup-form form {
+    width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  #signup-form form {
+    width: 86%;
+  }
+}
+#signup-form form > footer {
+  border-top: 1px dotted #737373;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #signup-form form > footer {
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+@media (min-width: 768px) {
+  #signup-form form > footer {
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #signup-form form > footer {
+    margin-right: -5%;
+    margin-left: -5%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+@media (min-width: 1024px) {
+  #signup-form form > footer {
+    margin-right: -7%;
+    margin-left: -7%;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+}
+#signup-form form > footer p {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background: #E6E6E6;
+}
+@media (max-width: 479px) {
+  #signup-form form > footer p {
+    padding: 0.5em 0.5em 0.5em 2.5em;
+    position: relative;
+  }
+  #signup-form form > footer p label {
+    display: block;
+    text-align: left;
+  }
+  #signup-form form > footer p input {
+    margin-top: -0.6em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    line-height: 1.2;
+    height: 1.2em;
+  }
+}
+#signup-form form > footer .button {
+  margin-top: 1.5em;
+}
+#signup-form form .head-category {
+  padding: 0.25em 0.5em;
+  position: relative;
+  color: #fff;
+  background: #999999;
+}
+@media (max-width: 479px) {
+  #signup-form form .head-category {
+    margin-top: 1em;
+  }
+}
+@media (min-width: 480px) {
+  #signup-form form .head-category {
+    margin-top: 1.75em;
+    margin-bottom: 1em;
+  }
+}
+#signup-form .formlist dd ul {
+  letter-spacing: -.40em;
+}
+#signup-form .formlist dd ul > li {
+  display: inline-block;
+  letter-spacing: normal;
+  margin-left: 1em;
+}
+#signup-form .formlist dd ul > li:first-child {
+  margin-left: 0 !important;
+}
+#signup-form .formlist dd ul > li:last-child {
+  margin-right: 0 !important;
+}
+#signup-form .formlist dd #user-birth-year {
+  width: 4em;
+}
+#signup-form .formlist dd #user-birth-month, #signup-form .formlist dd #user-birth-day {
+  width: 3em;
+}
+#signup-form .formlist dd .unit {
+  display: inline-block;
+  width: 1.2em;
+  vertical-align: middle;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #signup-form .extra .kome {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 768px) {
+  #signup-form .extra .kome {
+    margin-left: 14.5em;
+  }
+}
+
+#signup-completion p {
+  margin-bottom: 1em;
+}
+#signup-completion .completion-msg {
+  margin-top: 1px;
+  margin-bottom: 0.5em;
+  color: #f61d54;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+#signup-completion .txt {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+@media (max-width: 767px) {
+  #signup-completion .box-contents {
+    text-align: left;
+  }
+}
+@media (min-width: 480px) {
+  #signup-completion footer ul {
+    text-align: center;
+    letter-spacing: -.40em;
+  }
+  #signup-completion footer ul > li {
+    display: inline-block;
+    letter-spacing: normal;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  #signup-completion footer ul > li:first-child {
+    margin-left: 0 !important;
+  }
+  #signup-completion footer ul > li:last-child {
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 479px) {
+  #signup-completion footer li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #signup-completion footer li:first-child {
+    margin-top: 0;
+  }
+  #signup-completion footer li:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 479px) {
+  #signup-completion footer .button {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* 
+====================================================================================================
+◆ マイページ (.page-mypage) ./mypage/
+---------------------------------------------------------------------------------------------------- */
+/* マイページ専用サイドバー
+--------------------------------------------------*/
+@media (max-width: 1023px) {
+  #mypage-menu {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+/* ようこそ */
+#mpside-welcome .user-name {
+  margin-right: 0.5em;
+  color: #f38291;
+  font-weight: 700;
+  font-size: 200%;
+}
+#mpside-welcome ul {
+  margin-top: 1em;
+  zoom: 1;
+}
+#mpside-welcome ul:before, #mpside-welcome ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#mpside-welcome ul li {
+  width: 49%;
+}
+#mpside-welcome ul li:nth-child(odd) {
+  float: left;
+}
+#mpside-welcome ul li:nth-child(even) {
+  float: right;
+}
+@media (max-width: 479px) {
+  #mpside-welcome .button {
+    margin-bottom: 0.5em;
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+}
+
+/* マイページナビゲーション */
+@media (max-width: 1023px) {
+  #mpside-nav ul {
+    font-size: 12px;
+    font-size: 1.2rem;
+    zoom: 1;
+  }
+  #mpside-nav ul:before, #mpside-nav ul:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #mpside-nav ul > li {
+    float: left;
+    margin-left: 2%;
+    width: 32%;
+  }
+  #mpside-nav ul > li:first-child {
+    margin-left: 0 !important;
+  }
+  #mpside-nav ul > li:last-child {
+    margin-right: 0 !important;
+  }
+}
+#mpside-nav li {
+  margin-top: 1em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  #mpside-nav li {
+    display: table;
+    width: 100%;
+  }
+}
+#mpside-nav li a {
+  padding: 8px;
+  position: relative;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #999999;
+  display: block;
+  background: #F5F5F5;
+  color: #272727;
+}
+@media (max-width: 767px) {
+  #mpside-nav li a {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  #mpside-nav li a {
+    padding-left: 84px;
+    display: table-cell;
+    height: 5.5em;
+    vertical-align: middle;
+  }
+}
+#mpside-nav li a:hover {
+  color: #ef5368;
+}
+#mpside-nav li a .ico {
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+  background: #999999;
+  font-size: 32px;
+  font-size: 3.2rem;
+  -moz-transition: background-color 0.2s linear 0s;
+  -o-transition: background-color 0.2s linear 0s;
+  -webkit-transition: background-color 0.2s linear;
+  -webkit-transition-delay: 0s;
+  transition: background-color 0.2s linear 0s;
+}
+@media (max-width: 767px) {
+  #mpside-nav li a .ico {
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  #mpside-nav li a .ico {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    display: block;
+  }
+}
+#mpside-nav li a .label {
+  display: block;
+}
+@media (min-width: 768px) {
+  #mpside-nav li a .label {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+#mpside-nav li a dd {
+  margin-top: 2px;
+  line-height: 1.2;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+#mpside-nav li a:hover {
+  background: #fef6f7;
+}
+#mpside-nav li a:hover .ico {
+  background: #f38291;
+}
+
+/* マイページコンテンツ：ニュース
+--------------------------------------------------*/
+#mp-news .mp-news-entry {
+  padding-top: 1.5em;
+  border-top: 1px dotted #737373;
+}
+#mp-news .mp-news-entry:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+#mp-news .mp-news-entry .mp-news-head {
+  margin-bottom: 0.5em;
+  font-size: 125%;
+}
+#mp-news .mp-news-entry footer {
+  margin-top: 0.5em;
+}
+
+/* 
+====================================================================================================
+◆ メルマガバックナンバー (.page-magazine) ./magazine/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+◆ アンケートバックナンバー (.page-enquete) ./enquete/
+---------------------------------------------------------------------------------------------------- */
+.backnumber-list {
+  margin-bottom: 2.5em;
+  border-top: 1px dotted #272727;
+}
+.backnumber-list li {
+  padding-right: 1.11111%;
+  padding-left: 1.11111%;
+  border-bottom: 1px dotted #272727;
+}
+@media (max-width: 479px) {
+  .backnumber-list li {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+  }
+}
+@media (min-width: 480px) {
+  .backnumber-list li {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+@media (min-width: 480px) {
+  .backnumber-list dl {
+    display: table;
+    width: 100%;
+  }
+}
+@media (min-width: 480px) {
+  .backnumber-list dt, .backnumber-list dd {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+.backnumber-list dt {
+  padding-left: 2em;
+  position: relative;
+  white-space: nowrap;
+}
+@media (max-width: 479px) {
+  .backnumber-list dt {
+    margin-bottom: 0.25em;
+  }
+}
+@media (min-width: 480px) {
+  .backnumber-list dt {
+    width: 12.5em;
+  }
+}
+.backnumber-list dt:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: '';
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  color: #fff;
+  background: url(../common-img/ico-head-arrow.png) center center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.backnumber-list dt .vol {
+  display: inline-block;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .backnumber-list dt .vol {
+    margin-left: 0.5em;
+  }
+}
+@media (min-width: 768px) {
+  .backnumber-list dt .vol {
+    margin-left: 1em;
+  }
+}
+.backnumber-list a {
+  color: #272727;
+}
+.backnumber-list a:hover {
+  color: #f38291;
+}
+.backnumber-list a:link {
+  text-decoration: underline;
+}
+.backnumber-list a:hover {
+  text-decoration: none;
+}
+
+/* 
+====================================================================================================
+◆ お役立ち美容通信 (.page-news) ./news/
+---------------------------------------------------------------------------------------------------- */
+#news-list > h2 {
+  position: relative;
+}
+#news-list > footer {
+  padding-top: 3em;
+}
+
+.news-entry {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+.news-entry:first-child {
+  margin-top: 0;
+}
+.news-entry:last-child {
+  margin-bottom: 0;
+}
+.news-entry header .news-title {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  line-height: 1.5;
+}
+.news-entry header .news-date {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+  display: inline-block;
+  color: #fff;
+  background: #737373;
+}
+.news-entry footer {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px dotted #999999;
+  zoom: 1;
+}
+.news-entry footer:before, .news-entry footer:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .news-entry footer {
+    height: 100%;
+  }
+}
+.news-entry footer .news-category {
+  letter-spacing: -.40em;
+}
+@media (max-width: 767px) {
+  .news-entry footer .news-category {
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .news-entry footer .news-category {
+    float: left;
+    white-space: nowrap;
+  }
+}
+.news-entry footer .news-category > li {
+  display: inline-block;
+  letter-spacing: normal;
+  margin-left: 0.5em;
+}
+.news-entry footer .news-category > li:first-child {
+  margin-left: 0 !important;
+}
+.news-entry footer .news-category > li:last-child {
+  margin-right: 0 !important;
+}
+@media (max-width: 767px) {
+  .news-entry footer .news-category > li {
+    margin: 0.5em !important;
+  }
+  .news-entry footer .news-category > li:first-child {
+    margin-left: 0.5em !important;
+  }
+}
+.news-entry footer .news-category > li a {
+  padding-left: 1.25em;
+  padding-right: 1.5em;
+  -moz-border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  display: block;
+  position: relative;
+  color: #fff;
+  background: #f38291;
+}
+.news-entry footer .news-category > li a:after {
+  margin-top: -0.5em;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  content: '\f105';
+  font-family: FontAwesome;
+}
+.news-entry footer .news-category > li a:hover {
+  background: #f7b1ba;
+}
+@media (min-width: 768px) {
+  .news-entry footer .sns-btns {
+    float: right;
+  }
+}
+
+.news-body {
+  zoom: 1;
+}
+.news-body:before, .news-body:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.news-body .photo {
+  margin-right: 24px;
+  float: left;
+}
+@media (max-width: 767px) {
+  .news-body .photo {
+    width: 144px;
+  }
+}
+@media (min-width: 768px) {
+  .news-body .photo {
+    width: 184px;
+  }
+}
+
+.news-txt {
+  line-height: 1.75;
+}
+.news-txt .more {
+  padding-top: 0.5em;
+  text-align: right;
+}
+.news-txt .more a {
+  color: #272727;
+  text-decoration: underline;
+}
+.news-txt .more a:hover {
+  color: #ef5368;
+}
+.news-txt .more a:hover {
+  text-decoration: none;
+}
+.news-txt .more a:before {
+  margin-right: 0.4rem;
+  display: inline-block;
+  vertical-align: -4%;
+  color: #f38291;
+  font-size: 16px;
+  font-size: 1.6rem;
+  content: '\f138';
+  font-family: FontAwesome;
+}
+
+/* --- WP用サイドナビ --- */
+#news-menu a {
+  color: #272727;
+  text-decoration: underline;
+}
+#news-menu a:hover {
+  color: #ef5368;
+}
+#news-menu a:hover {
+  text-decoration: none;
+}
+#news-menu .entry-views, #news-menu .entry-date {
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+  display: block;
+  color: #fff;
+}
+#news-menu .entry-views {
+  background: #999999;
+}
+#news-menu .entry-date {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background: #737373;
+  float: left;
+}
+#news-menu .entry-title {
+  display: block;
+  clear: both;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #news-famous {
+    float: left;
+    width: 48%;
+  }
+}
+#news-famous li {
+  border-bottom: 1px dotted #737373;
+}
+#news-famous li:nth-child(1) .entry-views {
+  background: #A78E3A;
+}
+#news-famous li:nth-child(2) .entry-views {
+  background: #8F89A3;
+}
+#news-famous li:nth-child(3) .entry-views {
+  background: #9E6959;
+}
+#news-famous a {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: block;
+}
+#news-famous .rank {
+  margin-top: -8px;
+  position: relative;
+  float: left;
+  width: 32px;
+  height: 32px;
+}
+#news-famous .entry-views {
+  float: right;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #news-recent {
+    margin-top: 0;
+    float: right;
+    width: 48%;
+  }
+}
+#news-recent li {
+  border-bottom: 1px dotted #737373;
+}
+#news-recent a {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #news-category {
+    clear: both;
+  }
+}
+#news-category ul {
+  margin-top: 1em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #news-category li {
+    padding: 0.5em 0.75em;
+    display: inline-block;
+  }
+}
+#news-category li a {
+  line-height: 2;
+}
+#news-category li a:before {
+  margin-right: 0.25em;
+  display: inline-block;
+  vertical-align: -4%;
+  color: #A78E3A;
+  font-size: 16px;
+  font-size: 1.6rem;
+  content: '\f138';
+  font-family: FontAwesome;
+}
+
+/* 
+====================================================================================================
+■ 掲載ご希望の方へ (.page-maker) ./maker/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+◆ 体験者の声 (.page-report) ./report/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+◆ お問い合わせフォーム (.page-contact) ./contact/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+■ プライバシーポリシー (.page-privacy) ./privacy/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+■ 利用規約 (.page-rules) ./rules/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+■ 使い方ガイド (.page-guide) ./guide/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+■ サイトマップ (.page-sitemap) ./sitemap/
+---------------------------------------------------------------------------------------------------- */
+/* 
+====================================================================================================
+◆ コラム (.page-column) ./column/
+---------------------------------------------------------------------------------------------------- */

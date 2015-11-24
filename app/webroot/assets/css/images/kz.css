@@ -1,0 +1,7 @@
+.form-kz{
+overflow:hidden;
+}
+.form-kz form{
+float:left;
+width:200px !important;
+}

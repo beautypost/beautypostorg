@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /Item/
+Disallow: /Fbconnect
+Disallow: /pages/kakuninid

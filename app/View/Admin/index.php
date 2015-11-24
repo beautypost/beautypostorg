@@ -1,0 +1,2 @@
+
+beautypost 管理者メニュー
