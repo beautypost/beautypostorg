@@ -8,8 +8,7 @@ if(
 	define('FBDEBUG',1);
 //	define('FBDEBUG',0);
 	define('DOMAIN','http://localhost/beautypost');
-
- define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
+    define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
 
 
 }else{
@@ -114,19 +113,13 @@ define('PAGETITLE','お問い合わせ');
 define('REQUESTPAGETITLE','サービスお申込み');
 define('REQUESTPAGEDESCRIPTION','サービスお申込み');
 
-define('ERRORMESSAGEVOTE','必ず一つは投票を行ってください');
-define('WEBREQUESTSUBJECT','URL登録を受け付けました');
 define('DEFUALTSORT',' service.id DESC');
 define('PAGELIMIT',100);
 define('PAGEOFFSET',0);
 define('DEFAULTGENRE',1);
 
-//define('VOTEMAX',5);
-//define('BASICAUTH','bizran:123123@');
 define('BASICAUTH','');
 define('CONTACTSUBJECT','お問い合わせ::');
-define('MAILTO','info2@knsc.jp');
-define('MAILFROM','info@bizran.jp');
 
 define('MYPAGETITLE','マイページ');
 define('MYPAGEKEYWORDS','マイページ');
