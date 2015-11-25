@@ -10,7 +10,6 @@ if(
 	define('DOMAIN','http://localhost/beautypost');
     define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
 
-
 }else{
 	define('DOMAIN','http://beauty-post.jp');
 	define('WEBROOT','/');
