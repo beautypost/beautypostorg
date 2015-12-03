@@ -56,12 +56,13 @@ class ReviewController extends AppController {
     public function index($id){
 
         //レビュー総合
-
+        $item = $this->Item->getItemByID($id);
+        $this->set('Item',$item);
 
 
         //レビュー情報一覧
-        $this->ItemsReview->getItemsByItemID($id);
-
+        $r = $this->ItemsReview->getItemsByItemID($id);
+        $this->set('Reviews',$r);
 
     }
 

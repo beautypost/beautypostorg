@@ -226,7 +226,7 @@ function wants(id){
 <!-- review-->
 
                                         </ul>
-                                        <p class="more"><a href="./review/">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
+                                        <p class="more"><a href="<?php echo WEBROOT?>Review/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
                                     </div><!-- /.section-body -->
                                 </div><!-- /.round-thin-contents -->
                                 <footer><!-- <a href="" class="button btn-pk btn-sizeS">モニター体験レビューを詳しく見る</a> --></footer>
@@ -244,7 +244,7 @@ function wants(id){
                                     <th>満足度</th>
                                     <td class="user-rate">
                                         <div class="starrev" data-score="3">
-                                        <span>（レビュー：<a href="<?php echo WEBROOT?>/Review/List/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
+                                        <span>（レビュー：<a href="<?php echo WEBROOT?>Review/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -280,7 +280,7 @@ function wants(id){
 <?php endforeach;?>
                                         </ul>
                                     </div><!-- /.section-body -->
-                                    <p class="more"><a href="./review/">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
+                                    <p class="more"><a href="<?php echo WEBROOT?>Review/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
                                 </div><!-- /.round-thin-contents -->
                                 <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
                             </section><!-- /.review-topics -->
@@ -348,38 +348,6 @@ function wants(id){
 
 
     <script>
-    var radarChartData = {
-        labels: [ "価格", "使いやすさ", "デザイン", "性能", "継続性"],
-        datasets: [
-            {
-                fillColor: "rgba(230,220,220,0.2)",
-                strokeColor: "rgba(165,141,59,1)",
-                pointColor: "rgba(165,141,59,1)",
-                pointStrokeColor: "#fff",
-                data: [90,81,56,55,40],
-
-            }
-        ]
-    };
-
-    var radarChartData2 = {
-        labels: [ "価格", "使いやすさ", "デザイン", "性能", "継続性"],
-        datasets: [
-            {
-                label: "My First dataset",
-                fillColor: "rgba(230,220,220,0.2)",
-                strokeColor: "rgba(165,141,59,1)",
-                pointColor: "rgba(165,141,59,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#000",
-                pointHighlightStroke: "rgba(115,115,115,1)",
-                data: [50,10,15,20,40]
-            }
-        ]
-    };
-
-
-
 
     window.onload = function(){
         var ctx = document.getElementById("canvas1").getContext("2d");

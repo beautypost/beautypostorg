@@ -55,6 +55,9 @@ class Blog extends AppModel {
         $ret['comment'] = '';
         $ret['tag'] = '';
         $ret['valid'] = '';
+        $ret['img'] = '';
+        $ret['img1up'] = '';
+        $ret['entrydate'] = '';
 //        $ret['url'] = '';
     return $ret;
     }

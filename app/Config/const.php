@@ -9,6 +9,7 @@ if(
 //	define('FBDEBUG',0);
 	define('DOMAIN','http://localhost/beautypost');
     define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
+    define('UploadImagePathBLOG','/Library/WebServer/Documents/beautypost/app/webroot/images/blogs/');
 
 }else{
 	define('DOMAIN','http://beauty-post.jp');

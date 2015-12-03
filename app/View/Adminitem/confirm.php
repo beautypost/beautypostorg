@@ -100,7 +100,6 @@
                     <?php endif;?>
 
                     </div>
-
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像2</label>

@@ -39,6 +39,8 @@ class AdminblogController extends BaseController {
  * @var array
  */
 	public $uses = array('Blog');
+    public $components = array('ItemC');
+
 
 
 	public function beforeRender(){
@@ -107,6 +109,20 @@ class AdminblogController extends BaseController {
         //確認画面へ
         if($this->Blog->validates()){
         	$data = $this->Blog->data;
+
+            if (isset($_FILES['userfile']["error"])) {
+                    foreach ($_FILES['userfile']["error"] as $key => $error) {
+                            $ret = '';
+                            if ($error == UPLOAD_ERR_OK) {
+                                    $ret = $this->ItemC->uploadCheck($errormessages, $_FILES, $key,UploadImagePathBLOG);
+                                    $tmp_file_name[$key] = $ret;
+                                    $name = 'img'.$key.'up';
+                                    $data['Blog'][$name] = $ret;
+                            }
+//                            var_dump($key);
+                    }
+            }
+
 	        $this->set('data',$data);
 	    	$this->render('confirm');
         	return;
@@ -129,6 +145,8 @@ class AdminblogController extends BaseController {
         $messages = isset($this->params['data']['Blog']) ? $this->params['data']['Blog'] :null;
         $_data = (unserialize(base64_decode($messages)));
         $da = $this->Blog->setData($_data);
+        $da['img1up'] = ($da['img1up'] === 'true') ? '' : $da['img1up'];
+        $da['tag'] = ','.implode(',',$da['tag']).',';
 //        $da['valid'] = 1;
         $this->Blog->create();
         $this->Blog->save($da,array('validate'=>false));

@@ -152,7 +152,15 @@ class ItemsReview extends AppModel {
 
         $all = $this->find('all',$conditions);
 
-        return $all;
+        foreach($all as $k => $v){
+
+            $v['ItemsReview']['total'] = ($v['ItemsReview']['point1'] + $v['ItemsReview']['point2'] + $v['ItemsReview']['point3'] + $v['ItemsReview']['point4'] + $v['ItemsReview']['point5']) /5;
+            $ret[$k] = $v;
+
+        }
+
+
+        return $ret;
     }
     /**
     検索ワードを受け取ってITEM情報を取得

@@ -73,7 +73,7 @@ class ItemCComponent extends Component {
          * @param unknown_type $_FIlES
          * @return String テンポラリファイルネーム（ファイルパス付き）
          */
-        function uploadCheck(&$errormessages,$_FIlES, $count) {
+        function uploadCheck(&$errormessages,$_FIlES, $count,$uploadpath=UploadImagePath) {
                 //ファイル情報取得
                 $tmp_name = $_FILES['userfile']['tmp_name'][$count];
                 $uploadname = $_FILES['userfile']['name'][$count];
@@ -89,7 +89,7 @@ class ItemCComponent extends Component {
                 $uploadname = date("Y-m-d_H_i_s").'-'.$count.'-'.$uploadname;
 
                 //ファイルアップロード
-                if(!$this->tmp_image_uploads($tmp_name, $uploadname)){
+                if(!$this->tmp_image_uploads($tmp_name, $uploadname,$uploadpath)){
                         //アップロードファイルの削除
                         $this->Image->tmp_image_delete($uploadname);
                         array_push($errormessages, $count . '番目のファイルアップロードに失敗しました');
@@ -105,14 +105,14 @@ class ItemCComponent extends Component {
          * @param unknown_type $filename
          * @return unknown
          */
-        function tmp_image_uploads($tmp_name,$file_name){
+        function tmp_image_uploads($tmp_name,$file_name,$uploadpath){
 
-                        if(!move_uploaded_file($tmp_name, UploadImagePath.$file_name)){
-                                error_log('can not move dir='.$tmp_name."::".UploadImagePath.$file_name);
+                        if(!move_uploaded_file($tmp_name, $uploadpath.$file_name)){
+                                error_log('can not move dir='.$tmp_name."::".$uploadpath.$file_name);
                                 return false;
                         }
 
-                        chmod(UploadImagePath.$file_name,0755);
+                        chmod($uploadpath.$file_name,0755);
 
                         return true;
         }

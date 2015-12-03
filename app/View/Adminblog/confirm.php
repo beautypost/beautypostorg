@@ -16,14 +16,28 @@
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">日付 </label>
         <div class="col-sm-10">
-        <span class="confirmtext"><?php echo $data['Blog']['created']?></span>
+        <span class="confirmtext"><?php echo $data['Blog']['entrydate']?></span>
         </div>
     </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">カテゴリ</label>
-                    <div class="col-sm-10"><span class="confirmtext"><?php echo $this->Useful->selectOptionValue($GenreBlogs,$data['Blog']['tag'])?></span></div>
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">TAG</label>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $this->Useful->checkboxvalue($GenreBlogs,'Genre','title',$data['Blog']['tag'])?></span></div>
                 </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像1</label>
+                    <div class="col-sm-10">
 
+
+                    <span class="confirmtext">
+                    <?php if($data['Blog']['img1up']):?>
+                        <br>
+                    <img src="<?php echo WEBROOT.'images/blogs/'.$data['Blog']['img1up']?>" width="300"></span>
+                    <?php else:?>
+                        登録なし
+                    <?php endif;?>
+
+                    </div>
+                </div>
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">コメント </label>
         <div class="col-sm-9">
