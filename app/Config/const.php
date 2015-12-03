@@ -105,8 +105,13 @@ define("GOOGLE_SITE_NAME", 'http://beauty-post.jp');
 // require_once '../Vendor/Google/src/contrib/Google_Oauth2Service.php';
 
 
-define('PAGETITLE','お問い合わせ');
 
+define('MAILTO','yamamoto@knsc.jp');
+define('MAILFROM','info@beauty-post.jp');
+define('MAILFROMNAME','beauty-post');
+define('MakerSUBJECT','メーカーお問い合わせ');
+
+define('FpasswordSUBJECT','パスワードをお忘れの方');
 
 
 define('REQUESTPAGETITLE','サービスお申込み');

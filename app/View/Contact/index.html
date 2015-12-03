@@ -1,0 +1,140 @@
+<?php $rootpass = '../'; include($rootpass.'common/include.php'); ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>よくある質問・お問い合わせ | Beauty Post</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<?php echo headContent(); ?>
+<?php echo headContent_css('content'); ?>
+</head>
+<!-- 
+#################################################################################################### -->
+<body id="pagetop" class="page-contact">
+<?php echo gtm(); ?>
+<div class="menu-overlay">&#8203;</div>
+<div id="wrapper"><div id="wrap-inner">
+<!-- 
+====================================================================================================
+ Site Common Header                                                                    #site-header 
+==================================================================================================== -->
+<header id="site-header">
+	<?php echo headerContent(); ?>
+	<?php echo headerGnav(); ?>
+</header><!-- /#site-header -->
+<!-- 
+====================================================================================================
+ Contents                                                                                #page-area 
+==================================================================================================== -->
+<div id="page-area">
+	<div class="layout">
+		<ol id="breadcrumb" class="breadcrumb rsp-xxoo">
+			<li><a href="../">Beauty Post</a></li>
+			<li>よくある質問・お問い合わせ</li>
+		</ol><!-- /#breadcrumb -->
+		
+		<div id="main-area" class="layout-main layout-l">
+			<h2 class="head-bar ico-arrow">よくある質問・お問い合わせ</h2>
+			<section id="faq">
+				<h2 class="head-std ico-arrow">よくある質問</h2>
+				<div class="section-body">
+					<ul class="faq-list">
+						<li>
+							<dl class="faq-entry">
+								<dt class="faq-q">BeautyPostメンバーに登録したのですが、退会はできますか？</dt>
+								<dd class="faq-a">お問い合せフォームより、ご登録いただいているメールアドレスとニックネームをお知らせください。<br>退会の手続きをさせて頂きます。</dd>
+							</dl>
+						</li>
+						<li>
+							<dl class="faq-entry">
+								<dt class="faq-q">今届いている美容ニュースの配信先の変更（停止）はできますか？</dt>
+								<dd class="faq-a">ログインいただき、マイページのメールアドレス変更よりお手続き頂けます。<br>
+								停止についても同様にマイページよりお手続きください。</dd>
+							</dl>
+						</li>
+						<li>
+							<dl class="faq-entry">
+								<dt class="faq-q">モニターに応募するにはどうしたらいいですか？</dt>
+								<dd class="faq-a">モニター応募については、メンバーの方のマイページとBeauty Postメールにてお知らせしています。<br>
+								最新情報をいち早く確認されたい方はBeauty Postメールのご登録をオススメしております。</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</section><!-- /faq -->
+			
+			<section id="user-form">
+				<h2 class="head-std ico-arrow">お問い合わせ</h2>
+				<div class="section-body">
+					<form action="" class="contact-form">
+						<ul class="formlist">
+							<li class="required">
+								<dl>
+									<dt><label for="user-subject" class="inner">お問い合わせの種類</label></dt>
+									<dd>
+										<select name="user-subject" id="user-subject" required>
+											<option value="">選択してください</option>
+											<option>商品・サービスに関して</option>
+											<option>メンバー登録について</option>
+											<option>メール配信について</option>
+											<option>モニター応募について</option>
+											<option>その他</option>
+										</select>
+									</dd>
+								</dl>
+							</li>
+							<li class="required">
+								<dl>
+									<dt><label for="user-realname" class="inner">お名前</label></dt>
+									<dd><input name="user-realname" id="user-realname" type="text" required></dd>
+								</dl>
+							</li>
+							<li class="required">
+								<dl>
+									<dt><label for="user-mail" class="inner">メールアドレス</label></dt>
+									<dd><input name="user-mail" id="user-mail" type="email" required></dd>
+								</dl>
+							</li>
+							<li class="required">
+								<dl>
+									<dt><label for="user-mail-confirm" class="inner">メールアドレス（確認）</label></dt>
+									<dd><input name="user-mail-confirm" id="user-mail-confirm" type="email" required></dd>
+								</dl>
+							</li>
+							<li class="required">
+								<dl>
+									<dt><label for="user-message" class="inner">お問い合わせ内容</label></dt>
+									<dd><textarea name="user-message" id="user-message" cols="30" rows="10" required></textarea></dd>
+								</dl>
+							</li>
+						</ul><!-- /.formlist -->
+						
+						<div class="form-foot container">
+							<p>上記お問い合わせフォームよりご送信いただく、お客様の個人情報、およびご質問の内容は、当社の個人情報の取り扱いに従い、厳重に取り扱います。詳しくは「個人情報について」のページをご覧ください。<br>
+							お問い合わせフォームをご使用の際は、個人情報保護方針の内容にご了承の上で送信いただくようお願いいたします。</p>
+							<div class="form-nav">
+								<button class="button btn-vpk">送信</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section><!-- /#user-form -->
+		</div><!-- /#main-area -->
+		
+		<aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
+			<?php echo cmnSubContent(); ?>
+		</aside><!-- /#sub-area -->
+	</div>
+</div><!-- /#page-area -->
+<!-- 
+====================================================================================================
+ Site Common Footer                                                                    #site-footer 
+==================================================================================================== -->
+<?php echo footerContent(); ?>
+<!-- 
+==================================================================================================== -->
+</div></div><!-- /#wrapper>/#wrap-inner -->
+<?php echo lastContent(); ?>
+</body>
+</html>

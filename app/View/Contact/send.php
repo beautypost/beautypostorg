@@ -1,42 +1,18 @@
-            <div>
+<div id="page-area">
+    <div class="layout">
+        <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
+            <li><a href="../">Beauty Post</a></li>
+            <li>よくある質問・お問い合わせ</li>
+        </ol><!-- /#breadcrumb -->
 
-              <h1 class="kz-header">
-                <i class="menu-icon fa fa-envelope-o"></i>&nbsp;お問い合わせ
-              </h1>
-              <p>
-                  「<a href="<?php echo WEBROOT?>pages/faq">よくあるご質問</a>」でもご不明な点がある場合には、以下のお問い合わせフォームよりご連絡ください。
+        <div id="main-area" class="layout-main layout-l">
+            <h2 class="head-bar ico-arrow">お問い合わせ完了</h2>
+            <p class="mb16">この度はお問い合せいただき誠にありがとうござます。</p>
+            <p>翌営業日以内にご返答しますので、<br>今しばらくお待ちくださいますようお願いいたします。</p>
+        </div><!-- /#main-area -->
 
-              </p>
-            </div><!-- /.page-header -->   
-									<div class="widget-body">
-										<div class="widget-main">
-											<!-- #section:plugins/fuelux.wizard -->
-											<div id="fuelux-wizard" data-target="#step-container">
-												<!-- #section:plugins/fuelux.wizard.steps -->
-												<ul class="wizard-steps">
-													<li data-target="#step1">
-														<span class="step">1</span>
-														<span class="title">お問い合せ内容入力</span>
-													</li>
-
-													<li data-target="#step2">
-														<span class="step">2</span>
-														<span class="title">入力内容の確認</span>
-													</li>
-
-													<li data-target="#step3" class="active">
-														<span class="step">3</span>
-														<span class="title">メール送信</span>
-													</li>
-
-												</ul>
-
-												<!-- /section:plugins/fuelux.wizard.steps -->
-											</div>
-										<hr />
-										</div><!-- /.widget-main -->
-									</div><!-- /.widget-body -->
-											<div class="center">
-												<h3 class="green">お問い合わせいただき、ありがとうございます。</h3>
-												<p>後ほど担当者よりお問い合わせいただいた内容につきまして返信いたします。</p>
-											</div>
+        <aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
+        <?php echo $this->element('common/cmnSubContent'); ?>
+        </aside><!-- /#sub-area -->
+    </div>
+</div><!-- /#page-area -->

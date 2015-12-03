@@ -30,23 +30,26 @@ App::import('Sanitize');
  *
  * @package       app.Model
  */
-class Contact extends AppModel {
+class Maker extends AppModel {
     var $useTable = false;
-    var $name = 'Contact';
+    var $name = 'Maker';
     public $validate = array(
+        'company' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
+        'name' =>array('rule'=>array('notEmpty'),'message'=>'お名前を入力してください'),
         'email' =>array(
             array('rule'=>array('email',true),'message'=>'正しいメールアドレスを入力してください'),
             'custom'=>array('rule' => 'CheckEmail','message'=>'メールアドレス・メールアドレス（確認）には同じものをご入力ください')
             ),
-        'name' =>array('rule'=>array('notEmpty'),'message'=>'お名前を入力してください'),
-        'comment' =>array('rule'=>array('notEmpty'),'message'=>'お問い合わせ内容を入力'),
-
+        'tel' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
+        'zip1' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
+        'zip2' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
+        'message' =>array('rule'=>array('notEmpty'),'message'=>'お問い合わせ内容を入力してください'),
     );
 
     public function checkEmail(){
 
 
-      if($this->data['Contact']['email'] != $this->data['Contact']['email2']){
+      if($this->data['Maker']['email'] != $this->data['Maker']['email2']){
         return false;
       }else{
         return true;
@@ -66,24 +69,20 @@ class Contact extends AppModel {
     }
 
 	public function skel(){
-        $ret['title'] = '';
+        $ret['company'] = '';
+        $ret['group'] = '';
         $ret['name'] = '';
 		$ret['email2'] = '';
-		$ret['email'] = '';
-		$ret['comment'] = '';
+        $ret['email'] = '';
+        $ret['tel'] = '';
+        $ret['address'] = '';
+        $ret['zip1'] = '';
+        $ret['zip2'] = '';
+        $ret['website'] = '';
+		$ret['message'] = '';
 		return $ret;
 	}
 
-	public function titledata(){
-		$ret = array();
-		$ret[0] = '商品・サービスに関して';
-		$ret[1] = 'メンバー登録について';
-		$ret[2] = 'メール配信について';
-        $ret[3] = 'モニター応募について';
-        $ret[4] = 'その他';
-
-		return $ret;
-	}
 
 	public function getTitleByID($id){
 		$ret = $this->titledata();

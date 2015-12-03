@@ -113,12 +113,23 @@ class CollectionController extends AppController {
 
 		$this->Item->saveField('access',$item['Item']['access']+1);
 
+		//want情報
 		$wants = $this->Want->getItemsByItemID($id);
 		$this->set('Wants',$wants);
 
+		//レビュー情報
 		$reviews = $this->ItemsReview->getItemsByItemID($id);
 		$this->set('Reviews',$reviews);
 
+		//関連商品
+		$materials = $this->Item->getItemByInId($item['Item']['materials']);
+		$this->set('Materials',$materials);
+		//コーディネート商品
+
+		$coordinates = $this->Item->getItemByInId($item['Item']['coordinates']);
+		$this->set('Coordinates',$coordinates);
+
+		//アクセス保存
 		$this->ItemsAccess->create();
 		$item['item_id'] = $id;
 		$this->ItemsAccess->save($item);

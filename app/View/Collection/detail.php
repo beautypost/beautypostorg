@@ -78,7 +78,7 @@
                                 <a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a>
                             <?php endif;?>
                             <span class="num"><?php echo $Item['Item']['wants']?></span></div>
-                            <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo $Item['Item']['price']?></span>円</dd></dl>
+                            <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
                         </div><!-- /.item-summary -->
 <script>
 
@@ -187,12 +187,12 @@ function wants(id){
                                     <th>満足度</th>
                                     <td class="monitor-rate">
                                         <div class="starrev" data-score="3"></div>
-                                        <span>（レビュー：<a href="<?php echo WEBROOT?>review/">392件</a>）</span>
+                                        <span>（レビュー：<a href="<?php echo WEBROOT?>review/"><?php echo $Item['Item']['monitor']?>件</a>）</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>結果</th>
-                                    <td>肌水分量平均（5名）25%→38%</td>
+                                    <td><?php echo $Item['Item']['result']?></td>
                                 </tr>
                             </tbody>
                         </table><!-- /.table-std -->
@@ -244,7 +244,7 @@ function wants(id){
                                     <th>満足度</th>
                                     <td class="user-rate">
                                         <div class="starrev" data-score="3">
-                                        <span>（レビュー：<a href="<?php echo WEBROOT?>/Review/List/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['wants']?>件</a>）</span>
+                                        <span>（レビュー：<a href="<?php echo WEBROOT?>/Review/List/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -273,7 +273,7 @@ function wants(id){
                                                         <div class="starrev" data-score="3">
                                                         </dd>
                                                     </dl>
-                                                    <p class="author">（<?php echo $v['ItemsReview']['created']?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
+                                                    <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsReview']['created']))?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
                                                 </a>
                                             </li>
 <!-- review-->
@@ -292,16 +292,19 @@ function wants(id){
                     <h2 class="head-std ico-arrow">関連商品</h2>
                     <ul class="collection-gallery">
                     <!-- gallary-->
-                        <li><a href=""><!--
+<?php foreach($Materials as $k => $v):?>
+                        <li><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $v['Item']['id']?>"><!--
                              --><div class="item-thumbnail">
                                         <div class="imgframe">
                                             <div class="inner">
-                                                <img src="http://placehold.jp/e0b8dd/ffffff/800x600.png" alt="" class="over-fade">
+                                                <img src="<?php echo $v['Item']['img1']?>" alt="" class="over-fade">
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="item-name">商品名商品名商品名商品名あ</p><!--
-                             --></a></li>
+                                    <p class="item-name"><?php echo $v['Item']['title']?></p><!--
+                             --></a>
+                        </li>
+<?php endforeach;?>
                     <!-- gallary-->
                     </ul><!-- /.collection-gallery -->
                     <footer>
@@ -313,20 +316,20 @@ function wants(id){
                     <h2 class="head-std ico-arrow">この商品におすすめコーディネート商品</h2>
                     <ul class="collection-gallery">
 
-
+<?php foreach($Coordinates as $k => $v):?>
                     <!-- gallary-->
-                        <li><a href=""><!--
+                        <li><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $v['Item']['id']?>"><!--
                              --><div class="item-thumbnail">
                                         <div class="imgframe">
                                             <div class="inner">
-                                                <img src="http://placehold.jp/e0b8dd/ffffff/800x600.png" alt="" class="over-fade">
+                                                <img src="<?php echo $v['Item']['img1']?>" alt="" class="over-fade">
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="item-name">商品名商品名商品名商品名あ</p><!--
+                                    <p class="item-name"><?php echo $v['Item']['title']?></p><!--
                              --></a></li>
                     <!-- gallary-->
-
+<?php endforeach;?>
 
                     </ul><!-- /.collection-gallery -->
                     <footer>

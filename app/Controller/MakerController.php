@@ -28,61 +28,62 @@ App::uses('AppController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class ContactController extends AppController {
+class MakerController extends AppController {
 
-	public $uses = array('Contact');
+	public $uses = array('Maker');
 	public $components = array('MailC','ContactC');
-
 
     public function beforeFilter() {
         parent::beforeFilter();
         $this->set('cssname','content');
-        $this->set('bodyclass','page-contact');
+        $this->set('bodyclass','page-maker');
         //検索box用マスタ
 
     }
 
-	/**
-	お問い合わせTOP
-	**/
-	public function index() {
+    public function index(){}
+
+    /**
+    お問い合わせTOP
+    **/
+    public function input() {
         $this->set('errormessages','');
-        $this->set('title',$this->Contact->titledata());
+//        $this->set('title',$this->Maker->titledata());
 
          //DATAが入力されていなかった場合(初めて画面が表示された場合)
-	    if (!$this->request->is('post')) {
-	    	$data['Contact'] = $this->Contact->skel();
-	    	$this->set('data',$data);
-	    	return;
-	    }
+        if (!$this->request->is('post')) {
+            $data['Maker'] = $this->Maker->skel();
+            $this->set('data',$data);
+            return;
+        }
 
         $back = 1;
         if(isset($this->params['data']['back'])){
-            $this->request->data = (unserialize(base64_decode($this->params['data']['Contact'])));
+            $this->request->data = (unserialize(base64_decode($this->params['data']['Maker'])));
             $back =0;
         }
 
-        $this->Contact->set($this->request->data);
+        $this->Maker->set($this->request->data);
 //        $this->JobHistory->setAlldata($this->request->data['history'],$this->Admin);
         $this->set('data','');
         //確認画面へ
-        if($this->Contact->validates() && ($back == 1)){
-            $data = $this->Contact->data;
+        if($this->Maker->validates() && ($back == 1)){
+            $data = $this->Maker->data;
 
             $this->set('data',$data);
             $this->render('confirm');
             return;
 
         }else{
-            $errors = $this->Contact->invalidFields();
+            $errors = $this->Maker->invalidFields();
             $this->set('validationErrors',$errors);
 //            var_dump($errors);
 //            $Item['Item'] = $Item;
 //            var_dump($this->Item->data);
-            $this->set('data',$this->Contact->data);
+            $this->set('data',$this->Maker->data);
         }
 
-	}
+    }
 
 
 
@@ -90,11 +91,11 @@ class ContactController extends AppController {
 	お問い合わせ送信
 	**/
 	public function send() {
-		$messages = isset($this->params['data']['Contact']) ? $this->params['data']['Contact'] :null;
-		$Contact = (unserialize(base64_decode($messages)));
-		$message = $this->ContactC->setMessage($Contact,$this->Contact);
-		$this->MailC->mailsend(MAILTO,CONTACTSUBJECT,$message);
-		$this->MailC->mailsend($Contact['email'],CONTACTSUBJECT,$message);
+		$messages = isset($this->params['data']['Maker']) ? $this->params['data']['Maker'] :null;
+		$Maker = (unserialize(base64_decode($messages)));
+		$message = $this->ContactC->setMessageMaker($Maker,$this->Maker);
+		$this->MailC->mailsend(MAILTO,MakerSUBJECT,$message);
+		$this->MailC->mailsend($Maker['email'],MakerSUBJECT,$message);
 
 	}
 

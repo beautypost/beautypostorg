@@ -58,9 +58,7 @@ class RegistController extends AppController {
 
         //DATAが入力されていなかった場合(初めて画面が表示された場合)
         if (!$this->request->is('post')) {
-            $_data = $this->Snsuser->skel();
-
-            $data['Snsuser'] = $_data;
+            $data['Snsuser'] = $this->Snsuser->skel();
             $this->set('data',$data);
             return;
         }

@@ -39,9 +39,9 @@ class UserCComponent extends Component {
 
     public function getUserData(){//トップページ
 //        $facebook = $this->createFacebook(); //【2】アプリに接続
-        $id = $this->Session->read(SESSIONNAME);//【3】facebookのデータ
+//        $id = $this->Session->read(SESSIONNAME);//【3】facebookのデータ
 //var_dump($id);
-//        $id ='5604ab8c39b3e';
+        $id ='5604ab8c39b3e';
         $this->loadModel('Snsuser');
         $ret = $this->Snsuser->getItemByBeautyid($id);
 //        var_dump($ret);

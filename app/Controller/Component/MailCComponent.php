@@ -19,9 +19,6 @@ function mailsend($mailto,$subject,$messages){
 
 
 	if(mb_send_mail($mailto,$subject,$messages,$mailfrom)){
-		$this->InfoC->setErrorLog('ContactMailsend','MailSend true'.$mailto);				
-	}else{
-		$this->InfoC->setErrorLog('ContactMailsend','MailSend False'.$mailto);
 	}
 
 }
@@ -86,15 +83,15 @@ public function createSubjectAndBodyByEx($customer,$ExpireCode){
     $r = array();
     switch($ExpireCode){
         case 6:
-        case 15:        
+        case 15:
             $r['subject'] = twoweeksAnd5Days;
             $r['body'] = $this->twoweeksAnd5Days($customer);
             break;
         case 31:
-        case 61:        
+        case 61:
             $r['subject'] = expire1monthAnd2month;
             $r['body'] = $this->expire1monthAnd2month($customer);
-            break;            
+            break;
         case 0:
             $r['subject'] = expired;
             $r['body'] = $this->expired($customer);
@@ -343,7 +340,7 @@ $body ="
 自動延長期間中でも会員継続をして頂いた方にはもれなく、
 継続年数によって変わる「ベッキー♪パンジーひろばオリジナルグッズ（非売品）」をプレゼントさせていただきます。
 楽しみに待っていてくださいね！
- 
+
 既にお振り込みをされた方で、本状と行き違いでお振り込みをされた方には、大変申し訳ありません。
 
 継続をご希望される方は、大変お手数ですが、下記お支払方法をご確認ください。

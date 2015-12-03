@@ -69,6 +69,7 @@ class QuestionController extends AppController {
         $data = array();
         $this->setRequestValue($data,'question_value_id');
         $this->setRequestValue($data,'question_id');
+        var_dump($data);
         $session_id = session_id();
         $ret = $this->QuestionLog->getItemBySessionAndID($data['question_id'],$session_id);
 
@@ -93,8 +94,7 @@ class QuestionController extends AppController {
         $val = $this->Question->getItemByID($data['question_id']);
         $val['Question']['total']++;
         $this->Question->save($val);
-
-        $this->Detail($question['Question']['id']);
+        $this->Detail($val['Question']['id']);
         $this->render('detail');
         return;
 

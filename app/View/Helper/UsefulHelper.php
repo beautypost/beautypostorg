@@ -291,5 +291,11 @@ class UsefulHelper extends AppHelper {
 		}
 	}
 
+    public function formartTime($time){
+        echo $time;
+        echo date("Y.m.d",strtotime($time));
+    }
+
+
 
 }

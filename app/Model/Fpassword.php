@@ -29,27 +29,15 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
-class Snsuser extends AppModel {
+class Fpassword extends AppModel {
 
-    public $name = 'Snsuser';
+    public $name = 'fpassword';
 
     public $validate = array(
-        'email' =>array(
-            array('rule'=>array('email',true),'message'=>'正しいメールアドレスを入力してください'),
-            'custom'=>array('rule' => 'CheckEmail','message'=>'すでに使用されているメールアドレスです')
-            ),
-        'password' =>array(
-            'custom'=>array('rule' => 'checkPassword','message'=>'パスワードは半角英数字で入力し、パスワード・パスワード(確認)には同じものを入力してください')
-            ),
-        'username' =>array(
-            array('rule'=>array('notEmpty',true),'message'=>'ニックネームを入力してください'),
-            'custom'=>array('rule' => 'CheckUserName','message'=>'すでに使用されているニックネームです。')
-            ),
+        'email' =>array('rule'=>array('notEmpty'),'message'=>'肌質を選択してください'),
         'year' =>array(
             'custom'=>array('rule' => 'checkDate','message'=>'生年月日を正しく選択してください')
             ),
-        'pref' =>array('rule'=>array('notEmpty'),'message'=>'住んでいるエリアを選択してください'),
-        'skin' =>array('rule'=>array('notEmpty'),'message'=>'肌質を選択してください'),
     );
 
 
@@ -57,10 +45,10 @@ class Snsuser extends AppModel {
 
       // 数字のみ許可
       $pattern = '/^[0-9a-zA-Z]+$/';
-      $p2 = preg_match($pattern, $this->data['Snsuser']['password']);
-      $p1 = preg_match($pattern, $this->data['Snsuser']['password2']);
+      $p2 = preg_match($pattern, $this->data['Fpassword']['password']);
+      $p1 = preg_match($pattern, $this->data['Fpassword']['password2']);
 
-      if($this->data['Snsuser']['password'] != $this->data['Snsuser']['password2']){
+      if($this->data['Fpassword']['password'] != $this->data['Fpassword']['password2']){
         return false;
       }
 
@@ -78,9 +66,9 @@ class Snsuser extends AppModel {
         }
 
         if(checkdate(
-        $this->data['Snsuser']['month'],
-        $this->data['Snsuser']['day'],
-        $this->data['Snsuser']['year']
+        $this->data['Fpassword']['month'],
+        $this->data['Fpassword']['day'],
+        $this->data['Fpassword']['year']
         )){
             return true;
         }
@@ -91,9 +79,9 @@ class Snsuser extends AppModel {
 
       // 数字のみ許可
       $pattern = '/^[0-9]+$/';
-      $tel1 = preg_match($pattern, $this->data['Snsuser']['year']);
-      $tel2 = preg_match($pattern, $this->data['Snsuser']['month']);
-      $tel3 = preg_match($pattern, $this->data['Snsuser']['day']);
+      $tel1 = preg_match($pattern, $this->data['Fpassword']['year']);
+      $tel2 = preg_match($pattern, $this->data['Fpassword']['month']);
+      $tel3 = preg_match($pattern, $this->data['Fpassword']['day']);
       // var_dump($tel1.$tel2.$tel3);
       if($tel1 == 1 && $tel2 == 1 && $tel3 == 1){
 
@@ -123,7 +111,15 @@ class Snsuser extends AppModel {
         }
    }
 
+   public function setKey($user){
 
+    $pw['beautyid'] = $user['Snsuser']['beautyid'];
+    $pw['onetimekey'] = date("YmdHis").$user['Snsuser']['beautyid'];
+
+    $this->create();
+    $this->save($pw);
+    return $pw['onetimekey'];
+   }
 
 
     public function setData($Item){
@@ -170,16 +166,6 @@ class Snsuser extends AppModel {
         }else{
             return false;
         }
-    }
-
-    public function getUserByMailAndBirth($email,$year,$month,$day){
-        $con['conditions'] = array(
-            'email'=>$email,
-            'year'=>$year,
-            'month'=>$month,
-            'day'=>$day
-            );
-        return $this->find('first',$con);
     }
 
 
@@ -257,15 +243,15 @@ class Snsuser extends AppModel {
             return $data['beautyid'];
         }
 
-        public function getItemBySNSid($itemID,$sns){
-            if(!$itemID){return;}
+        public function getBeautyidByKey($key){
+
             $conditions['conditions'] = array(
-                                'sns_id'=>$itemID,
-                                'sns'=>$sns
+                                'onetimekey'=>$key,
+
 //                                'valid'=>1,
                                 );
             $all = $this->find('first',$conditions);
-            return $all;
+            return $all['Fpassword']['beautyid'];
         }
 
 
@@ -282,14 +268,7 @@ class Snsuser extends AppModel {
         }
 
 
-        public function setPassword($id,$password){
-
-            $this->id = $id;
-            $this->saveField('password',$password);
-
-        }
-
-    public function getItemByInId($ids){
+    function getItemByInId($ids){
         $all = explode(',',$ids);
         $conditions = array(
                             'id' => $all,
