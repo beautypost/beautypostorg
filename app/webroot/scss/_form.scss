@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@mixin formset {
+
+input,select,textarea {
+	@include box-sizing(border-box); width:100%;
+	@include mqlt($bpL) { @include fz(17); }
+	@include mqmt($bpL) { @include fz(15); }
+}
+input[type=text] {
+	&.formparts-sizeZip { width:4em; }
+}
+input[type=checkbox] { margin:0 0.25em 2px; padding:0; position:relative; vertical-align:middle; width:auto; }
+input[type=radio] { margin:0 0.25em 2px; position:relative; vertical-align:middle; width:auto; }
+input[type=submit] { padding:5px 10px; }
+textarea { vertical-align:top; }
+option { padding-right:1em; }
+
+.formparts-mv { @include container(1em); }
+
+}
+
+// -------------------------------------------------------------------------------------------------
+@mixin formset_L {
+
+
+
+}
+// -------------------------------------------------------------------------------------------------
+@mixin formset_M {
+
+
+
+}
+// -------------------------------------------------------------------------------------------------
+@mixin formset_S {
+
+
+
+}

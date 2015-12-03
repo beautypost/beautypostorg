@@ -27,6 +27,8 @@
 
 .box-contents .box-head {
   line-height: 3.2rem;
+  padding-top: 0;
+  padding-bottom: 0;
   font-size: 16px;
   font-size: 1.6rem;
 }

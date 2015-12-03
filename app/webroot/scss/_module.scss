@@ -1,0 +1,639 @@
+@charset "utf-8";
+// =================================================================================================
+// ■ テキストカラー
+// -------------------------------------------------------------------------------------------------
+	/* --- module:テキストカラー --- */
+	.txt-c-vpk { color:$c-vpk; }
+	
+// =================================================================================================
+// ■ CSSアニメーション強制再描画
+// -------------------------------------------------------------------------------------------------
+	/* --- module:CSSアニメーション強制再描画 --- */
+	.redraw { -webkit-animation:redraw 1s infinite; -ms-animation:redraw 1s infinite; }
+	@-webkit-keyframes redraw { from { min-width:1px; } to { min-width:2px; } }
+	@keyframes redraw { from { min-width:1px; } to { min-width:2px; } }
+	
+// =================================================================================================
+// ■ 独自リストスタイル
+// -------------------------------------------------------------------------------------------------
+	/* --- module:独自リストスタイル --- */
+	p.kome { @include liststyle("※"); } ul,ol { &.kome>li { @include liststyle("※"); } }
+	p.ast  { @include liststyle("＊"); } ul,ol { &.ast>li  { @include liststyle("＊"); } }
+	p.dot  { @include liststyle("・"); }
+	ul,ol { &.dot { list-style-type:disc; &>li { margin-left:1.5em; } } }
+	ul,ol { &.num { list-style-type:decimal; &>li { margin-left:2em; } } }
+	ul,ol { &.alp { list-style-type:lower-latin; &>li { margin-left:2em; } } }
+	
+// =================================================================================================
+// ■ CSSボタン
+// -------------------------------------------------------------------------------------------------
+	/* ---CSSボタン--- */
+	.button {
+		padding:0.5em 2em;
+		border:none; @include border-radius(5px);
+		display:inline-block; position:relative;
+		overflow:hidden;
+		cursor:pointer;
+		color:#fff;
+		@include grad($c-gy,$c-gy-dk);
+		&:hover { background:darken($c-gy,20%); }
+		&.btn-block { @include ps(0); display:block; text-align:center; }
+		&.btn-sizeS { padding:0.4em 1.5em; }
+		&.btn-sizeM { padding:0.5em 2.5em; font-size:150%; }
+		&.btn-rich-vpk {
+			color:#fff;
+			@include background-image(url(../common-img/stripe.png),linear-gradient(#fa7a9a,#c60f3b));
+			@include background-size(12px,auto);
+			@include box-shadow(-3px -3px 0 0 #c4123f inset);
+			@include text-shadow(1px 2px 1px #c4123f);
+			&:hover {
+				@include background-image(url(../common-img/stripe.png),linear-gradient( lighten(#fa7a9a,5%),lighten(#c60f3b,15%) ) );
+				@include background-size(12px,auto);
+				@include box-shadow(-1px -1px 0 0 #c4123f inset);
+				@include text-shadow(0 1px 1px lighten(#c4123f,10%));
+			}
+		}
+		&.btn-rich-pk {
+			color:#fff;
+			border:2px solid darken($c-pk,15%);
+			@include background-image(url(../common-img/stripe.png),linear-gradient(#F35673,#EF4260));
+			@include background-size(12px,auto);
+			@include text-shadow(1px 2px 1px #c4123f);
+			&:hover {
+				border-color:$c-pk;
+				@include background-image(url(../common-img/stripe.png),linear-gradient( lighten(#F35673,10%),lighten(#F35673,10%) ) );
+				@include background-size(12px,auto);
+				@include text-shadow(0 1px 1px lighten(#c4123f,10%));
+			}
+		}
+		&.btn-vpk {
+			color:#fff;
+			@include background-image(url(../common-img/stripe.png),linear-gradient(#fa7a9a,#c60f3b));
+			@include background-size(18px,auto);
+			@include text-shadow(1px 2px 1px #c4123f);
+			&:hover {
+				@include background-image(url(../common-img/stripe.png),linear-gradient( lighten(#fa7a9a,5%),lighten(#c60f3b,15%) ) );
+				@include background-size(18px,auto);
+				@include text-shadow(0 1px 1px lighten(#c4123f,10%));
+			}
+		}
+		&.btn-pk {
+			color:#fff;
+			@include grad(#F35673,#EF4260);
+			&:hover { background:lighten(#F35673,10%); }
+		}
+		&.btn-gd {
+			color:#fff;
+			@include grad(#ad9644,#9d8432);
+			&:hover { background:lighten(#9d8432,10%); }
+		}
+		&.btn-nb {
+			color:#fff;
+			@include grad(#7b768a,#676277);
+			&:hover { background:lighten(#7b768a,10%); }
+		}
+		.subtxt { display:block; font-size:60%; text-align:center; }
+	}
+	
+	.btn-want {
+		@include mqmt($bpS) {
+			margin-top:2em;
+			#collection-list & { margin-top:0; }
+		}
+		border:none;
+		@include border-radius(5px);
+		overflow:hidden;
+		display:table;
+		@include mqlt($bpS) { margin-bottom:0.8rem; width:100%; }
+		@include mq($bpS,$bpM) { margin-left:238 / 440 * -100%;}
+		@include mqmt($bpS) { float:left; }
+		color:#fff;
+		.num,a { @include pv(0.5em); display:table-cell; text-align:center; }
+		a {
+			@include mqlt($bpM) { @include ps(1.5em); }
+			@include mqmt($bpM) { @include ps(2em); }
+			border-right:1px solid darken(#3EB6B4,15%);
+			color:#fff;
+			@include grad(#3EB6B4,darken(#3EB6B4,10%));
+			letter-spacing:2px;
+			&:hover {
+				background:lighten(#3EB6B4,10%);;
+			}
+		}
+		.num {
+			@include ps(1em);
+			position:relative;
+			background:darken(#3EB6B4,10%);
+			border-left:1px solid #3EB6B4;
+			&:after {
+				margin-top:-8px;
+				border:transparent 8px solid;
+				border-right-color:darken(#3EB6B4,10%);
+				@include posa(50%,null,null,-16px);
+				display:block;
+				content:'';
+				@include wh(0);
+			}
+		}
+	}
+	
+// =================================================================================================
+// ■ 基本テーブル
+// -------------------------------------------------------------------------------------------------
+	/* ---基本テーブル--- */
+	.table-std {
+		width:100%;
+		tbody {
+			th,td { padding:10px 14px; border:1px solid lighten($c-gy-dk,15%); }
+			th { background:$c-gy; font-weight:400; text-align:left; }
+			td { background:$c-gy-lt; }
+		}
+	}
+	
+	.table-transparent {
+		width:100%;
+		tbody {
+			th { text-align:left; }
+		}
+	}
+	
+// =================================================================================================
+// ■ フォーム用擬似テーブル
+// -------------------------------------------------------------------------------------------------
+	/* ---フォーム用擬似テーブル--- */
+	.formlist {
+		@include formset();
+		li {
+			@include ms(0.5em);
+			@include mqlt($bpS) { @include mv(0.5em); }
+			@include mqmt($bpS) { @include mv(1em); }
+			dl {
+				@include mqmt($bpS) { display:table; width:100%; }
+			}
+			&.wide dl {
+				@include mq($bpS,$bpM) { display:block; width:auto; }
+			}
+			dt,dd {
+				@include mqmt($bpS) { display:table-cell; }
+			}
+			&.wide {
+				dt,dd { @include mq($bpS,$bpM) { display:block; } }
+			}
+			dt {
+				@include mqmt($bpS) { padding-right:1em; width:14em; }
+				font-weight:700;
+				.inner { display:inline-block; width:100%; position:relative; }
+			}
+			&.required dt>.inner {
+				&:after {
+					margin-top:-0.75em;
+					@include posa(50%,0);
+					content:'必須';
+					width:3em; line-height:1.5;
+					color:#fff;
+					background:$c-vpk;
+					text-align:center;
+					@include mqlt($bpL) { @include fz(12); }
+					@include mqmt($bpL) { @include fz(10); }
+				}
+			}
+			&.optional dt>.inner {
+				&:after {
+					margin-top:-0.75em;
+					@include posa(50%,0);
+					content:'任意';
+					width:3em; line-height:1.5;
+					color:#fff;
+					background:$c-gy-dk;
+					text-align:center;
+					@include mqlt($bpL) { @include fz(12); }
+					@include mqmt($bpL) { @include fz(10); }
+				}
+			}
+		}
+	}
+	
+// =================================================================================================
+// ■ パンくずリスト
+// -------------------------------------------------------------------------------------------------
+	/* ---パンくずリスト--- */
+	.breadcrumb {
+		margin-bottom:1.6rem;
+		position:relative; width:100%; overflow:hidden; white-space:nowrap;
+		@include inlineblockWrap() {
+			@include fz(13); line-height:2.4rem; height:2.4rem; white-space:nowrap;
+			&:not(:first-child) { &:before { @include ms(0.6rem); color:$c-gy-dk; @include fa-angle-double-right(); } }
+		}
+		a {
+			@include link-colors($c-txt,darken($c-pk,10%));
+			@include ulLink();
+		}
+	}
+	
+// =================================================================================================
+// ■ ページタイトル
+// -------------------------------------------------------------------------------------------------
+	/* ---ページタイトル--- */
+	.pagetitle {
+		margin-bottom:1.5em;
+		border:4px solid #c8c7c7; @include border-radius(10px);
+		overflow:hidden;
+		background:$c-gy;
+	}
+	
+// =================================================================================================
+// ■ ページネーション
+// -------------------------------------------------------------------------------------------------
+	/* ---ページネーション--- */
+	.pagination {
+		text-align:center;
+		li {
+			display:inline-block;
+			@include mqlt($bpS) {
+				line-height:4rem; @include fz(12); font-weight:700;
+				&.sp-hide { display:none; }
+			}
+			@include mqmt($bpS) { line-height:2.4rem; }
+			a { 
+				padding:0 10px;
+				@include link-colors($c-txt,$c-pk);
+				display:block;
+				&:hover { text-decoration:none; }
+			}
+		}
+		ul {
+			@include mqlt($bpS) { @include cf(); }
+		}
+		ul>li {
+			>a { background:$c-gy; }
+			&.nav-prev {
+				@include mqlt($bpS) { float:left; }
+				a:before { @include ms(0.25em); content:'<'; }
+			}
+			&.nav-next {
+				@include mqlt($bpS) { float:right; }
+				a:after { @include ms(0.25em); content:'>'; }
+			}
+		}
+		ol>li {
+			>a { text-decoration:underline; }
+			&.nav-now {
+				color:#fff; background:$c-pk; text-decoration:none;
+				padding:0 10px;
+			}
+			&.ell {
+				padding:0 10px;
+			}
+		}
+		.nav-back {
+			@include ms(1em);
+			a { @include ps(1.5em); }
+		}
+	}
+	
+// =================================================================================================
+// ■ ヘッダー
+// -------------------------------------------------------------------------------------------------
+	/* ---ヘッダー：バータイプ--- */
+	@mixin head-bar {
+		// 基本設定
+		// --------
+		@include mqlt($bpL) { margin-bottom:1.6rem; }
+		@include mqmt($bpL) { margin-bottom:2rem; }
+		padding:0.7rem 0.5em 0.6rem;
+		position:relative;
+		@include border-radius(0.5rem);
+		@include stripe-bk();
+		@include fz(18); font-weight:400;
+		
+		// ヘッドマーク設定
+		// ----------------
+		&:before {
+			margin-left:0.8rem;
+			@include border-radius(50%);
+			@include leftCenterIcon();
+			visibility:hidden; // アイコン無しの場合は非表示状態に
+			color:$c-txt; background:#fff;
+			content:'';
+			@include fz(24);
+		}
+		
+		// 各種ヘッドアイコン設定
+		// ----------------------
+		&.ico-arrow { // 矢印アイコン
+			padding-left:4rem;
+			&:before {
+				visibility:visible;
+				background:url(../common-img/ico-bar-arrow.png) center center no-repeat;
+				@include background-size(cover);
+			}
+		}
+		&.ico-search { // ルーペアイコン
+			padding-left:4rem;
+			&:before {
+				visibility:visible;
+				background:url(../common-img/ico-bar-search.png) center center no-repeat;
+				@include background-size(cover);
+			}
+		}
+	}
+	.head-bar { @include head-bar(); }
+	
+	/* ---ヘッダー：下線タイプ--- */
+	.head-std {
+		margin-bottom:1em; padding:0.5em 0 0.5em 2em;
+		border-bottom:1px dotted $c-txt;
+		position:relative;
+		@include fz(20); font-weight:400;
+		&:before {
+			@include posa(0.5em,null,null,0);
+			display:block; content:'';
+			@include border-radius(50%);
+			@include wh(1.5em,lh);
+			color:#fff; background:$c-txt;
+			text-align:center;
+		}
+		&.head-sizeS {
+			@include mqlt($bpL) { @include fz(16); font-weight:700; }
+			@include mqmt($bpL) { @include fz(14); font-weight:700; }
+		}
+		
+		// 各種アイコンを追加
+		&.ico-check {
+			&:before { @include fa-check(); }
+		}
+		&.ico-arrow {
+			&:before {
+				background:url(../common-img/ico-head-arrow.png) center center no-repeat;
+				@include background-size(cover);
+			}
+		}
+		&.ico-search {
+			&:before {
+				background:url(../common-img/ico-head-search.png) center center no-repeat;
+				@include background-size(cover);
+			}
+		}
+		.subtitle { @include fz(14); }
+	}
+	
+// =================================================================================================
+// ■ システムメッセージ
+// -------------------------------------------------------------------------------------------------
+	/* ---システムメッセージ表示セクション--- */
+	.error-msg {
+		padding:1em; border:1px solid $c-vpk;
+		color:$c-vpk; background:rgba($c-pk,0.2);
+		font-weight:700;
+	}
+	
+	.system-msg {
+		padding:1em; border:1px solid $c-vpk;
+		color:$c-vpk; background:rgba($c-pk,0.2);
+		font-weight:700;
+	}
+	
+// =================================================================================================
+// ■ 画像フレーム
+// -------------------------------------------------------------------------------------------------
+	/* ---画像フレーム--- */
+	.imgframe {
+		padding:75% 0 0;
+		position:relative;
+		border:1px solid $c-gy-dk;
+		display:block;
+		width:100%; height:100%;
+		background:#ffffff;
+		@include box-sizing(border-box);
+		>.inner {
+			@include posa(3px,3px,3px,3px);
+			display:block;
+			vertical-align:middle;
+			text-align:center;
+			overflow:hidden;
+		}
+		img {
+			top:-1px; position:relative;
+			width:auto; height:auto;
+			max-width:100%; max-height:100%;
+			vertical-align:middle;
+		}
+	}
+	
+	/* --- module:フォトフレーム --- */
+	.photo-frame {
+		@include photoFrame(basic,#e0e0e0,true);
+		&.pf-borderless { @include photoFrame(borderless,#e0e0e0,false); }
+		&.pf-rich { @include photoFrame(rich,#e0e0e0,false); }
+	}
+	a.photo#{$-_}frame {
+		text-decoration:none;
+		&:hover { text-decoration:none; }
+	}
+	
+// =================================================================================================
+// ■ 動画フレーム
+// -------------------------------------------------------------------------------------------------
+	/* ---動画フレーム--- */
+	.youtube {
+		padding:3px; border:1px solid $c-gy-dk;
+		>.inner {
+			padding-top:56.25%; position:relative; width:100%;
+			iframe { @include posa(0,null,null,0); width:100% !important; height:100% !important; }
+		}
+	}
+
+// =================================================================================================
+// ■ シャドウボックス
+// -------------------------------------------------------------------------------------------------
+	/* --- module:シャドウボックス --- */
+	.shadow-box {
+		@include box-shadow(0 3px 5px 0 rgba(#000,0.05));
+		position:relative;
+		// 基本シャドウを使わない
+		&.sbox#{$-_}flat { @include box-shadow(none); }
+		
+		// 下側左右コーナーにシャドウ追加
+		&.sbox#{$-_}corner {
+			&:before,&:after {
+				display:block;
+				position:absolute;
+				content:'';
+				z-index:-1;
+				bottom:8px;
+				width:47%; max-width:300px; height:10px;
+				@include box-shadow(0 10px 12px rgba(#000,0.5));
+			}
+			&:before { left:8px; @include transform-origin(left,bottom); @include rotate(-4deg); }
+			&:after{ right:8px; @include transform-origin(right,bottom); @include rotate(4deg); }
+		}
+		
+		// 下側センターにシャドウ追加
+		&.sbox#{$-_}center {
+			&:before {
+				@include border-radius(40%,15px);
+				display:block;
+				content:'';
+				z-index:-1;
+				position:absolute;
+				top:30%; bottom:8px; left:10%; right:10%;
+				@include box-shadow(0 10px 12px rgba(#000,0.5));
+			}
+		}
+		
+		// サイド上部にシャドウ追加
+		&.sbox#{$-_}sidetop {
+			&:before,&:after {
+				display:block;
+				position:absolute;
+				top:8px;
+				content:'';
+				z-index:-1;
+				height:75%; max-height:200px; width:10px;
+			}
+			&:before {
+				left:8px;
+				@include transform-origin(left,top); @include rotate(-4deg);
+				@include box-shadow(-10px 0 12px rgba(#000,0.5));
+			}
+			&:after {
+				right:8px;
+				@include transform-origin(right,top); @include rotate(4deg);
+				@include box-shadow(10px 0 12px rgba(#000,0.5));
+			}
+		}
+		
+		// サイド下部にシャドウ追加
+		&.sbox#{$-_}sidebtm {
+			&:before,&:after {
+				display:block;
+				position:absolute;
+				bottom:8px;
+				content:'';
+				z-index:-1;
+				height:75%; max-height:200px; width:10px;
+			}
+			&:before {
+				left:8px;
+				@include transform-origin(left,bottom); @include rotate(4deg);
+				@include box-shadow(-10px 0 12px rgba(#000,0.5));
+			}
+			&:after {
+				right:8px;
+				@include transform-origin(right,bottom); @include rotate(-4deg);
+				@include box-shadow(10px 0 12px rgba(#000,0.5));
+			}
+		}
+	}
+
+
+// =================================================================================================
+// ■ 定型コンテンツ：box-contents
+// -------------------------------------------------------------------------------------------------
+	/* ---ボックス型コンテンツ--- */
+	.box-contents {
+		@include container(gz(1));
+		@include border-radius(0.5rem);
+		position:relative; background:$c-gy;
+		.box-head {
+			@include head-bar();
+			margin-bottom:0 !important;
+			@include ps(20 / 720 * 100%);
+			@include border-radius(0.5rem 0.5rem 0 0);
+		}
+		.parts-ico {
+			@include border-radius(50%);
+			@include posa(-14px,(18 / 720 * 100%));
+			@include wh(60px,lh);
+			@include box-shadow(2px 2px 2px 0 rgba($c_bk_dk,0.3));
+			overflow:hidden;
+			img { @include wh(60px); }
+		}
+		.box-contents-body { padding:(20 / 720 * 100%); }
+	}
+	
+// =================================================================================================
+// ■ 定型コンテンツ：round-contents / round-thin-contents
+// -------------------------------------------------------------------------------------------------
+	/* ---角丸型コンテンツ--- */
+	.round-contents {
+		border:5px solid #cfcece;
+		@include border-radius(6px);
+		.round-contents-body { padding:15px; }
+	}
+	.round-thin-contents {
+		border:1px solid $c-gy-dk;
+		@include border-radius(5px);
+		overflow:hidden;
+		.round-head { padding:0.5em 1em; color:#fff; background:$c-bk-lt; font-weight:400; }
+	}
+	
+// =================================================================================================
+// ■ 定型コンテンツ：doc-section
+// -------------------------------------------------------------------------------------------------
+	/* ---長文文書コンテンツ--- */
+	.doc-section {
+		p,li {
+			@include mqlt($bpL) { @include fz(12); }
+		}
+		p { margin-bottom:1em; line-height:1.75; }
+		ul,ol { padding-bottom:0.5em; }
+		li { margin-bottom:0.5em; line-height:1.75; }
+		section {
+			h2 { margin-bottom:0.5em; padding:4px; @include border-radius(3px); color:darken($c-pk,30%); background:$c-gy-lt; @include fz(16); font-weight:400; }
+			a { @include link-colors($c-pk,darken($c-pk,20%)); }
+		}
+	}
+	
+// =================================================================================================
+// ■ アンケート結果
+// -------------------------------------------------------------------------------------------------
+	/* ---アンケート結果--- */
+	.enquete-section {
+		#sub-area & { background:#fdfbfb; } // サイドバーの中の時のみ
+		.side-head { // サイドバーの中でしか出力されない。
+			text-align:center;
+			img { max-width:441px; }
+		}
+		.enquete-head { // サイドバーの中でしか出力されない。
+			line-height:2.5; background:$c-gy;
+			@include mqlt($bpL) { @include ps(15px); }
+			@include mqmt($bpL) { @include ps(5px); @include fz(14); }
+		}
+		>header { // 詳細ページでしか出力されない。
+			font-size:150%;
+			font-weight:700;
+		}
+		section { margin:0; }
+		.answer { // サイド・詳細共通利用
+			padding-top:8px;
+			.total { padding:3px 8px; background:$c-gy; display:inline-block; }
+			table {
+				width:100%; border-collapse:separate; border-spacing:0 12px;
+				th,td {
+					span { white-space:nowrap; }
+				}
+				th { padding-right:0.5em; width:1%; text-align:left; }
+				td {
+					width:99%;
+					&:last-child { padding-left:0.5em; width:3em; text-align:right; }
+					.bar { display:block; background:lighten($c-pk,15%); }
+				}
+			}
+		}
+		.section-body { padding-top:1.5em; padding-bottom:1.5em; } // 詳細ページでしか出力されない。
+		footer {  // サイドバーの中でしか出力されない。
+			margin-top:8px;
+			li {
+				.button {
+					@include mqlt($bpS) { @include ps(1.5em); }
+				}
+			}
+		}
+		.enquete-txt { padding-bottom:1.5em; }
+		@include mqlt($bpS) {
+			.answer+footer .button { @include fz(14); } // サイドバースマホサイズ縦のみ、ボタンのテキストサイズ調整
+		}
+	}
+	
+// -------------------------------------------------------------------------------------------------

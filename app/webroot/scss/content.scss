@@ -1,0 +1,1511 @@
+@charset "utf-8";
+/* 
+====================================================================================================
+■ common
+■ ブランクページ (.page-blank) ./blank/
+■ Beauty Postとは？ (.page-about) ./about/
+■ 美容機器の基礎知識 (.page-knowladge) ./knowledge/
+◆ 美容機器用語集 (.page-glossary) ./glossary/
+◆ 美容機器コレクション (.page-collection) ./collection/
+ ◆ レビュー (.page-review) ./collection/review/
+  ◇ レビュー入力
+  ◇ レビュー表示
+ ◆ 商品比較 (.page-compare) ./collection/compare/
+■ 会員特典の説明 (.page-privilege) ./privilege/
+◆ ログイン (.page-login) ./login/
+◆ サインアップ (.page-signup) ./signup/
+◆ マイページ (.page-mypage) ./mypage/
+◆ パスワード再設定 (.page-forgetpass) ./forgetpass/
+◆ メルマガバックナンバー (.page-magazine) ./magazine/
+◆ アンケートバックナンバー (.page-enquete) ./enquete/
+◆ お役立ち美容通信 (.page-news) ./news/
+■ 美容機器メーカーの方へ (.page-maker) ./maker/
+■ モニター体験レポート (.page-report) ./report/
+◆ よくある質問・お問い合わせ (.page-contact) ./contact/
+■ プライバシーポリシー (.page-privacy) ./privacy/
+■ 利用規約 (.page-rules) ./rules/
+■ 使い方ガイド (.page-guide) ./guide/
+■ サイトマップ (.page-sitemap) ./sitemap/
+◆ コラム (.page-column) ./column/
+==================================================================================================== */
+@import "import"; // Compass,変数定義,各種mixin
+/* 
+====================================================================================================
+■ common
+---------------------------------------------------------------------------------------------------- */
+	#page-area {
+		@include mqlt($bpM) { margin-top:1em; }
+	}
+/* 
+====================================================================================================
+■ ブランクページ (.page-blank) ./blank/
+---------------------------------------------------------------------------------------------------- */
+
+/* 
+====================================================================================================
+■ Beauty Postとは？ (.page-about) ./about/
+---------------------------------------------------------------------------------------------------- */
+	.page-about {
+		#main-area {
+			section { @include container(gz(2)); }
+		}
+	}
+	#about-lead {
+		>p {
+			margin-bottom:2.4rem;
+			@include mqlt($bpM) { @include fz(14); }
+			@include mqmt($bpL) { line-height:2; }
+		}
+		.lead {
+			line-height:1.5; color:$c-vpk;
+			@include mqlt($bpM) { @include fz(18); }
+			@include mq($bpM,$bpL) { @include fz(21) }
+			@include mqmt($bpL) { @include fz(18); }
+		}
+		.sub {
+			margin-top:2.4rem;
+			@include mqlt($bpS) { padding:(16 / 480 * 100%) (24 / 480 * 100%); }
+			@include mq($bpS,$bpM) { padding:(10 / 480 * 100%) (20 / 480 * 100%); }
+			@include mqmt($bpM) { padding:(10 / 720 * 100%) (20 / 720 * 100%); }
+			@include border-radius(10px);
+			@include mqmt($bpL) { line-height:1.75; }
+			background:$c-gy; font-weight:700;
+			@include mqmt($bpL) { @include fz(14); }
+		}
+	}
+	
+	#about-recommend {
+		.section-body {
+			@include border-radius(10px);
+			color:$c-vpk;
+			@include fz(16);
+			@include mqlt($bpM) {
+				padding:3%;
+				background:$c-gy;
+			}
+			@include mqmt($bpM) {
+				@include ms(auto); padding:80px 0 0 248px;
+				width:720px; height:330px;
+				@include box-sizing(border-box);
+				background:$c-gy url(../images/about/recommend-bg.jpg) center top no-repeat;
+				@include background-size(720px auto);
+			}
+			ul {
+				@include mqlt($bpM) {
+					padding:2% 5%;
+					@include border-radius(5px);
+					background:#fff;
+				}
+			}
+			li {
+				@include mqlt($bpM) {
+					margin-left:1.2em; @include pv(0.25em);
+					line-height:1.25;
+					.fa { margin-left:-1.2em; display:inline-block; width:1.2em; }
+				}
+				@include mqmt($bpM) {
+					line-height:2.2;
+					.fa { margin-right:4px; }
+				}
+			}
+		}
+	}
+	
+	#about-concept {
+		p,dd {
+			@include mqmt($bpL) { line-height:2; }
+		}
+		.sub {
+			@include mv(1em);
+			@include mqlt($bpS) { padding:(16 / 480 * 100%) (24 / 480 * 100%); }
+			@include mq($bpS,$bpM) { padding:(10 / 480 * 100%) (20 / 480 * 100%); }
+			@include mqmt($bpM) { padding:(10 / 720 * 100%) (20 / 720 * 100%); }
+			@include border-radius(10px);
+			background:$c-gy;
+			@include mqmt($bpL) { @include fz(14); }
+			li { @include pv(0.5em); }
+		}
+		dl {
+			@include mqmt($bpM) { display:table; width:100%; }
+		}
+		dt {
+			@include mqlt($bpS) { text-align:center; }
+			@include mqmt($bpS) {
+				display:table-cell; vertical-align:bottom;
+				background:url(../images/about/concept-line.png) right bottom no-repeat;
+			}
+			span {
+				margin-bottom:16px; padding:9px;
+				@include border-radius(50%);
+				@include mqlt($bpS) { margin-bottom:-32px; display:inline-block; }
+				@include mqmt($bpS) { display:block; }
+				@include stripe-bk();
+				@include wh(102px,lh);
+				img { vertical-align:middle; }
+			}
+		}
+		dd {
+			font-weight:700;
+			@include mqlt($bpS) { padding-top:40px; border-top:3px double $c-txt; }
+			@include mqmt($bpS) {
+				padding-top:16px; padding-bottom:32px; padding-left:24px; border-bottom:1px solid $c-txt;
+				display:table-cell; vertical-align:bottom;
+			}
+			@include mqmt($bpL) { @include fz(14); }
+		}
+	}
+/* 
+====================================================================================================
+■ 美容機器の基礎知識 (.page-knowladge) ./knowledge/
+---------------------------------------------------------------------------------------------------- */
+	.page-knowledge {
+		#main-area {
+			//section { @include container(gz(2)); }
+		}
+	}
+	
+	/* --- 美容機器とは --- */
+	#knowledge-about {
+		.eyecatch {
+			@include mq($bpS,$bpL) {
+				margin-right:1em;
+				float:left;
+				width:240px;
+			}
+			@include mqmt($bpL) {
+				padding-right:30px;
+				width:240px;
+				display:table-cell; vertical-align:middle;
+			}
+			img { border:1px solid $c-gy-dk; }
+		}
+		.section-body {
+			padding:2em (10 / nounit($wMain) * 100%) 0;
+			padding-top:0;
+			@include mq($bpS,$bpL) { @include cf(); }
+			p {
+				@include mqmt($bpL) {
+					display:table-cell; vertical-align:middle; line-height:2;
+				}
+			}
+		}
+		.sub-section {
+			p { @include mqmt($bpL) { line-height:2; } }
+		}
+	}
+	
+	/* --- エステサロンと美容機器の歴史 --- */
+	#knowledge-history {
+		.sub-txt { padding-bottom:0.75em; text-align:right; }
+		.section-body {
+			padding:(32 / nounit($wMain) * 100%) (40 / nounit($wMain) * 100%);
+			@include border-radius(0.5rem);
+			background:$c-gy url(../images/dummy/knowledge-lattice.png) center center;
+		}
+		li {
+			margin-top:30px;
+			position:relative;
+			&:before {
+				@include posa(-1.25em,null,null,35px);
+				display:block;
+				content:'\f063';
+				color:#fff;
+				font-size:24px;
+				font-family:FontAwesome;
+			}
+			&:first-child {
+				margin-top:0;
+				&:before { display:none; }
+			}
+		}
+		dl {
+			@include mqlt($bpS) { @include cf(); }
+			@include mqmt($bpS) { display:table; }
+		}
+		dt {
+			span { 
+				display:block;
+				@include wh(9rem,lh);
+				@include border-radius(50%);
+				overflow:hidden;
+				color:$c-pk;
+				background:#fff;
+			}
+			@include mqlt($bpS) {
+				margin-right:1em;
+				float:left;
+			}
+			@include mqmt($bpS) {
+				display:table-cell;
+				vertical-align:middle;
+			}
+		}
+		dd {
+			@include mqlt($bpS) {
+				overflow:hidden;
+			}
+			@include mqmt($bpS) {
+				padding-left:2em;
+				display:table-cell;
+				vertical-align:middle;
+				min-height:9rem;
+			}
+		}
+	}
+	
+	/* --- 美容機器のメリット --- */
+	#knowledge-merit {
+		ul { margin-top:2em; }
+		li {
+			@include container(2.4rem); position:relative;
+			.eyecatch {
+				margin-top:-16px;
+				@include posa(0,0);
+				@include wh(180px);
+			}
+		}
+		dl {
+			position:relative;
+			&:before {
+				@include posa(0,null,null,0);
+				@include border-radius(50%);
+				display:block;
+				@include wh(9rem,lh);
+				color:#fff;
+				background:$c-pk;
+			}
+		}
+		li:nth-child(1) {
+			dl:before {
+				content:'';
+				@include mqlt($bpS) { @include wh(76px); }
+				@include mqmt($bpS) { @include wh(90px); }
+				background:url(../images/knowledge/merit01.png) center center no-repeat;
+				@include background-size(cover);
+			}
+		}
+		li:nth-child(2) {
+			dl:before {
+				content:'';
+				@include mqlt($bpS) { @include wh(76px); }
+				@include mqmt($bpS) { @include wh(90px); }
+				background:url(../images/knowledge/merit02.png) center center no-repeat;
+				@include background-size(cover);
+			}
+		}
+		li:nth-child(3) {
+			dl:before {
+				content:'';
+				@include mqlt($bpS) { @include wh(76px); }
+				@include mqmt($bpS) { @include wh(90px); }
+				background:url(../images/knowledge/merit03.png) center center no-repeat;
+				@include background-size(cover);
+			}
+			dd {
+				@include mq($bpM,$bpL) { padding-right:19rem; }
+			}
+		}
+		dt,dd {
+			padding-left:11rem;
+		}
+		dt {
+			@include pv(0.5em);
+			border-bottom:1px dotted $c-pk;
+			color:$c-pk;
+			font-weight:700;
+			@include mqlt($bpS) { padding-left:9rem; }
+			@include mqmt($bpL) { @include fz(20); }
+		}
+		dd {
+			@include pv(1.5em);
+			line-height:2;
+			@include mqlt($bpS) { padding-left:0; }
+		}
+	}
+	
+	/* --- 美容機器の今後 --- */
+	#knowledge-future {
+		.section-body { line-height:2; }
+	}
+	
+/* 
+====================================================================================================
+◆ 美容機器用語集 (.page-glossary) ./glossary/
+---------------------------------------------------------------------------------------------------- */
+	.page-glossary {}
+	
+	#glossary-index {
+		.index-group {  }
+		.index-list {
+			@include mqlt($bpS) {
+				li {
+					border-bottom:1px dotted $c-bk-lt;
+					@include fz(14);
+					a {
+						@include link-colors($c-txt,$c-pk);
+						display:block;
+						position:relative;
+						@include pv(8px);
+						&:after {
+							margin-top:-1rem;
+							@include posa(50%,-8px);
+							@include wh(2rem,lh);
+							color:$c-pk;
+							@include fz(16);
+							@include fa-chevron-circle-right();
+						}
+					}
+				}
+			}
+			@include mqmt($bpS) {
+				@include inlineblockWrap {
+					@include pv(8px); @include ps(10 / 480 * 100%);
+					&:before {
+						margin-right:4px;
+						display:inline-block;
+						vertical-align:middle;
+						color:$c-pk;
+						font-size:116.7%;
+						@include fa-chevron-circle-right();
+					}
+					a {
+						@include link-colors($c-txt,$c-pk);
+						@include mqmt($bpM) { text-decoration:underline; }
+						&:hover {
+							text-decoration:none;
+						}
+					}
+				}
+			}
+		}
+	}
+	#glossary-detail {
+		.section-body {
+			@include mqmt($bpS) { @include cf(); }
+		}
+		.item-img {
+			@include mqmt($bpS) {
+				margin-right:2%;
+				width:49%;
+				float:left;
+			}
+		}
+		.user-text {
+			margin-bottom:1.5em;
+			@include mqlt($bpS) { margin-top:0.75em; }
+			p { margin-bottom:1.5em; }
+		}
+		.relative-words {
+			ul {
+				@include mqlt($bpS) {
+					li {
+						border-bottom:1px dotted $c-bk-lt;
+						@include fz(14);
+						a {
+							@include link-colors($c-txt,$c-pk);
+							display:block;
+							position:relative;
+							@include pv(8px);
+							&:after {
+								margin-top:-1rem;
+								@include posa(50%,-8px);
+								@include wh(2rem,lh);
+								color:$c-pk;
+								@include fz(16);
+								@include fa-chevron-circle-right();
+							}
+						}
+					}
+				}
+				@include mqmt($bpS) {
+					@include inlineblockWrap {
+						@include pv(8px); @include ps(10 / 480 * 100%);
+						&:before {
+							margin-right:4px;
+							display:inline-block;
+							vertical-align:middle;
+							color:$c-pk;
+							font-size:116.7%;
+							@include fa-chevron-circle-right();
+						}
+						a {
+							@include link-colors($c-txt,$c-pk);
+							@include mqmt($bpM) { text-decoration:underline; }
+							&:hover {
+								text-decoration:none;
+							}
+						}
+					}
+				}
+			}
+			/* li {
+				@include pv(8px); @include ps(10 / 480 * 100%);
+				&:before {
+					margin-right:4px;
+					display:inline-block;
+					vertical-align:middle;
+					color:$c-pk;
+					font-size:116.7%;
+					@include fa-chevron-circle-right();
+				}
+				a {
+					@include link-colors($c-txt,$c-pk);
+					@include mqmt($bpM) { text-decoration:underline; }
+					&:hover { text-decoration:none; }
+				}
+			} */
+		}
+		footer { margin-top:1.5em; }
+	}
+/* 
+====================================================================================================
+◆ 美容機器コレクション (.page-collection) ./collection/
+---------------------------------------------------------------------------------------------------- */
+	.page-collection {}
+	
+	#collection-list {
+		>footer {
+			margin-top:16px; padding-top:24px;
+			border-top:1px dotted $c-txt;
+		}
+	}
+	#collection-detail {
+		>section {
+			@include container(3em);
+		}
+	}
+/* 
+====================================================================================================
+ ◆ レビュー (.page-review) ./collection/review/
+---------------------------------------------------------------------------------------------------- */
+	.page-review {}
+	
+	/* 
+	--------------------------------------------------------------------------------------------------
+  ◇ レビュー入力
+	-------------------------------------------------------------------------------------------------- */
+		#review-post {
+			form {
+				>footer {
+					padding-top:1em;
+					border-top:1px dotted $c-gy-dk;
+					text-align:center;
+					a { @include ulLink(); @include link-colors($c-pk,darken($c-pk,15%)); }
+				}
+			}
+			.review-user {
+				margin-top:16px;
+				ul {
+					margin-bottom:0.5em;
+					@include mqmt($bpM) {
+						@include horizontalWrap() {
+							width:50%;
+						}
+					}
+					dl {
+						@include cf();
+						line-height:2;
+						dt { float:left; width:7em; font-weight:700; }
+						dd {
+							overflow:hidden;
+							&:before {
+								content:'：';
+							}
+						}
+					}
+				}
+				footer {
+					margin-top:0.75em; text-align:right;
+					@include mqlt($bpS) {
+						.button { display:block; text-align:center; }
+					}
+				}
+			}
+			.review-data {
+				table {
+					width:100%;
+					border:1px solid $c-gy;
+					tr {
+						border-bottom:1px solid $c-gy;
+					}
+					th,td {
+						@include mqlt($bpM) {
+							padding:12px 0;
+						}
+						@include mqmt($bpM) {
+							padding:8px;
+						}
+					}
+					th { font-weight:400; }
+					td {
+						text-align:center;
+						.star {
+							
+						}
+					}
+					thead {
+						th { text-align:center; }
+					}
+				}
+			}
+		}
+	/* 
+	--------------------------------------------------------------------------------------------------
+  ◇ レビュー表示
+	-------------------------------------------------------------------------------------------------- */
+		#review-list {
+			.summary {
+				position:relative;
+				h2 {
+					color:#fff;
+					background:$c-bk-lt;
+					@include mqlt($bpM) { margin-bottom:0.5em; @include ps(0.5em); }
+					@include mqmt($bpM) {
+						padding:0.5em 1.5em;
+						@include posa(0,null,null,0);
+					}
+				}
+				.evaluation {
+					@include mqmt($bpM) {
+						margin:0 auto;
+						width:50%;
+					}
+					.table-std {
+						margin-bottom:0.5em;
+						@include ms(auto);
+						@include mqlt($bpL) { width:80%; }
+						@include mqmt($bpL) { width:60%; }
+						th { width:4em; }
+					}
+					
+				}
+				>footer {
+					margin-top:0.75em; text-align:right;
+					@include mqlt($bpS) {
+						.button { display:block; text-align:center; }
+					}
+				}
+			}
+			.review-entry {
+				padding-top:1em;
+				border-top:1px dotted $c-gy-dk;
+				@include mqmt($bpM) {
+					@include cf();
+				}
+				>header {
+					@include mqmt($bpM) {
+						width:58%; float:right;
+					}
+					h2 {
+						margin-left:1.5em; margin-right:0.5em;
+						position:relative;
+						&:before {
+							margin-left:-1.5em; margin-right:0.5em;
+							@include posa(0,null,null,1);
+							width:1em; height:1em; line-height:1;
+							position:relative;
+							display:inline-block;
+							@include fa-chevron-circle-right();
+							text-align:center;
+						}
+					}
+					>p {
+						text-align:right;
+						@include mqlt($bpL) { @include fz(14); }
+					}
+					.user-data { margin-top:0.75em; }
+					.post-date { margin-bottom:0.75em; }
+				}
+				.evaluation {
+					@include mqmt($bpM) {
+						width:39%; float:left;
+					}
+					.table-std {
+						margin-bottom:0.5em;
+						@include ms(auto);
+						@include mqlt($bpL) { width:90%; }
+						@include mqmt($bpL) { width:70%; }
+						th { width:4em; }
+					}
+					
+				}
+				.user-txt {
+					@include mqmt($bpM) {
+						width:58%; float:right;
+					}
+				}
+			}
+			>footer {
+				margin-top:16px; padding-top:24px;
+				border-top:1px dotted $c-txt;
+			}
+		}
+/* 
+====================================================================================================
+ ◆ 商品比較 (.page-compare) ./collection/compare/
+---------------------------------------------------------------------------------------------------- */
+	.page-compare-popup {
+		height:100%;
+		position:relative;
+		
+		.tableWrap { position:relative; }
+
+		th,td {
+			padding:8px 12px; border-bottom:1px solid $c-gy-dk; width:420px; background:#f5f5f5; text-align:left;
+		}
+		td {
+			border-right:1px solid $c-gy;
+			&:not(:first-child):after {
+				content:'';
+				display:block;
+				width:200px; height:1px;
+			}
+			.item-taglist {
+				margin-left:-2px; margin-right:-2px;
+				position:relative;
+				width:204px;
+				li { margin:4px 2px !important; }
+			}
+		}
+		thead {
+			th { border-top:1px solid $c-gy-dk; border-right:1px solid $c-gy; background:#FEF6F6; text-align:left; }
+		}
+		table {
+			margin:16px;
+			vertical-align:top;
+			tbody {
+				&.table-head {
+					tr {
+						border-bottom:1px solid $c-gy-dk;
+						td {
+							padding-left:0; border-right:none; color:$c-vpk; background:#fff; @include fz(16);
+							span { padding-left:8px; border-left:5px solid $c-vpk; }
+						} 
+					}
+				}
+			}
+			tr > *:first-child { background:$c-gy; white-space:nowrap; }
+		}
+	}
+	
+	#sp-compare {
+		.compare-custom {
+			form { @include formset }
+			dl {
+				margin-bottom:1.25em;
+				@include mqmt($bpS) {
+					display:table; width:100%;
+				}
+			}
+			dt {
+				font-weight:700;
+				@include mqlt($bpS) { margin-bottom:0.5em; }
+				@include mqmt($bpS) {
+					padding-right:0.5em;
+					display:table-cell; vertical-align:middle;
+					width:9.5em;
+				}
+			}
+			dd {
+				@include mqmt($bpS) {
+					display:table-cell; vertical-align:middle;
+				}
+			}
+		}
+		.compare-list {
+			li {
+				border-top:1px dotted $c-bk-lt;
+				position:relative;
+				&:after {
+					margin-top:-0.5em;
+					display:block;
+					@include posa(50%,0);
+					color:$c-pk;
+					@include wh(1.6rem,lh);
+					@include fz(16);
+					@include fa-chevron-circle-right();
+				}
+				a {
+					display:block;
+					@include cf();
+					@include pv(1em);
+					.photo {
+						margin-right:1em;
+						float:left;
+						width:30%;
+					}
+					.info {
+						padding-right:1.5em;
+						position:relative;
+						overflow:hidden;
+						.item-name { margin-bottom:0.5em; color:$c-pk; font-weight:700; }
+						.compare-info { color:$c-txt; @include fz(14); }
+					}
+				}
+			}
+		}
+	}
+/* 
+====================================================================================================
+■ 会員特典の説明 (.page-privilege) ./privilege/
+---------------------------------------------------------------------------------------------------- */
+
+/* 
+====================================================================================================
+◆ ログイン (.page-login) ./login/
+---------------------------------------------------------------------------------------------------- */
+	.page-login {}
+	
+	#login-section {
+		@include mqmt($bpM) { @include cf(); }
+	}
+	
+	#login-form {
+		@include mqmt($bpM) { width:48.5%; float:left; }
+		form { @include formset(); }
+		dt { margin-top:8px; }
+		dd { margin-bottom:20px; }
+		.form-footer {
+			text-align:center;
+			button { margin-top:1em; margin-bottom:0.5em; }
+			ul { margin-bottom:2em; }
+			li {
+				line-height:2;
+				@include mqmt($bpL) { @include ms(1em); display:inline-block; }
+			}
+			a {
+				@include link-colors($c-txt,darken($c-pk,10%)); @include ulLink();
+				&:before {
+					margin-right:0.25em; display:inline-block; color:$c-pk; vertical-align:middle;
+					@include fz(16);
+					@include fa-chevron-circle-right();
+				}
+			}
+		}
+	}
+	
+	#login-social {
+		@include mqmt($bpM) { margin-top:0; float:right; width:48.5%; }
+		.section-body {
+			ul {
+				@include mq($bpS,$bpM) { @include ms(auto); width:75%; }
+				@include mqmt($bpL) { @include ms(auto); width:75%; }
+			}
+			li {
+				@include mv(1em);
+				.button {
+					display:block;
+					position:relative;
+					font-weight:700;
+					@include box-sizing(border-box);
+					@include mqlt($bpM) { @include fz(16); padding-left:20%; }
+					@include mq($bpS,$bpM) { @include fz(18); padding-left:18%; }
+					@include mqmt($bpM) { @include fz(20); padding-left:4em; }
+					.fa {
+						margin-top:-0.5em; padding-right:0.25em;
+						@include posa(50%,0,0,0.4em);
+						@include wh(1em,lh);
+						text-align:center;
+						@include mqlt($bpM) { @include fz(32); }
+						@include mqmt($bpM) { border-right:2px dotted #fff; @include fz(40); }
+					}
+					&:after {
+						margin-top:-0.5em;
+						@include posa(50%,5%);
+						@include wh(1em,lh);
+						text-align:center;
+						@include mqlt($bpM) { @include fz(18); }
+						@include mqmt($bpM) { @include fz(20); }
+						@include fa-chevron-circle-right();
+					}
+					span {
+						display:block;
+						font-weight:400;
+						@include mqlt($bpM) { font-size:80%; }
+						@include mqmt($bpM) { font-size:50%; }
+					}
+					&.btn-google {
+						@include grad(lighten($c-ggl,5%),darken($c-ggl,5%));
+						&:hover { @include grad(lighten($c-ggl,10%),lighten($c-ggl,10%)) }
+					}
+					&.btn-facebook {
+						@include grad(lighten($c-fbbl,5%),darken($c-fbbl,5%));
+						&:hover { @include grad(lighten($c-fbbl,10%),lighten($c-fbbl,10%)) }
+					}
+					&.btn-twitter {
+						@include grad(lighten($c-twbl,5%),darken($c-twbl,5%));
+						&:hover { @include grad(lighten($c-twbl,10%),lighten($c-twbl,10%)) }
+					}
+				}
+			}
+		}
+		footer {
+			margin-top:1em;
+			@include mqmt($bpL) { text-align:center; line-height:2; }
+			a { @include link-colors($c-pk,darken($c-pk,15%)); }
+		}
+	}
+	
+	#visitor-section {
+		>.section-body {
+			@include mqlt($bpM) { @include mv(0.5em); }
+			@include mqmt($bpM) { display:table; width:100%; }
+			p {
+				@include mqlt($bpM) { text-align:center; }
+				@include mqmt($bpM) { display:table-cell; vertical-align:middle; @include fz(16); }
+			}
+			.signup {
+				@include mqlt($bpM) { margin-top:1em; text-align:center; }
+				@include mqmt($bpM) {
+					display:table-cell; text-align:right; vertical-align:middle;
+					.button { white-space:nowrap; }
+				}
+			}
+		}
+		#privilege {
+			padding:4px;
+			background:$c-gy;
+			h2 {
+				margin-bottom:0.5em;
+				img { width:100%; max-width:image-width('../images/login/privilege-head.png') / 2; height:auto; }
+			}
+			>.section-body {
+				@include mqlt($bpM) { padding:1em; }
+				@include mqmt($bpM) { padding:1.5em; }
+				border:1px solid #fff;
+				ul {
+					@include mqmt($bpM) {
+						@include horizontalWrap() {
+							margin-left:2%; margin-bottom:0.75em;
+							width:32%;
+							&:nth-child(3n-2) { margin-left:0; clear:both; }
+							.image { margin-bottom:0.25em; display:block; }
+						}
+					}
+					//@include mqmt($bpL) {
+					//	@include horizontalWrap() {
+					//		margin-left:2%; margin-bottom:0.75em;
+					//		width:15%;
+					//		.image { margin-bottom:0.25em; display:block; }
+					//	}
+					//}
+				}
+				li {
+					@include mqlt($bpM) {
+						position:relative;
+						display:table;
+						width:100%;
+						.image,.txt { @include pv(0.5em); display:table-cell; vertical-align:top; }
+						.image { width:104px; }
+						.txt { padding-left:0.5em; @include fz(14); }
+					}
+				}
+				>footer { text-align:right; }
+			}
+		}
+	}
+/* 
+====================================================================================================
+◆ サインアップ (.page-signup) ./signup/
+---------------------------------------------------------------------------------------------------- */
+	.page-signup {}
+	
+	#signup-form {
+		form {
+			display:block;
+			@include mqmt($bpM) { @include ms(auto); padding-top:0.5em; }
+			@include mq($bpM,$bpL) { width:90%; }
+			@include mqmt($bpL) { width:86%; }
+			>footer {
+				border-top:1px dotted $c-bk-lt;
+				@include mqlt($bpM) { margin-top:1em; @include pv(1em); }
+				@include mqmt($bpM) { margin-top:3em; @include pv(2em); position:relative; }
+				@include mq($bpM,$bpL) { @include ms(-5%); @include ps(5%); }
+				@include mqmt($bpL) { @include ms(-7%); @include ps(7%); }
+				text-align:center;
+				p {
+					@include pv(1.5em); background:$c-gy;
+					@include mqlt($bpS) {
+						padding:0.5em 0.5em 0.5em 2.5em; position:relative;
+						label { display:block; text-align:left; }
+						input {
+							margin-top:-0.6em; display:block;
+							@include posa(50%,null,null,0.5em);
+							line-height:1.2; height:1.2em;
+						}
+					}
+				}
+				.button { margin-top:1.5em; }
+			}
+			.head-category {
+				@include mqlt($bpS) { margin-top:1em; }
+				@include mqmt($bpS) { margin-top:1.75em; margin-bottom:1em; }
+				padding:0.25em 0.5em; position:relative; color:#fff; background:$c-gy-dk;
+			}
+		}
+		.formlist {
+			dd {
+				ul {
+					@include inlineblockWrap() { margin-left:1em; }
+				}
+				#user-birth-year {
+					width:4em;
+				}
+				#user-birth-month, #user-birth-day {
+					width:3em;
+				}
+				.unit { display:inline-block; width:1.2em; vertical-align:middle; text-align:center; }
+			}
+		}
+		.extra {
+			.kome {
+				@include mqlt($bpM) { @include fz(14); }
+				@include mqmt($bpM) { margin-left:16.5em; }
+			}
+		}
+	}
+	
+	#signup-completion {
+		p { margin-bottom:1em; }
+		.completion-msg { margin-top:1px; margin-bottom:0.5em; color:$c-vpk; @include fz(24); font-weight:700; }
+		.txt { @include fz(16); }
+		.box-contents {
+			@include mqlt($bpM) {
+				text-align:left;
+			}
+		}
+		footer {
+			ul {
+				@include mqmt($bpS) {
+					text-align:center;
+					@include inlineblockWrap() {
+						@include ms(1em);
+					}
+				}
+			}
+			li {
+				@include mqlt($bpS) {
+					@include container(1em);
+				}
+			}
+			.button {
+				@include mqlt($bpS) {
+					display:block;
+					text-align:center;
+				}
+			}
+		}
+	}
+/* 
+====================================================================================================
+◆ マイページ (.page-mypage) ./mypage/
+---------------------------------------------------------------------------------------------------- */
+	
+	/* マイページ専用サイドバー
+	--------------------------------------------------*/
+	#mypage-menu {
+		@include mqlt($bpL) { @include mv(1em); }
+	}
+	/* ようこそ */
+	#mpside-welcome {
+		.user-name { margin-right:0.5em; color:$c-pk; font-weight:700; font-size:200%; }
+		ul {
+			margin-top:1em;
+			@include cf();
+			li { width:49%; }
+			li:nth-child(odd) { float:left; }
+			li:nth-child(even) { float:right; }
+		}
+		.button {
+			@include mqlt($bpS) { margin-bottom:0.5em; @include fz(13); }
+		}
+	}
+	/* マイページナビゲーション */
+	#mpside-nav {
+		ul {
+			@include mqlt($bpL) {
+				@include fz(12);
+				@include horizontalWrap() { margin-left:2%; width:32%; }
+			}
+		}
+		li {
+			margin-top:1em;
+			@include box-sizing(border-box);
+			@include mqlt($bpL) {}
+			@include mqmt($bpM) { display:table; width:100%; }
+			a {
+				padding:8px;
+				position:relative;
+				@include border-radius(5px);
+				border:1px solid $c-gy-dk;
+				display:block;
+				background:$c-gy-lt;
+				@include mqlt($bpM) {
+					text-align:center;
+				}
+				@include mqmt($bpM) {
+					padding-left:84px;
+					display:table-cell;
+					height:5.5em;
+					vertical-align:middle;
+				}
+				@include link-colors($c-txt,darken($c-pk,10%));
+				.ico {
+					@include border-radius(32px);
+					@include wh(56px,lh);
+					color:#fff;
+					background:$c-gy-dk;
+					@include fz(32);
+					@include mqlt($bpM) {
+						margin-bottom:4px;
+						display:inline-block;
+					}
+					@include mqmt($bpM) {
+						margin-top:-26px;
+						@include posa(50%,null,null,12px);
+						display:block;
+					}
+					@include transition(background-color 0.2s linear 0s);
+				}
+				.label {
+					display:block;
+					@include mqmt($bpM) { @include fz(16); font-weight:700; letter-spacing:1px; }
+				}
+				dd { margin-top:2px; line-height:1.2; @include opacity(0.5); }
+				&:hover {
+					background:lighten($c-pk,25%);
+					.ico { background:$c-pk; }
+				}
+			}
+		}
+	}
+	
+	/* マイページコンテンツ：ニュース
+	--------------------------------------------------*/
+	#mp-news {
+		.mp-news-entry {
+			padding-top:1.5em;
+			border-top:1px dotted $c-bk-lt;
+			&:first-child { padding-top:0; border-top:none; }
+			.mp-news-head { margin-bottom:0.5em; font-size:125%; }
+			footer { margin-top:0.5em; }
+		}
+	}
+	
+/* 
+====================================================================================================
+◆ パスワード再設定 (.page-forgetpass) ./forgetpass/
+---------------------------------------------------------------------------------------------------- */
+
+/* 
+====================================================================================================
+◆ メルマガバックナンバー (.page-magazine) ./magazine/
+---------------------------------------------------------------------------------------------------- */
+
+/* 
+====================================================================================================
+◆ アンケートバックナンバー (.page-enquete) ./enquete/
+---------------------------------------------------------------------------------------------------- */
+	.backnumber-list {
+		margin-bottom:2.5em;
+		border-top:1px dotted $c-txt;
+		li {
+			@include ps( 8 / nounit($wMain) * 100% );
+			@include mqlt($bpS) {
+				@include pv(0.75em);
+			}
+			@include mqmt($bpS) {
+				@include pv(1em);
+			}
+			border-bottom:1px dotted $c-txt;
+		}
+		dl {
+			@include mqmt($bpS) {
+				display:table;width:100%;
+			}
+		}
+		dt,dd {
+			@include mqmt($bpS) {
+				display:table-cell; vertical-align:top;
+			}
+		}
+		dt {
+			padding-left:2em;
+			position:relative;
+			@include mqlt($bpS) { margin-bottom:0.25em; }
+			@include mqmt($bpS) { width:12.5em; } 
+			white-space:nowrap;
+			&:before {
+				@include posa(0,null,null,0);
+				display:block; content:'';
+				@include border-radius(50%);
+				@include wh(1.5em,lh);
+				color:#fff;
+				background:url(../common-img/ico-head-arrow.png) center center no-repeat;
+				@include background-size(cover);
+			}
+			.vol {
+				@include mqlt($bpM) {
+					margin-left:0.5em;
+				}
+				@include mqmt($bpM) {
+					margin-left:1em;
+				}
+				display:inline-block;
+				font-weight:700;
+			}
+		}
+		a {
+			@include link-colors($c-txt,$c-link);
+			&:link { text-decoration:underline; }
+			&:hover { text-decoration:none; }
+		}
+	}
+	
+	//  詳細ページについてはサイドバーの表示と共通。moduleに。
+	
+/* 
+====================================================================================================
+◆ お役立ち美容通信 (.page-news) ./news/
+---------------------------------------------------------------------------------------------------- */
+	.page-news {}
+	
+	#news-list {
+		>h2 { position:relative; }
+		>footer { padding-top:3em; }
+	}
+	
+	.news-entry {
+		@include container(2.5em);
+		header {
+			.news-title { @include pv(0.5em); line-height:1.5; }
+			.news-date {
+				@include mv(1.6rem);
+				@include ps(0.75em);
+				display:inline-block;
+				color:#fff; background:$c-bk-lt;
+			}
+		}
+		footer {
+			margin-top:24px; padding-top:24px;
+			border-top:1px dotted $c-gy-dk;
+			@include cf();
+			@include mqmt($bpM) { height:100%; }
+			.news-category {
+				@include mqlt($bpM) { margin-bottom:1em; }
+				@include mqmt($bpM) { float:left; white-space:nowrap; }
+				@include inlineblockWrap() {
+					margin-left:0.5em;
+					@include mqlt($bpM) {
+						margin:0.5em !important;
+						&:first-child  { margin-left:0.5em !important; }
+					}
+					a {
+						padding-left:1.25em; padding-right:1.5em;
+						@include border-radius(0.3rem);
+						display:block;
+						position:relative;
+						color:#fff;
+						background:$c-pk;
+						&:after {
+							margin-top:-0.5em;
+							@include posa(50%,0);
+							@include wh(1em,lh);
+							@include fa-angle-right();
+						}
+						&:hover {
+							background:lighten($c-pk,10%);
+						}
+					}
+				}
+			}
+			.sns-btns {
+				@include mqmt($bpM) { float:right; }
+			}
+		}
+	}
+	.news-body {
+		@include cf();
+		.photo {
+			margin-right:24px;
+			float:left;
+			@include mqlt($bpM) { width:144px; }
+			@include mqmt($bpM) { width:184px; }
+		}
+	}
+	.news-txt {
+		line-height:1.75;
+		.more {
+			padding-top:0.5em; text-align:right;
+			a {
+				@include link-colors($c-txt,darken($c-pk,10%));
+				@include ulLink();
+				&:before {
+					margin-right:0.4rem;
+					display:inline-block;
+					vertical-align:-4%;
+					color:$c-pk;
+					@include fz(16);
+					@include fa-chevron-circle-right();
+				}
+			}
+		}
+	}
+	
+	/* --- WP用サイドナビ --- */
+	#news-menu {
+		a {
+			@include link-colors($c-txt,darken($c-pk,10%));
+			@include ulLink();
+		}
+		.entry-views,.entry-date {
+			@include ps(0.75em);
+			display:block;
+			color:#fff;
+		}
+		.entry-views { background:$c-gy-dk; }
+		.entry-date { margin-top:0.5em; margin-bottom:0.5em; background:$c-bk-lt; float:left; }
+		.entry-title { display:block; clear:both; }
+	}
+	#news-famous {
+		@include mq($bpM,$bpL) {
+			float:left;
+			width:48%;
+		}
+		li {
+			border-bottom:1px dotted $c-bk-lt;
+			&:nth-child(1) { .entry-views { background:$c-gd; } }
+			&:nth-child(2) { .entry-views { background:$c-sv; } }
+			&:nth-child(3) { .entry-views { background:$c-bz; } }
+		}
+		a { @include pv(1em); display:block; }
+		.rank { margin-top:-8px; position:relative; float:left; width:32px; height:32px; }
+		.entry-views { float:right; }
+	}
+	#news-recent {
+		@include mq($bpM,$bpL) {
+			margin-top:0;
+			float:right;
+			width:48%;
+		}
+		li {
+			border-bottom:1px dotted $c-bk-lt;
+		}
+		a { @include pv(1em); display:block; }
+	}
+	#news-category {
+		@include mq($bpM,$bpL) {
+			clear:both;
+		}
+		ul {
+			margin-top:1em;
+		}
+		li {
+			@include mq($bpM,$bpL) {
+				padding:0.5em 0.75em;
+				display:inline-block;
+			}
+			a {
+				line-height:2;
+				&:before {
+					margin-right:0.25em;
+					display:inline-block;
+					vertical-align:-4%;
+					color:$c-gd;
+					@include fz(16);
+					@include fa-chevron-circle-right();
+				}
+			}
+		}
+	}
+	
+/* 
+====================================================================================================
+■ 美容機器メーカーの方へ (.page-maker) ./maker/
+---------------------------------------------------------------------------------------------------- */
+	.page-maker {
+		.pagetitle {
+		}
+	}
+	
+	#maker-lead, #maker-appeal {
+		p {
+			@include mqmt($bpL) { line-height:2; }
+			.photo {
+				margin:1em auto;
+				display:block;
+			}
+		}
+		.section-body { margin-bottom:1.5em; }
+		footer {
+			.kome { @include fz(11); }
+			.button {
+				@include fz(16);
+				@include mqlt($bpS) { @include ps(0); display:block; text-align:center; }
+			}
+		}
+	}
+	
+	#maker-service {
+		p { @include mqmt($bpL) { line-height:2; } }
+		.section-body {
+			@include mqlt($bpM) {
+				section {
+					@include cf();
+					.eyecatch { float:left; width:80/300 * 100%; }
+					.section-body { float:right; width:210/300 * 100%;  }
+				}
+			}
+			@include mqmt($bpM) {
+				@include horizontalWrap('section') {
+					@include mv(0);
+					margin-left:32/1000 * 100%;
+					width:312/1000 * 100%;
+				}
+			}
+			.eyecatch {
+				text-align:center;
+				img {
+					@include mqlt($bpM) { width:100%; }
+					@include mqmt($bpM) { margin-bottom:1em; width:200/312 * 100%; }
+					height:auto;
+				}
+			}
+		}
+	}
+/* 
+====================================================================================================
+■ モニター体験レポート (.page-report) ./report/
+---------------------------------------------------------------------------------------------------- */
+	.report-box {
+		padding:112 / 2000 * 100%;
+		background:#F1ECE6;
+	}
+	#report-lead {
+		.width-adjuster {
+			@include mqmt($bpM) {
+				margin-left:-5%;
+				width:105%;
+				position:relative;
+			}
+		}
+		footer {
+			position:relative;
+			text-align:center;
+			.link-btn {
+				@include posa(0,null,null,0);
+				width:100%;
+			}
+		}
+	}
+	
+	.report-gallery {
+		@include horizontalWrap() {
+			margin-bottom:1em;
+			@include mqlt($bpS) {
+				width:100%;
+			}
+			@include mq($bpS,$bpM) {
+				margin-left:3%;
+				width:48.5%;
+				&:nth-child(2n-1) { margin-left:0; clear:both; }
+			}
+			@include mqmt($bpM) {
+				margin-left:30 / 888 * 100%;
+				width:276 / 888 * 100%;
+				&:nth-child(3n-2) { margin-left:0; clear:both; }
+			}
+		}
+	}
+	.report-result {
+		padding:3%;
+		background:#fff;
+	}
+	
+/* 
+====================================================================================================
+◆ よくある質問・お問い合わせ (.page-contact) ./contact/
+---------------------------------------------------------------------------------------------------- */
+	.faq-list {
+		counter-reset:faqlist;
+		li {
+			@include container(1.5em); padding-top:1.5em;
+			border-top:1px dotted $c-gy-dk;
+			counter-increment: faqlist;
+			&:first-child { border:none; padding-top:0; }
+		}
+	}
+	.faq-entry {}
+	.faq-q {
+		position:relative; padding-left:5.6rem; @include pv(0.5em);
+		overflow:hidden;
+		font-weight:700;
+		@include mqmt($bpL) {
+			@include fz(16);
+		}
+		color:$c-vpk;
+		&:before {
+			margin-top:-1em;
+			@include wh(2em,lh);
+			@include posa(50%,null,null,0);
+			display:block;
+			content:"Q" counters(faqlist, ".") ". ";
+			@include fz(20);
+		}
+	}
+	.faq-a {
+		position:relative; padding-left:5.6rem; @include pv(0.5em);
+		overflow:hidden;
+		@include mqlt($bpL) { @include fz(12); }
+		&:before {
+			margin-top:-1em;
+			@include wh(2em,lh);
+			@include posa(50%,null,null,0);
+			display:block;
+			content:"A" counters(faqlist, ".") ". ";
+			@include fz(20);
+		}
+	}
+	
+	#user-form {
+		@include formset();
+		.contact-form {
+			display:block;
+			@include mqmt($bpM) { @include ms(auto); padding-top:0.5em; }
+			@include mq($bpM,$bpL) { width:90%; }
+			@include mqmt($bpL) { width:86%; }
+			.form-nav {
+				margin-top:1.5em;
+				text-align:center;
+				button {
+					@include mqmt($bpL) { font-size:18px; }
+				}
+			}
+		}
+	}
+/* 
+====================================================================================================
+■ プライバシーポリシー (.page-privacy) ./privacy/
+---------------------------------------------------------------------------------------------------- */
+
+/* 
+====================================================================================================
+■ 利用規約 (.page-rules) ./rules/
+---------------------------------------------------------------------------------------------------- */
+	#rules-document {
+		
+	}
+/* 
+====================================================================================================
+■ 使い方ガイド (.page-guide) ./guide/
+---------------------------------------------------------------------------------------------------- */
+
+/* 
+====================================================================================================
+■ サイトマップ (.page-sitemap) ./sitemap/
+---------------------------------------------------------------------------------------------------- */
+
+/* 
+====================================================================================================
+◆ コラム (.page-column) ./column/
+---------------------------------------------------------------------------------------------------- */

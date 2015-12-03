@@ -1,0 +1,30 @@
+@charset "utf-8";
+	
+	$c-bk-dk: #272727;
+	$c-bk:    #4D4D4D;
+	$c-bk-lt: #737373;
+	$c-gy-dk: #999999;
+	$c-gy:    #E6E6E6;
+	$c-gy-lt: #F5F5F5;
+	
+	$c-vpk: #f61d54;
+	$c-pk: #f38291;
+	
+	$c-gd: #A78E3A;
+	$c-sv: #8F89A3;
+	$c-bz: #9E6959;
+	
+	$c-fbbl:     #3b5998; // Facebookブルー
+	$c-twbl:     #55acee; // Twitterブルー
+	$c-ggl:      #DD4B39; // Google+レッド
+	$c-freedial: #12a73b; // フリーダイヤルロゴ
+	
+	$c-base:     #fff;
+	$c-txt:      $c-bk-dk; // *必須値:以降のmixinで使用
+	$c-subtxt:   #666;
+	$c-seotxt:   #999;
+	$c-link:      $c-pk;
+	$c-link-hover:$c-pk;
+	
+	$c-mg: #000;
+	$c-pn: #000;

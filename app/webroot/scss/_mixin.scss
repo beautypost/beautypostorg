@@ -1,0 +1,277 @@
+@charset "utf-8";
+	
+	// クラスのセパレータ設定
+	$-_: if($fhts-classname-hyphen, '-', '_') !default;
+
+// -------------------------------------------------------------------------------------------------
+// 各種ファンクション
+// -------------------------------------------------------------------------------------------------
+	
+	// 0.数値から単位を取り除く | MIT License | http://jsdo.it/a_t/j9mT
+	//  nounit($value)
+	@import "lib/nounit";
+	
+	// 0.小数点の桁数を丸める | MIT License | gist.github.com/terkel/4373420
+	//  decimal-round ($number, $digits:0, $mode:round)
+	@import "lib/decimal";
+	
+	// 0.HSBカラーに対応
+	@import "lib/hsb";
+	
+	// 1.グリッド設定から数値を割り出す
+	@function gz($value,$unit:px) {
+		$px: $value * $default-gz;
+		@if $fhts-font-size-rem and $unit == rem {
+			@return ($px / $default-fz) * 1rem;
+		} @else {
+			@return $px * 1px;
+		}
+	}
+	
+	//$echo: gz(3,rem);
+	// 99.デバッグ用ログ出力
+	//$echo:null !default;
+	//@if $echo {
+	//	body:before {
+	//		padding:0.5em; display:block;
+	//		content:"#{$echo}";
+	//		color:#0f0; background:black;
+	//		font:12px/1.5 monospace;
+	//	}
+	//}
+	
+// -------------------------------------------------------------------------------------------------
+// フォント関連
+// -------------------------------------------------------------------------------------------------
+	
+	@mixin fz10 { font-size:10px; font-family:"ＭＳ Ｐゴシック","MS PGothic",sans-serif; }
+	
+	@mixin fz($fz,$base-fz:$default-fz) {
+		font-size:#{$fz}px; // フォールバック
+		@if $fhts-font-size-rem {
+			$rem : ($fz / $default-fz);
+			font-size: decimal-round($rem,2) * 1rem;
+		} @else {
+			$ratio: ($fz / $base-fz);
+			font-size: decimal-round(percentage($ratio),2);
+		}
+	}
+	
+	// ▼明朝フォント指定 ※font-size:13px以上はHG明朝E系も含める。何か値を引数に。
+	@mixin ff_serif($hg:null) {
+		@if $hg {
+			font-family: "Hiragino Mincho ProN","ヒラギノ明朝 ProN W3", "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3",YuMincho,"Yu Mincho","游明朝",serif;
+		} @else {
+			font-family: "Hiragino Mincho ProN","ヒラギノ明朝 ProN W3", "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3",YuMincho,"Yu Mincho","游明朝","HGP明朝E",serif;
+		}
+	}
+	
+	// ▼FontAwesome 擬似要素
+	// 山括弧上 太
+	@mixin fa-chevron-top()   { content:'\f077'; font-family:FontAwesome; }
+	// 山括弧右 太
+	@mixin fa-chevron-right() { content:'\f054'; font-family:FontAwesome; }
+	// 山括弧下 太
+	@mixin fa-chevron-bottom(){ content:'\f078'; font-family:FontAwesome; }
+	// 山括弧左 太
+	@mixin fa-chevron-left()  { content:'\f058'; font-family:FontAwesome; }
+	
+	// 山括弧上 太●
+	@mixin fa-chevron-circle-top()   { content:'\f139'; font-family:FontAwesome; }
+	// 山括弧右 太●
+	@mixin fa-chevron-circle-right() { content:'\f138'; font-family:FontAwesome; }
+	// 山括弧下 太●
+	@mixin fa-chevron-circle-bottom(){ content:'\f13a'; font-family:FontAwesome; }
+	// 山括弧左 太●
+	@mixin fa-chevron-circle-left()  { content:'\f137'; font-family:FontAwesome; }
+	
+	// 山括弧上 細
+	@mixin fa-angle-top()   { content:'\f106'; font-family:FontAwesome; }
+	// 山括弧右 細
+	@mixin fa-angle-right() { content:'\f105'; font-family:FontAwesome; }
+	// 山括弧下 細
+	@mixin fa-angle-bottom(){ content:'\f107'; font-family:FontAwesome; }
+	// 山括弧左 細
+	@mixin fa-angle-left() { content:'\f104'; font-family:FontAwesome; }
+	
+	// 二重山括弧上 細
+	@mixin fa-angle-double-top()   { content:'\f102'; font-family:FontAwesome; }
+	// 二重山括弧右 細
+	@mixin fa-angle-double-right() { content:'\f101'; font-family:FontAwesome; }
+	// 二重山括弧下 細
+	@mixin fa-angle-double-bottom(){ content:'\f103'; font-family:FontAwesome; }
+	// 二重山括弧左 細
+	@mixin fa-angle-double-left() { content:'\f100'; font-family:FontAwesome; }
+	
+	// チェックマーク
+	@mixin fa-check() { content:'\f00c'; font-family:FontAwesome; }
+	
+	
+// -------------------------------------------------------------------------------------------------
+// レイアウト関連
+// -------------------------------------------------------------------------------------------------
+	// ▼MediaQuery拡張
+	@mixin mqlt($breakpoint) { @media (max-width: ($breakpoint - 1)) { @content; } }
+	@mixin mqmt($breakpoint) { @media (min-width: $breakpoint) { @content; } }
+	@mixin mq($bp-min,$bp-max) { @media (min-width: $bp-min) and (max-width: ($bp-max - 1)) { @content; } }
+	
+	// ▼縦横片方向余白指定
+	@mixin ms($m:0) { margin-right:$m; margin-left:$m; }
+	@mixin mv($m:0) { margin-top:$m; margin-bottom:$m; }
+	@mixin ps($p:0) { padding-right:$p; padding-left:$p; }
+	@mixin pv($p:0) { padding-top:$p; padding-bottom:$p; }
+	
+	// ▼基本コンテンツブロック上下調整
+	@mixin container($m:gz(1)) {
+		@include mv($m);
+		&:first-child { margin-top:0; }
+		&:last-child { margin-bottom:0; }
+	}
+	
+	// ▼正方形コンテンツ
+	@mixin wh($z:0,$lh:null) {
+		width:$z; height:$z;
+		@if $lh == lh { line-height:$z; text-align:center; }
+	}
+	// ▼ポジション制御：絶対
+	@mixin posa($t:null,$r:null,$b:null,$l:null) {
+		position:absolute;
+		@if $t { top:$t; } @if $r { right:$r; } @if $b { bottom:$b; } @if $l { left:$l; }
+	}
+	// ▼ポジション制御：相対
+	@mixin posr($t:null,$r:null,$b:null,$l:null) {
+		position:relative;
+		@if $t { top:$t; } @if $r { right:$r; } @if $b { bottom:$b; } @if $l { left:$l; }
+	}
+	// ▼ポジション制御：固定
+	@mixin posf($t:null,$r:null,$b:null,$l:null) {
+		position:fixed;
+		@if $t { top:$t; } @if $r { right:$r; } @if $b { bottom:$b; } @if $l { left:$l; }
+	}
+	
+	// ▼クリアフィックス
+	@mixin cf() { zoom:1; &:before,&:after { content:''; display:table; clear:both; } }
+	
+	// ▼横並びレイアウト（inline-block版）
+	@mixin inlineblockWrap($child-item:li) {
+		letter-spacing:-.40em;
+		>#{$child-item} {
+			display:inline-block; letter-spacing:normal;
+			&:first-child { margin-left:0 !important; }
+			&:last-child { margin-right:0 !important; }
+			@content;
+		}
+	}
+	// ▼横並びレイアウト（float版）
+	@mixin horizontalWrap($child-item:li,$direction:left) {
+		@include cf();
+		>#{$child-item} {
+			float:$direction;
+			&:first-child { margin-#{$direction}:0 !important; }
+			&:last-child { margin-#{opposite-position($direction)}:0 !important; }
+			@content;
+		}
+	}
+	// ▼横並びレイアウト（table-cell版）
+	@mixin faketableWrap($child-item:li,$row:null) {
+		display:table;
+		@if $row { >#{$row} { display:table-row; } }
+		>#{$child-item} { display:table-cell; vertical-align:middle; @content; }
+	}
+	
+// -------------------------------------------------------------------------------------------------
+// 装飾
+// -------------------------------------------------------------------------------------------------
+	// ▼独自リストスタイル
+	@mixin liststyle($cnt) {
+		margin-left:1em;
+		&:before{ margin-left:-1em; position:relative; display:inline-block; width:1em; content:$cnt; text-align:center; }
+	}
+	
+	// ▼下線リンク
+	@mixin ulLink() {
+		text-decoration:underline;
+		&:hover { text-decoration:none; }
+	}
+	
+	// ▼フォトフレーム
+	// 1:種別選択[basic/borderless/rich] / 2:テーマカラー / 3:デフォルト値の出力
+	@mixin photoFrame($type:basic,$theme-color:#e0e0e0,$default:true) {
+		@if $default {
+			padding:7px;
+			border:solid 1px $theme-color;
+		}
+		@if $type == borderless {
+			padding:8px;
+			border:none;
+		}
+		@if $type == rich { border-right-color:darken($theme-color,5%); border-bottom-color:darken($theme-color,10%); }
+		@if $default {
+			display:inline-block;
+		}
+		@if $type == rich {
+			background:lighten($theme-color,5%);
+			@include background-image(radial-gradient(center 40%, circle farthest-corner, rgba(lighten($theme-color,25%),1), rgba(lighten($theme-color,25%),1) 60%, rgba(lighten($theme-color,25%),0)));
+		} @else {
+			background:lighten($theme-color,15%);
+		}
+		@if $default {
+			img { margin:0 auto; display:block; @include box-shadow(0 0 0 1px rgba(#000,0.05)); }
+			.caption {
+				margin-top:3px; margin-bottom:-3px;
+				display:block; // a要素の中にspan等として入る可能性も考え、block要素に。
+				position:relative;
+				@include fz(10);
+				text-align:center;
+			}
+		}
+		@if $type == rich {
+			.caption { @include text-shadow(0 1px 0 lighten($theme-color,25%), 0 0 2px rgba(#000,0.2)); }
+		}
+		@content;
+	}
+	
+	// ▼疑似要素イメージ
+	@mixin beforeImg($url) {
+		position:relative;
+		&:before { content:url($url); @content; }
+	}
+	@mixin afterImg($url) {
+		position:relative;
+		&:after { content:url($url); @content; }
+	}
+	
+	// ▼擬似要素アイコン
+	@mixin inlineIcon() {
+		display:inline-block;
+		vertical-align:middle;
+	}
+	@mixin leftCenterIcon() {
+		margin-top:-0.5em; display:block;
+		@include posa(50%,null,null,0);
+		@include wh(1em,lh);
+	}
+	@mixin rightCenterIcon() {
+		margin-top:-0.5em; display:block;
+		@include posa(50%,0);
+		@include wh(1em,lh);
+	}
+	
+	// ▼ブラックストライプ背景
+	@mixin stripe-bk() {
+		color:#fff;
+		background:$c-bk-dk url(../common-img/stripe.png); @include background-size(12px);
+	}
+	
+	// ▼グラデ縦
+	@mixin grad($c_start:#ccc,$c_end:#999) {
+		background: mix($c_start, $c_end,50%);
+		@include background-image(linear-gradient(top,$c_start,$c_end));
+		@include filter-gradient($c_start,$c_end,vertical);
+	}
+	// ▼グラデ横
+	@mixin grad_h($c_start:#ccc,$c_end:#999) {
+		background: mix($c_start, $c_end,50%);
+		@include background-image(linear-gradient(left,$c_start,$c_end));
+		@include filter-gradient($c_start,$c_end,horizontal);
+	}

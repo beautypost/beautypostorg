@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/* OOCSS */
+.vat { vertical-align:top; } .vam { vertical-align:middle; } .vabl { vertical-align:baseline; } .vab { vertical-align:bottom; }
+.fll { float:left; } .flr { float:right; } .flc { @include ms(auto); } .clb { clear:both; }
+.tal { text-align:left; } .tac { text-align:center; } .tar { text-align:right; }
+.ltsn { letter-spacing:normal; } .lts-1 { letter-spacing:-1px; }
+.wsnw { white-space:nowrap; }
+
+.clearfix { @include cf(); }
+.fitimg#{$-_}w { width:100%; height:auto; }
+.fitimg#{$-_}h { width:auto; height:100%; }
+
+.dummylink { cursor: pointer; }
+.txt-c-pk { color:$c-vpk; }
+
+/* ---ページトップアンカー--- */
+.page#{$-_}up { text-align:right; a:before { content:"▲"; } }
+
+/* ---ロールオーバーエフェクト--- */
+.hover-fade { @include transition(opacity 0.2s linear); }
+a:hover .hover-fade { @include opacity(0.6); }
+
+/* ---ユーザー入力エリア--- */
+.usertxt { font-family:"ＭＳ Ｐゴシック","MS PGothic",sans-serif !important; }
+
+/* ---レスポンシブ要素表示切替--- */
+.rsp#{$-_}xxxo {
+	@include mqlt($bpL){ display:none; }
+}
+.rsp#{$-_}xxox {
+	@include mqlt($bpM){ display:none; }
+	@include mqmt($bpL){ display:none; }
+}
+.rsp#{$-_}xxoo {
+	@include mqlt($bpM){ display:none; }
+}
+.rsp#{$-_}xoxx {
+	@include mqlt($bpS) { display:none; }
+	@include mqmt($bpM) { display:none; }
+}
+.rsp#{$-_}xoxo {
+	@include mqlt($bpS) { display:none; }
+	@include mq($bpM,$bpL) { display:none; }
+}
+.rsp#{$-_}xoox {
+	@include mqlt($bpS) { display:none; }
+	@include mqmt($bpL){ display:none; }
+}
+.rsp#{$-_}xooo {
+	@include mqlt($bpS) { display:none; }
+}
+.rsp#{$-_}oxxx {
+	@include mqmt($bpS) { display:none; }
+}
+.rsp#{$-_}oxxo {
+	@include mq($bpS,$bpL) { display:none; }
+}
+.rsp#{$-_}oxox {
+	@include mq($bpS,$bpM) { display:none; }
+	@include mqmt($bpL){ display:none; }
+}
+.rsp#{$-_}oxoo {
+	@include mq($bpS,$bpM) { display:none; }
+}
+.rsp#{$-_}ooxx {
+	@include mqmt($bpM) { display:none; }
+}
+.rsp#{$-_}ooxo {
+	@include mq($bpM,$bpL) { display:none; }
+}
+.rsp#{$-_}ooox {
+	@include mqmt($bpL){ display:none; }
+}
+
+/* 
+--------------------------------------------------
+ margin & padding
+-------------------------------------------------- */
+$mpList: 0 5 8 10 15 16 20 24 25 30 32 35 40 45 48 50 55 56 60 64 65 70 72 75 80 85 88 90 95 96 100 120 128 160 192 256;
+@for $i from 1 through length($mpList) { 
+	$px: nth($mpList,$i)+px;
+	.m#{nth($mpList,$i)} { margin:$px !important; }
+	.mt#{nth($mpList,$i)} { margin-top:$px !important; }
+	.mr#{nth($mpList,$i)} { margin-right:$px !important; }
+	.mb#{nth($mpList,$i)} { margin-bottom:$px !important; }
+	.ml#{nth($mpList,$i)} { margin-left:$px !important; }
+	.p#{nth($mpList,$i)} { padding:$px !important; }
+	.pt#{nth($mpList,$i)} { padding-top:$px !important; }
+	.pr#{nth($mpList,$i)} { padding-right:$px !important; }
+	.pb#{nth($mpList,$i)} { padding-bottom:$px !important; }
+	.pl#{nth($mpList,$i)} { padding-left:$px !important; }
+}

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*
+/* 
 ====================================================================================================
 ■ common
 ■ ブランクページ (.page-blank) ./blank/
@@ -15,19 +15,20 @@
 ◆ ログイン (.page-login) ./login/
 ◆ サインアップ (.page-signup) ./signup/
 ◆ マイページ (.page-mypage) ./mypage/
+◆ パスワード再設定 (.page-forgetpass) ./forgetpass/
 ◆ メルマガバックナンバー (.page-magazine) ./magazine/
 ◆ アンケートバックナンバー (.page-enquete) ./enquete/
 ◆ お役立ち美容通信 (.page-news) ./news/
-■ 掲載ご希望の方へ (.page-maker) ./maker/
-◆ 体験者の声 (.page-report) ./report/
-◆ お問い合わせフォーム (.page-contact) ./contact/
+■ 美容機器メーカーの方へ (.page-maker) ./maker/
+■ モニター体験レポート (.page-report) ./report/
+◆ よくある質問・お問い合わせ (.page-contact) ./contact/
 ■ プライバシーポリシー (.page-privacy) ./privacy/
 ■ 利用規約 (.page-rules) ./rules/
 ■ 使い方ガイド (.page-guide) ./guide/
 ■ サイトマップ (.page-sitemap) ./sitemap/
 ◆ コラム (.page-column) ./column/
 ==================================================================================================== */
-/*
+/* 
 ====================================================================================================
 ■ common
 ---------------------------------------------------------------------------------------------------- */
@@ -37,11 +38,11 @@
   }
 }
 
-/*
+/* 
 ====================================================================================================
 ■ ブランクページ (.page-blank) ./blank/
 ---------------------------------------------------------------------------------------------------- */
-/*
+/* 
 ====================================================================================================
 ■ Beauty Postとは？ (.page-about) ./about/
 ---------------------------------------------------------------------------------------------------- */
@@ -151,7 +152,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: #E6E6E6 url(/images/about/recommend-bg.jpg) center top no-repeat;
+    background: #E6E6E6 url(../images/about/recommend-bg.jpg) center top no-repeat;
     -moz-background-size: 720px auto;
     -o-background-size: 720px auto;
     -webkit-background-size: 720px auto;
@@ -242,7 +243,7 @@
   #about-concept dt {
     display: table-cell;
     vertical-align: bottom;
-    background: url(/images/about/concept-line.png) right bottom no-repeat;
+    background: url(../images/about/concept-line.png) right bottom no-repeat;
   }
 }
 #about-concept dt span {
@@ -252,7 +253,7 @@
   -webkit-border-radius: 50%;
   border-radius: 50%;
   color: #fff;
-  background: #272727 url(/common-img/stripe.png);
+  background: #272727 url(../common-img/stripe.png);
   -moz-background-size: 12px;
   -o-background-size: 12px;
   -webkit-background-size: 12px;
@@ -302,7 +303,7 @@
   }
 }
 
-/*
+/* 
 ====================================================================================================
 ■ 美容機器の基礎知識 (.page-knowladge) ./knowledge/
 ---------------------------------------------------------------------------------------------------- */
@@ -362,7 +363,7 @@
   -moz-border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
   border-radius: 0.5rem;
-  background: #E6E6E6 url(../dummy/knowledge-lattice.png) center center;
+  background: #E6E6E6 url(../images/dummy/knowledge-lattice.png) center center;
 }
 #knowledge-history li {
   margin-top: 30px;
@@ -481,7 +482,7 @@
 }
 #knowledge-merit li:nth-child(1) dl:before {
   content: '';
-  background: url(../knowledge/images/merit01.png) center center no-repeat;
+  background: url(../images/knowledge/merit01.png) center center no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -501,7 +502,7 @@
 }
 #knowledge-merit li:nth-child(2) dl:before {
   content: '';
-  background: url(../knowledge/images/merit02.png) center center no-repeat;
+  background: url(../images/knowledge/merit02.png) center center no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -521,7 +522,7 @@
 }
 #knowledge-merit li:nth-child(3) dl:before {
   content: '';
-  background: url(../knowledge/images/merit03.png) center center no-repeat;
+  background: url(../images/knowledge/merit03.png) center center no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -581,7 +582,7 @@
   line-height: 2;
 }
 
-/*
+/* 
 ====================================================================================================
 ◆ 美容機器用語集 (.page-glossary) ./glossary/
 ---------------------------------------------------------------------------------------------------- */
@@ -788,7 +789,7 @@
   margin-top: 1.5em;
 }
 
-/*
+/* 
 ====================================================================================================
 ◆ 美容機器コレクション (.page-collection) ./collection/
 ---------------------------------------------------------------------------------------------------- */
@@ -809,11 +810,11 @@
   margin-bottom: 0;
 }
 
-/*
+/* 
 ====================================================================================================
  ◆ レビュー (.page-review) ./collection/review/
 ---------------------------------------------------------------------------------------------------- */
-	/*
+	/* 
 	--------------------------------------------------------------------------------------------------
   ◇ レビュー入力
 	-------------------------------------------------------------------------------------------------- */
@@ -915,7 +916,7 @@
   text-align: center;
 }
 
-	/*
+	/* 
 	--------------------------------------------------------------------------------------------------
   ◇ レビュー表示
 	-------------------------------------------------------------------------------------------------- */
@@ -1066,7 +1067,7 @@
   border-top: 1px dotted #272727;
 }
 
-/*
+/* 
 ====================================================================================================
  ◆ 商品比較 (.page-compare) ./collection/compare/
 ---------------------------------------------------------------------------------------------------- */
@@ -1150,6 +1151,9 @@
     font-size: 1.5rem;
   }
 }
+#sp-compare .compare-custom form input[type=text].formparts-sizeZip {
+  width: 4em;
+}
 #sp-compare .compare-custom form input[type=checkbox] {
   margin: 0 0.25em 2px;
   padding: 0;
@@ -1171,6 +1175,16 @@
 }
 #sp-compare .compare-custom form option {
   padding-right: 1em;
+}
+#sp-compare .compare-custom form .formparts-mv {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#sp-compare .compare-custom form .formparts-mv:first-child {
+  margin-top: 0;
+}
+#sp-compare .compare-custom form .formparts-mv:last-child {
+  margin-bottom: 0;
 }
 #sp-compare .compare-custom dl {
   margin-bottom: 1.25em;
@@ -1255,11 +1269,11 @@
   font-size: 1.4rem;
 }
 
-/*
+/* 
 ====================================================================================================
 ■ 会員特典の説明 (.page-privilege) ./privilege/
 ---------------------------------------------------------------------------------------------------- */
-/*
+/* 
 ====================================================================================================
 ◆ ログイン (.page-login) ./login/
 ---------------------------------------------------------------------------------------------------- */
@@ -1298,6 +1312,9 @@
     font-size: 1.5rem;
   }
 }
+#login-form form input[type=text].formparts-sizeZip {
+  width: 4em;
+}
 #login-form form input[type=checkbox] {
   margin: 0 0.25em 2px;
   padding: 0;
@@ -1319,6 +1336,16 @@
 }
 #login-form form option {
   padding-right: 1em;
+}
+#login-form form .formparts-mv {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#login-form form .formparts-mv:first-child {
+  margin-top: 0;
+}
+#login-form form .formparts-mv:last-child {
+  margin-bottom: 0;
 }
 #login-form dt {
   margin-top: 8px;
@@ -1690,7 +1717,7 @@
   text-align: right;
 }
 
-/*
+/* 
 ====================================================================================================
 ◆ サインアップ (.page-signup) ./signup/
 ---------------------------------------------------------------------------------------------------- */
@@ -1827,7 +1854,7 @@
 }
 @media (min-width: 768px) {
   #signup-form .extra .kome {
-    margin-left: 14.5em;
+    margin-left: 16.5em;
   }
 }
 
@@ -1888,7 +1915,7 @@
   }
 }
 
-/*
+/* 
 ====================================================================================================
 ◆ マイページ (.page-mypage) ./mypage/
 ---------------------------------------------------------------------------------------------------- */
@@ -2072,11 +2099,15 @@
   margin-top: 0.5em;
 }
 
-/*
+/* 
+====================================================================================================
+◆ パスワード再設定 (.page-forgetpass) ./forgetpass/
+---------------------------------------------------------------------------------------------------- */
+/* 
 ====================================================================================================
 ◆ メルマガバックナンバー (.page-magazine) ./magazine/
 ---------------------------------------------------------------------------------------------------- */
-/*
+/* 
 ====================================================================================================
 ◆ アンケートバックナンバー (.page-enquete) ./enquete/
 ---------------------------------------------------------------------------------------------------- */
@@ -2175,7 +2206,7 @@
   text-decoration: none;
 }
 
-/*
+/* 
 ====================================================================================================
 ◆ お役立ち美容通信 (.page-news) ./news/
 ---------------------------------------------------------------------------------------------------- */
@@ -2451,35 +2482,362 @@
   font-family: FontAwesome;
 }
 
-/*
+/* 
 ====================================================================================================
-■ 掲載ご希望の方へ (.page-maker) ./maker/
+■ 美容機器メーカーの方へ (.page-maker) ./maker/
 ---------------------------------------------------------------------------------------------------- */
-/*
+@media (min-width: 1024px) {
+  #maker-lead p, #maker-appeal p {
+    line-height: 2;
+  }
+}
+#maker-lead p .photo, #maker-appeal p .photo {
+  margin: 1em auto;
+  display: block;
+}
+#maker-lead .section-body, #maker-appeal .section-body {
+  margin-bottom: 1.5em;
+}
+#maker-lead footer .kome, #maker-appeal footer .kome {
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+#maker-lead footer .button, #maker-appeal footer .button {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+@media (max-width: 479px) {
+  #maker-lead footer .button, #maker-appeal footer .button {
+    padding-right: 0;
+    padding-left: 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  #maker-service p {
+    line-height: 2;
+  }
+}
+@media (max-width: 767px) {
+  #maker-service .section-body section {
+    zoom: 1;
+  }
+  #maker-service .section-body section:before, #maker-service .section-body section:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #maker-service .section-body section .eyecatch {
+    float: left;
+    width: 26.66667%;
+  }
+  #maker-service .section-body section .section-body {
+    float: right;
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  #maker-service .section-body {
+    zoom: 1;
+  }
+  #maker-service .section-body:before, #maker-service .section-body:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #maker-service .section-body > section {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 3.2%;
+    width: 31.2%;
+  }
+  #maker-service .section-body > section:first-child {
+    margin-left: 0 !important;
+  }
+  #maker-service .section-body > section:last-child {
+    margin-right: 0 !important;
+  }
+}
+#maker-service .section-body .eyecatch {
+  text-align: center;
+}
+#maker-service .section-body .eyecatch img {
+  height: auto;
+}
+@media (max-width: 767px) {
+  #maker-service .section-body .eyecatch img {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  #maker-service .section-body .eyecatch img {
+    margin-bottom: 1em;
+    width: 64.10256%;
+  }
+}
+
+/* 
 ====================================================================================================
-◆ 体験者の声 (.page-report) ./report/
+■ モニター体験レポート (.page-report) ./report/
 ---------------------------------------------------------------------------------------------------- */
-/*
+.report-box {
+  padding: 5.6%;
+  background: #F1ECE6;
+}
+
+@media (min-width: 768px) {
+  #report-lead .width-adjuster {
+    margin-left: -5%;
+    width: 105%;
+    position: relative;
+  }
+}
+#report-lead footer {
+  position: relative;
+  text-align: center;
+}
+#report-lead footer .link-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.report-gallery {
+  zoom: 1;
+}
+.report-gallery:before, .report-gallery:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.report-gallery > li {
+  float: left;
+  margin-bottom: 1em;
+}
+.report-gallery > li:first-child {
+  margin-left: 0 !important;
+}
+.report-gallery > li:last-child {
+  margin-right: 0 !important;
+}
+@media (max-width: 479px) {
+  .report-gallery > li {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .report-gallery > li {
+    margin-left: 3%;
+    width: 48.5%;
+  }
+  .report-gallery > li:nth-child(2n-1) {
+    margin-left: 0;
+    clear: both;
+  }
+}
+@media (min-width: 768px) {
+  .report-gallery > li {
+    margin-left: 3.37838%;
+    width: 31.08108%;
+  }
+  .report-gallery > li:nth-child(3n-2) {
+    margin-left: 0;
+    clear: both;
+  }
+}
+
+.report-result {
+  padding: 3%;
+  background: #fff;
+}
+
+/* 
 ====================================================================================================
-◆ お問い合わせフォーム (.page-contact) ./contact/
+◆ よくある質問・お問い合わせ (.page-contact) ./contact/
 ---------------------------------------------------------------------------------------------------- */
-/*
+.faq-list {
+  counter-reset: faqlist;
+}
+.faq-list li {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-top: 1.5em;
+  border-top: 1px dotted #999999;
+  counter-increment: faqlist;
+}
+.faq-list li:first-child {
+  margin-top: 0;
+}
+.faq-list li:last-child {
+  margin-bottom: 0;
+}
+.faq-list li:first-child {
+  border: none;
+  padding-top: 0;
+}
+
+.faq-q {
+  position: relative;
+  padding-left: 5.6rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  overflow: hidden;
+  font-weight: 700;
+  color: #f61d54;
+}
+@media (min-width: 1024px) {
+  .faq-q {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+.faq-q:before {
+  margin-top: -1em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  content: "Q" counters(faqlist,".") ". ";
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.faq-a {
+  position: relative;
+  padding-left: 5.6rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .faq-a {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+.faq-a:before {
+  margin-top: -1em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  content: "A" counters(faqlist,".") ". ";
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+#user-form input, #user-form select, #user-form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  #user-form input, #user-form select, #user-form textarea {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #user-form input, #user-form select, #user-form textarea {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+#user-form input[type=text].formparts-sizeZip {
+  width: 4em;
+}
+#user-form input[type=checkbox] {
+  margin: 0 0.25em 2px;
+  padding: 0;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+#user-form input[type=radio] {
+  margin: 0 0.25em 2px;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+#user-form input[type=submit] {
+  padding: 5px 10px;
+}
+#user-form textarea {
+  vertical-align: top;
+}
+#user-form option {
+  padding-right: 1em;
+}
+#user-form .formparts-mv {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#user-form .formparts-mv:first-child {
+  margin-top: 0;
+}
+#user-form .formparts-mv:last-child {
+  margin-bottom: 0;
+}
+#user-form .contact-form {
+  display: block;
+}
+@media (min-width: 768px) {
+  #user-form .contact-form {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #user-form .contact-form {
+    width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  #user-form .contact-form {
+    width: 86%;
+  }
+}
+#user-form .contact-form .form-nav {
+  margin-top: 1.5em;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  #user-form .contact-form .form-nav button {
+    font-size: 18px;
+  }
+}
+
+/* 
 ====================================================================================================
 ■ プライバシーポリシー (.page-privacy) ./privacy/
 ---------------------------------------------------------------------------------------------------- */
-/*
+/* 
 ====================================================================================================
 ■ 利用規約 (.page-rules) ./rules/
 ---------------------------------------------------------------------------------------------------- */
-/*
+/* 
 ====================================================================================================
 ■ 使い方ガイド (.page-guide) ./guide/
 ---------------------------------------------------------------------------------------------------- */
-/*
+/* 
 ====================================================================================================
 ■ サイトマップ (.page-sitemap) ./sitemap/
 ---------------------------------------------------------------------------------------------------- */
-/*
+/* 
 ====================================================================================================
 ◆ コラム (.page-column) ./column/
 ---------------------------------------------------------------------------------------------------- */

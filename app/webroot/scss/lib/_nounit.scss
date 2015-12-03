@@ -1,0 +1,13 @@
+@charset "utf-8";
+//  sassの演算では、10px/1px=10というように、単位付きの値を、単位付きの1で割ると単位を除いた数を返すので、
+//  引数を単位付きの1（$_nounit_divisor）を求めてそれで割る。
+//
+//  単位付きの1（$_nounit_divisor）の求め方
+//  1. 小数点切捨て整数
+//  2. ＊2で偶数にして、2で割った余りを0にする
+//  3. +1
+
+@function nounit($value) {
+  $_nounit_divisor: (floor($value) * 2) % 2 + 1;
+  @return ($value / $_nounit_divisor);
+}
