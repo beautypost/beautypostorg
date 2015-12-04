@@ -30,12 +30,18 @@ $(function(){
     </div>
 
     <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">作成日付 </label>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">表示日付 </label>
         <div class="col-sm-10">
-        <input id="datepicker" type="text" name="data[created]" value="<?php echo $data['Column']['created']?>" class="col-xs-10">
+        <input id="datepicker" type="text" name="data[entrydate]" value="<?php echo $data['Column']['entrydate']?>" class="col-xs-10">
         </div>
     </div>
-
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">表示/非表示</label>
+        <div class="col-sm-10">
+    <select name="data[valid]">
+        <?php echo $this->Useful->option($GenreValid['valid'],$data['Column']['valid'])?>
+    </select></div>
+    </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">カテゴリ</label>
@@ -64,6 +70,9 @@ $(function(){
                                             </button>
                                         </div>
                                     </div>
+
+
+
 <input type="hidden" name="data[id]" value="<?php echo $data['Column']['id']?>">
 </form>
     </div>

@@ -116,6 +116,7 @@ class Blog extends AppModel {
         }
 
         $all = $this->find('first',array('conditions'=>$conditions));
+        $all['Blog']['tags'] = explode(',',$all['Blog']['tag']);
         return $all;
     }
 
@@ -128,6 +129,7 @@ class Blog extends AppModel {
     * @param sessionITEMS
     **/
     public function getItems($sort='',$limit='',$offset='',$tag='') {
+
         $conditions = array();
         // if(!$this->checkAdminID($userID)){
         //     $conditions['conditions'][] = array('valid'=>1,'created <='=>$this->now());
@@ -136,7 +138,7 @@ class Blog extends AppModel {
         //     $conditions['conditions'][] = array('genre_id'=>$genreID);
         // }
         if($tag){
-            $conditions['conditions'][] = array('tag'=>$tag);
+            $conditions['conditions']['tag like'] = '%,'.$tag.',%';
         }
 
         if($sort){
@@ -155,11 +157,11 @@ class Blog extends AppModel {
     }
 
 
-    public function getItemsAllCount($userID,$genreID){
+    public function getItemsAllCount($genreID){
         $conditions = array();
-        if(!$this->checkAdminID($userID)){
-            $conditions['conditions'][] = array('valid'=>1,'created <='=>$this->now());
-        }
+        // if(!$this->checkAdminID($userID)){
+        //     $conditions['conditions'][] = array('valid'=>1,'created <='=>$this->now());
+        // }
         if($genreID){
             $conditions['conditions'][] = array('genre_id'=>$genreID);
         }
@@ -167,6 +169,7 @@ class Blog extends AppModel {
         $count = $this->find('count',$conditions);
         return $count;
     }
+
 
 
 

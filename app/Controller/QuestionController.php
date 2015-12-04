@@ -128,9 +128,8 @@ class QuestionController extends AppController {
     }
 
     public function Detail($id){
-        $total = $this->Question->getItemsCount('');
-        $p = isset($data['p']) ? $data['p'] : 0;
-        $pager = $this->Pager->getPager($total,$p,1);
+        $all = $this->Question->getItems('','');
+        $pager = $this->Pager->getPagerDetail($all,'Question',$id);
         $this->set('Pager',$pager);
 
         $question = $this->Question->getItemByID($id);

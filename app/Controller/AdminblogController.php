@@ -32,7 +32,6 @@ App::uses('BaseController', 'Controller');
 class AdminblogController extends BaseController {
 
 
-
 /**
  * This controller does not use a model
  *

@@ -35,7 +35,7 @@
 	Router::connect('/Glossary/detail/:id', array('controller' => 'glossary', 'action' => 'detail'),array('pass'=>array('id')));
 	Router::connect('/Type/:tag', array('controller' => 'type', 'action' => 'index'),array('pass'=>array('category')));
 
-	Router::connect('/Review/:id', array('controller' => 'review', 'action' => 'index'),array('pass'=>array('id')));
+	Router::connect('/Review/index/:id', array('controller' => 'review', 'action' => 'index'),array('pass'=>array('id')));
 
 
 	Router::connect('/Column/detail/:id', array('controller' => 'column', 'action' => 'detail'),array('pass'=>array('id')));

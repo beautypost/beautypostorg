@@ -328,6 +328,12 @@ $ret[8] ='ネイルケア';
         return $Items;
     }
 
+    public function getValid() {
+        $Items['valid'][0] = '非表示';
+        $Items['valid'][1] = '表示';
+        return $Items;
+    }
+
     //年齢
     public function getAgeRange(){
         for($i=18;$i<65;$i++){

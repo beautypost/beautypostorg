@@ -47,6 +47,31 @@ class PagerComponent extends Component {
 
 		return $ret;
     }
+
+    public function getPagerDetail($all,$object,$id,$limit=1){
+        $ret['s'] = false;
+        $ret['e'] = false;
+
+
+        foreach($all as $offset => $v){
+            if($v[$object]['id'] == $id){
+                break;
+            }
+        }
+
+        if($offset != 0){
+            $ret['s'] = $all[$offset-1][$object]['id'];
+        }
+
+        if(!isset($offset)){
+            $ret['e'] = $all[$offset+1][$object]['id'];
+        }
+
+        $ret['p'] = $offset;
+        return $ret;
+    }
+
+
 }
 
 /*

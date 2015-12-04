@@ -43,8 +43,11 @@ class NewsController extends AppController {
 	public function beforeRender(){
 		$this->set('bodyclass','page-news');
 		$this->set('cssname','content');
+
+		//アクセス順
 		$sort['count'] = 'DESC';
 		$this->set('BlogAccess',$this->Blog->getItems($sort,BLOGPAGESUBLIMIT,0,''));
+		//新着
 		$sort['created'] = 'DESC';
 		$this->set('BlogNew',$this->Blog->getItems($sort,BLOGPAGESUBLIMIT,0,''));
     // // 価格
@@ -55,27 +58,44 @@ class NewsController extends AppController {
 
 	public function index($tag='',$offset=''){
 
+		//pageing
+		$sort = isset($data['sort']) ? $data['sort'] : '';
+		$limit = isset($data['limit']) ? $data['limit'] : 10;
+		$p = isset($data['p']) ? $data['p'] : 0;
+
+
 		//一覧表示
 		$sort['created'] = 'DESC';
 		$items = $this->Blog->getItems($sort,BLOGPAGELIMIT,$offset,$tag);
 
 		$this->set('Blogs',$items);
 
+		//検索条件でのmaxcount
+		$total = $this->Blog->getItemsAllCount('');
+		//pagerを作成
+		$pager = $this->Pager->getPager($total,$p,$limit);
+
+		$this->set('totalcount',$total);
+
+		$this->set('Pager',$pager);
+
 	}
 
 	public function detail($id){
 
-		if($id>0){
-			$item = $this->Blog->getItemByID($id,'');
-			if(!$item){
-				return;
-			}
-			//カウントアップ
-			$this->Blog->setCountUp($item);
-			$this->set('Blog',$item);
-			$this->render('detail');
+		$item = $this->Blog->getItemByID($id,'');
+
+		if(!$item){
 			return;
 		}
+		$tag = '';
+		//カウントアップ
+		$this->Blog->setCountUp($item);
+		$this->set('Blog',$item);
+
+		$all = $this->Blog->getItems('','','',$tag);
+		$pager = $this->Pager->getPagerDetail($all,'Blog',$id);
+		$this->set('Pager',$pager);
 
 	}
 

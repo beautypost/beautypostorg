@@ -1,11 +1,11 @@
 <div id="page-area">
   <div class="layout">
-    <div id="main-area">
+
       <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
         <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
-        <li>お役立ち美容通信</li>
+        <li>コラム</li>
       </ol><!-- /#breadcrumb -->
-
+    <div id="main-area" class="layout-main layout-l">
       <article id="news-list">
 
         <h2>コラム
@@ -47,9 +47,34 @@
         </section><!-- /.news-entry -->
 <?php endforeach;?>
 
+      <footer>
+                    <nav class="pagination pg-list">
+                        <ul>
 
-      </article>
-    </div>
+<?php if ($Pager['s']):?>
+      <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
+<?php endif;?>
+                                <ol>
+  <?php foreach ($Pager['pager'] as $k =>$v):?>
+    <?php if ($Pager['p'] == $v-1):?>
+      <li class="nav-now"><a href="?data[p]=<?php echo $v-1?>"><?php echo $v;?></a></li>
+    <?php else:?>
+      <li><a href="?data[p]=<?php echo $v-1?>"><?php echo $v?></a></li>
+    <?php endif;?>
+  <?php endforeach;?>
+                                </ol>
+<?php if ($Pager['e']):?>
+      <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
+<?php endif;?>
+                        </ul>
+                    </nav><!-- /.pagination -->
+      </footer>
+    </article>
+    </div><!-- /#main-area -->
 
-    </div>
+    <aside id="news-menu" class="layout-sub layout-r">
+        <?php echo $this->element('common/cmnSubContent'); ?>
+    </aside><!-- /#sub-area -->
+  </div>
+
 </div><!-- /#page-area -->

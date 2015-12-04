@@ -11,9 +11,9 @@
                             <tr>
                                 <th class="center">ID</th>
                                 <th>日付</th>
+                                <th>表示/非表示</th>
                                 <th>カテゴリ</th>
                                 <th>タイトル</th>
-
                                 <th>Status</th>
                             </tr>
                         </thead>
@@ -23,12 +23,12 @@
 <tr>
     <td><?php echo $Item['Blog']['id']?></td>
     <td><?php echo $Item['Blog']['created']?></td>
+    <td><?php echo $GenreValid['valid'][$Item['Blog']['valid']]?></td>
     <td><?php echo $this->Useful->selectOptionValue($GenreBlogs,$Item['Blog']['tag'])?></td>
     <td><?php echo $Item['Blog']['title']?></td>
 
     <td>
         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminblog/edit/?id=<?php echo $Item['Blog']['id']?>">編集</a>
-        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminblog/delete/?id=<?php echo $Item['Blog']['id']?>">削除</a>
     </td>
 </tr>
 <?php endforeach?>

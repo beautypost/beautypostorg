@@ -20,9 +20,13 @@
 			<div>
 				<nav class="pagination pg-list">
 					<ul>
-						<li class="nav-prev"><a href="#">Prev</a></li>
-						<li class="nav-back"><a href="<?php echo WEBROOT.$this->name?>">一覧へ戻る</a></li>
-						<li class="nav-next"><a href="#">Next</a></li>
+<?php if ($Pager['s']):?>
+      <li class="nav-prev"><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Pager['s']?>"><span class="rsp-xxoo">Prev</span></a></li>
+<?php endif;?>
+      <li class="nav-back"><a href="<?php echo WEBROOT.$this->name?>"><span class="rsp-xxoo">一覧へ戻る</span></a></li>
+<?php if ($Pager['e']):?>
+      <li class="nav-next"><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Pager['e']?>"><span class="rsp-xxoo">Next</span></a></li>
+<?php endif;?>
 					</ul>
 				</nav><!-- /.pagination -->
 			</div>
@@ -64,11 +68,11 @@
 				<nav class="pagination pg-list">
 					<ul>
 <?php if ($Pager['s']):?>
-      <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
+      <li class="nav-prev"><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Pager['s']?>"><span class="rsp-xxoo">Prev</span></a></li>
 <?php endif;?>
-						<li class="nav-back"><a href="<?php echo WEBROOT.$this->name?>">一覧へ戻る</a></li>
+      <li class="nav-back"><a href="<?php echo WEBROOT.$this->name?>"><span class="rsp-xxoo">一覧へ戻る</span></a></li>
 <?php if ($Pager['e']):?>
-      <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
+      <li class="nav-next"><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Pager['e']?>"><span class="rsp-xxoo">Next</span></a></li>
 <?php endif;?>
 					</ul>
 				</nav><!-- /.pagination -->

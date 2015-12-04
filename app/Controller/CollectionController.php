@@ -38,7 +38,7 @@ class CollectionController extends AppController {
  *
  * @var array
  */
-	public $uses = array('ItemsAccess','Item','RecommendItem','Webrequest','ItemsReview','UserVote');
+	public $uses = array('ItemsAccess','Item','RecommendItem','Webrequest','ItemsReview','UserVote','ItemsMonitor');
 
 
 	public function beforeFilter() {
@@ -120,6 +120,11 @@ class CollectionController extends AppController {
 		//レビュー情報
 		$reviews = $this->ItemsReview->getItemsByItemID($id);
 		$this->set('Reviews',$reviews);
+
+		//レビュー情報
+		$reviews = $this->ItemsMonitor->getItemsByItemID($id);
+		$this->set('Monitors',$reviews);
+
 
 		//関連商品
 		$materials = $this->Item->getItemByInId($item['Item']['materials']);

@@ -42,7 +42,13 @@ if (isset($validationErrors) && is_array($validationErrors)) {
         <input type="text" name="data[entrydate]" value="<?php echo $data['Blog']['entrydate']?>" class="col-xs-6" id="datepicker">
     </div>
     </div>
-
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">表示/非表示</label>
+        <div class="col-sm-10">
+    <select name="data[valid]">
+        <?php echo $this->Useful->option($GenreValid['valid'],$data['Blog']['valid'])?>
+    </select></div>
+    </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">TAG</label>

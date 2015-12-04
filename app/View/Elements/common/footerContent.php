@@ -26,8 +26,8 @@
                 <ul>
                     <li><a href="<?php echo WEBROOT?>pages/privacy/">プライバシーポリシー</a></li>
                     <li><a href="<?php echo WEBROOT?>pages/rules/">利用規約</a></li>
-                    <li><a href="<?php echo WEBROOT?>pages/maker/">美容機器メーカーの方へ</a></li>
-                    <li><a href="<?php echo WEBROOT?>pages/contact/">お問い合わせ</a></li>
+                    <li><a href="<?php echo WEBROOT?>Maker/">美容機器メーカーの方へ</a></li>
+                    <li><a href="<?php echo WEBROOT?>Contact/">お問い合わせ</a></li>
                 </ul>
             </div><!-- /#fnav -->
         </div><!-- /.layout -->

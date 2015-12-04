@@ -58,6 +58,7 @@ class Column extends AppModel {
         $ret['tag'] = '';
         $ret['valid'] = '';
         $ret['created'] = '';
+        $ret['entrydate'] = '';
 //        $ret['url'] = '';
     return $ret;
     }
@@ -149,6 +150,8 @@ class Column extends AppModel {
             $conditions['offset']    = $offset;
         }
 
+            $conditions['conditions'][] = array('valid'=>1);
+
 
         $all = $this->find('all',$conditions);
         return $all;
@@ -235,10 +238,10 @@ class Column extends AppModel {
 
 
     public function setCountUp($item){
-        $hits = $item['Blog']['count'] +1;
+        $hits = $item['Column']['count'] +1;
         $data = array(
-            'Blog' => array(
-                'id' => $item['Blog']['id'],
+            'Column' => array(
+                'id' => $item['Column']['id'],
                 'count' => $hits,
                 'modified' => false
             )

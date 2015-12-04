@@ -74,7 +74,7 @@ class AdmincolumnController extends BaseController {
 
 	public function delete(){
 		$id = $this->params['url']['id'];
-		$Column = $this->Column->getItemByID($id);
+		$Column = $this->Column->getItemByID($id,'');
 		$Column['Column']['valid'] = 0;
 		$this->Column->save($Column);
 //		var_dump($Column);

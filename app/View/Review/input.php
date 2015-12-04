@@ -111,7 +111,7 @@
                         <p class="mb16"><span class="wsnw"><a href="<?php echo WEBROOT?>pages/guide/" target="_blank">利用規約</a>と<a href="<?php echo WEBROOT?>pages/privacy/" target="_blank">プライバシーポリシー</a>に</span><span class="wsnw">同意いただきレビューをご投稿ください。</span></p>
                         <button class="button btn-pk btn-sizeM">投稿する</button>
                     </footer>
-                    <input type="hidden" name="data[item_id]" value="<?php echo $data['ItemsReview']['item_id']?>">
+                    <input type="hidden" name="data[item_id]" value="<?php echo $Item['Item']['id']?>">
                 </form>
             </section><!-- /#review-post -->
 

@@ -40,14 +40,28 @@ class ColumnController extends AppController {
  */
 	public $uses = array('Item','Column','Webrequest');
 
-	public function beforeRender(){
-		$this->set('bodyclass','page-news');
+	public function beforeFilter(){
+		$this->set('bodyclass','page-column');
 		$this->set('cssname','content');
 
 	}
 
+	public function beforeRender(){
+        //マスタ
+        $this->set('AllGenreNames',$this->Genre->getAllGenreName());
+        //部位マスタ
+        $this->set('PointGenres',$this->Genre->getPointGenre());
+
+
+		parent::beforeRender();
+	}
 
 	public function index($tag='',$offset=''){
+
+		//pageing
+		$sort = isset($data['sort']) ? $data['sort'] : '';
+		$limit = isset($data['limit']) ? $data['limit'] : 10;
+		$p = isset($data['p']) ? $data['p'] : 0;
 
 		//一覧表示
 		$sort['created'] = 'DESC';
@@ -55,21 +69,35 @@ class ColumnController extends AppController {
 
 		$this->set('Columns',$items);
 
+		//検索条件でのmaxcount
+		$total = $this->Column->getItemsAllCount('','');
+		//pagerを作成
+		$pager = $this->Pager->getPager($total,$p,$limit);
+
+		$this->set('totalcount',$total);
+
+		$this->set('Pager',$pager);
+
+
 	}
 
 	public function detail($id){
 
-		if($id>0){
-			$item = $this->Column->getItemByID($id,'');
-			if(!$item){
-				break;
-			}
-			//カウントアップ
-			$this->Column->setCountUp($item);
-			$this->set('Column',$item);
-			$this->render('detail');
+		$item = $this->Column->getItemByID($id,'');
+
+		if(!$item){
+		$this->set('Pager','');
 			return;
 		}
+		$tag = '';
+		//カウントアップ
+		$this->Column->setCountUp($item);
+
+		$this->set('Column',$item);
+
+		$all = $this->Column->getItems('','','',$tag);
+		$pager = $this->Pager->getPagerDetail($all,'Column',$id);
+		$this->set('Pager',$pager);
 
 	}
 

@@ -18,12 +18,12 @@
                 <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
                 <li><a href="<?php echo WEBROOT?>collection">美容機器コレクション</a></li>
                 <li><a href="<?php echo WEBROOT?>collection/detail/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['title']?></a></li>
-                <li>ユーザーレビュー</li>
+                <li>モニターレビュー</li>
             </ol><!-- /#breadcrumb -->
 
         <div id="main-area" class="layout-main layout-l">
             <section id="review-list">
-                <h2 class="head-bar"><?php echo $Item['Item']['title']?>についてのユーザーレビュー</h2>
+                <h2 class="head-bar"><?php echo $Item['Item']['title']?>についてのモニターレビュー</h2>
                 <section class="summary">
                     <h2>総合評価</h2>
                     <div class="evaluation">
@@ -45,20 +45,17 @@
                         </div><!-- /.item-chart -->
                     </div>
 
-                    <footer class="">
-                        <a href="<?php echo WEBROOT.$this->name?>/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a>
-                    </footer>
                 </section><!-- /.summary -->
 <script>
 ratystar(<?php echo $Item['Item']['id']?>)
 </script>
-<?php foreach($Reviews as $k => $v):?>
+<?php foreach($Monitors as $k => $v):?>
 
                 <section class="review-entry">
                     <header>
-                        <h2><?php echo $v['ItemsReview']['title']?></h2>
+                        <h2><?php echo $v['ItemsMonitor']['title']?></h2>
                         <p class="user-data"><?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?> <?php echo $v['SnsUser']['username']?><br class="rsp-oxxx"></p>
-                        <p class="post-date"><?php echo date("Y.m.d",strtotime($v['ItemsReview']['created']))?></p>
+                        <p class="post-date"><?php echo date("Y.m.d",strtotime($v['ItemsMonitor']['created']))?></p>
                     </header>
 
                     <div class="evaluation">
@@ -67,7 +64,7 @@ ratystar(<?php echo $Item['Item']['id']?>)
                                 <tr>
                                     <th>満足度</th>
                                     <td class="user-rate">
-                    <div class="starrev<?php echo $v['ItemsReview']['id']?>" data-score="<?php echo $v['ItemsReview']['total']?>"></div>
+                    <div class="starrev<?php echo $v['ItemsMonitor']['id']?>" data-score="<?php echo $v['ItemsMonitor']['total']?>"></div>
 
                                     </td>
                                 </tr>
@@ -75,17 +72,17 @@ ratystar(<?php echo $Item['Item']['id']?>)
                         </table><!-- /.table-std -->
                         <div class="item-chart">
         <div style="width:80%">
-            <canvas id="canvas<?php echo $v['ItemsReview']['id']?>" height="450" width="450"></canvas>
+            <canvas id="canvas<?php echo $v['ItemsMonitor']['id']?>" height="450" width="450"></canvas>
         </div>
                         </div><!-- /.item-chart -->
                     </div><!-- /.evaluation -->
 
                     <div class="user-txt">
-                        <p><?php echo $v['ItemsReview']['comment']?></p>
+                        <p><?php echo $v['ItemsMonitor']['comment']?></p>
                     </div><!-- /.user-txt -->
                 </section><!-- /.review-entry -->
 <script>
-ratystar(<?php echo $v['ItemsReview']['id']?>)
+ratystar(<?php echo $v['ItemsMonitor']['id']?>)
 </script>
 <?php endforeach;?>
 
@@ -110,9 +107,9 @@ ratystar(<?php echo $v['ItemsReview']['id']?>)
         var data =[<?php echo $totalreview['p1']?>,<?php echo $totalreview['p2']?>,<?php echo $totalreview['p3']?>,<?php echo $totalreview['p4']?>,<?php echo $totalreview['p5']?>];
         rt(ctx,data);
 
-    <?php foreach($Reviews as $k => $v):?>
-        var ctx = document.getElementById("canvas<?php echo $v['ItemsReview']['id']?>").getContext("2d");
-        var data =[<?php echo $v['ItemsReview']['point1']?>,<?php echo $v['ItemsReview']['point2']?>,<?php echo $v['ItemsReview']['point3']?>,<?php echo $v['ItemsReview']['point4']?>,<?php echo $v['ItemsReview']['point5']?>];
+    <?php foreach($Monitors as $k => $v):?>
+        var ctx = document.getElementById("canvas<?php echo $v['ItemsMonitor']['id']?>").getContext("2d");
+        var data =[<?php echo $v['ItemsMonitor']['point1']?>,<?php echo $v['ItemsMonitor']['point2']?>,<?php echo $v['ItemsMonitor']['point3']?>,<?php echo $v['ItemsMonitor']['point4']?>,<?php echo $v['ItemsMonitor']['point5']?>];
         rt(ctx,data);
     <?php endforeach;?>
     }

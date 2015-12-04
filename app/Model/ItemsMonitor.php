@@ -29,15 +29,15 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
-class ItemsReview extends AppModel {
-    public $name = 'ItemsReview';
+class ItemsMonitor extends AppModel {
+    public $name = 'ItemsMonitor';
     public $belongsTo = array(
         'SnsUser' => array(
             'className' => 'SnsUser',
             'foreignKey' => 'user_id',
 //            'conditions'=>array(),
 //            'dependent' => true,
-            'order' => 'ItemsReview.created'
+            'order' => 'ItemsMonitor.created'
         )
     );
 
@@ -127,7 +127,7 @@ class ItemsReview extends AppModel {
             $itemids = array();
 //            var_dump($all);
             foreach($all as $k => $v){
-                $itemids[] = $v['ItemsReview']['item_id'];
+                $itemids[] = $v['ItemsMonitor']['item_id'];
             }
 
             App::import('Model','Item');
@@ -153,9 +153,12 @@ class ItemsReview extends AppModel {
         $all = $this->find('all',$conditions);
         $ret = array();
         foreach($all as $k => $v){
-            $v['ItemsReview']['total'] = ($v['ItemsReview']['point1'] + $v['ItemsReview']['point2'] + $v['ItemsReview']['point3'] + $v['ItemsReview']['point4'] + $v['ItemsReview']['point5']) /5;
+
+            $v['ItemsMonitor']['total'] = ($v['ItemsMonitor']['point1'] + $v['ItemsMonitor']['point2'] + $v['ItemsMonitor']['point3'] + $v['ItemsMonitor']['point4'] + $v['ItemsMonitor']['point5']) /5;
             $ret[$k] = $v;
+
         }
+
 
         return $ret;
     }

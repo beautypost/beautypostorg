@@ -79,6 +79,7 @@ class UsefulHelper extends AppHelper {
     }
 
     public function age($year,$month,$day){
+        $month = sprintf('%02d',$month);
         $age = (int) ((date('Ymd')-($year.$month.$day))/10000);
         return $age;
     }

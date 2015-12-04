@@ -59,7 +59,7 @@
                          --><img src="<?php echo WEBROOT?>common-img/sbnr-column-half.jpg" width="568" height="272" class="fitimg-w hover-fade rsp-xoxx" alt="Beauty Post コラム"><!--
                          --><img src="<?php echo WEBROOT?>common-img/sbnr-column.jpg" width="500" height="260" class="fitimg-w hover-fade rsp-xxxo" alt="Beauty Post コラム"><!--
                      --></a></li>
-                    <li class="bnr-maker"><a href="<?php echo WEBROOT?>pages/maker"><!--
+                    <li class="bnr-maker"><a href="<?php echo WEBROOT?>Maker"><!--
                          --><img src="<?php echo WEBROOT?>common-img/sbnr-maker.png" width="500" height="180" class="fitimg-w hover-fade rsp-xxxo" alt="美容機器メーカーの方へ"><!--
                          --><span class="rsp-ooox">美容機器メーカーの方へ</span><!--
                      --></a></li><!-- /.bnr-maker -->

@@ -109,12 +109,16 @@ class MypageController extends AppController {
         $items = $this->ItemsReview->getItemsByUserID($userID);
 //        var_dump($items);
         $this->set('Items',$items);
+        $r = $this->Session->read('ItemCompare');
+        $this->set('ItemCompare',$r);
 
     }
 
     function want(){
         $userID =$this->SnsuserData['Snsuser']['id'];
         $items = $this->Want->getItemsByUserID($userID);
+        $r = $this->Session->read('ItemCompare');
+        $this->set('ItemCompare',$r);
 
         $this->set('Items',$items);
 

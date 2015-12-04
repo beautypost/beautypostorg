@@ -87,6 +87,7 @@ class BaseController extends AppController{
 
     $this->set('GenreIcons',$this->Genre->getItemIcon());
 
+    $this->set('GenreValid',$this->Genre->getValid());
 
     $this->set('AllGenreNames',$this->Genre->getAllGenreName());
     }

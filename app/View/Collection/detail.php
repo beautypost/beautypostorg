@@ -172,7 +172,7 @@ function wants(id){
                         </div>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-howtouse -->
-
+<?php if(count($Monitors)>0):?>
                 <section class="item-m-review item-review">
                     <h2 class="head-bar ico-arrow">モニター体験レビュー</h2>
                     <div class="section-body">
@@ -211,32 +211,39 @@ function wants(id){
                                         <ul>
 
 <!-- review-->
+<?php foreach($Monitors as $k => $v):?>
+<!-- review-->
                                             <li>
                                                 <a href="">
-                                                    <p class="title">タイトルタイトルタイトル</p>
+                                                    <p class="title"><?php echo $v['ItemsMonitor']['title']?></p>
                                                     <dl>
                                                         <dt>満足度</dt>
-                                                        <dd class="monitor-rate">
+                                                        <dd class="user-rate">
                                                         <div class="starrev" data-score="3">
                                                         </dd>
                                                     </dl>
-                                                    <p class="author">（1231年09月99日 99才 主婦）</p>
+                                                    <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsMonitor']['created']))?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
                                                 </a>
                                             </li>
 <!-- review-->
+<?php endforeach;?>
+
 
                                         </ul>
-                                        <p class="more"><a href="<?php echo WEBROOT?>Review/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
+                                        <p class="more"><a href="<?php echo WEBROOT?>Review/monitor/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
                                     </div><!-- /.section-body -->
                                 </div><!-- /.round-thin-contents -->
                                 <footer><!-- <a href="" class="button btn-pk btn-sizeS">モニター体験レビューを詳しく見る</a> --></footer>
                             </section><!-- /.review-topics -->
                         </div><!-- /.item-review-body -->
+
+
                     </div><!-- /.section-body -->
                 </section><!-- /.item-m-review.item-review -->
-
+<?php endif;?>
                 <section class="item-u-review item-review">
                     <h2 class="head-bar ico-arrow">ユーザーレビュー</h2>
+<?php if(count($Reviews)>0):?>
                     <div class="section-body">
                         <table class="table-std user-rate">
                             <tbody>
@@ -244,7 +251,7 @@ function wants(id){
                                     <th>満足度</th>
                                     <td class="user-rate">
                                         <div class="starrev" data-score="3">
-                                        <span>（レビュー：<a href="<?php echo WEBROOT?>Review/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
+                                        <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -260,6 +267,8 @@ function wants(id){
                             <section class="review-topics">
                                 <div class="round-thin-contents">
                                     <h2 class="round-head">ユーザーレビュートピック</h2>
+
+
                                     <div class="section-body">
                                         <ul>
 <?php foreach($Reviews as $k => $v):?>
@@ -280,12 +289,19 @@ function wants(id){
 <?php endforeach;?>
                                         </ul>
                                     </div><!-- /.section-body -->
-                                    <p class="more"><a href="<?php echo WEBROOT?>Review/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
+                                    <p class="more"><a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
                                 </div><!-- /.round-thin-contents -->
+
+
                                 <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
                             </section><!-- /.review-topics -->
                         </div><!-- /.item-review-body -->
                     </div><!-- /.section-body -->
+<?php else:?>
+                                <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
+<?php endif;?>
+
+
                 </section><!-- /.item-u-review.item-review -->
 
                 <section class="item-relative">

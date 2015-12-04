@@ -10,7 +10,9 @@
                         <thead>
                             <tr>
                                 <th class="center">ID</th>
-                                <th>日付</th>
+                                <th>表示日付</th>
+                                <th>表示/非表示</th>
+
                                 <th>カテゴリ</th>
                                 <th>タイトル</th>
 
@@ -22,12 +24,13 @@
 <?php foreach($Columns as $Item):?>
 <tr>
     <td><?php echo $Item['Column']['id']?></td>
-    <td><?php echo $Item['Column']['created']?></td>
+    <td><?php echo $Item['Column']['entrydate']?></td>
+    <td><?php echo $GenreValid['valid'][$Item['Column']['valid']]?></td>
     <td><?php echo $this->Useful->selectOptionValue($GenreColumns,$Item['Column']['tag'])?></td>
     <td><?php echo $Item['Column']['title']?></td>
     <td>
         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Admincolumn/edit/?id=<?php echo $Item['Column']['id']?>">編集</a>
-        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Admincolumn/delete/?id=<?php echo $Item['Column']['id']?>">削除</a>
+        <!-- a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Admincolumn/delete/?id=<?php echo $Item['Column']['id']?>">削除</a -->
     </td>
 </tr>
 <?php endforeach?>

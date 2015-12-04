@@ -62,7 +62,7 @@ class ForgetPasswordController extends AppController {
         if(!$this->Fpassword->validates() || !$user){
 	        $errors = $this->Fpassword->invalidFields();
 	        $this->set('errormessages',$errors);
-            var_dump($errors);
+//            var_dump($errors);
 			$messages = isset($this->params['data']['Fpassword']) ? $this->params['data']['Fpassword'] :null;
 			$Fpassword['Fpassword'] = $messages;
 			$this->set('Fpassword',$Fpassword);

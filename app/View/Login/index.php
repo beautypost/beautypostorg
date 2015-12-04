@@ -30,7 +30,7 @@
                             </p>
                             <button class="button btn-vpk btn-sizeM">ログイン</button>
                             <ul>
-                                <li><a href="#">パスワードを忘れた方</a></li>
+                                <li><a href="<?php echo WEBROOT?>Forgetpassword/">パスワードを忘れた方</a></li>
                                 <li><a href="<?php echo WEBROOT?>regist/input">まだアカウントをお持ちでない方</a></li>
                             </ul>
                         </div><!-- /.form-footer -->
