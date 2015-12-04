@@ -1469,7 +1469,7 @@
 	
 	#user-form {
 		@include formset();
-		.contact-form {
+		.Contact-form {
 			display:block;
 			@include mqmt($bpM) { @include ms(auto); padding-top:0.5em; }
 			@include mq($bpM,$bpL) { width:90%; }

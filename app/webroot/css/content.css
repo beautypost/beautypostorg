@@ -2791,32 +2791,32 @@
 #user-form .formparts-mv:last-child {
   margin-bottom: 0;
 }
-#user-form .contact-form {
+#user-form .Contact-form {
   display: block;
 }
 @media (min-width: 768px) {
-  #user-form .contact-form {
+  #user-form .Contact-form {
     margin-right: auto;
     margin-left: auto;
     padding-top: 0.5em;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #user-form .contact-form {
+  #user-form .Contact-form {
     width: 90%;
   }
 }
 @media (min-width: 1024px) {
-  #user-form .contact-form {
+  #user-form .Contact-form {
     width: 86%;
   }
 }
-#user-form .contact-form .form-nav {
+#user-form .Contact-form .form-nav {
   margin-top: 1.5em;
   text-align: center;
 }
 @media (min-width: 1024px) {
-  #user-form .contact-form .form-nav button {
+  #user-form .Contact-form .form-nav button {
     font-size: 18px;
   }
 }
