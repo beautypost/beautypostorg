@@ -1079,6 +1079,106 @@
 			}
 		}
 	}
+	/* マイページコンテンツ：美容天気予報
+	--------------------------------------------------*/
+	#mp-advisory {
+		>header {
+			@include mqlt($bpL) { margin-bottom:1.6rem; }
+			@include mqmt($bpM) { display:table; width:100%; @include box-sizing(border-box); }
+			@include mqmt($bpL) { margin-bottom:2rem; }
+			padding:0.7rem 0.5em 0.6rem;
+			@include border-radius(0.75rem);
+			@include stripe-bk();
+		}
+		>.section-body {
+			@include mqmt($bpS) {
+				@include cf();
+			}
+		}
+	}
+	.advisory-head {
+		padding-left:4rem;
+		@include pv(0.5em);
+		position:relative;
+		@include mqmt($bpM) {
+			//padding-left:36 / 984 * 100%;
+			display:table-cell; vertical-align:middle;
+			//width:876 / 984 * 50%;
+		}
+		&:before {
+			//margin-left:0.8rem;
+			@include border-radius(50%);
+			@include leftCenterIcon();
+			color:$c-txt; background:#fff;
+			content:'';
+			background:url(../common-img/ico-bar-arrow.png) center center no-repeat;
+			@include background-size(cover);
+			@include fz(24);
+		}
+		img { max-width: 334px; }
+	}
+	.advisory-status {
+		@include border-radius(0.5rem);
+		color:$c-txt;
+		background:#fff;
+		@include fz(12);
+		@include mqlt($bpM) { margin-top:0.5em; }
+		@include mqmt($bpM) { display:table-cell; vertical-align:middle; max-width:876 / 984 * 50%; }
+		li {
+			&:first-child { border-bottom:1px dotted $c-bk-lt; }
+		}
+		dl {
+			display:table;
+			width:100%;
+		}
+		dt,dd { padding:4px 8px; display:table-cell; }
+		dt {
+			padding-right:1em;
+			color:$c-vpk;
+			font-weight:700;
+		}
+		dd {
+			text-align:right;
+		}
+	}
+	
+	.advisory-dryair, .advisory-sunburn {
+		border-style:solid;
+		@include border-radius(6px);
+		@include box-sizing(border-box);
+		@include mqmt($bpS) {
+			width:980 / 2000 * 100%;
+		}
+		@include mqlt($bpM) {
+			border-width:4px;
+		}
+		@include mq($bpM,$bpL) {
+			border-width:8px;
+		}
+		@include mqmt($bpL) {
+			border-width:4px;
+		}
+		&.level1 { border-color:#948ace; }
+		&.level2 { border-color:#e496cc; }
+		&.level3 { border-color:#f9969f; }
+		&.level4 { border-color:#f85a7a; }
+		&.level5 { border-color:#ee6c4c; }
+		.section-body {
+			img { line-height:0px; vertical-align:middle; }
+			p { @include pv(0.25em); @include ps(22/948 * 100%); }
+		}
+	}
+	.advisory-dryair {
+		@include mqmt($bpS) {
+			float:left;
+		} 
+	}
+	.advisory-sunburn {
+		@include mqmt($bpS) {
+			margin-top:0;
+			float:right;
+		}
+	}
 	
 	/* マイページコンテンツ：ニュース
 	--------------------------------------------------*/
@@ -1469,7 +1569,7 @@
 	
 	#user-form {
 		@include formset();
-		.Contact-form {
+		.contact-form {
 			display:block;
 			@include mqmt($bpM) { @include ms(auto); padding-top:0.5em; }
 			@include mq($bpM,$bpL) { width:90%; }

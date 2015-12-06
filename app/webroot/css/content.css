@@ -2081,6 +2081,199 @@
   background: #f38291;
 }
 
+/* マイページコンテンツ：美容天気予報
+--------------------------------------------------*/
+#mp-advisory > header {
+  padding: 0.7rem 0.5em 0.6rem;
+  -moz-border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: #272727 url(../common-img/stripe.png);
+  -moz-background-size: 12px;
+  -o-background-size: 12px;
+  -webkit-background-size: 12px;
+  background-size: 12px;
+}
+@media (max-width: 1023px) {
+  #mp-advisory > header {
+    margin-bottom: 1.6rem;
+  }
+}
+@media (min-width: 768px) {
+  #mp-advisory > header {
+    display: table;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1024px) {
+  #mp-advisory > header {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 480px) {
+  #mp-advisory > .section-body {
+    zoom: 1;
+  }
+  #mp-advisory > .section-body:before, #mp-advisory > .section-body:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.advisory-head {
+  padding-left: 4rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .advisory-head {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.advisory-head:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-top: -0.5em;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  color: #272727;
+  background: #fff;
+  content: '';
+  background: url(../common-img/ico-bar-arrow.png) center center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+.advisory-head img {
+  max-width: 334px;
+}
+
+.advisory-status {
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  color: #272727;
+  background: #fff;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+@media (max-width: 767px) {
+  .advisory-status {
+    margin-top: 0.5em;
+  }
+}
+@media (min-width: 768px) {
+  .advisory-status {
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 44.5122%;
+  }
+}
+.advisory-status li:first-child {
+  border-bottom: 1px dotted #737373;
+}
+.advisory-status dl {
+  display: table;
+  width: 100%;
+}
+.advisory-status dt, .advisory-status dd {
+  padding: 4px 8px;
+  display: table-cell;
+}
+.advisory-status dt {
+  padding-right: 1em;
+  color: #f61d54;
+  font-weight: 700;
+}
+.advisory-status dd {
+  text-align: right;
+}
+
+.advisory-dryair, .advisory-sunburn {
+  border-style: solid;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 480px) {
+  .advisory-dryair, .advisory-sunburn {
+    width: 49%;
+  }
+}
+@media (max-width: 767px) {
+  .advisory-dryair, .advisory-sunburn {
+    border-width: 4px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .advisory-dryair, .advisory-sunburn {
+    border-width: 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .advisory-dryair, .advisory-sunburn {
+    border-width: 4px;
+  }
+}
+.advisory-dryair.level1, .advisory-sunburn.level1 {
+  border-color: #948ace;
+}
+.advisory-dryair.level2, .advisory-sunburn.level2 {
+  border-color: #e496cc;
+}
+.advisory-dryair.level3, .advisory-sunburn.level3 {
+  border-color: #f9969f;
+}
+.advisory-dryair.level4, .advisory-sunburn.level4 {
+  border-color: #f85a7a;
+}
+.advisory-dryair.level5, .advisory-sunburn.level5 {
+  border-color: #ee6c4c;
+}
+.advisory-dryair .section-body img, .advisory-sunburn .section-body img {
+  line-height: 0px;
+  vertical-align: middle;
+}
+.advisory-dryair .section-body p, .advisory-sunburn .section-body p {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-right: 2.32068%;
+  padding-left: 2.32068%;
+}
+
+@media (min-width: 480px) {
+  .advisory-dryair {
+    float: left;
+  }
+}
+
+@media (min-width: 480px) {
+  .advisory-sunburn {
+    margin-top: 0;
+    float: right;
+  }
+}
+
 /* マイページコンテンツ：ニュース
 --------------------------------------------------*/
 #mp-news .mp-news-entry {
@@ -2791,32 +2984,32 @@
 #user-form .formparts-mv:last-child {
   margin-bottom: 0;
 }
-#user-form .Contact-form {
+#user-form .contact-form {
   display: block;
 }
 @media (min-width: 768px) {
-  #user-form .Contact-form {
+  #user-form .contact-form {
     margin-right: auto;
     margin-left: auto;
     padding-top: 0.5em;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #user-form .Contact-form {
+  #user-form .contact-form {
     width: 90%;
   }
 }
 @media (min-width: 1024px) {
-  #user-form .Contact-form {
+  #user-form .contact-form {
     width: 86%;
   }
 }
-#user-form .Contact-form .form-nav {
+#user-form .contact-form .form-nav {
   margin-top: 1.5em;
   text-align: center;
 }
 @media (min-width: 1024px) {
-  #user-form .Contact-form .form-nav button {
+  #user-form .contact-form .form-nav button {
     font-size: 18px;
   }
 }
