@@ -7,8 +7,8 @@
 
         <div class="layout-main layout-r">
             <h2 class="pagetitle"><!--
-                 --><img src="<?php echo WEBROOT?>/images/mypage/pagetitle-full.jpg" width="1984" height="256" class="fitimg-w rsp-xooo" alt="マイページ My Page"><!--
-                 --><img src="<?php echo WEBROOT?>/images/mypage/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="マイページ My Page"><!--
+                 --><img src="<?php echo WEBROOT?>images/mypage/pagetitle-full.jpg" width="1984" height="256" class="fitimg-w rsp-xooo" alt="マイページ My Page"><!--
+                 --><img src="<?php echo WEBROOT?>images/mypage/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="マイページ My Page"><!--
              --></h2>
         </div><!-- /.layout-main.layout-r -->
 

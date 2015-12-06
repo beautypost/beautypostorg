@@ -29,7 +29,9 @@
                 その内容に同意していただけましたら、下記フォームに必要事項をご入力の上、<br>
                 「登録内容を変更する」ボタンをクリックしてください。</p>
                 <form method="post" action="<?php echo WEBROOT.$this->name?>/input">
-
+<?php foreach($validationErrors as $k => $v):?>
+    <?php echo $v[0]?><br>
+<?php endforeach;?>
         <?php echo $this->element('registinput'); ?>
 
 

@@ -143,7 +143,6 @@ class MypageController extends AppController {
         //確認画面へ
         if($this->Snsuser->validates() && ($back == 1)){
             $data = $this->Snsuser->data;
-
             $this->set('data',$data);
             $this->render('confirm');
             return;
@@ -154,6 +153,7 @@ class MypageController extends AppController {
 //            $Item['Item'] = $Item;
 //            var_dump($this->Item->data);
             $this->set('data',$this->Snsuser->data);
+
         }
 
     }

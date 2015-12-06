@@ -15,7 +15,7 @@ if($this->name == 'Index'){
 
 <?php else:?>
             <div id="welcome">
-                ようこそ<?php echo $UserData['Snsuser']['name']?>さん <a href="<?php echo WEBROOT?>Login/logout">ログアウト</a>
+                ようこそ<?php echo $UserData['Snsuser']['username']?>さん <a href="<?php echo WEBROOT?>Login/logout">ログアウト</a>
             </div><!-- /#welcome -->
 
 <?php endif;?>
