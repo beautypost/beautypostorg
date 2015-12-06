@@ -1,6 +1,7 @@
 <footer id="site-footer">
     <div id="fcontent">
         <div class="layout">
+            <p id="topanchor"><a href="#pagetop">ページトップへ戻る <i class="fa fa-angle-double-up">&#8203;</i></a></p>
             <div id="fhead">
                 <img src="<?php echo WEBROOT?>common-img/logo.png" width="576" height="144" alt="美容機器コレクション Beauty Post" class="logo rsp-xxxo">
                 <ul>

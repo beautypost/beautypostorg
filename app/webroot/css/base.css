@@ -1820,6 +1820,48 @@ ul.alp > li, ol.alp > li {
   margin-left: 2em;
 }
 
+/* ---ページトップへ戻る--- */
+#topanchor {
+  position: absolute;
+  right: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+@media (max-width: 767px) {
+  #topanchor {
+    top: -4em;
+  }
+  #topanchor a {
+    color: #f38291 !important;
+    line-height: 3em;
+  }
+}
+@media (min-width: 768px) {
+  #topanchor {
+    top: -57px;
+  }
+  #topanchor a {
+    padding-top: 50px;
+    display: block;
+    overflow: hidden;
+    width: 50px;
+    height: 0;
+    background: url(../common-img/btn-pagetop_off.png) center center no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  #topanchor a:hover {
+    background-image: url(../common-img/btn-pagetop_on.png);
+  }
+}
+@media (min-width: 1200px) {
+  #topanchor {
+    right: -4rem;
+  }
+}
+
 /* ---CSSボタン--- */
 .button {
   padding: 0.5em 2em;
@@ -2084,6 +2126,10 @@ ul.alp > li, ol.alp > li {
   content: '';
   width: 0;
   height: 0;
+}
+.btn-want.is-wanted a {
+  background: #88BDBC;
+  cursor: default;
 }
 
 /* ---基本テーブル--- */
@@ -5357,13 +5403,13 @@ section:last-child, .container:last-child {
 ---------------------------------------------------------------------------------------------------- 	*/
 @media (max-width: 767px) {
   #page-area {
-    padding-bottom: 3.2rem;
+    padding-bottom: 4.8rem;
   }
 }
 @media (min-width: 768px) {
   #page-area {
     padding-top: 3.2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 5.6rem;
   }
 }
 

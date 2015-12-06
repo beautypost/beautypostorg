@@ -3,23 +3,6 @@ $(function(){
 // -------------------------------------------------------------------------------------------------
 // ナビゲーション関連
 // -------------------------------------------------------------------------------------------------
-
-	// まず必要ないものを隠す
-	//$('#gnavsp').hide();
-	//$('#fsp_foot').find('ul').hide();
-	//
-	//// トグルスイッチ設定
-	//$('#hcontact').find('.btn_menu').click(function(){
-	//	$(this).toggleClass('on');
-	//	$('#gnavsp').slideToggle();
-	//	return false;
-	//});
-	//$('#fsp_btn').find('.btn_menu').click(function(){
-	//	$(this).toggleClass('on');
-	//	$('#fsp_foot').find('ul').slideToggle();
-	//	return false;
-	//});
-	
 	
 	$('#menu-toggle,.menu-overlay').click(function(){
 		$('body').toggleClass('menu-on');
@@ -36,17 +19,38 @@ $(function(){
 // -------------------------------------------------------------------------------------------------
 // ページ内スムーススクロール設定
 // -------------------------------------------------------------------------------------------------
-	$('a[href*=#]').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length && target;
-			if (target.length) {
-				var targetOffset = target.offset().top;
-				$('html,body').animate({scrollTop: targetOffset}, 500, "easeOutQuint");
-				return false;
-			}
+	// html要素でのスクロールが可能かどうかを判別
+	var isHtmlScroll = (function(){
+		var html = $('html'), top = html.scrollTop();
+		var el = $('<div></div>').height(1).prependTo('body');
+		html.scrollTop(1);
+		var rs = !!html.scrollTop();
+		html.scrollTop(top);
+		el.remove();
+		return rs;
+	})();
+	
+	// スムーススクロール実装
+	$('a[href^=#]').click(function() {
+		var target = $(this.hash);
+		target = target.length && target;
+		if (target.length) {
+			var tgto = target.offset().top;
+			$(isHtmlScroll ? 'html' : 'body').animate({scrollTop: tgto}, 500, "swing");
+			return false;
 		}
 	});
+	
+	// スクロールストップ処理
+	function scrollStop() { $(isHtmlScroll ? 'html' : 'body').queue([]).stop(); }
+	// マウススクロールイベントでスクロール中断（Firefox / IE8）
+	if (window.addEventListener) {
+		window.addEventListener('DOMMouseScroll', scrollStop, false);
+	} else {
+		document.onmousewheel = scrollStop; // ↓のwindow.onmousewheelに続けて書くと、FirefoxにおいてNicescrollなどが機能しなくなる
+	}
+	// マウススクロールイベントでスクロール中断（IE9+・Chrome）
+	window.onmousewheel = scrollStop;
 
 // -------------------------------------------------------------------------------------------------
 // 画像サムネイル設定

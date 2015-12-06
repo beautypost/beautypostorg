@@ -21,7 +21,7 @@
                     <div class="box-contents-body collection-body">
                         <div class="item-face">
                             <div class="item-img">
-                                <a href="" class="imgframe">
+                                <a href="<?php echo $Item['Item']['img1']?>" class="imgframe swipebox">
                                     <div class="inner">
                                         <img src="<?php echo $Item['Item']['img1']?>" class="fitimg-w hover-fade" alt="">
                                     </div>
@@ -100,17 +100,17 @@ function wants(id){
                         <div class="item-info2">
                             <div class="item-gallery">
                                 <ul>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img1']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img2']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img3']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img4']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img5']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img6']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img7']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="" class="imgframe"><div class="inner"><img src="<?php echo $Item['Item']['img8']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img1']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img1']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img2']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img2']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img3']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img3']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img4']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img4']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img5']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img5']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img6']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img6']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img7']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img7']?>" alt="" class="hover-fade"></div></a></li>
+                                    <li><a href="<?php echo $Item['Item']['img8']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img8']?>" alt="" class="hover-fade"></div></a></li>
                                 </ul>
                             </div><!-- /.item-gallery -->
-                            <p class="item-external"><a href="<?php echo $Item['Item']['makerurl']?>" target="_blank" class="button btn-nb btn-sizeS">メーカー<span class="rsp-xooo">のWeb</span>サイトで<span class="rsp-xooo">最新</span>スペックをを確認<span class="rsp-xooo">する</span></a></p>
+                            <p class="item-external"><a href="<?php echo $Item['Item']['makerurl']?>" target="_blank" class="button btn-nb btn-sizeS">メーカー<span class="rsp-xooo">のWeb</span>サイトで<span class="rsp-xooo">最新</span>スペックを確認<span class="rsp-xooo">する</span></a></p>
                             <div class="attention">
                                 <ul class="kome">
                                     <li>スペック情報を含め、掲載している価格やスペック・付属品・画像などの情報は保証をいたしかねます。</li>

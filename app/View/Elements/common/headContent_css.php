@@ -2,3 +2,4 @@
 <link rel="stylesheet" href="<?php echo $this->webroot?>css/reset.css" media="all">
 <link rel="stylesheet" href="<?php echo $this->webroot?>css/base.css" media="all">
 <link rel="stylesheet" href="<?php echo $this->webroot?>css/<?php echo $cssname?>.css" media="all">
+<link rel="stylesheet" href="<?php echo $this->webroot?>css/swipebox.min.css" media="all">

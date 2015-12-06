@@ -25,6 +25,35 @@
 	ul,ol { &.alp { list-style-type:lower-latin; &>li { margin-left:2em; } } }
 	
 // =================================================================================================
+// ■ ページトップへ戻る
+// -------------------------------------------------------------------------------------------------
+	/* ---ページトップへ戻る--- */
+	#topanchor {
+		position:absolute;
+		right:1rem;
+		@include fz(12);
+		@include mqlt($bpM) {
+			top:-4em;
+			a { color:$c-pk !important; line-height:3em; }
+		}
+		@include mqmt($bpM) {
+			top:-57px;
+			a {
+				padding-top:50px;
+				display:block;
+				overflow:hidden;
+				width:50px; height:0;
+				background:url(../common-img/btn-pagetop_off.png) center center no-repeat;
+				@include background-size(cover);
+				&:hover {
+					background-image:url(../common-img/btn-pagetop_on.png);
+				}
+			}
+		}
+		@include mqmt(1200px) { right:-4rem; }
+	}
+	
+// =================================================================================================
 // ■ CSSボタン
 // -------------------------------------------------------------------------------------------------
 	/* ---CSSボタン--- */
@@ -134,6 +163,9 @@
 				content:'';
 				@include wh(0);
 			}
+		}
+		&.is-wanted {
+			a { background:#88BDBC; cursor:default; }
 		}
 	}
 	

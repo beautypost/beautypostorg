@@ -1086,8 +1086,8 @@
  □ #page-area
 ---------------------------------------------------------------------------------------------------- 	*/
 	#page-area {
-		@include mqlt($bpM) { padding-bottom:3.2rem; }
-		@include mqmt($bpM) { padding-top:3.2rem; padding-bottom:4rem; }
+		@include mqlt($bpM) { padding-bottom:4.8rem; }
+		@include mqmt($bpM) { padding-top:3.2rem; padding-bottom:5.6rem; }
 	}
 	
 /* 
