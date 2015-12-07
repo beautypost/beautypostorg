@@ -205,6 +205,17 @@ class UsefulHelper extends AppHelper {
         return $ret;
     }
 
+    public function checkNull($arg){
+        if($arg == ''){
+            return '-';
+        }
+        if($arg == '1970.01.01'){
+            return '-';
+        }
+        return $arg;
+    }
+
+
     /**
     html select 用 option 生成
     **/

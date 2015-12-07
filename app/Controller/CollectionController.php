@@ -48,6 +48,7 @@ class CollectionController extends AppController {
         //検索box用マスタ
         $this->setSearchMaster();
 
+
 	}
 
 	public function beforeRender(){
@@ -59,7 +60,6 @@ class CollectionController extends AppController {
 		$wants = $this->Want->getItems();
 
 		$this->set('Wants',$wants);
-
 
 		parent::beforeRender();
 	}
@@ -139,6 +139,10 @@ class CollectionController extends AppController {
 		$this->ItemsAccess->create();
 		$item['item_id'] = $id;
 		$this->ItemsAccess->save($item);
+
+		$attr = $this->Genre->getAttr($item['Item']['genre_id']);
+		$this->set('GenreAttr',$attr);
+
 
 //		var_dump($reviews);
 

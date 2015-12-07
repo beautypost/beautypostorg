@@ -94,6 +94,16 @@ $ret['ico'] = '';
 $ret['materials'] = '';
 $ret['result'] = '';
 $ret['cordinates'] = '';
+$ret['attr1'] = '';
+$ret['attr2'] = '';
+$ret['attr3'] = '';
+$ret['attr4'] = '';
+$ret['attr5'] = '';
+$ret['attr6'] = '';
+$ret['attr7'] = '';
+$ret['attr8'] = '';
+$ret['attr9'] = '';
+$ret['attr10'] = '';
 
 //        $ret['url'] = '';
     return $ret;

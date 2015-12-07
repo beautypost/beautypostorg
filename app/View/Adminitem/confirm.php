@@ -188,6 +188,14 @@
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> コーディネート商品</label>
                     <div class="col-sm-10"><?php echo $data['Item']['cordinates']?></div>
                 </div>
+<?php if($data['Item']['id']):?>
+<?php for($x=1;$x<11;$x++):?>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> <?php echo $GenreAttr['Genre']['attr'.$x]?></label>
+                    <div class="col-sm-10"><?php echo $data['Item']['attr'.$x]?></div>
+                </div>
+<?php endfor;?>
+<?php endif;?>
 
     </form>
 

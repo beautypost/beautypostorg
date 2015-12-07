@@ -34,19 +34,19 @@
                                     <li>
                                         <dl>
                                             <dt>メーカー名</dt>
-                                            <dd><?php echo $this->Useful->selectOptionValue($GenreMakers,$Item['Item']['maker'])?></dd>
+                                            <dd><?php echo $this->Useful->checkNull($this->Useful->selectOptionValue($GenreMakers,$Item['Item']['maker']))?></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
                                             <dt>発売日</dt>
-                                            <dd><?php echo date("Y.m.d",strtotime($Item['Item']['salesdate']))?></dd>
+                                            <dd><?php echo $this->Useful->checkNull(date("Y.m.d",strtotime($Item['Item']['salesdate'])))?></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
                                             <dt>商品種類</dt>
-                            <dd><?php  echo $this->Useful->selectOptionValue($GenreKisyu,$Item['Item']['genre_id'])?></dd>
+                            <dd><?php  echo $this->Useful->checkNull($this->Useful->selectOptionValue($GenreKisyu,$Item['Item']['genre_id']))?></dd>
 
 
                                         </dl>
@@ -54,20 +54,20 @@
                                     <li>
                                         <dl>
                                             <dt>部位</dt>
-                            <dd><?php  echo $this->Useful->checkboxvalue($GenrePoints,'Genre','title',$Item['Item']['genres'])?></dd>
+                            <dd><?php  echo $this->Useful->checkNull($this->Useful->checkboxvalue($GenrePoints,'Genre','title',$Item['Item']['genres']))?></dd>
 
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
                                             <dt>商品番号</dt>
-                                            <dd><?php echo $Item['Item']['jancode']?></dd>
+                                            <dd><?php echo $this->Useful->checkNull($Item['Item']['jancode'])?></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
                                             <dt>目的・用途</dt>
-                            <dd><?php  echo $this->Useful->checkboxvalue($GenrePurposes,'Genre','title',$Item['Item']['genres'])?></dd>
+                            <dd><?php  echo $this->Useful->checkNull($this->Useful->checkboxvalue($GenrePurposes,'Genre','title',$Item['Item']['genres']))?></dd>
 
                                         </dl>
                                     </li>
@@ -75,30 +75,24 @@
                             </div><!-- /.item-info -->
 
                             <?php if($this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
-                            <div class="is-wanted">aaaa
-                                <a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a>
-                            </div>
-            <div class="is-want"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
-
+                                    <div class="btn-want is-wanted">
                             <?php else:?>
-            <div class="btn-want"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
-
+                                    <div class="btn-want">
                             <?php endif;?>
-                            <span class="num"><?php echo $Item['Item']['wants']?></span></div>
-                            <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
+                            <a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+                            <?php if($Item['Item']['price']):?>
+                                <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
+                            <?php endif;?>
                         </div><!-- /.item-summary -->
 
                         <div class="item-info2">
                             <div class="item-gallery">
                                 <ul>
-                                    <li><a href="<?php echo $Item['Item']['img1']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img1']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="<?php echo $Item['Item']['img2']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img2']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="<?php echo $Item['Item']['img3']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img3']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="<?php echo $Item['Item']['img4']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img4']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="<?php echo $Item['Item']['img5']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img5']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="<?php echo $Item['Item']['img6']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img6']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="<?php echo $Item['Item']['img7']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img7']?>" alt="" class="hover-fade"></div></a></li>
-                                    <li><a href="<?php echo $Item['Item']['img8']?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img8']?>" alt="" class="hover-fade"></div></a></li>
+                                <?php for($x=1;$x<9;$x++):?>
+                                    <?php if($Item['Item']['img'.$x]):?>
+                                    <li><a href="<?php echo $Item['Item']['img'.$x]?>" class="imgframe swipebox"><div class="inner"><img src="<?php echo $Item['Item']['img'.$x]?>" alt="" class="hover-fade"></div></a></li>
+                                <?php endif;?>
+                                <?php endfor;?>
                                 </ul>
                             </div><!-- /.item-gallery -->
                             <p class="item-external"><a href="<?php echo $Item['Item']['makerurl']?>" target="_blank" class="button btn-nb btn-sizeS">メーカー<span class="rsp-xooo">のWeb</span>サイトで<span class="rsp-xooo">最新</span>スペックを確認<span class="rsp-xooo">する</span></a></p>
@@ -121,26 +115,44 @@
                     <h2 class="head-bar ico-arrow">商品詳細</h2>
                     <div class="section-body">
                         <table class="table-std">
+                        <?php if($Item['Item']['size']):?>
                             <tr>
                                 <th>サイズ</th>
                                 <td><?php echo $Item['Item']['size']?></td>
                             </tr>
+                        <?php endif;?>
+                        <?php if($Item['Item']['weight']):?>
                             <tr>
                                 <th>重量</th>
                                 <td><?php echo $Item['Item']['weight']?></td>
                             </tr>
+                        <?php endif;?>
+                        <?php if($Item['Item']['warranty']):?>
                             <tr>
                                 <th>保証期間</th>
                                 <td><?php echo $Item['Item']['warranty']?></td>
                             </tr>
+                        <?php endif;?>
+                        <?php if($Item['Item']['set']):?>
                             <tr>
                                 <th>セット内容・付属品</th>
                                 <td><?php echo $Item['Item']['set']?></td>
                             </tr>
+                        <?php endif;?>
+                        <?php if($Item['Item']['color']):?>
                             <tr>
                                 <th>カラーバリエーション</th>
                                 <td><?php echo $Item['Item']['color']?></td>
                             </tr>
+                        <?php endif;?>
+                        <?php for($x=1;$x<11;$x++):?>
+                            <?php if($Item['Item']['attr'.$x]):?>
+                            <tr>
+                                <th><?php echo $GenreAttr['Genre']['attr'.$x]?></th>
+                                <td><?php echo $Item['Item']['attr'.$x]?></td>
+                            </tr>
+                        <?php endif;?>
+                        <?php endfor;?>
                         </table>
                         <div class="youtube">
                             <div class="inner">
@@ -149,7 +161,7 @@
                         </div>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-detail -->
-
+<?php if($Item['Item']['example'] || $Item['Item']['example_url']):?>
                 <section class="item-howtouse">
                     <h2 class="head-bar ico-arrow">使用方法</h2>
                     <div class="section-body">
@@ -163,7 +175,8 @@
                         </div>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-howtouse -->
-<?php if(count($Monitors)>0):?>
+<?php endif;?>
+                <?php if(count($Monitors)>0):?>
                 <section class="item-m-review item-review">
                     <h2 class="head-bar ico-arrow">モニター体験レビュー</h2>
                     <div class="section-body">
@@ -289,17 +302,8 @@
                         </div><!-- /.item-review-body -->
                     </div><!-- /.section-body -->
 <?php else:?>
-    <!--  review がなかった場合-->
-                            <div class="item-review-body">
-                            <div class="item-chart">
-        <div style="width:80%">
-            <img src="<?php echo WEBROOT?>images/dummy/chart-dummy.png" width="100" height="100" class="fitimg-w" alt="">
-        </div>
-    </div>
 
-
-    </div>
-                                <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
+                    <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
 <!-- ここまで　-->
 <?php endif;?>
 

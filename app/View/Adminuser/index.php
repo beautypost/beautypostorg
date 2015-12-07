@@ -24,9 +24,13 @@
     <td><?php echo $Item['Snsuser']['created']?></td>
     <td><?php echo $Item['Snsuser']['first_name']?><?php echo $Item['Snsuser']['last_name']?></td>
     <td><?php echo $Item['Snsuser']['name']?></td>
-
     <td>
-        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminuser/delete/?id=<?php echo $Item['Snsuser']['id']?>">削除</a>
+        <a class="btn-sm btn-success" href="<?php echo WEBROOT.$this->name?>/edit/?id=<?php echo $Item['Snsuser']['id']?>">編集</a>
+&nbsp;&nbsp;
+        <a class="btn-sm btn-warning" href="<?php echo WEBROOT.$this->name?>/invalid/?id=<?php echo $Item['Snsuser']['id']?>">ログイン不可</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <a class="btn-sm btn-danger" href="<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Snsuser']['id']?>">削除</a>
     </td>
 </tr>
 <?php endforeach?>

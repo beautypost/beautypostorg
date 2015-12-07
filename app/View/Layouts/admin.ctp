@@ -129,16 +129,17 @@ tinyMCE.init({
                             <i class="menu-icon fa fa-chevron-right"></i><span class="menu-text">コラム</span>
                        </a>
                     </li>
+                    <li class="<?php $this->Beautypost->cssActive('Adminfavorite')?>">
+                       <a href="<?php echo WEBROOT?>Adminfavorite">
+                            <i class="menu-icon fa fa-chevron-right"></i><span class="menu-text">Beauty Post おすすめ</span>
+                       </a>
+                    </li>
                     <li class="<?php $this->Beautypost->cssActive('Admintype')?>">
                        <a href="<?php echo WEBROOT?>Admintype">
                             <i class="menu-icon fa fa-bookmark-o"></i><span class="menu-text">用語集</span>
                        </a>
                     </li>
-                    <li class="<?php $this->Beautypost->cssActive('Adminmaster')?>">
-                       <a href="<?php echo WEBROOT?>Adminmaster">
-                            <i class="menu-icon fa fa-book"></i><span class="menu-text">マスタ管理</span>
-                       </a>
-                    </li>
+
                     <li class="<?php $this->Beautypost->cssActive('Adminitem')?>">
                        <a href="<?php echo WEBROOT?>Adminitem">
                             <i class="menu-icon fa fa-briefcase"></i><span class="menu-text">商品管理</span>
@@ -149,13 +150,24 @@ tinyMCE.init({
                             <i class="menu-icon fa fa-users"></i><span class="menu-text">ユーザー管理</span>
                        </a>
                     </li>
+                    <li class="<?php $this->Beautypost->cssActive('Adminmaster')?>">
+                       <a href="<?php echo WEBROOT?>Adminmaster">
+                            <i class="menu-icon fa fa-book"></i><span class="menu-text">マスタ管理</span>
+                       </a>
+                    </li>
+                    <li class="<?php $this->Beautypost->cssActive('Adminattr')?>">
+                       <a href="<?php echo WEBROOT?>Adminattr">
+                            <i class="menu-icon fa fa-users"></i><span class="menu-text">マスタ:項目管理</span>
+                       </a>
+                    </li>
 
+<!--
                     <li class="<?php $this->Beautypost->cssActive('Adminmailmagazine')?>">
                        <a href="<?php echo WEBROOT?>Adminmailmagazine">
                             <i class="menu-icon fa fa-envelope"></i><span class="menu-text">メルマガ管理</span>
                        </a>
                     </li>
-
+-->
 
     </ul>
 

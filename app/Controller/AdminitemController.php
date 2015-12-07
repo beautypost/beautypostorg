@@ -66,6 +66,11 @@ class AdminitemController extends BaseController {
 	public function edit(){
 		$id = $this->params['url']['id'];
 		$data = $this->Item->getItemByID($id);
+
+        $attr = $this->Genre->getAttr($data['Item']['genre_id']);
+        $this->set('GenreAttr',$attr);
+
+
 //		var_dump($Item);
 		$this->set('data',$data);
 		$this->render('input');
@@ -96,6 +101,11 @@ class AdminitemController extends BaseController {
         if(isset($this->params['data']['back'])){
             $this->request->data = (unserialize(base64_decode($this->params['data']['Item'])));
             $data['Item'] = $this->request->data;
+            if($data['Item']['id']){
+                $attr = $this->Genre->getAttr($data['Item']['genre_id']);
+                $this->set('GenreAttr',$attr);
+            }
+
             $this->set('data',$data);
             return;
         }
@@ -122,7 +132,10 @@ class AdminitemController extends BaseController {
 //            $this->set('PostUploadFile', $tmp_file_name);
 //var_dump($data['Item']);
             $this->set('data',$data);
-
+            if($data['Item']['id']){
+                $attr = $this->Genre->getAttr($data['Item']['genre_id']);
+                $this->set('GenreAttr',$attr);
+            }
 
 	    	$this->render('confirm');
         	return;

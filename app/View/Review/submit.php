@@ -13,7 +13,7 @@
 
         </div><!-- /#main-area -->
 
-                        <aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
+<aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
         <?php echo $this->element('common/cmnSubContent'); ?>
     </aside>
 
