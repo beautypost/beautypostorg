@@ -53,17 +53,17 @@ class PagerComponent extends Component {
         $ret['e'] = false;
 
 
-        foreach($all as $offset => $v){
+        foreach($all as $k => $v){
             if($v[$object]['id'] == $id){
+                $offset = $k;
                 break;
             }
         }
-
         if($offset != 0){
             $ret['s'] = $all[$offset-1][$object]['id'];
         }
 
-        if(!isset($offset)){
+        if($offset < (count($all))-1){
             $ret['e'] = $all[$offset+1][$object]['id'];
         }
 

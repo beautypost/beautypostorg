@@ -29,7 +29,7 @@
                 <dd class="monitor-rate">
                     <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_monitor']?>"></div>
                     <span>（レビュー：<a href="<?php echo WEBROOT?>Monitor/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['monitor']?>件</a>）</span>
-                    <p>肌水分量平均（名）% →%</p>
+                    <p><?php echo $Item['Item']['result']?></p>
                 </dd>
                 <dt>ユーザーレビュー</dt>
                 <dd class="user-rate">
@@ -69,7 +69,13 @@ ratystar(<?php echo $Item['Item']['id']?>)
                     </li>
                 </ul>
             </div><!-- /.item-info -->
-            <div class="btn-want"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+            <?php if($this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
+            <div class="is-wanted" id="ajwant"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+        <?php else:?>
+            <div class="btn-want" id="ajwant"><a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+        <?php endif;?>
+
+
             <p class="more"><a href="<?php echo WEBROOT?>collection/detail/<?php echo $Item['Item']['id']?>" class="button btn-vpk">詳細を見る<i class="fa fa-chevron-circle-right">&#8203;</i></a></p>
         </div><!-- /.item-summary -->
     </div><!-- /.box-contents-body -->

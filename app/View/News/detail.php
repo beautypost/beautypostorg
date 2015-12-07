@@ -3,7 +3,8 @@
 
       <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
         <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
-        <li>お役立ち美容通信</li>
+        <li><a href="<?php echo WEBROOT?>"News/>お役立ち美容通信</a></li>
+        <li><?php echo $Blog['Blog']['title']?></li>
       </ol><!-- /#breadcrumb -->
 
     <div id="main-area" class="layout-main layout-l">
@@ -18,7 +19,7 @@
         <section class="news-entry">
           <header>
             <h2 class="news-title head-bar"><?php echo $Blog['Blog']['title']?></h2>
-            <p class="news-date"><?php echo $Blog['Blog']['entrydate']?></p>
+            <p class="news-date"><?php echo $this->Useful->setdate($Blog['Blog']['entrydate'])?></p>
           </header>
 
           <div class="news-body">
@@ -44,7 +45,7 @@
             <?php endforeach;?>
             </ul><!-- /.news-category -->
             <div class="sns-btns">
-              sns
+              SNS用のタグを設置
             </div>
           </footer>
         </section><!-- /.news-entry -->

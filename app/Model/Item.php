@@ -91,6 +91,9 @@ $ret['example_url'] = '';
 $ret['rate'] = '';
 $ret['recommends'] = '';
 $ret['ico'] = '';
+$ret['materials'] = '';
+$ret['result'] = '';
+$ret['cordinates'] = '';
 
 //        $ret['url'] = '';
     return $ret;

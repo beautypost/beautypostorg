@@ -127,7 +127,7 @@
                 <div class="section-body">
                     <ul class="search-category-list">
                         <?php foreach($GenreKisyu as $Item):?>
-                        <li><a href="<?php echo $this->webroot;?>Collection/?data[GenreKisyu]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                        <li><a href="<?php echo $this->webroot;?>Collection/?data[GenreKisyu]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                         <?php endforeach;?>
                     </ul>
                 </div><!-- /.section-body -->
@@ -138,7 +138,7 @@
                 <div class="section-body">
                     <ul class="search-category-list">
                         <?php foreach($GenrePurposes as $Item):?>
-                        <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                        <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                         <?php endforeach;?>
                     </ul>
                 </div><!-- /.section-body -->
@@ -153,7 +153,7 @@
                     <div class="box-contents-body">
                         <ul class="search-category-list">
                             <?php foreach($GenrePointsWithGroups[GENREPOINTFACE] as $Item):?>
-                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePoints]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePoints]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                             <?php endforeach;?>
                         </ul>
                     </div><!-- /.box-contents-body -->
@@ -165,7 +165,7 @@
                     <div class="box-contents-body">
                         <ul class="search-category-list">
                         <?php foreach($GenrePointsWithGroups[GENREPOINTBODY] as $Item):?>
-                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                         <?php endforeach;?>
                         </ul>
                     </div><!-- /.box-contents-body -->
@@ -177,7 +177,7 @@
                     <div class="box-contents-body">
                         <ul class="search-category-list">
                         <?php foreach($GenrePointsWithGroups[GENREPOINTFOOT] as $Item):?>
-                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                         <?php endforeach;?>
                         </ul>
                     </div><!-- /.box-contents-body -->
@@ -189,7 +189,7 @@
                     <div class="box-contents-body">
                         <ul class="search-category-list">
                         <?php foreach($GenrePointsWithGroups[GENREPOINTHAIR] as $Item):?>
-                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                         <?php endforeach;?>
                         </ul>
                     </div><!-- /.box-contents-body -->
@@ -201,7 +201,7 @@
                     <div class="box-contents-body">
                         <ul class="search-category-list">
                         <?php foreach($GenrePointsWithGroups[GENREPOINTDENTAL] as $Item):?>
-                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                         <?php endforeach;?>
                         </ul>
                     </div><!-- /.box-contents-body -->
@@ -213,7 +213,7 @@
                     <div class="box-contents-body">
                         <ul class="search-category-list">
                         <?php foreach($GenrePointsWithGroups[GENREPOINTNAIL] as $Item):?>
-                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo 1;?>）</span></a></li>
+                            <li><a href="<?php echo $this->webroot;?>Collection/?data[GenrePurposes]=<?php echo $Item['Genre']['id']?>"><?php echo $Item['Genre']['title']?><span class="num">（<?php echo $Item['Genre']['count'];?>）</span></a></li>
                         <?php endforeach;?>
                         </ul>
                     </div><!-- /.box-contents-body -->

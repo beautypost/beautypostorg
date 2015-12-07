@@ -55,6 +55,10 @@ class CollectionController extends AppController {
         $this->set('AllGenreNames',$this->Genre->getAllGenreName());
         //部位マスタ
         $this->set('PointGenres',$this->Genre->getPointGenre());
+		//want情報
+		$wants = $this->Want->getItems();
+
+		$this->set('Wants',$wants);
 
 
 		parent::beforeRender();
@@ -113,9 +117,6 @@ class CollectionController extends AppController {
 
 		$this->Item->saveField('access',$item['Item']['access']+1);
 
-		//want情報
-		$wants = $this->Want->getItemsByItemID($id);
-		$this->set('Wants',$wants);
 
 		//レビュー情報
 		$reviews = $this->ItemsReview->getItemsByItemID($id);
@@ -131,8 +132,8 @@ class CollectionController extends AppController {
 		$this->set('Materials',$materials);
 		//コーディネート商品
 
-		$coordinates = $this->Item->getItemByInId($item['Item']['coordinates']);
-		$this->set('Coordinates',$coordinates);
+		$cordinates = $this->Item->getItemByInId($item['Item']['cordinates']);
+		$this->set('Coordinates',$cordinates);
 
 		//アクセス保存
 		$this->ItemsAccess->create();

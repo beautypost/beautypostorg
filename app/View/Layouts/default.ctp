@@ -33,6 +33,27 @@
 ==================================================================================================== -->
 
             <?php echo $this->Session->flash(); ?>
+
+
+<script>
+
+function wants(id){
+
+//alert( $( this ).val()); // valueを表示
+        $.ajax({
+                type: "GET",
+                url: "<?php echo WEBROOT?>Ajax/setWant/?itemID="+id,
+                success: function(data){
+                        if(data != '') {
+                            $("#ajwant").html(data)
+                        }
+                }
+
+        });
+}
+</script>
+
+
             <?php echo $this->fetch('content'); ?>
 <!--
 ====================================================================================================

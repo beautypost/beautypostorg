@@ -26,7 +26,7 @@ echo '<div class="error-msg container">';
         <?php echo $this->element('registinput'); ?>
 
                     <footer>
-                        <p><label><input type="checkbox" name="data[policy]">利用規約及び個人情報の取扱いについてに同意する</label></p>
+                        <p><label><input type="checkbox" name="data[policy]" required>利用規約及び個人情報の取扱いについてに同意する</label></p>
                         <button type="submit" class="button btn-pk btn-sizeM">登録する</button>
                     </footer>
                 </form>

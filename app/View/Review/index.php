@@ -40,7 +40,7 @@
                         </table><!-- /.table-std -->
                         <div class="item-chart">
         <div style="width:80%">
-            <canvas id="canvas2" height="450" width="450"></canvas>
+            <canvas id="canvas0" height="450" width="450"></canvas>
         </div>
                         </div><!-- /.item-chart -->
                     </div>
@@ -106,7 +106,7 @@ ratystar(<?php echo $v['ItemsReview']['id']?>)
     window.onload = function(){
 
 
-        var ctx = document.getElementById("canvas2").getContext("2d");
+        var ctx = document.getElementById("canvas0").getContext("2d");
         var data =[<?php echo $totalreview['p1']?>,<?php echo $totalreview['p2']?>,<?php echo $totalreview['p3']?>,<?php echo $totalreview['p4']?>,<?php echo $totalreview['p5']?>];
         rt(ctx,data);
 

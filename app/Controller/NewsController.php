@@ -94,8 +94,10 @@ class NewsController extends AppController {
 		$this->set('Blog',$item);
 
 		$all = $this->Blog->getItems('','','',$tag);
+
 		$pager = $this->Pager->getPagerDetail($all,'Blog',$id);
 		$this->set('Pager',$pager);
+//		var_dump($pager);
 
 	}
 

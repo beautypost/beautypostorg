@@ -72,6 +72,7 @@ class UsefulHelper extends AppHelper {
                 $v['Want']['user_id'] == $userid &&
                 $v['Want']['item_id'] == $itemid
                 ){
+
                 return true;
             }
         }
@@ -226,12 +227,15 @@ class UsefulHelper extends AppHelper {
 	**/
 	public function option($options,$selected,$nu=''){
         if(!is_array($selected)){
+            if($selected !== ''){
             $selected = explode(',',$selected);
+            }
         }
         $ret = '';
         if(!$nu){
 		  $ret .= '<option value="">-----</option>';
         }
+
 		foreach($options as $key => $val){
 			$ret .= "<option value=$key";
             if(is_array($selected)){

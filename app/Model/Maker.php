@@ -34,15 +34,15 @@ class Maker extends AppModel {
     var $useTable = false;
     var $name = 'Maker';
     public $validate = array(
-        'company' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
+        'company' =>array('rule'=>array('notEmpty'),'message'=>'御社名を入力してください'),
         'name' =>array('rule'=>array('notEmpty'),'message'=>'お名前を入力してください'),
         'email' =>array(
             array('rule'=>array('email',true),'message'=>'正しいメールアドレスを入力してください'),
             'custom'=>array('rule' => 'CheckEmail','message'=>'メールアドレス・メールアドレス（確認）には同じものをご入力ください')
             ),
-        'tel' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
-        'zip1' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
-        'zip2' =>array('rule'=>array('notEmpty'),'message'=>'を入力してください'),
+        'tel' =>array('rule'=>array('notEmpty'),'message'=>'電話番号を入力してください'),
+        'zip1' =>array('rule'=>array('notEmpty'),'message'=>'郵便番号1を入力してください'),
+        'zip2' =>array('rule'=>array('notEmpty'),'message'=>'郵便番号2を入力してください'),
         'message' =>array('rule'=>array('notEmpty'),'message'=>'お問い合わせ内容を入力してください'),
     );
 

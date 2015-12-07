@@ -106,7 +106,14 @@ class RegistController extends AppController {
         $this->Snsuser->create();
         $this->Snsuser->save($da,array('validate'=>false));
 
-        $this->set('pagename','派遣者新規登録-登録完了');
+
+
+        //ログイン完了
+        $this->Session->write(SESSIONNAME,$da['beautyid']);
+
+
+
+        $this->set('pagename','登録-登録完了');
     }
 
 

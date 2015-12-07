@@ -26,7 +26,7 @@
 							<li class="optional">
 								<dl>
 									<dt><label for="maker-group" class="inner">部署名</label></dt>
-									<dd><input name="data[group]" id="maker-group" type="text" value="<?php echo $data['Maker']['group']?>" required></dd>
+									<dd><input name="data[group]" id="maker-group" type="text" value="<?php echo $data['Maker']['group']?>"></dd>
 								</dl>
 							</li>
 							<li class="required">
@@ -72,7 +72,7 @@
 							<li class="required">
 								<dl>
 									<dt><label for="user-message" class="inner">お問い合わせ内容</label></dt>
-									<dd><textarea name="data[message]" id="user-message" cols="30" rows="10" value="<?php echo $data['Maker']['message']?>" required></textarea></dd>
+									<dd><textarea name="data[message]" id="user-message" cols="30" rows="10" required><?php echo $data['Maker']['message']?></textarea></dd>
 								</dl>
 							</li>
 						</ul><!-- /.formlist -->

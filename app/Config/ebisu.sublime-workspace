@@ -1,0 +1,1843 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"scaleLi",
+				"scaleLineWidth"
+			],
+			[
+				"Questio",
+				"QuestionValue"
+			],
+			[
+				"REDI",
+				"REDIRECTURL〔constant〕"
+			],
+			[
+				"bu",
+				"button_text"
+			],
+			[
+				"Se",
+				"SearchObject"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"act",
+				"$actressID〔variable〕"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"border-bo",
+				"border-bottom-width"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"end",
+				"endforeach"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"bank",
+				"bank"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"bor",
+				"border-width"
+			],
+			[
+				"DE",
+				"DEFAULTGENRE"
+			],
+			[
+				"score",
+				"target-score"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"User",
+				"UserHistory"
+			],
+			[
+				"Nu",
+				"NullCheckData"
+			],
+			[
+				"newss",
+				"newssite_id"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"pre",
+				"prerssdescription"
+			],
+			[
+				"ca",
+				"calendar"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"news",
+				"newses"
+			],
+			[
+				"mysql_fe",
+				"mysql_fetch_assoc"
+			],
+			[
+				"item",
+				"itemValue"
+			],
+			[
+				"pro",
+				"professor"
+			],
+			[
+				"profe",
+				"professorid"
+			],
+			[
+				"pref",
+				"prefid"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"div",
+				"div	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/controller/confirm.php",
+			"settings":
+			{
+				"buffer_size": 1522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/webroot/templates/index.tpl",
+			"settings":
+			{
+				"buffer_size": 638,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/index.php",
+			"settings":
+			{
+				"buffer_size": 1970,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/webroot/templates/confirm.tpl",
+			"settings":
+			{
+				"buffer_size": 679,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Library/WebServer/Documents/awake/noragami/ebisu/conf/model/formItem.php",
+			"settings":
+			{
+				"buffer_size": 3995,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "package control:in",
+		"selected_items":
+		[
+			[
+				"package control:in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"gitco",
+				"Git: Commit"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"git add ./*",
+			"git add newfile",
+			"git init",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os; pf = ‘Package Control.sublime-package’; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), ‘wb’).write(urllib.request.urlopen( ‘http://sublime.wbond.net/’ + pf.replace(‘ ‘,’%20′)).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Library/WebServer/Documents/awake/noragami/ebisu/conf",
+		"/Library/WebServer/Documents/awake/noragami/ebisu/input",
+		"/Library/WebServer/Documents/awake/noragami/ebisu/input/controller",
+		"/Library/WebServer/Documents/awake/noragami/ebisu/input/webroot",
+		"/Library/WebServer/Documents/awake/noragami/ebisu/input/webroot/templates",
+		"/Library/WebServer/Documents/awake/noragami/ebisu/plugin"
+	],
+	"file_history":
+	[
+		"/Library/WebServer/Documents/beautypost/app/webroot/raty/lib/jquery.raty.css",
+		"/Library/WebServer/Documents/beautypost/app/View/Review/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/RegistController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Collection/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Mypage/review.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Item.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Question.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/QuestionValue.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/ItemsReview.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/ItemList.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/registinput.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Mypage/input.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/registconfirm.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/MypageController.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Want.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Regist/input.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AppController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Regist/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Mypage/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Mypage/info.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminmasterController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Layouts/admin.ctp",
+		"/Library/WebServer/Documents/beautypost/app/View/Admintype/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdmintypeController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdmincolumnController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Admincolumn/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Admincolumn/input.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Genre.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Admincolumn/index.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/GoogleloginController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/FbconnectController.php",
+		"/Library/WebServer/Documents/beautypost/app/Config/database.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/IndexController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/BaseController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Helper/UsefulHelper.php",
+		"/Library/WebServer/Documents/beautypost/app/Config/const.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/TwLoginController.php",
+		"/Library/WebServer/Documents/beautypost/app/Config/core.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Admin/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Collection/detail.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminitem/input.php",
+		"/Users/kazuoyamamoto/Desktop/imge/loca.html",
+		"/Library/WebServer/Documents/beautypost/loca2.html",
+		"/Library/WebServer/Documents/beautypost/app/Config/bootstrap.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminmailmagazineedit/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminmailmagazineedit/submit.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminmailmagazine/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminmailmagazineedit/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminmailmagazineEditController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminuserController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminkeyword/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Layouts/default.ctp",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/common/headerGnav.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Mailmagazine.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminmailmagazineController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminitem/index.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/Component/MailMagazineCComponent.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Snsuser.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Type.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Admintype/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminuser/index.php",
+		"/Library/WebServer/Documents/beautypost/lib/Cake/Controller/ComponentCollection.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/Column.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Mypage/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/common/cmnMypage.php",
+		"/Library/WebServer/Documents/beautypost/app/View/glossary/detail.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/common/cmnSubContent.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/common/footerContent.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/common/cmnEnquete.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Pages/privacy.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Mypage/want.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Mypage/submit.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Regist/submit.php",
+		"/Library/WebServer/Documents/beautypost/app/webroot/css/top.css",
+		"/Library/WebServer/Documents/beautypost/app/View/Admintype/input.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminkeyword/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminkeyword/input.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminkeywordController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminitemController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Index/index.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/Component/UserCComponent.php",
+		"/Library/WebServer/Documents/beautypost/plugins/TwitterKit/Controller/Component/TwitterComponent.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/Component/ItemCComponent.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Layouts/base.ctp",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminitem/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/View/glossary/index.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/AdminKeyword.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/CollectionController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/CompareController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Question/index.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/QuestionController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/MailmagazineController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Question/lists.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/GlossaryController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/common/cmnSearchForm.php",
+		"/Library/WebServer/Documents/beautypost/app/Config/routes.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Question/detail.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Pages/about.php",
+		"/Library/WebServer/Documents/beautypost/app/View/MailMagazine/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/MailMagazine/detail.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Pages/rules.php",
+		"/Library/WebServer/Documents/beautypost/app/View/compare/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/compare/popup.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Question/list.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Question/Result.php",
+		"/Library/WebServer/Documents/beautypost/app/webroot/css/base.css",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/common/googleAnalytics.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/MailMagazineSendController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Elements/gtm.php",
+		"/Library/WebServer/Documents/beautypost/bizranadmin/app/Controller/Component/NewsCComponent.php",
+		"/Library/WebServer/Documents/beautypost/bizranadmin/app/Model/News.php",
+		"/Library/WebServer/Documents/beautypost/bizranadmin/app/View/Blog/item.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminblog/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Adminmaster/index.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/MailMagazineController.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/MailMagazineEditController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Type/detail.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/ReviewController.php",
+		"/Library/WebServer/Documents/beautypost/app/View/review/index.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Review/input.php",
+		"/Library/WebServer/Documents/beautypost/app/View/review/confirm.php",
+		"/Library/WebServer/Documents/beautypost/app/View/Review/submit.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/AdminquestionController.php",
+		"/Library/WebServer/Documents/beautypost/app/Model/News.php",
+		"/Library/WebServer/Documents/beautypost/bizranadmin/lib/Cake/View/Errors/missing_plugin.ctp",
+		"/Library/WebServer/Documents/beautypost/app/Controller/Component/QuestionCComponent.php",
+		"/Library/WebServer/Documents/beautypost/app/Controller/Component/NewsCComponent.php"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"age",
+			"detail",
+			"option",
+			"Blog",
+			"ItemsReview",
+			"Review",
+			"int",
+			"getitems",
+			"age",
+			"ratystar",
+			"star",
+			"raty",
+			"starrev",
+			"2d",
+			"radar",
+			"Contact",
+			">\n",
+			"Contact",
+			"option",
+			"  ",
+			"facebook",
+			"icon",
+			"tag",
+			"checked",
+			"purpose",
+			"checkusername",
+			"ORDER BY ,",
+			".",
+			"(/",
+			"..",
+			"(/",
+			"..",
+			".",
+			"..",
+			".",
+			"(/",
+			"..",
+			"../",
+			"(/",
+			"..",
+			"(/",
+			"..",
+			".",
+			"..",
+			";\n",
+			".",
+			"..",
+			"../",
+			"$this->webroot",
+			"images",
+			"?>//",
+			"images",
+			"model",
+			"Questions",
+			"Question",
+			"images",
+			"getitems",
+			"getitemcount",
+			"var",
+			"td",
+			"render",
+			"../",
+			"{$rootpass}",
+			"setdata",
+			"News",
+			"news",
+			"\n//",
+			"PostUploadFile",
+			"{",
+			"ico",
+			"twitterlogin",
+			"save",
+			"redirect_uri",
+			"getAll",
+			"VOTEMAX",
+			"Blog",
+			"option",
+			"Blog",
+			"AdminBlog",
+			"Blog",
+			"News",
+			"dtbMailmagazine",
+			"tbl_mdl",
+			"class",
+			"dtbMailmagazine",
+			"dtdCustomer",
+			"dtbMailmagazine",
+			"dtdCustomer",
+			"dtbCustomer",
+			"Blog",
+			"$this->webroot",
+			"get",
+			"var_dump",
+			"items",
+			"height: 100%",
+			"option",
+			"break",
+			"option",
+			"piP",
+			"CheckAdminID",
+			"News",
+			"maker",
+			"tag",
+			"News",
+			"url",
+			"News",
+			"getpointgenre",
+			"Snsuser",
+			"data",
+			"テキストが入ります。テキストが入ります。テキストが入ります。",
+			"maker",
+			"data",
+			"scoreName",
+			"User",
+			"Item",
+			"News",
+			"\n        ",
+			"News",
+			"\" class=\"col-xs-10\">",
+			"<input type=\"text\" name=\"",
+			"<input type=\"text\" name=\"data[title]\" value=\"",
+			"News",
+			"AdminItem",
+			"News",
+			"Item",
+			"setsearch",
+			"collection",
+			"want"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/knsc",
+			"",
+			"Actress/",
+			"Index/",
+			"",
+			"</a></td>",
+			"<td><a href=\"<?php echo WEBROOT?>actress/?key=\">",
+			"</strong>」",
+			"」</strong>",
+			"「<strong>",
+			"<h2 class=\"kz-header kz-header-point\"><i class=\"ace-icon glyphicon glyphicon-align-left\"></i>&nbsp;",
+			"$pingserver[] = array('",
+			"',mailsend='2014/",
+			"2014/09/08' where name like '%",
+			"2014/09/08",
+			"09' where name like '%",
+			"10' where name like '%",
+			"',mailsend='2014",
+			"'title'=>'価格','comment'=>\"価格設定\\nについての評価です。\"",
+			"1=>array('title'=>'満足度','comment'=>\"ビズランユーザー\\nが5段階評価で\\nレビューした\\n総合的な評価です。\"),",
+			"\",\"",
+			"bizran",
+			"当社",
+			"\")",
+			"\"),",
+			"'comment'=>\"",
+			"6,",
+			"yougos",
+			"(genre_id,title",
+			"','",
+			",",
+			"",
+			",",
+			"','keywords'=>'');",
+			"#06478a",
+			",'urlname'=>'','name",
+			"ビズラン",
+			"'urlname'=>'','name",
+			",'title'=>'','children",
+			"<?php echo WEBROOT;?>assets",
+			"'comment'",
+			"kz-btn",
+			"<?PHP echo WEBROOT?>assets",
+			"",
+			"values(2,'",
+			"(genre_id,name",
+			"'",
+			"','",
+			"<?php echo WEBROOT;?>",
+			".News",
+			".Newssite",
+			".News",
+			".Newssite",
+			".News",
+			".Newssite",
+			".News",
+			".Newssite",
+			".Users",
+			".Newssite.id",
+			".User",
+			".News",
+			"<?php echo $WEBROOT;?>",
+			"",
+			"\\n",
+			"o\" n",
+			"1\" v",
+			"\">",
+			"=\"",
+			"",
+			"array('",
+			"');",
+			"','"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/controller/confirm.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1279,
+								1279
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 3.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/webroot/templates/index.tpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 638,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								404,
+								404
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1970,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1934,
+								1934
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 534.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/controller/confirm.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Library/WebServer/Documents/awake/noragami/ebisu/input/webroot/templates/confirm.tpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								678,
+								678
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": true,
+							"WordCountSyntax": "html",
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"history_list_is_closing": true,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Library/WebServer/Documents/awake/noragami/ebisu/conf/model/formItem.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.426721859453,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "ebisu.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"confirm",
+				"input/controller/confirm.php"
+			],
+			[
+				"formitem",
+				"conf/model/formItem.php"
+			],
+			[
+				"core",
+				"app/Config/core.php"
+			],
+			[
+				"column",
+				"app/Model/Column.php"
+			],
+			[
+				"column/de",
+				"app/View/Column/detail.php"
+			],
+			[
+				"columncn",
+				"app/Controller/ColumnController.php"
+			],
+			[
+				"maker",
+				"app/Controller/MakerController.php"
+			],
+			[
+				"collectionco",
+				"app/Controller/CollectionController.php"
+			],
+			[
+				"itemlist",
+				"app/View/Elements/ItemList.php"
+			],
+			[
+				"mypage/review",
+				"app/View/Mypage/review.php"
+			],
+			[
+				"mypagecont",
+				"app/Controller/MypageController.php"
+			],
+			[
+				"footerconte",
+				"app/View/Elements/common/footerContent.php"
+			],
+			[
+				"default.ctp",
+				"app/View/Layouts/default.ctp"
+			],
+			[
+				"cmsub",
+				"app/View/Elements/common/cmnSubContent.php"
+			],
+			[
+				"subconte",
+				"app/View/Elements/common/cmnSubContentBlog.php"
+			],
+			[
+				"makercont",
+				"app/Controller/MakerController.php"
+			],
+			[
+				"usefule",
+				"app/View/Helper/UsefulHelper.php"
+			],
+			[
+				"forgetpasswo",
+				"app/Controller/ForgetpasswordController.php"
+			],
+			[
+				"login/inde",
+				"app/View/Login/index.php"
+			],
+			[
+				"forgetpassword",
+				"app/View/Forgetpassword/index.php"
+			],
+			[
+				"subcontentblog",
+				"app/View/Elements/common/cmnSubContentBlog.php"
+			],
+			[
+				"database",
+				"app/Config/database.php"
+			],
+			[
+				"admincolumn/inde",
+				"app/View/Admincolumn/index.php"
+			],
+			[
+				"adminblog/inde",
+				"app/View/Adminblog/index.php"
+			],
+			[
+				"blog",
+				"app/Model/Blog.php"
+			],
+			[
+				"admincolumn/confirm",
+				"app/View/Admincolumn/confirm.php"
+			],
+			[
+				"adminblog/confirm",
+				"app/View/Adminblog/confirm.php"
+			],
+			[
+				"admincolumn/input",
+				"app/View/Admincolumn/input.php"
+			],
+			[
+				"adminblog/input",
+				"app/View/Adminblog/input.php"
+			],
+			[
+				"adminblog",
+				"app/Controller/AdminblogController.php"
+			],
+			[
+				"admincolumncont",
+				"app/Controller/AdmincolumnController.php"
+			],
+			[
+				"column/confirm",
+				"app/View/Admincolumn/confirm.php"
+			],
+			[
+				"basecont",
+				"app/Controller/BaseController.php"
+			],
+			[
+				"appcont",
+				"app/Controller/AppController.php"
+			],
+			[
+				"genre",
+				"app/Model/Genre.php"
+			],
+			[
+				"admincolumn",
+				"app/Controller/AdmincolumnController.php"
+			],
+			[
+				"review/inde",
+				"app/View/Review/index.php"
+			],
+			[
+				"reviewcont",
+				"app/Controller/ReviewController.php"
+			],
+			[
+				"pager",
+				"app/Controller/Component/PagerComponent.php"
+			],
+			[
+				"columncont",
+				"app/Controller/ColumnController.php"
+			],
+			[
+				"news/detail",
+				"app/View/News/detail.php"
+			],
+			[
+				"column/detail",
+				"app/View/Column/detail.php"
+			],
+			[
+				"newscont",
+				"app/Controller/NewsController.php"
+			],
+			[
+				"colmncont",
+				"app/Controller/ColumnController.php"
+			],
+			[
+				"collectioncont",
+				"app/Controller/CollectionController.php"
+			],
+			[
+				"newsinde",
+				"app/View/News/index.php"
+			],
+			[
+				"column/inde",
+				"app/View/Column/index.php"
+			],
+			[
+				"collection/detail",
+				"app/View/Collection/detail.php"
+			],
+			[
+				"itemsreview",
+				"app/Model/ItemsReview.php"
+			],
+			[
+				"monitor",
+				"app/View/Review/monitor.php"
+			],
+			[
+				"reviewcon",
+				"app/Controller/ReviewController.php"
+			],
+			[
+				"question/detail",
+				"app/View/Question/detail.php"
+			],
+			[
+				"news/de",
+				"app/View/News/detail.php"
+			],
+			[
+				"question",
+				"app/Controller/QuestionController.php"
+			],
+			[
+				"newscon",
+				"app/Controller/NewsController.php"
+			],
+			[
+				"itemcc",
+				"app/Controller/Component/ItemCComponent.php"
+			],
+			[
+				"item",
+				"app/Model/Item.php"
+			],
+			[
+				"blogcont",
+				"app/Controller/AdminblogController.php"
+			],
+			[
+				"useful",
+				"app/View/Helper/UsefulHelper.php"
+			],
+			[
+				"cmnsub",
+				"app/View/Elements/common/cmnSubContentBlog.php"
+			],
+			[
+				"detail",
+				"app/View/News/detail.php"
+			],
+			[
+				"adminblogco",
+				"app/Controller/AdminblogController.php"
+			],
+			[
+				"news/index",
+				"app/View/News/index.php"
+			],
+			[
+				"subcon",
+				"app/View/Elements/common/cmnSubContent.php"
+			],
+			[
+				"review/index",
+				"app/View/Review/index.php"
+			],
+			[
+				"review/input",
+				"app/View/Review/input.php"
+			],
+			[
+				"route",
+				"app/Config/routes.php"
+			],
+			[
+				"jquery.raty",
+				"app/webroot/raty/lib/jquery.raty.css"
+			],
+			[
+				"raty/lib/jquery.raty",
+				"app/webroot/raty/lib/jquery.raty.css"
+			],
+			[
+				"default",
+				"app/View/Layouts/default.ctp"
+			],
+			[
+				"element/ite",
+				"app/View/Elements/ItemList.php"
+			],
+			[
+				"collection/deta",
+				"app/View/Collection/detail.php"
+			],
+			[
+				"collection/index",
+				"app/View/Collection/index.php"
+			],
+			[
+				"review/index.html",
+				"app/View/Review/index.html"
+			],
+			[
+				"bootstra",
+				"app/Config/bootstrap.php"
+			],
+			[
+				"admin",
+				"app/View/Layouts/admin.ctp"
+			],
+			[
+				"admin.ctp",
+				"app/View/Layouts/admin.ctp"
+			],
+			[
+				"base.",
+				"app/View/Layouts/base.ctp"
+			],
+			[
+				"adminitemcont",
+				"app/Controller/AdminitemController.php"
+			],
+			[
+				"const",
+				"app/Config/const.php"
+			],
+			[
+				"adminblogcont",
+				"app/Controller/AdminblogController.php"
+			],
+			[
+				"base",
+				"app/View/Layouts/base.ctp"
+			],
+			[
+				"adminitem/input",
+				"app/View/Adminitem/input.php"
+			],
+			[
+				"adminitem",
+				"app/Controller/AdminitemController.php"
+			],
+			[
+				"adminitem/confirm",
+				"app/View/Adminitem/confirm.php"
+			],
+			[
+				"adminite/confirm",
+				"app/View/Adminitem/confirm.php"
+			],
+			[
+				"adminitemco",
+				"app/Controller/AdminitemController.php"
+			],
+			[
+				"adminblogcnt",
+				"app/Controller/AdminblogController.php"
+			],
+			[
+				"pwinpupt",
+				"app/View/Forgetpassword/pwinput.php"
+			],
+			[
+				"forgetpassword/pwinput",
+				"app/View/Forgetpassword/pwinput.php"
+			],
+			[
+				"snsuser",
+				"app/Model/Snsuser.php"
+			],
+			[
+				"fpassowrd",
+				"app/Model/Fpassword.php"
+			],
+			[
+				"contactcc",
+				"app/Controller/Component/ContactCComponent.php"
+			],
+			[
+				"forgetpassowrdcont",
+				"app/Controller/ForgetpasswordController.php"
+			],
+			[
+				"contactc",
+				"app/Controller/Component/ContactCComponent.php"
+			],
+			[
+				"registcont",
+				"app/Controller/RegistController.php"
+			],
+			[
+				"forgetpassword/",
+				"app/View/Forgetpassword/index.php"
+			],
+			[
+				"forgetpassowrd/index",
+				"app/View/Forgetpassword/index.php"
+			],
+			[
+				"fpassowrdco",
+				"app/Controller/ForgetpasswordController.php"
+			],
+			[
+				"contact/inde",
+				"app/View/Contact/index.php"
+			],
+			[
+				"registinput",
+				"app/View/Elements/registinput.php"
+			],
+			[
+				"contact/send",
+				"app/View/Contact/send.php"
+			],
+			[
+				"maker/confirm",
+				"app/View/maker/confirm.php"
+			],
+			[
+				"contact/confirm",
+				"app/View/Contact/confirm.php"
+			],
+			[
+				"maker.php",
+				"app/Model/Maker.php"
+			],
+			[
+				"maker/input",
+				"app/View/maker/input.php"
+			],
+			[
+				"contactcont",
+				"app/Controller/ContactController.php"
+			],
+			[
+				"contact/send.php",
+				"app/View/Contact/send.php"
+			],
+			[
+				"mailcc",
+				"app/Controller/Component/MailCComponent.php"
+			],
+			[
+				"contactcon",
+				"app/Controller/ContactController.php"
+			],
+			[
+				"contact/index",
+				"app/View/Contact/index.php"
+			],
+			[
+				"contact",
+				"app/Model/Contact.php"
+			],
+			[
+				"",
+				"app/Controller/ContactController.php"
+			],
+			[
+				"contactco",
+				"app/Controller/ContactController.php"
+			],
+			[
+				"collection/inde",
+				"app/View/Collection/index.php"
+			],
+			[
+				"usercco",
+				"app/Controller/Component/UserCComponent.php"
+			],
+			[
+				"itemsre",
+				"app/Model/ItemsReview.php"
+			],
+			[
+				"usercc",
+				"app/Controller/Component/UserCComponent.php"
+			],
+			[
+				"collection/de",
+				"app/View/Collection/detail.php"
+			],
+			[
+				"usefulhel",
+				"app/View/Helper/UsefulHelper.php"
+			],
+			[
+				"questioncont",
+				"app/Controller/QuestionController.php"
+			],
+			[
+				"database.php",
+				"app/Config/database.php"
+			],
+			[
+				"databse",
+				"lib/Cake/Model/Datasource/Session/DatabaseSession.php"
+			],
+			[
+				"bootstrap",
+				"app/Config/bootstrap.php"
+			],
+			[
+				"appco",
+				"app/Controller/AppController.php"
+			],
+			[
+				"daabase",
+				"app/Config/database.php"
+			],
+			[
+				"adminuser/inde",
+				"app/View/Adminuser/index.php"
+			],
+			[
+				"base.ctp",
+				"app/View/Layouts/base.ctp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

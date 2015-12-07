@@ -34,11 +34,11 @@
 <?php endforeach;?>
         <?php echo $this->element('registinput'); ?>
 
-
                     <footer>
                         <p><label><input type="checkbox">利用規約及び個人情報の取扱いについてに同意する</label></p>
                         <button type="submit" class="button btn-pk btn-sizeM">登録情報を変更する</button>
                     </footer>
+                    <input type="hidden" name="data[id]" value="<?php echo $data['Snsuser']['id']?>">
                 </form>
             </section><!-- /#signup-form -->
         </div><!-- /#main-area -->

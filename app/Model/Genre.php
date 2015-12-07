@@ -77,25 +77,48 @@ class Genre extends AppModel {
 // 目的                      2
 // 部位                      3
 // メーカー                        4
-
 $genre = '';
         return $genre;
     }
 
     public function getKisyu(){
         $conditions['conditions'] = array('genre_id'=>GENREKISYU);
-        return $this->find('all',$conditions);
+        $all = $this->find('all',$conditions);
+
+       App::import('Model','Item'); //別モデルを呼び出し， HogeRelationを使う
+        $item = new Item;
+
+
+        foreach($all as $k => $v){
+            $count = $item->getItemsCount(array('genre_id'=>$v['Genre']['id'],'valid'=>1));
+            $all[$k]['Genre']['count'] = $count;
+        }
+        return $all;
+
     }
 
     public function getPurpose(){
         $conditions['conditions'] = array('genre_id'=>GENREPURPOSE);
-        return $this->find('all',$conditions);
+        $all = $this->find('all',$conditions);
+
+       App::import('Model','Item'); //別モデルを呼び出し， HogeRelationを使う
+        $item = new Item;
+
+
+        foreach($all as $k => $v){
+            $count = $item->getItemsCount(array('genres like'=>'%,'.$v['Genre']['id'].',%','valid'=>1));
+            $all[$k]['Genre']['count'] = $count;
+        }
+        return $all;
 
     }
 
     public function getPoint(){
         $conditions['conditions'] = array('genre_id'=>GENREPOINT);
-        return $this->find('all',$conditions);
+        $all = $this->find('all',$conditions);
+
+
+        return $all;
 
     }
 
@@ -188,9 +211,20 @@ $ret[8] ='ネイルケア';
 
     public function getPointWithGroup(){
         $group = $this->getPointGenre();
+       App::import('Model','Item'); //別モデルを呼び出し， HogeRelationを使う
+        $item = new Item;
+
         foreach($group as $g => $v){
             $conditions['conditions'] = array('group_id'=>$g,'genre_id'=>GENREPOINT);
-            $ret[$g] = $this->find('all',$conditions);
+            $all= $this->find('all',$conditions);
+
+            foreach($all as $k => $v){
+                $count = $item->getItemsCount(array('genres like'=>'%,'.$v['Genre']['id'].',%','valid'=>1));
+                $all[$k]['Genre']['count'] = $count;
+            }
+
+            $ret[$g] = $all;
+
         }
         return $ret;
     }
@@ -403,15 +437,15 @@ $ret[8] ='ネイルケア';
 
     //都道府県
     public function getPref() {
-        $Items['pref']['01'] = '北海道';
-        $Items['pref']['02'] = '青森県';
-        $Items['pref']['03'] = '岩手県';
-        $Items['pref']['04'] = '宮城県';
-        $Items['pref']['05'] = '秋田県';
-        $Items['pref']['06'] = '山形県';
-        $Items['pref']['08'] = '茨城県';
-        $Items['pref']['07'] = '福島県';
-        $Items['pref']['09'] = '栃木県';
+        $Items['pref']['1'] = '北海道';
+        $Items['pref']['2'] = '青森県';
+        $Items['pref']['3'] = '岩手県';
+        $Items['pref']['4'] = '宮城県';
+        $Items['pref']['5'] = '秋田県';
+        $Items['pref']['6'] = '山形県';
+        $Items['pref']['8'] = '茨城県';
+        $Items['pref']['7'] = '福島県';
+        $Items['pref']['9'] = '栃木県';
         $Items['pref']['10'] = '群馬県';
         $Items['pref']['11'] = '埼玉県';
         $Items['pref']['12'] = '千葉県';

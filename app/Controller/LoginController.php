@@ -57,6 +57,11 @@ class LoginController extends AppController {
 	 * @param genreID sort limit offset
 	 */
 	public function index() {
+		if($this->SnsuserData){
+			return $this->redirect(
+            array('controller' => 'Mypage', 'action' => 'index')
+	        );
+		}
 		$this->set('redirecturl','');
 	}
 

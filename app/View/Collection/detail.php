@@ -73,30 +73,21 @@
                                     </li>
                                 </ul>
                             </div><!-- /.item-info -->
-                            <div class="btn-want" id="wants">
-                            <?php if(!$this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
+
+                            <?php if($this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
+                            <div class="is-wanted">aaaa
                                 <a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a>
+                            </div>
+            <div class="is-want"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+
+                            <?php else:?>
+            <div class="btn-want"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+
                             <?php endif;?>
                             <span class="num"><?php echo $Item['Item']['wants']?></span></div>
                             <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
                         </div><!-- /.item-summary -->
-<script>
 
-function wants(id){
-
-//alert( $( this ).val()); // valueを表示
-        $.ajax({
-                type: "GET",
-                url: "<?php echo WEBROOT?>Ajax/setWant/?itemID="+id,
-                success: function(data){
-                        if(data != '') {
-                            $("#wants").html(data)
-                        }
-                }
-
-        });
-}
-</script>
                         <div class="item-info2">
                             <div class="item-gallery">
                                 <ul>
@@ -298,12 +289,23 @@ function wants(id){
                         </div><!-- /.item-review-body -->
                     </div><!-- /.section-body -->
 <?php else:?>
+    <!--  review がなかった場合-->
+                            <div class="item-review-body">
+                            <div class="item-chart">
+        <div style="width:80%">
+            <img src="<?php echo WEBROOT?>images/dummy/chart-dummy.png" width="100" height="100" class="fitimg-w" alt="">
+        </div>
+    </div>
+
+
+    </div>
                                 <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
+<!-- ここまで　-->
 <?php endif;?>
 
 
                 </section><!-- /.item-u-review.item-review -->
-
+<?php if(count($Materials) > 0):?>
                 <section class="item-relative">
                     <h2 class="head-std ico-arrow">関連商品</h2>
                     <ul class="collection-gallery">
@@ -327,7 +329,8 @@ function wants(id){
                         <a href="./spec/" class="button btn-pk">関連商品をまとめて比較</a>
                     </footer>
                 </section><!-- /.item-relative -->
-
+            <?php endif;?>
+<?php if(count($Coordinates) > 0):?>
                 <section class="item-cordinate">
                     <h2 class="head-std ico-arrow">この商品におすすめコーディネート商品</h2>
                     <ul class="collection-gallery">
@@ -346,12 +349,12 @@ function wants(id){
                              --></a></li>
                     <!-- gallary-->
 <?php endforeach;?>
-
                     </ul><!-- /.collection-gallery -->
                     <footer>
                         <a href="./spec/" class="button btn-pk">おすすめ商品をまとめて比較</a>
                     </footer>
                 </section><!-- /.item-cordinate -->
+<?php endif;?>
             </section><!-- /#collection-list -->
         </div><!-- /#main-area -->
 

@@ -45,7 +45,7 @@
             </div>
           </footer>
         </section><!-- /.news-entry -->
-<?php endforeach;?>
+    <?php endforeach;?>
 
       <footer>
                     <nav class="pagination pg-list">
@@ -70,6 +70,14 @@
                     </nav><!-- /.pagination -->
       </footer>
     </article>
+
+
+
+
+準備中です
+
+
+
     </div><!-- /#main-area -->
 
     <aside id="news-menu" class="layout-sub layout-r">

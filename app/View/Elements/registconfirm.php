@@ -108,7 +108,7 @@
                     </div>
 
                     <footer>
-                        <p><label><input type="checkbox" checked>利用規約及び個人情報の取扱いについてに同意する</label></p>
+                        <p><label><input type="checkbox" checked disabled>利用規約及び個人情報の取扱いについてに同意する</label></p>
 
 <form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input">
 <button class="button btn-pk btn-sizeM" data-last="Finish" type="submit">

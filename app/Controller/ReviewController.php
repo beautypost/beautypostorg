@@ -34,6 +34,17 @@ class ReviewController extends AppController {
 //	public $components = array('MailC');
 
 
+    public function beforeFilter(){
+
+        if(!isset($this->SnsuserData)){
+            return $this->redirect(
+            array('controller' => 'Login', 'action' => 'index')
+            );
+        }
+
+    }
+
+
     public function beforeRender(){
         $this->set('Gender',$this->Genre->getGender());
         $this->set('Pref',$this->Genre->getPref());
@@ -119,6 +130,9 @@ class ReviewController extends AppController {
     レビュー登録
     **/
     public function input() {
+
+
+
         $this->set('pagename','新規登録');
         $this->set('errormessages','');
         $itemid = $this->setRequestGetValue('itemID');

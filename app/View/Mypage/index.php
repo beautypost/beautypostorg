@@ -22,12 +22,12 @@
                     <h2 class="advisory-head"><img src="<?php echo WEBROOT; ?>images/mypage/advisory-head.png" class="fitimg-w" alt="あなたの美容天気予報"></h2>
                     <div class="advisory-status">
                         <ul>
-                            <li><dl><dt>登録地域</dt><dd>鹿児島県 種子島・屋久島地方 種子島</dd></dl></li>
-                            <li><dl><dt>肌質</dt><dd>健康な肌</dd></dl></li>
+                            <li><dl><dt>登録地域</dt><dd><?php echo $this->Useful->ViewselectValue($Pref['pref'],$UserData['Snsuser']['pref'])?></dd></dl></li>
+                            <li><dl><dt>肌質</dt><dd><?php echo $this->Useful->ViewselectValue($Skin,$UserData['Snsuser']['skin'])?></dd></dl></li>
                         </ul>
                     </div><!-- /.advisory-status -->
                 </header>
-                
+
                 <div class="section-body">
                     <section class="advisory-dryair level1">
                         <h2><img src="<?php echo WEBROOT; ?>images/mypage/dryair1.png" alt="" class="fitimg-w"></h2>
@@ -37,7 +37,7 @@
                             <img src="<?php echo WEBROOT; ?>images/mypage/advisory-boxbtm.png" alt="" class="fitimg-w">
                         </div><!-- /.section-body -->
                     </section><!-- /.advisory-dryair -->
-                    
+
                     <section class="advisory-sunburn level2">
                         <h2><img src="<?php echo WEBROOT; ?>images/mypage/sunburn2.png" alt="" class="fitimg-w"></h2>
                         <div class="section-body">

@@ -50,6 +50,7 @@ class Snsuser extends AppModel {
             ),
         'pref' =>array('rule'=>array('notEmpty'),'message'=>'住んでいるエリアを選択してください'),
         'skin' =>array('rule'=>array('notEmpty'),'message'=>'肌質を選択してください'),
+        'mailmagazine' =>array('rule'=>array('notEmpty'),'message'=>'Beautypostメール送信可否を選択してください'),
     );
 
 
@@ -163,6 +164,13 @@ class Snsuser extends AppModel {
 
     public function checkUniqueParam($name,$param){
         $conditions['conditions'] = array($name=>$param);
+
+        $id = isset($this->data['Snsuser']['id']) ? $this->data['Snsuser']['id'] : '';
+
+        if($id){
+            $conditions['conditions'][] = array('id !='=> $id);
+        }
+
         $count = $this->find('count',$conditions);
 
         if($count){

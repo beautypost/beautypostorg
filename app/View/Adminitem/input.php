@@ -221,7 +221,18 @@ if (isset($validationErrors) && is_array($validationErrors)) {
 <?php endif;?>
                     </div>
                 </div>
-
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 肌水分量</label>
+                    <div class="col-sm-10"><input type="text" name="data[result]" value="<?php echo $data['Item']['result']?>" class="col-xs-10"></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 関連商品</label>
+                    <div class="col-sm-10"><input type="text" name="data[materials]" value="<?php echo $data['Item']['materials']?>" class="col-xs-10"></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> コーディネート商品</label>
+                    <div class="col-sm-10"><input type="text" name="data[cordinates]" value="<?php echo $data['Item']['cordinates']?>" class="col-xs-10"></div>
+                </div>
 
                 <div class="clearfix form-actions">
                     <div class="col-md-offset-3 col-md-9">

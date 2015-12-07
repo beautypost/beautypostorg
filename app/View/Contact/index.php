@@ -58,6 +58,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
 									<dt><label for="user-subject" class="inner">お問い合わせの種類</label></dt>
 									<dd>
 										<select name="data[title]" id="user-subject" required>
+
 										<?php echo $this->Useful->option($title,$data['Contact']['title'])?>
 										</select>
 									</dd>
