@@ -2645,7 +2645,7 @@ ul.alp > li, ol.alp > li {
   display: inline-block;
   background: white;
 }
-.photo-frame img {
+.photo-frame > img {
   margin: 0 auto;
   display: block;
   -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
@@ -2657,8 +2657,6 @@ ul.alp > li, ol.alp > li {
   margin-bottom: -3px;
   display: block;
   position: relative;
-  font-size: 10px;
-  font-size: 1rem;
   text-align: center;
 }
 .photo-frame.pf-borderless {
@@ -2678,6 +2676,15 @@ ul.alp > li, ol.alp > li {
 }
 .photo-frame.pf-rich .caption {
   text-shadow: 0 1px 0 white, 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.photo-frame .caption {
+  font-size: 12px;
+  font-size: 1.2rem;
+  position: relative;
+  vertical-align: middle;
+}
+.photo-frame .caption img {
+  vertical-align: middle;
 }
 
 a.photo-frame {

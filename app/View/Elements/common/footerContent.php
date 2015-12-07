@@ -19,7 +19,7 @@
                     <li><a href="<?php echo WEBROOT?>Regist/input/">Beauty Post メンバー登録</a></li>
                 </ul>
                 <ul>
-                    <li><a href="<?php echo WEBROOT?>pages/voice/">モニター体験レポート</a></li>
+                    <li><a href="<?php echo WEBROOT?>pages/report/">モニター体験レポート</a></li>
                     <li><a href="<?php echo WEBROOT?>News/">お役立ち美容通信</a></li>
                     <li><a href="<?php echo WEBROOT?>Mailmagazine/">メルマガバックナンバー</a></li>
                     <li><a href="<?php echo WEBROOT?>Column/">Beauty Post コラム</a></li>

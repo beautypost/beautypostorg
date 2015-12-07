@@ -21,7 +21,8 @@
 
             column  : 0,
             clear   : 0,
-            height  : 'minHeight',
+            height  : 'min-height',
+            linehgieht: false,
             reset   : '',
             descend : function descend (a,b){ return b-a; }
 
@@ -65,7 +66,14 @@
                     if (ie6) {
                         self.eq(j*op.column+k).height(hListLine[j]);
                     } else {
-                        self.eq(j*op.column+k).css(op.height,hListLine[j]);
+                        self.eq(j*op.column+k).css({
+                            'min-height': hListLine[j]
+                        });
+                        if (op.lineheight) {
+                            self.eq(j*op.column+k).css({
+                                'line-height' : hListLine[j] + 'px'
+                            });
+                        }
                     }
                     if (k == 0 && op.clear != 0) {
                         self.eq(j*op.column+k).css('clear','both');
@@ -76,7 +84,14 @@
             if (ie6) {
                 self.height(hMax);
             } else {
-                self.css(op.height,hMax);
+                self.css({
+                    'min-height': hMax
+                });
+                if (op.lineheight) {
+                    self.css({
+                        'line-height': hMax + 'px'
+                    });
+                }
             }
         }
     };
@@ -96,5 +111,19 @@ jQuery(function($){
         } else {
             $('.js-ah-xooo').autoHeight({reset:'reset'});
         }
+    }).trigger('resize');
+    
+    $(window).resize(function(){
+        $('.report-gallery').each(function(){
+            if (window.innerWidth < bpS) {
+                $(this).find('.caption').removeAttr('style');
+            } else if (bpS <= window.innerWidth && window.innerWidth < bpM) {
+                $(this).find('.caption').autoHeight({column:2,lineheight:true,reset:'reset'});
+            } else if (bpM <= window.innerWidth && window.innerWidth < bpL) {
+                $(this).find('.caption').autoHeight({column:3,lineheight:true,reset:'reset'});
+            } else {
+                $(this).find('.caption').autoHeight({column:3,lineheight:true,reset:'reset'});
+            }
+        });
     }).trigger('resize');
 });

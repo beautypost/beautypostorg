@@ -457,6 +457,12 @@
 		@include photoFrame(basic,#e0e0e0,true);
 		&.pf-borderless { @include photoFrame(borderless,#e0e0e0,false); }
 		&.pf-rich { @include photoFrame(rich,#e0e0e0,false); }
+		.caption {
+			@include fz(12);
+			position:relative;
+			vertical-align:middle;
+			img { vertical-align:middle; }
+		}
 	}
 	a.photo#{$-_}frame {
 		text-decoration:none;

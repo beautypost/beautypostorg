@@ -1479,7 +1479,8 @@
 ---------------------------------------------------------------------------------------------------- */
 	.report-box {
 		padding:112 / 2000 * 100%;
-		background:#F1ECE6;
+		@include border-radius(16px);
+		background:#F1ECE6 url(../images/report/texture.png);
 	}
 	#report-lead {
 		.width-adjuster {
@@ -1495,7 +1496,34 @@
 			.link-btn {
 				@include posa(0,null,null,0);
 				width:100%;
+				a {
+					@include mqmt($bpS) {
+						padding:0;
+					}
+					@include mqmt($bpM) {
+						margin-top:1em;
+					}
+				}
+				span {
+					display:block;
+					@include mqmt($bpS) {
+						padding-top:4rem; height:0; width:280px;
+						background:url(../images/report/btn-more.png);
+						@include background-size(cover);
+					}
+				}
 			}
+		}
+	}
+	#report-report{
+		>.section-body {
+			padding-top:56 / 2000 * 100%;
+		}
+	}
+	#report-result {
+		.section-body {
+			@include mqlt($bpM) { margin-bottom:1em; }
+			@include mqmt($bpM) { margin-bottom:2em; }
 		}
 	}
 	
@@ -1515,11 +1543,66 @@
 				width:276 / 888 * 100%;
 				&:nth-child(3n-2) { margin-left:0; clear:both; }
 			}
+			.caption { margin-top:0.5em; margin-bottom:0.25em; }
 		}
 	}
 	.report-result {
-		padding:3%;
-		background:#fff;
+		padding:112 / 1776 * 100%;
+		background:#fff url(../images/report/grid.png);
+		@include background-size(18px);
+		@include mqmt($bpS) {
+			@include cf();
+		}
+	}
+	
+	.report-result-person {
+		padding:24 / 1552 * 100%; padding-bottom:3px; position:relative;
+		@include box-sizing(border-box);
+		@include mqlt($bpS) {
+			margin-bottom:1em;
+		}
+		@include mqmt($bpS) {
+			width:664 / 1552 * 100%;
+			float:left;
+		}
+		&:after {
+			margin-left:-20%;
+			position:absolute;
+			top:-8%; left:50%;
+			content:'';
+			width:40%; height:50%;
+			background:url('../images/report/seal.png') no-repeat;
+			@include background-size(contain);
+		}
+	}
+	.report-result-calender {
+		@include mqmt($bpS) {
+			width:784 / 1552 * 100%;
+			float:right;
+		}
+	}
+	.report-result-data {
+		@include mqmt($bpS) {
+			clear:both;
+		}
+		ul { padding-top:16px; }
+		li {
+			@include mv(2.4rem);
+			h3 { margin-bottom:0.5em; margin-left:-0.25em; margin-right:-0.25em; padding:0.25em 0.5em; @include border-radius(0.5em); color:#fff; font-weight:700; }
+			&:nth-child(1) h3 { @include grad(#21C7E6,#00589B); }
+			&:nth-child(2) h3 { @include grad(#F6C86C,#DF681D); }
+			&:nth-child(3) h3 { @include grad(#F92882,#FA0114); }
+		}
+		p {
+			@include mqlt($bpS) { @include fz(14); }
+			@include mqmt($bpM) {
+				padding-left:328 / 1552 * 100%;
+				line-height:2;
+			}
+		}
+	}
+	.report-result-comment {
+		margin-top:-240 / 1552 * 100%;
 	}
 	
 /* 

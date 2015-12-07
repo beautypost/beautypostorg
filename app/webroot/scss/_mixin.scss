@@ -216,12 +216,11 @@
 			background:lighten($theme-color,15%);
 		}
 		@if $default {
-			img { margin:0 auto; display:block; @include box-shadow(0 0 0 1px rgba(#000,0.05)); }
+			>img { margin:0 auto; display:block; @include box-shadow(0 0 0 1px rgba(#000,0.05)); }
 			.caption {
 				margin-top:3px; margin-bottom:-3px;
 				display:block; // a要素の中にspan等として入る可能性も考え、block要素に。
 				position:relative;
-				@include fz(10);
 				text-align:center;
 			}
 		}
