@@ -1662,7 +1662,38 @@
     padding: 1.5em;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 479px) {
+  #visitor-section #privilege > .section-body ul li {
+    margin-bottom: 0.75em;
+  }
+}
+@media (min-width: 480px) and (max-width: 823px) {
+  #visitor-section #privilege > .section-body ul {
+    zoom: 1;
+  }
+  #visitor-section #privilege > .section-body ul:before, #visitor-section #privilege > .section-body ul:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #visitor-section #privilege > .section-body ul > li {
+    float: left;
+    margin-left: 2%;
+    margin-bottom: 0.75em;
+    width: 49%;
+  }
+  #visitor-section #privilege > .section-body ul > li:first-child {
+    margin-left: 0 !important;
+  }
+  #visitor-section #privilege > .section-body ul > li:last-child {
+    margin-right: 0 !important;
+  }
+  #visitor-section #privilege > .section-body ul > li:nth-child(odd) {
+    margin-left: 0;
+    clear: both;
+  }
+}
+@media (min-width: 824px) {
   #visitor-section #privilege > .section-body ul {
     zoom: 1;
   }
@@ -1686,31 +1717,6 @@
   #visitor-section #privilege > .section-body ul > li:nth-child(3n-2) {
     margin-left: 0;
     clear: both;
-  }
-  #visitor-section #privilege > .section-body ul > li .image {
-    margin-bottom: 0.25em;
-    display: block;
-  }
-}
-@media (max-width: 767px) {
-  #visitor-section #privilege > .section-body li {
-    position: relative;
-    display: table;
-    width: 100%;
-  }
-  #visitor-section #privilege > .section-body li .image, #visitor-section #privilege > .section-body li .txt {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    display: table-cell;
-    vertical-align: top;
-  }
-  #visitor-section #privilege > .section-body li .image {
-    width: 104px;
-  }
-  #visitor-section #privilege > .section-body li .txt {
-    padding-left: 0.5em;
-    font-size: 14px;
-    font-size: 1.4rem;
   }
 }
 #visitor-section #privilege > .section-body > footer {
@@ -3205,6 +3211,49 @@
 ====================================================================================================
 ■ サイトマップ (.page-sitemap) ./sitemap/
 ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .pagelist {
+    zoom: 1;
+  }
+  .pagelist:before, .pagelist:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+.pagelist li {
+  line-height: 2.5;
+}
+@media (min-width: 768px) {
+  .pagelist li {
+    margin-left: 1%;
+    width: 48%;
+    float: left;
+  }
+}
+.pagelist li:before {
+  margin-right: 0.25em;
+  content: '\f138';
+  font-family: FontAwesome;
+  color: #f38291;
+}
+.pagelist li.ico-home {
+  font-size: 150%;
+}
+.pagelist li.ico-home:before {
+  content: '\f015';
+}
+.pagelist li a {
+  color: #272727;
+  text-decoration: underline;
+}
+.pagelist li a:hover {
+  color: #ef5368;
+}
+.pagelist li a:hover {
+  text-decoration: none;
+}
+
 /* 
 ====================================================================================================
 ◆ コラム (.page-column) ./column/

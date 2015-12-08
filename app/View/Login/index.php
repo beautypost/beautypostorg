@@ -75,28 +75,22 @@
                         <h2><img src="<?php echo WEBROOT?>images/login/privilege-head.png" width="928" height="104" alt="Beauty Postメンバー会員特典について"></h2>
                         <ul>
                             <li>
-                                <span class="image"><img src="http://placehold.jp/400x240.png" class="fitimg-w" alt=""></span>
-                                <span class="txt">美容天気予報（天気や紫外線×肌質）を毎日GET♪</span>
+                                <img src="<?php echo WEBROOT; ?>images/login/privilege01.png" class="fitimg-w" alt="美容天気予報（天気や紫外線×肌質）を毎日GET♪">
                             </li>
                             <li>
-                                <span class="image"><img src="http://placehold.jp/400x240.png" class="fitimg-w" alt=""></span>
-                                <span class="txt">気になる商品の「スペック比較」ができる！</span>
+                                <img src="<?php echo WEBROOT; ?>images/login/privilege02.png" class="fitimg-w" alt="美容機器のモニター参加やサンプルがもらえる">
                             </li>
                             <li>
-                                <span class="image"><img src="http://placehold.jp/400x240.png" class="fitimg-w" alt=""></span>
-                                <span class="txt">商品のレビュー投稿ができる！！</span>
+                                <img src="<?php echo WEBROOT; ?>images/login/privilege03.png" class="fitimg-w" alt="気になる商品の「スペック比較」ができる！">
                             </li>
                             <li>
-                                <span class="image"><img src="http://placehold.jp/400x240.png" class="fitimg-w" alt=""></span>
-                                <span class="txt">Want！ボタンでほしい商品をクリップ <i class="fa fa-heart">&#8203;​</i></span>
+                                <img src="<?php echo WEBROOT; ?>images/login/privilege04.png" class="fitimg-w" alt="商品のレビュー投稿ができる！！">
                             </li>
                             <li>
-                                <span class="image"><img src="http://placehold.jp/400x240.png" class="fitimg-w" alt=""></span>
-                                <span class="txt">みんなの美活アンケートや美容メルマガもチェック！</span>
+                                <img src="<?php echo WEBROOT; ?>images/login/privilege05.png" class="fitimg-w" alt="Want！ボタンでほしい商品をクリップ">
                             </li>
                             <li>
-                                <span class="image"><img src="http://placehold.jp/400x240.png" class="fitimg-w" alt=""></span>
-                                <span class="txt">美容機器のモニター参加やサンプルがもらえる（抽選）</span>
+                                <img src="<?php echo WEBROOT; ?>images/login/privilege06.png" class="fitimg-w" alt="みんなの美活アンケートやお役立ち美容通信もチェック！">
                             </li>
                         </ul>
                         <footer>

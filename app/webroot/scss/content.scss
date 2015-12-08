@@ -874,30 +874,22 @@
 				@include mqmt($bpM) { padding:1.5em; }
 				border:1px solid #fff;
 				ul {
-					@include mqmt($bpM) {
+					@include mqlt($bpS) {
+						li { margin-bottom:0.75em; }
+					}
+					@include mq($bpS,824px) {
+						@include horizontalWrap() {
+							margin-left:2%; margin-bottom:0.75em;
+							width:49%;
+							&:nth-child(odd) { margin-left:0; clear:both; }
+						}
+					}
+					@include mqmt(824px) {
 						@include horizontalWrap() {
 							margin-left:2%; margin-bottom:0.75em;
 							width:32%;
 							&:nth-child(3n-2) { margin-left:0; clear:both; }
-							.image { margin-bottom:0.25em; display:block; }
 						}
-					}
-					//@include mqmt($bpL) {
-					//	@include horizontalWrap() {
-					//		margin-left:2%; margin-bottom:0.75em;
-					//		width:15%;
-					//		.image { margin-bottom:0.25em; display:block; }
-					//	}
-					//}
-				}
-				li {
-					@include mqlt($bpM) {
-						position:relative;
-						display:table;
-						width:100%;
-						.image,.txt { @include pv(0.5em); display:table-cell; vertical-align:top; }
-						.image { width:104px; }
-						.txt { padding-left:0.5em; @include fz(14); }
 					}
 				}
 				>footer { text-align:right; }
@@ -1687,7 +1679,32 @@
 ====================================================================================================
 ■ サイトマップ (.page-sitemap) ./sitemap/
 ---------------------------------------------------------------------------------------------------- */
-
+	.pagelist {
+		@include mqmt($bpM) {
+			@include cf();
+		}
+		li {
+			line-height:2.5;
+			@include mqmt($bpM) {
+				margin-left:1%;
+				width:48%;
+				float:left;
+			}
+			&:before {
+				margin-right:0.25em;
+				@include fa-chevron-circle-right();
+				color:$c-pk;
+			}
+			&.ico-home {
+				font-size:150%;
+				&:before { content:'\f015'; }
+			}
+			a {
+				@include link-colors($c-txt,darken($c-pk,10%));
+				@include ulLink();
+			}
+		}
+	}
 /* 
 ====================================================================================================
 ◆ コラム (.page-column) ./column/
