@@ -6,10 +6,12 @@
         <li>コラム</li>
       </ol><!-- /#breadcrumb -->
     <div id="main-area" class="layout-main layout-l">
+
+<?php if(count($Columns) >0):?>
+
       <article id="news-list">
 
-        <h2>コラム
-        </h2>
+        <h2>コラム</h2>
 
 
          <?php foreach($Columns as $k => $v):?>
@@ -71,10 +73,24 @@
       </footer>
     </article>
 
+<?php else:?>
 
 
 
-準備中です
+準備中です。
+
+
+
+
+
+
+
+
+
+<?php endif;?>
+
+
+
 
 
 

@@ -3,7 +3,7 @@
 
       <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
         <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
-        <li><a href="<?php echo WEBROOT?>"News/>お役立ち美容通信</a></li>
+        <li><a href="<?php echo WEBROOT.$this->name?>">お役立ち美容通信</a></li>
         <li><?php echo $Blog['Blog']['title']?></li>
       </ol><!-- /#breadcrumb -->
 
@@ -19,7 +19,7 @@
         <section class="news-entry">
           <header>
             <h2 class="news-title head-bar"><?php echo $Blog['Blog']['title']?></h2>
-            <p class="news-date"><?php echo $this->Useful->setdate($Blog['Blog']['entrydate'])?></p>
+            <p class="news-date"><?php echo $this->Useful->setdate($Blog['Blog']['entrydate'],'Y/m/d')?></p>
           </header>
 
           <div class="news-body">

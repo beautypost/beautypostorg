@@ -186,8 +186,20 @@ $ret['attr10'] = '';
         $con['offset'] = $offset;
 //        var_dump($con);
         $all = $this->find('all',$con);
+
+        if(!defined('ADMINCONTROLLER')){
+            $conditions['conditions']['valid'] = 1;
+        }
+
 //        var_dump($con);
         return $all;
+    }
+
+
+    public function invalid($id,$ret){
+            $this->id = $id;
+            $ret = ($ret == 0) ? 1: 0;
+            $this->saveField('valid',$ret);
     }
 
     public function getSort($ite){

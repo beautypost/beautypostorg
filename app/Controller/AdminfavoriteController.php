@@ -72,17 +72,22 @@ class AdminfavoriteController extends BaseController {
 		$this->render('input');
 	}
 
-	public function delete(){
-		$id = $this->params['url']['id'];
-		$Favorite = $this->Favorite->getItemByID($id);
-		$Favorite['Favorite']['valid'] = 0;
-		$this->Favorite->save($Favorite);
-//		var_dump($Favorite);
-		$this->set('data',$Favorite);
-		$this->Index();
-		$this->render('index');
-		return;
-	}
+    public function valid(){
+        $id = $this->params['url']['id'];
+        $valid = $this->params['url']['valid'];
+        $this->Favorite->invalid($id,$valid);
+        $this->Index();
+        $this->render('index');
+        return;
+    }
+
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->Favorite->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 

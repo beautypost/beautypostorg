@@ -36,6 +36,7 @@ class ReviewController extends AppController {
 
     public function beforeFilter(){
 
+        parent::beforeFilter();
         if(!isset($this->SnsuserData)){
             return $this->redirect(
             array('controller' => 'Login', 'action' => 'index')
@@ -73,22 +74,13 @@ class ReviewController extends AppController {
 
         //レビュー情報一覧
         $tr = $this->ItemsReview->getItemsByItemID($id);
-        $this->set('Reviews',$tr);
-        $p1 = $p2 = $p3 = $p4 = $p5 = 0;
-        foreach($tr as $k=>$v){
-            $p1 +=$v['ItemsReview']['point1'];
-            $p2 +=$v['ItemsReview']['point2'];
-            $p3 +=$v['ItemsReview']['point3'];
-            $p4 +=$v['ItemsReview']['point4'];
-            $p5 +=$v['ItemsReview']['point5'];
-        }
-        $total = count($tr);
 
-        $r['p1'] = $p1 / $total;
-        $r['p2'] = $p2 / $total;
-        $r['p3'] = $p3 / $total;
-        $r['p4'] = $p4 / $total;
-        $r['p5'] = $p5 / $total;
+        $this->set('Reviews',$tr);
+        if(count($tr) == 0){
+            return;
+        }
+
+        $r = $this->ItemsReview->getTotalReviewByAll($tr);
 
         $this->set('totalreview',$r);
 
@@ -104,6 +96,9 @@ class ReviewController extends AppController {
 
         //レビュー情報一覧
         $tr = $this->ItemsMonitor->getItemsByItemID($id);
+        if(count($tr) == 0){
+            return;
+        }
         $this->set('Monitors',$tr);
         $p1 = $p2 = $p3 = $p4 = $p5 = 0;
 

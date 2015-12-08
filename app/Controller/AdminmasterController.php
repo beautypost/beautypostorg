@@ -89,17 +89,13 @@ class AdminmasterController extends BaseController {
 		$this->render('input');
 	}
 
-	public function delete(){
+    public function delete(){
         $id = $this->params['url']['id'];
-		$Genre = $this->Genre->getItemByID($id);
-		$Genre['Genre']['valid'] = 0;
-		$this->Genre->save($Genre);
-//		var_dump($Genre);
-		$this->set('data',$Genre);
-		$this->Index();
-		$this->render('index');
-		return;
-	}
+        $this->Genre->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 

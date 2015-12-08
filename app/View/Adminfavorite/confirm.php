@@ -10,20 +10,24 @@
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
         <div class="col-sm-10">
-        <span class="confirmtext"><?php echo $data['Type']['title']?></span>
+        <span class="confirmtext"><?php echo $data['Favorite']['title']?></span>
         </div>
     </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">カテゴリ</label>
-                    <div class="col-sm-10"><span class="confirmtext"><?php echo $this->Useful->ViewselectValue($GenreTypes,$data['Type']['category'])?></span></div>
-                </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">URL </label>
+        <div class="col-sm-10">
+        <span class="confirmtext"><?php echo $data['Favorite']['url']?></span>
+        </div>
+    </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">コメント </label>
-        <div class="col-sm-9">
-            <span class="confirmtext"><?php echo $data['Type']['comment']?></span>
+        <div class="col-sm-10">
+        <span class="confirmtext"><?php echo $data['Favorite']['comment']?></span>
         </div>
     </div>
+
     </form>
 
                                     <div class="clearfix form-actions">
@@ -34,14 +38,14 @@
                                                 入力画面へ戻る
                                             </button>
     <input type="hidden" name="data[back]" value="true">
-    <input type="hidden" name="data[Type]" value="<?php echo base64_encode(serialize($data['Type'])) ?>">
+    <input type="hidden" name="data[Favorite]" value="<?php echo base64_encode(serialize($data['Favorite'])) ?>">
     </form>
 <form class="col-xs-5" method="post" action="<?php echo WEBROOT.$this->name?>/Submit" display:inline>
                                             <button class="btn btn-info" type="submit">
                                                 <i class="ace-icon fa fa-check bigger-110"></i>
                                                 登録する
                                             </button>
-    <input type="hidden" name="data[Type]" value="<?php echo base64_encode(serialize($data['Type'])) ?>">
+    <input type="hidden" name="data[Favorite]" value="<?php echo base64_encode(serialize($data['Favorite'])) ?>">
 </form>
                                         </div>
                                     </div>

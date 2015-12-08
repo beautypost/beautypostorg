@@ -255,7 +255,7 @@
                                     <th>満足度</th>
                                     <td class="user-rate">
                                         <div class="starrev" data-score="3">
-                                        <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
+                                        <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo count($Reviews)?>件</a>）</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -278,7 +278,7 @@
 <?php foreach($Reviews as $k => $v):?>
 <!-- review-->
                                             <li>
-                                                <a href="">
+                                                <a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>">
                                                     <p class="title"><?php echo $v['ItemsReview']['title']?></p>
                                                     <dl>
                                                         <dt>満足度</dt>
@@ -373,13 +373,16 @@
     <script>
 
     window.onload = function(){
-        var ctx = document.getElementById("canvas1").getContext("2d");
-        var data =[5,4,5,5,4];
-        rt(ctx,data);
+        <?php if(count($Monitors)>0):?>
+            var ctx = document.getElementById("canvas1").getContext("2d");
+            var data =[5,4,5,5,4];
+            rt(ctx,data);
+        <?php endif;?>
+        <?php if(count($totalreview) > 0):?>
         var ctx = document.getElementById("canvas2").getContext("2d");
-        var data =[10,51,32,55,40];
+        var data =[<?php echo $totalreview['p1']?>,<?php echo $totalreview['p2']?>,<?php echo $totalreview['p3']?>,<?php echo $totalreview['p4']?>,<?php echo $totalreview['p5']?>];
         rt(ctx,data);
-
+        <?php endif;?>
     }
 
     function rt(ctx,datas){

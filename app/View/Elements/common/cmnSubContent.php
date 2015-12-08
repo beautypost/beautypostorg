@@ -12,11 +12,11 @@
                      --></a></li>
                 </ul>
             </div><!-- /.side-bnrs -->
-
+<?php if(isset($Questions[0])):?>
             <section id="side-enquete" class="round-contents enquete-section rsp-xxxo">
                 <?php echo $this->element('common/cmnEnquete')?>
             </section><!-- /#side-enquete -->
-
+<?php endif;?>
             <div class="side-bnrs">
                 <ul>
                     <li><a href="<?php echo WEBROOT?>pages/privilege/"><!--
@@ -31,7 +31,7 @@
                      --></a></li>
                 </ul>
             </div><!-- /.side-bnrs -->
-
+<?php if(isset($blogs[0])):?>
             <section id="side-news" class="round-contents">
                 <h2><!--
                      --><img src="<?php echo WEBROOT?>common-img/side-news-head-full.jpg" width="882" height="176" class="fitimg-w rsp-ooox" alt="今旬の美容ニュース"><!--
@@ -46,7 +46,7 @@
                     <a href="<?php echo WEBROOT?>News/" class="button btn-block btn-pk">さらに見る</a>
                 </div>
             </section><!-- /#side-news -->
-
+<?php endif;?>
             <div class="side-bnrs">
                 <ul>
                     <li><a href="<?php echo WEBROOT?>Mailmagazine/"><!--

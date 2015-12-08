@@ -67,11 +67,15 @@ class AdminKeyword extends AppModel {
     単数
     **/
     public function getItems() {
-        $conditions['conditions'] = array(
-//                            'genre_id'=>$genreID,
-//                            'toprecommend'=>1,
-                            'valid'=>1
-                            );
+        $conditions = array();
+//         $conditions['conditions'] = array(
+// //                            'genre_id'=>$genreID,
+// //                            'toprecommend'=>1,
+//                             'valid'=>1
+//                             );
+        if(!defined('ADMINCONTROLLER')){
+            $conditions['conditions']['valid'] = 1;
+        }
         $all = $this->find('all',$conditions);
         return $all;
     }
@@ -109,6 +113,11 @@ class AdminKeyword extends AppModel {
         return $all;
     }
 
+    public function invalid($id,$ret){
+            $this->id = $id;
+            $ret = ($ret == 0) ? 1: 0;
+            $this->saveField('valid',$ret);
+    }
 
     public function countUp($itemID){
         $r = $this->getItemByID($itemID);

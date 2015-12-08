@@ -72,17 +72,13 @@ class AdmintypeController extends BaseController {
 		$this->render('input');
 	}
 
-	public function delete(){
-		$id = $this->params['url']['id'];
-		$Type = $this->Type->getItemByID($id);
-		$Type['Type']['valid'] = 0;
-		$this->Type->save($Type);
-//		var_dump($Type);
-		$this->set('data',$Type);
-		$this->Index();
-		$this->render('index');
-		return;
-	}
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->Type->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 

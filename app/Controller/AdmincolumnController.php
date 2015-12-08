@@ -72,17 +72,22 @@ class AdmincolumnController extends BaseController {
 		$this->render('input');
 	}
 
-	public function delete(){
-		$id = $this->params['url']['id'];
-		$Column = $this->Column->getItemByID($id,'');
-		$Column['Column']['valid'] = 0;
-		$this->Column->save($Column);
-//		var_dump($Column);
-		$this->set('data',$Column);
-		$this->Index();
-		$this->render('index');
-		return;
-	}
+    public function valid(){
+        $id = $this->params['url']['id'];
+        $valid = $this->params['url']['valid'];
+        $this->Column->invalid($id,$valid);
+        $this->Index();
+        $this->render('index');
+        return;
+    }
+
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->Column->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 

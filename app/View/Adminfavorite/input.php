@@ -21,23 +21,22 @@ if (isset($validationErrors) && is_array($validationErrors)) {
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
         <div class="col-sm-10">
-        <input type="text" name="data[title]" value="<?php echo $data['Type']['title']?>" class="col-xs-10">
+        <input type="text" name="data[title]" value="<?php echo $data['Favorite']['title']?>" class="col-xs-10">
         </div>
     </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">五十音</label>
+  <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">URL </label>
         <div class="col-sm-10">
-    <select name="data[category]">
-        <?php echo $this->Useful->option($GenreTypes,$data['Type']['category'])?>
-    </select></div>
-    </div>
+        <input type="text" name="data[url]" value="<?php echo $data['Favorite']['url']?>" class="col-xs-10">
+        </div>
+  </div>
+
 
 
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">内容 </label>
         <div class="col-sm-10">
-            <textarea name="data[comment]" class="col-xs-10" rows="10"><?php echo $data['Type']['comment']?></textarea>
+            <textarea name="data[comment]" class="col-xs-10" rows="10"><?php echo $data['Favorite']['comment']?></textarea>
         </div>
     </div>
                                     <div class="clearfix form-actions">
@@ -52,7 +51,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
                                             </button>
                                         </div>
                                     </div>
-<input type="hidden" name="data[id]" value="<?php echo $data['Type']['id']?>">
+<input type="hidden" name="data[id]" value="<?php echo $data['Favorite']['id']?>">
 </form>
     </div>
     </div>

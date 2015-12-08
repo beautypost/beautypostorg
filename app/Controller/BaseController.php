@@ -20,6 +20,8 @@
 
 App::uses('AppController', 'Controller');
 
+define('ADMINCONTROLLER','1');
+
 /**
  * Static content controller
  *

@@ -7,7 +7,8 @@
 	<div class="layout">
 		<ol id="breadcrumb" class="breadcrumb rsp-xxoo">
 			<li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
-			<li>美容機器用語集</li>
+			<li><a href="<?php echo WEBROOT.$this->name?>">美容機器用語集</a></li>
+			<li><?php echo $Item['Type']['title']?></li>
 		</ol><!-- /#breadcrumb -->
 
 		<div id="main-area" class="layout-main layout-l">
@@ -19,6 +20,7 @@
 				<h2 class="head-bar ico-arrow"><?php echo $Item['Type']['title']?></h2>
 
 				<div class="section-body">
+				<!--
 					<div class="item-img">
 						<div class="imgframe">
 							<div class="inner">

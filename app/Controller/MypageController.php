@@ -39,7 +39,7 @@ class MypageController extends AppController {
  *
  * @var array
  */
-	public $uses = array('UserVote','ItemsReview');
+	public $uses = array('UserVote','ItemsReview','Favorite');
 
 
     public $name = 'Mypage';
@@ -64,6 +64,14 @@ class MypageController extends AppController {
         $this->set('Day',$this->Genre->getDayRange());
         $this->set('Mailmagazine',$this->Genre->getMailmagazine());
         $this->set('cssname','content');
+
+        //want情報
+        $wants = $this->Want->getItems();
+
+        $this->set('Wants',$wants);
+
+
+
         $this->setSearchMaster();
     }
 
@@ -84,6 +92,10 @@ class MypageController extends AppController {
         if(!$userID){
             $this->redirect('/Login');
         }
+
+
+        $this->set('Favorites',$this->Favorite->getItems());
+
 //		$HistoryItems = $this->UserVote->getUserVoteHistory($userID);
 
 //		$this->set('HistoryItems',$HistoryItems);

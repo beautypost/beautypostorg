@@ -71,17 +71,22 @@ class AdminkeywordController extends BaseController {
 		$this->render('input');
 	}
 
-	public function delete(){
-		$id = $this->params['url']['id'];
-		$AdminKeywords = $this->AdminKeyword->getItemByID($id);
-		$AdminKeywords['AdminKeyword']['valid'] = 0;
-		$this->AdminKeyword->save($AdminKeywords);
-//		var_dump($AdminKeywords);
-		$this->set('data',$AdminKeywords);
-		$this->Index();
-		$this->render('index');
-		return;
-	}
+    public function valid(){
+        $id = $this->params['url']['id'];
+        $valid = $this->params['url']['valid'];
+        $this->AdminKeyword->invalid($id,$valid);
+        $this->Index();
+        $this->render('index');
+        return;
+    }
+
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->AdminKeyword->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 

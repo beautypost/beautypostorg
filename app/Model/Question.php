@@ -39,7 +39,11 @@ class Question extends AppModel {
             'order' => 'id'
         )
     );
-
+    public function invalid($id,$ret){
+            $this->id = $id;
+            $ret = ($ret == 0) ? 1: 0;
+            $this->saveField('valid',$ret);
+    }
     public function setData($Item){
         $all = $this->skel();
         foreach($all as $k => $v){
@@ -65,7 +69,7 @@ class Question extends AppModel {
     ITEMIDを利用して、リコメンドITEMを取得
     複数
     **/
-    public function getItems($limit,$offset) {
+    public function getItems($limit='',$offset=0,$order='') {
         $conditions = array(
 //            'conditions'=> array('item_id'=>$id),
             'order'     => array('created')
@@ -79,6 +83,9 @@ class Question extends AppModel {
             $conditions['offset'] = $offset;
         }
 
+        if(!defined('ADMINCONTROLLER')){
+            $conditions['conditions']['valid'] = 1;
+        }
 
         $all = $this->find('all',$conditions);
 

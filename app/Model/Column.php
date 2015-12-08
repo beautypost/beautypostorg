@@ -108,20 +108,23 @@ class Column extends AppModel {
     単数
     **/
     public function getItemByID($itemID,$userID) {
-        if(!$itemID){return;}
 
-        if($this->checkAdminID($userID)){
-            $conditions = array('id'=>$itemID);
-        }else{
-            $conditions = array('id'=>$itemID,'valid'=>1,'created <='=>$this->now());
+            $conditions['conditions'] = array('id'=>$itemID);
+
+        if(!defined('ADMINCONTROLLER')){
+            $conditions['conditions']['valid'] = 1;
         }
 
-        $all = $this->find('first',array('conditions'=>$conditions));
+        $all = $this->find('first',$conditions);
         return $all;
     }
 
 
-
+    public function invalid($id,$ret){
+            $this->id = $id;
+            $ret = ($ret == 0) ? 1: 0;
+            $this->saveField('valid',$ret);
+    }
 
     /**
     複数のITEMIDを受け取って複数のITEM情報を取得
@@ -150,7 +153,9 @@ class Column extends AppModel {
             $conditions['offset']    = $offset;
         }
 
-            $conditions['conditions'][] = array('valid'=>1);
+        if(!defined('ADMINCONTROLLER')){
+            $conditions['conditions']['valid'] = 1;
+        }
 
 
         $all = $this->find('all',$conditions);

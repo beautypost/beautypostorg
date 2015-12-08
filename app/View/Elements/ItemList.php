@@ -26,11 +26,13 @@
         <div class="item-summary">
             <dl class="item-rate">
                 <dt>モニター評価</dt>
+                <?php if($Item['Item']['monitor'] > 0):?>
                 <dd class="monitor-rate">
                     <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_monitor']?>"></div>
                     <span>（レビュー：<a href="<?php echo WEBROOT?>Monitor/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['monitor']?>件</a>）</span>
                     <p><?php echo $Item['Item']['result']?></p>
                 </dd>
+<?php endif;?>
                 <dt>ユーザーレビュー</dt>
                 <dd class="user-rate">
                     <div class="star<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_review']?>"></div>
@@ -69,10 +71,10 @@ ratystar(<?php echo $Item['Item']['id']?>)
                     </li>
                 </ul>
             </div><!-- /.item-info -->
-            <?php if($this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
-            <div class="is-wanted" id="ajwant"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+        <?php if($this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
+             <div class="btn-want is-wanted" id="ajwant<?php echo $Item['Item']['id']?>"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
         <?php else:?>
-            <div class="btn-want" id="ajwant"><a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+            <div id="ajwant<?php echo $Item['Item']['id']?>"><div class="btn-want"><a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div></div>
         <?php endif;?>
 
 

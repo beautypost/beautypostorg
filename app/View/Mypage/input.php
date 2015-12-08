@@ -29,13 +29,15 @@
                 その内容に同意していただけましたら、下記フォームに必要事項をご入力の上、<br>
                 「登録内容を変更する」ボタンをクリックしてください。</p>
                 <form method="post" action="<?php echo WEBROOT.$this->name?>/input">
+<?php if(isset($validationErrors)):?>
 <?php foreach($validationErrors as $k => $v):?>
     <?php echo $v[0]?><br>
 <?php endforeach;?>
+<?php endif;?>
         <?php echo $this->element('registinput'); ?>
 
                     <footer>
-                        <p><label><input type="checkbox">利用規約及び個人情報の取扱いについてに同意する</label></p>
+                        <p><label><input type="checkbox" required>利用規約及び個人情報の取扱いについてに同意する</label></p>
                         <button type="submit" class="button btn-pk btn-sizeM">登録情報を変更する</button>
                     </footer>
                     <input type="hidden" name="data[id]" value="<?php echo $data['Snsuser']['id']?>">

@@ -73,17 +73,22 @@ class AdminblogController extends BaseController {
 		$this->render('input');
 	}
 
-	public function delete(){
-		$id = $this->params['url']['id'];
-		$Blog = $this->Blog->getItemByID($id);
-		$Blog['Blog']['valid'] = 0;
-		$this->Blog->save($Blog);
-//		var_dump($Blog);
-		$this->set('data',$Blog);
-		$this->Index();
-		$this->render('index');
-		return;
-	}
+    public function valid(){
+        $id = $this->params['url']['id'];
+        $valid = $this->params['url']['valid'];
+        $this->Blog->invalid($id,$valid);
+        $this->Index();
+        $this->render('index');
+        return;
+    }
+
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->Blog->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 

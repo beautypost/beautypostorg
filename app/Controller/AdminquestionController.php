@@ -71,17 +71,22 @@ class AdminquestionController extends BaseController {
 		$this->render('input');
 	}
 
-	public function delete(){
-		$id = $this->params['url']['id'];
-		$Question = $this->Question->getItemByID($id);
-		$Question['Question']['valid'] = 0;
-		$this->Question->save($news);
-//		var_dump($news);
-		$this->set('data',$news);
-		$this->Index();
-		$this->render('index');
-		return;
-	}
+    public function valid(){
+        $id = $this->params['url']['id'];
+        $valid = $this->params['url']['valid'];
+        $this->Question->invalid($id,$valid);
+        $this->Index();
+        $this->render('index');
+        return;
+    }
+
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->Question->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 

@@ -65,8 +65,7 @@ class AjaxController extends AppController {
 
 		$this->Want->create();
 		$this->Want->save($data);
-
-		echo '<i class="fa fa-heart">&#8203;</i> Want!<span class="num">'.$it['Item']['wants'].'</span>';
+		echo '<div class="btn-want is-wanted"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num">'.$it['Item']['wants'].'</span></div>';
 		exit;
 	}
 

@@ -435,10 +435,11 @@ $ret[8] ='ネイルケア';
     }
 
     public function getSkin(){
-        $Items['skin'][0] = '敏感肌';
-        $Items['skin'][1] = '混合肌';
-        $Items['skin'][2] = '脂性肌';
-        $Items['skin'][3] = '乾燥肌';
+        $Items['skin'][1] = '敏感肌';
+        $Items['skin'][2] = '乾燥肌';
+        $Items['skin'][4] = '混合肌';
+        $Items['skin'][3] = '脂性肌';
+
     return $Items;
     }
 

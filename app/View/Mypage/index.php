@@ -53,21 +53,18 @@
                 <h2 class="head-bar ico-arrow">Beauty Postからのお知らせ</h2>
 
                 <div class="mp-news-list">
+                <?php foreach($Favorites as $k => $v):?>
                     <section class="mp-news-entry">
-                        <h2 class="mp-news-head">タイトルタイトル</h2>
+                        <h2 class="mp-news-head"><?php echo $v['Favorite']['title']?></h2>
                         <div class="sec-body">
-                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                            <?php echo $v['Favorite']['comment']?>
                         </div>
-                        <footer class="tar"><a href="#" class="button btn-pk">モニターに応募する</a></footer>
+                        <?php if($v['Favorite']['url']):?>
+                        <footer class="tar"><a href="<?php echo $v['Favorite']['url']?>" class="button btn-pk">モニターに応募する</a></footer>
+                    <?php endif;?>
                     </section><!-- /.mp-news-entry -->
+                <?php endforeach;?>
 
-                    <section class="mp-news-entry">
-                        <h2 class="mp-news-head">タイトルタイトル</h2>
-                        <div class="sec-body">
-                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        </div>
-                        <footer class="tar"><a href="#" class="button btn-pk">モニターに応募する</a></footer>
-                    </section><!-- /.mp-news-entry -->
                 </div><!-- /.mp-news-list -->
             </section><!-- /#mp-news -->
         </div><!-- /#main-area -->

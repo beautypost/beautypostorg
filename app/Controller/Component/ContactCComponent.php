@@ -110,22 +110,34 @@ public function setMessagePw($Snsuser,$key){
     $domain = DOMAIN;
     $day = date("Y/m/d g:i");
     $str = <<<EOD
+下記URLをクリックして、パスワードの再設定をお願いいたします。
 
-    お問い合わせありがとうございました。
+【会員ID(メールアドレス）】
+$Snsuser['Snsuser']['email']
 
-    お問い合せ内容
-    □■――――――――――――――――――――――――――――――――――■□
-    お問い合わせ日時 : $day
-    変更URL $domain/forgetpassword/pwinput/?key=$key
-    □■――――――――――――――――――――――――――――――――――■□
+■ 新パスワード再設定用URL
+https://$domain/forgetpassword/pwinput/?key=$key
+※6文字〜12文字の半角英数字で設定をお願いいたします。
+
+【注意事項】
+・パスワード再設定用のURLは、セキュリティ保持のため有効期限が設けられています。
+  メールを受信されましたら速やかに手続きを行ってください。
 
 
-    □■――――――――――――――――――――――――――――――――――■□
+【お問い合わせ先】
+■ お問い合わせフォーム
+http://beauty-post.jp/Contact/
 
-    http://beautypost.jp
-    info@beautypost.jp
-    □■――――――――――――――――――――――――――――――――――■□
+※このメールはBeauty Postのパスワード再設定の手続きが行われた
+　メールアドレス宛てにお送りしています。
+　心あたりが無い場合は、破棄してください。
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+　Beauty Post 編集部
+　〒104-0061　東京都中央区銀座7-15-8
+　Email：info@beauty-post.jp
+　URL ：https://beauty-post.jp
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 EOD;
 
 

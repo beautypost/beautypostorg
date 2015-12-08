@@ -3,6 +3,11 @@
         <?php $this->Useful->pagetitle($pagetitle,$pagecomment)?>
     <div class="row">
         <div class="col-xs-12">
+    <?php if(isset($message)):?>
+    <div class="alert alert-danger">
+        <?php echo $message?>
+    </div>
+    <?php endif;?>
             <!-- PAGE CONTENT BEGINS -->
             <div class="row">
                 <div class="col-xs-12">
@@ -15,6 +20,7 @@
                                 <th>カテゴリ</th>
                                 <th>タイトル</th>
                                 <th>Status</th>
+                                <th>削除</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,7 +34,12 @@
     <td><?php echo $Item['Blog']['title']?></td>
 
     <td>
-        <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminblog/edit/?id=<?php echo $Item['Blog']['id']?>">編集</a>
+        <a class="btn-sm btn-success" href="<?php echo WEBROOT.$this->name?>/edit/?id=<?php echo $Item['Blog']['id']?>">編集</a>
+&nbsp;&nbsp;
+        <a class="btn-sm btn-warning" href="<?php echo WEBROOT.$this->name?>/valid/?id=<?php echo $Item['Blog']['id']?>&valid=<?php echo $Item['Blog']['valid']?>">表示<?php if($Item['Blog']['valid'] == 1):?>不<?php endif;?>可</a>
+    </td>
+    <td>
+        <a href="#" class="btn-sm btn-danger" onClick="dispCheck('<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Blog']['id']?>')">削除</a>
     </td>
 </tr>
 <?php endforeach?>

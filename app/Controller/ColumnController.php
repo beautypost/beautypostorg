@@ -85,9 +85,10 @@ class ColumnController extends AppController {
 
 		$item = $this->Column->getItemByID($id,'');
 
-		if(!$item){
-		$this->set('Pager','');
-			return;
+		if(count($item) == 0){
+	        return $this->redirect(
+	            array('controller' => 'pages', 'action' => '404')
+	        );
 		}
 		$tag = '';
 		//カウントアップ

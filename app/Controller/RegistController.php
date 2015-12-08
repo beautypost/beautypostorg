@@ -103,6 +103,7 @@ class RegistController extends AppController {
         $da['birthday'] = $da['year'].$da['month'].$da['day'];
         $da['sns'] = WEBKEY;
 
+        $da['created'] = $this->Snsuser->now();
         $this->Snsuser->create();
         $this->Snsuser->save($da,array('validate'=>false));
 

@@ -14,6 +14,7 @@
                 <th class="center">ID</th>
                 <th>タイトル</th>
                 <th>設定</th>
+                                <th>削除</th>
             </tr>
         </thead>
         <tbody>
@@ -24,8 +25,10 @@
             <td>
             <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminmaster/edit/?id=<?php echo $Item['Genre']['id']?>">編集</a>
         &nbsp;&nbsp;
-            <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminmaster/delete/?id=<?php echo $Item['Genre']['id']?>">削除</a>
-            </td>
+    </td>
+    <td>
+        <a href="#" class="btn-sm btn-danger" onClick="dispCheck('<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Genre']['id']?>')">削除</a>
+    </td>
             </tr>
         <?php endforeach?>
         </tbody>
@@ -44,6 +47,7 @@
                     <th class="center">ID</th>
                     <th>タイトル</th>
                     <th>設定</th>
+                                                    <th>削除</th>
                 </tr>
             </thead>
             <tbody>
@@ -55,8 +59,10 @@
                     <td>
                         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminmaster/edit/?id=<?php echo $Item['Genre']['id']?>">編集</a>
             &nbsp;&nbsp;
-                        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminmaster/delete/?id=<?php echo $Item['Genre']['id']?>">削除</a>
-                    </td>
+    </td>
+    <td>
+        <a href="#" class="btn-sm btn-danger" onClick="dispCheck('<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Genre']['id']?>')">削除</a>
+    </td>
                 </tr>
             <?php endforeach?>
             </tbody>
@@ -77,6 +83,7 @@
                     <th>部位カテゴリ</th>
                     <th>タイトル</th>
                     <th>設定</th>
+                                                    <th>削除</th>
                 </tr>
             </thead>
             <tbody>
@@ -88,8 +95,11 @@
                     <td>
                         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminmaster/edit/?id=<?php echo $Item['Genre']['id']?>">編集</a>
                         &nbsp;&nbsp;
-                        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminmaster/delete/?id=<?php echo $Item['Genre']['id']?>">削除</a>
-                    </td>
+    </td>
+    <td>
+        <a href="#" class="btn-sm btn-danger" onClick="dispCheck('<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Genre']['id']?>')">削除</a>
+    </td>
+
                 </tr>
             <?php endforeach?>
             </tbody>
@@ -109,6 +119,7 @@
                     <th class="center">ID</th>
                     <th>タイトル</th>
                     <th>設定</th>
+                                                    <th>削除</th>
                 </tr>
             </thead>
             <tbody>
@@ -121,8 +132,11 @@
                     <td>
                         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminmaster/edit/?id=<?php echo $Item['Genre']['id']?>">編集</a>
                         &nbsp;&nbsp;
-                        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminmaster/delete/?id=<?php echo $Item['Genre']['id']?>">削除</a>
-                    </td>
+    </td>
+    <td>
+        <a href="#" class="btn-sm btn-danger" onClick="dispCheck('<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Genre']['id']?>')">削除</a>
+    </td>
+
                 </tr>
             <?php endforeach?>
             </tbody>
@@ -142,6 +156,7 @@
                     <th class="center">ID</th>
                     <th>タイトル</th>
                     <th>設定</th>
+                                                    <th>削除</th>
                 </tr>
             </thead>
             <tbody>
@@ -153,8 +168,11 @@
                     <td>
                         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminmaster/edit/?id=<?php echo $Item['Genre']['id']?>">編集</a>
                         &nbsp;&nbsp;
-                        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminmaster/delete/?id=<?php echo $Item['Genre']['id']?>">削除</a>
-                    </td>
+    </td>
+    <td>
+        <a href="#" class="btn-sm btn-danger" onClick="dispCheck('<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Genre']['id']?>')">削除</a>
+    </td>
+
                 </tr>
             <?php endforeach?>
             </tbody>
@@ -175,6 +193,7 @@
                     <th class="center">ID</th>
                     <th>タイトル</th>
                     <th>設定</th>
+                                                    <th>削除</th>
                 </tr>
             </thead>
             <tbody>
@@ -186,8 +205,11 @@
                     <td>
                         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminmaster/edit/?id=<?php echo $Item['Genre']['id']?>">編集</a>
                         &nbsp;&nbsp;
-                        <a class="btn-sm btn-danger" href="<?php echo WEBROOT?>Adminmaster/delete/?id=<?php echo $Item['Genre']['id']?>">削除</a>
-                    </td>
+    </td>
+    <td>
+        <a href="#" class="btn-sm btn-danger" onClick="dispCheck('<?php echo WEBROOT.$this->name?>/delete/?id=<?php echo $Item['Genre']['id']?>')">削除</a>
+    </td>
+
                 </tr>
             <?php endforeach?>
             </tbody>

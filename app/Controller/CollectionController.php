@@ -111,6 +111,12 @@ class CollectionController extends AppController {
 		//getで受け取ったdataをセット
 
 		$item = $this->Item->getItemByID($id);
+
+		if(count($item) == 0){
+        	return $this->redirect(array('controller' => 'pages', 'action' => '404'));
+        }
+
+
 		$this->set('Item',$item);
 
 		$this->Item->id = $item['Item']['id'];
@@ -120,7 +126,15 @@ class CollectionController extends AppController {
 
 		//レビュー情報
 		$reviews = $this->ItemsReview->getItemsByItemID($id);
-		$this->set('Reviews',$reviews);
+        $this->set('Reviews',$reviews);
+
+        $r = array();
+        if(count($reviews) != 0){
+	        $r = $this->ItemsReview->getTotalReviewByAll($reviews);
+        }
+
+	        $this->set('totalreview',$r);
+
 
 		//レビュー情報
 		$reviews = $this->ItemsMonitor->getItemsByItemID($id);

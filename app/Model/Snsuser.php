@@ -329,6 +329,12 @@ class Snsuser extends AppModel {
     }
 
 
+    public function invalid($id,$ret){
+            $this->id = $id;
+            $ret = ($ret == 0) ? 1: 0;
+            $this->saveField('valid',$ret);
+    }
+
     /**
     複数のITEMIDを受け取って複数のITEM情報を取得
     複数

@@ -44,6 +44,16 @@ class AdminuserController extends BaseController {
 	public function beforeRender(){
 		$this->set('pagetitle','ユーザー管理');
 		$this->set('pagecomment','ユーザー情報の編集を行います');
+        $this->set('Gender',$this->Genre->getGender());
+        $this->set('Pref',$this->Genre->getPref());
+        $this->set('Job',$this->Genre->getJob());
+        $this->set('Skin',$this->Genre->getSkin());
+//        $this->set('Age',$this->Genre->getAgeRange());
+//        var_dump($this->Genre->getYearRange());
+        $this->set('Year',$this->Genre->getYearRange());
+        $this->set('Month',$this->Genre->getMonthRange());
+        $this->set('Day',$this->Genre->getDayRange());
+        $this->set('Mailmagazine',$this->Genre->getMailmagazine());
 
         parent::beforeRender();
 	}
@@ -58,7 +68,7 @@ class AdminuserController extends BaseController {
  */
 	public function Index() {
         $sort = array('created'=>'desc');
-		$this->set('Snsusers',$this->Snsuser->getItems('',$sort,100));
+		$this->set('Snsusers',$this->Snsuser->getItems('',$sort,1000));
 		return;
 	}
 
@@ -66,22 +76,26 @@ class AdminuserController extends BaseController {
 	public function edit(){
 		$id = $this->params['url']['id'];
 		$data = $this->Snsuser->getItemByID($id);
-//		var_dump($Snsuser);
 		$this->set('data',$data);
 		$this->render('input');
 	}
 
-	public function delete(){
-		$id = $this->params['url']['id'];
-		$data = $this->Snsuser->getItemByID($id);
-		$data['Snsuser']['valid'] = 0;
-		$this->Snsuser->save($data);
-//		var_dump($Snsuser);
-		$this->set('data',$data);
+	public function valid(){
+        $id = $this->params['url']['id'];
+        $valid = $this->params['url']['valid'];
+		$this->Snsuser->invalid($id,$valid);
 		$this->Index();
 		$this->render('index');
 		return;
 	}
+
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->Snsuser->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
 
@@ -112,11 +126,9 @@ class AdminuserController extends BaseController {
         }else{
 
 	        $errors = $this->Snsuser->invalidFields();
-	        $this->set('errormessages',$errors);
-			$messages = isset($this->params['data']['Snsuser']) ? $this->params['data']['Snsuser'] :null;
-			$_Contact = (unserialize(base64_decode($messages)));
-			$Snsuser['Snsuser'] = $_Contact;
-			$this->set('Snsuser',$Snsuser);
+            $this->set('validationErrors',$errors);
+            $data = $this->Snsuser->data;
+            $this->set('data',$data);
         }
 
 
@@ -128,7 +140,7 @@ class AdminuserController extends BaseController {
         $_data = (unserialize(base64_decode($messages)));
         $da = $this->Snsuser->setData($_data);
 
-        $da['genres'] = implode(',',$da['genres']);
+//        $da['genres'] = implode(',',$da['genres']);
 //        var_dump($da['genres']);
         $da['valid'] = 1;
         $this->Snsuser->create();

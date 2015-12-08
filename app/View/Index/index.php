@@ -17,7 +17,7 @@
 <?php $i=0;?>
 <?php foreach($AdminKeywords as $Item):?>
 <?php $i++;?>
-                <li><a href="<?php echo $this->webroot;?>Collection/"><span class="number"><img src="<?php echo $this->webroot;?>common-img/ico-key0<?php echo $i?>.png" width="68" height="60" alt="1"></span><span class="keyword"><?php echo $Item['AdminKeyword']['title']?></span></a></li>
+                <li><a href="<?php echo $Item['AdminKeyword']['url'];?>"><span class="number"><img src="<?php echo $this->webroot;?>common-img/ico-key0<?php echo $i?>.png" width="68" height="60" alt="1"></span><span class="keyword"><?php echo $Item['AdminKeyword']['title']?></span></a></li>
 <?php endforeach;?>
             </ul>
         </section><!-- /#top-keyword -->

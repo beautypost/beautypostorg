@@ -23,7 +23,7 @@
 						<ul class="index-list">
 						<?php foreach($Items[$k] as $Item):?>
 
-							<li><a href="<?php echo WEBROOT.$this->name.'/detail/'.$Item['Type']['id']?>"><?php echo $Item['Type']['title']?>美容機器用語</a></li>
+							<li><a href="<?php echo WEBROOT.$this->name.'/detail/'.$Item['Type']['id']?>"><?php echo $Item['Type']['title']?></a></li>
 						<?php endforeach;?>
 						</ul><!-- /.index-list -->
 				</section>

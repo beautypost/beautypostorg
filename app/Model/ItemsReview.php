@@ -159,6 +159,26 @@ class ItemsReview extends AppModel {
 
         return $ret;
     }
+
+    public function getTotalReviewByAll($tr){
+        $p1 = $p2 = $p3 = $p4 = $p5 = 0;
+        foreach($tr as $k=>$v){
+            $p1 +=$v['ItemsReview']['point1'];
+            $p2 +=$v['ItemsReview']['point2'];
+            $p3 +=$v['ItemsReview']['point3'];
+            $p4 +=$v['ItemsReview']['point4'];
+            $p5 +=$v['ItemsReview']['point5'];
+        }
+        $total = count($tr);
+
+        $r['p1'] = $p1 / $total;
+        $r['p2'] = $p2 / $total;
+        $r['p3'] = $p3 / $total;
+        $r['p4'] = $p4 / $total;
+        $r['p5'] = $p5 / $total;
+        return $r;
+    }
+
     /**
     検索ワードを受け取ってITEM情報を取得
     複数

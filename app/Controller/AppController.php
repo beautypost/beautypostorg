@@ -88,6 +88,7 @@ class AppController extends Controller {
 
         //アンケート
         $this->set('Questions',$this->Question->getItems(QUESTIONSUBLIMIT,''));
+
         //NEWS
         $sort['CREATED'] ='DESC';
         $this->set('News',$this->News->getItems($sort,NEWSSUBLIMIT));

@@ -66,5 +66,12 @@ class TypeController extends AppController {
 
 	}
 
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->Column->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 }

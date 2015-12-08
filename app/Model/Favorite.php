@@ -29,18 +29,16 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
-class Blog extends AppModel {
-    public $name = 'Blog';
-
+class Favorite extends AppModel {
+    public $name = 'Favorites';
 
 
     public function setData($Item){
         $all = $this->skel();
         foreach($all as $k => $v){
-            $all[$k] = isset($Item[$k]) ? $Item[$k] : '';
+            $all[$k] = $Item[$k];
         }
         return $all;
-
     }
 
     public function now(){
@@ -52,24 +50,9 @@ class Blog extends AppModel {
 //        $ret['created'] = $this->now();
         $ret['id'] = '';
         $ret['title'] = '';
+        $ret['url'] = '';
         $ret['comment'] = '';
-        $ret['tag'] = '';
-        $ret['valid'] = '';
-        $ret['img'] = '';
-        $ret['img1up'] = '';
-        $ret['entrydate'] = '';
-//        $ret['url'] = '';
     return $ret;
-    }
-
-
-    public function checkAdminID($id){
-
-    if($id ==''){return;}
-        if(strstr(ADMINID,$id)){
-            return true;
-        }
-        return;
     }
 
 
@@ -77,28 +60,12 @@ class Blog extends AppModel {
     GENRETOP (アイテム一覧)　のTOPで表示されるアイテム
     単数
     **/
-    public function getItemGenreTop($genreID) {
+    function getItemGenreTop($genreID) {
         $conditions = array(
                             'genre_id'=>$genreID,
-                            'valid'=>1,
-                            'created <='=>$this->now()
+                            'valid'=>1
                             );
         $all = $this->find('first',array('conditions'=>$conditions));
-        return $all;
-    }
-
-    public function getBlogsByIDs($items,$userID){
-
-        if(!$items){return;}
-        $items = explode(',',$items);
-
-        if($this->checkAdminID($userID)){
-            $conditions = array('id'=>$items);
-        }else{
-            $conditions = array('id'=>$items,'valid'=>1,'created <='=>$this->now());
-        }
-
-        $all = $this->find('all',array('conditions'=>$conditions));
         return $all;
     }
 
@@ -106,20 +73,15 @@ class Blog extends AppModel {
     ITEMIDを受け取ってITEM情報を取得
     単数
     **/
-    public function getItemByID($itemID,$userID) {
+    public function getItemByID($itemID) {
         if(!$itemID){return;}
-
-        if($this->checkAdminID($userID)){
-            $conditions = array('id'=>$itemID);
-        }else{
-            $conditions = array('id'=>$itemID);
-        }
-
+        $conditions = array(
+                            'id'=>$itemID,
+                            'valid'=>1
+                            );
         $all = $this->find('first',array('conditions'=>$conditions));
-        $all['Blog']['tags'] = explode(',',$all['Blog']['tag']);
         return $all;
     }
-
 
 
 
@@ -128,7 +90,7 @@ class Blog extends AppModel {
     複数
     * @param sessionITEMS
     **/
-    public function getItems($sort='',$limit='',$offset='',$tag='') {
+    public function getItems($sort='',$limit='',$offset='') {
 
         $conditions = array();
         // if(!$this->checkAdminID($userID)){
@@ -137,10 +99,6 @@ class Blog extends AppModel {
         // if($genreID){
         //     $conditions['conditions'][] = array('genre_id'=>$genreID);
         // }
-        if($tag){
-            $conditions['conditions']['tag like'] = '%,'.$tag.',%';
-        }
-
         if($sort){
             $conditions['order']     = $sort;
         }
@@ -164,71 +122,23 @@ class Blog extends AppModel {
             $this->saveField('valid',$ret);
     }
 
-    public function getItemsAllCount($genreID){
-        $conditions = array();
-        // if(!$this->checkAdminID($userID)){
-        //     $conditions['conditions'][] = array('valid'=>1,'created <='=>$this->now());
-        // }
-        if($genreID){
-            $conditions['conditions'][] = array('genre_id'=>$genreID);
-        }
-
-        $count = $this->find('count',$conditions);
-        return $count;
-    }
-
-
-
-
     /**
      ジャンルID　並び順　表示件数　開始番号　を受け取ってITEM情報を取得
      複数
      * @param genreID sort limit offset
     **/
-    public function getItemsByGenreID($userID,$genreID,$sort,$limit,$offset) {
-        if($this->checkAdminID($userID)){
+    public function getItemsByGenreID($genreID,$sort,$limit,$offset) {
         $conditions = array(
-            'conditions'=> array('genre_id'=>$genreID),
-            'order'     => array($sort['key']=>$sort['value']),
-            'limit'     => $limit,
-            'offset'    => $offset
-            );
-        }else{
-        $conditions = array(
-            'conditions'=> array('genre_id'=>$genreID,'valid'=>1,'created <='=>$this->now()),
+            'conditions'=> array('genre_id'=>$genreID,'valid'=>1),
             'order'     => array($sort['key']=>$sort['value']),
             'limit'     => $limit,
             'offset'    => $offset
             );
 
-        }
         $all = $this->find('all',$conditions);
 
         return $all;
     }
-
-    public function getItemsCountByGenreID($genreID) {
-        $conditions = array(
-            'conditions'=> array('genre_id'=>$genreID,'valid'=>1),
-            );
-
-        $all = $this->find('count',$conditions);
-
-        return $all;
-    }
-
-    public function getItemCountByAllGenre($genres){
-        $ret_genres = array();
-        foreach($genres as $genre){
-            $count = $this->getItemsCountByGenreID($genre['id']);
-            if($count > 0){
-                $ret_genres[$genre['id']] = $genre;
-            }
-        }
-        return $ret_genres;
-    }
-
-
     /**
     検索ワードを受け取ってITEM情報を取得
     複数
@@ -241,21 +151,6 @@ class Blog extends AppModel {
 
         $all = $this->find('all',$conditions);
         return $all;
-    }
-
-
-    public function setCountUp($item){
-        $hits = $item['Blog']['count'] +1;
-        $data = array(
-            'Blog' => array(
-                'id' => $item['Blog']['id'],
-                'count' => $hits,
-                'modified' => false
-            )
-        );
-        $this->save($data, false, array('count'));
-        //記事中で紹介されたサイト
-
     }
 
 

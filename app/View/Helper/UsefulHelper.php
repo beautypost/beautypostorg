@@ -222,10 +222,10 @@ class UsefulHelper extends AppHelper {
     public function getIco($Icos,$selected){
         $ret = '';
         $rset = explode(',',$selected);
+        $rset = array_filter($rset,'strlen');
         foreach($rset as $key => $val){
-                if($val){
-
-             $ret .= '<li class="tag-'.$key.'">'.$Icos['ico'][$val].'</li> ';
+                if(isset($val)){
+                 $ret .= '<li class="tag-'.$val.'">'.$Icos['ico'][$val].'</li> ';
                 }
         }
 //        var_dump($ret);

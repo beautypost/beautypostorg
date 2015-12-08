@@ -40,6 +40,18 @@ tinyMCE.init({
 });
 </script>
 
+
+<script type="text/javascript"><!--
+   function dispCheck(uri) {
+     // 選択結果で分岐
+      if( window.confirm('削除してよろしいですか？') == true ) {
+         // OKなら移動
+         window.location = uri;
+      }
+   }
+// -->
+</script>
+
         <!-- page specific plugin styles -->
 
         <!-- text fonts -->
@@ -131,7 +143,7 @@ tinyMCE.init({
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Adminfavorite')?>">
                        <a href="<?php echo WEBROOT?>Adminfavorite">
-                            <i class="menu-icon fa fa-chevron-right"></i><span class="menu-text">Beauty Post おすすめ</span>
+                            <i class="menu-icon fa fa-chevron-left"></i><span class="menu-text">BeautyPostおすすめ</span>
                        </a>
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Admintype')?>">
@@ -153,11 +165,6 @@ tinyMCE.init({
                     <li class="<?php $this->Beautypost->cssActive('Adminmaster')?>">
                        <a href="<?php echo WEBROOT?>Adminmaster">
                             <i class="menu-icon fa fa-book"></i><span class="menu-text">マスタ管理</span>
-                       </a>
-                    </li>
-                    <li class="<?php $this->Beautypost->cssActive('Adminattr')?>">
-                       <a href="<?php echo WEBROOT?>Adminattr">
-                            <i class="menu-icon fa fa-users"></i><span class="menu-text">マスタ:項目管理</span>
                        </a>
                     </li>
 

@@ -74,7 +74,7 @@
                     url: "<?php echo WEBROOT?>Ajax/setWant/?itemID="+id,
                     success: function(data){
                             if(data != '') {
-                                $("#wants").html(data)
+                                $("#ajwant"+id).html(data)
                             }
                     }
             });
