@@ -109,11 +109,12 @@ public function setMessagePw($Snsuser,$key){
 
     $domain = DOMAIN;
     $day = date("Y/m/d g:i");
+    $mail = $Snsuser['Snsuser']['email'];
     $str = <<<EOD
 下記URLをクリックして、パスワードの再設定をお願いいたします。
 
 【会員ID(メールアドレス）】
-$Snsuser['Snsuser']['email']
+$mail
 
 ■ 新パスワード再設定用URL
 https://$domain/forgetpassword/pwinput/?key=$key
