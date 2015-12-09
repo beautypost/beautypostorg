@@ -1273,6 +1273,160 @@
 ====================================================================================================
 ■ 会員特典の説明 (.page-privilege) ./privilege/
 ---------------------------------------------------------------------------------------------------- */
+.privilege-lead {
+  margin-bottom: 2em;
+  line-height: 2;
+}
+
+.privilege-section {
+  padding: 8px;
+  position: relative;
+  background: #E6E6E6;
+  line-height: 2;
+}
+.privilege-section > .inner {
+  padding: 2.24261%;
+  padding-left: 9.78593%;
+  position: relative;
+  background: #F5F5F5;
+  zoom: 1;
+  -moz-box-shadow: 0 0 0 1px #fff inset;
+  -webkit-box-shadow: 0 0 0 1px #fff inset;
+  box-shadow: 0 0 0 1px #fff inset;
+}
+.privilege-section > .inner:before, .privilege-section > .inner:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media (max-width: 767px) {
+  .privilege-section > .inner {
+    padding: 12px;
+    padding-left: 72px;
+    padding-right: 10px;
+    padding-bottom: 320px;
+  }
+}
+.privilege-section h2 {
+  margin-bottom: 1.25em;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .privilege-section h2 {
+    width: 80%;
+  }
+}
+
+.privilege-label {
+  width: 7.6%;
+  min-width: 56px;
+  position: absolute;
+  top: -8px;
+  left: 2%;
+}
+@media (max-width: 767px) {
+  .privilege-label {
+    left: 16px;
+  }
+}
+
+.privilege-img-pc {
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 479px) {
+  .privilege-txt {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+.privilege-img-sp {
+  margin-left: -143.75px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 287.5px;
+  height: 316px;
+}
+
+@media (max-width: 767px) {
+  #privilege02 > .inner {
+    padding-bottom: 12px;
+  }
+}
+@media (min-width: 768px) {
+  #privilege01 h2 {
+    width: 44.44444%;
+    float: left;
+  }
+  #privilege01 .privilege-img-pc {
+    margin-left: 1em;
+    float: right;
+    width: 43.51852%;
+  }
+  #privilege01 .privilege-txt {
+    clear: left;
+  }
+
+  #privilege02 h2 {
+    width: 38.88889%;
+  }
+
+  #privilege03 h2 {
+    width: 44.90741%;
+    float: left;
+  }
+  #privilege03 .privilege-img-pc {
+    margin-left: 1em;
+    float: right;
+    width: 43.51852%;
+  }
+  #privilege03 .privilege-txt {
+    clear: left;
+  }
+
+  #privilege04 h2 {
+    width: 44.44444%;
+    float: left;
+  }
+  #privilege04 .privilege-img-pc {
+    margin-left: 1em;
+    float: right;
+    width: 43.51852%;
+  }
+  #privilege04 .privilege-txt {
+    clear: left;
+  }
+
+  #privilege05 h2 {
+    width: 38.19444%;
+    float: left;
+  }
+  #privilege05 .privilege-img-pc {
+    margin-left: 1em;
+    float: right;
+    width: 35.99537%;
+  }
+  #privilege05 .privilege-txt {
+    clear: left;
+  }
+
+  #privilege06 h2 {
+    width: 45.13889%;
+    float: left;
+  }
+  #privilege06 .privilege-img-pc {
+    margin-left: 1em;
+    margin-right: -5.78704%;
+    float: right;
+    width: 58.10185%;
+  }
+  #privilege06 .privilege-txt {
+    clear: left;
+  }
+}
 /* 
 ====================================================================================================
 ◆ ログイン (.page-login) ./login/

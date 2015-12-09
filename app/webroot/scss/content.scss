@@ -749,7 +749,85 @@
 ====================================================================================================
 ■ 会員特典の説明 (.page-privilege) ./privilege/
 ---------------------------------------------------------------------------------------------------- */
-
+	.privilege-lead {
+		margin-bottom:2em;
+		line-height:2;
+	}
+	.privilege-section {
+		padding:8px;
+		position:relative;
+		background:$c-gy;
+		line-height:2;
+		>.inner {
+			padding:44 / 1962 * 100%;
+			padding-left:192 / 1962 * 100%;
+			position:relative;
+			background:$c-gy-lt;
+			@include cf();
+			@include mqlt($bpM) {
+				padding:12px;
+				padding-left:72px; padding-right:10px; padding-bottom:640 * 0.5px;
+			}
+			@include box-shadow(0 0 0 1px #fff inset);
+		}
+		h2 {
+			margin-bottom:1.25em;
+			@include mq($bpS,$bpM) {
+				width:80%;
+			}
+		}
+	}
+	.privilege-label {
+		width:152 / 2000 * 100%; min-width:56px;
+		position:absolute;
+		top:-8px;
+		left:40 / 2000 * 100%;
+		@include mqlt($bpM) { left:16px; }
+	}
+	.privilege-img-pc {
+		@include box-shadow(0 0 0 1px rgba(#000,0.2),0 2px 8px 0 rgba(#000,0.1));
+	}
+	.privilege-txt {
+		@include mqlt($bpS) { @include fz(14); }
+	}
+	.privilege-img-sp {
+		margin-left:575 * -0.25px;;
+		@include posa(null,null,0,50%);
+		width:575 * 0.5px; height:632 * 0.5px;
+	}
+	@include mqlt($bpM) {
+		#privilege02 >.inner { padding-bottom:12px; }
+	}
+	@include mqmt($bpM) {
+		#privilege01 {
+			h2 { width:768 / 1728 * 100%; float:left; }
+			.privilege-img-pc { margin-left:1em; float:right; width:752 / 1728 * 100%; }
+			.privilege-txt { clear:left; }
+		}
+		#privilege02 {
+			h2 { width:672 / 1728 * 100%; }
+		}
+		#privilege03 {
+			h2 { width:776 / 1728 * 100%; float:left; }
+			.privilege-img-pc { margin-left:1em; float:right; width:752 / 1728 * 100%; }
+			.privilege-txt { clear:left; }
+		}
+		#privilege04 {
+			h2 { width:768 / 1728 * 100%; float:left; }
+			.privilege-img-pc { margin-left:1em; float:right; width:752 / 1728 * 100%; }
+			.privilege-txt { clear:left; }
+		}
+		#privilege05 {
+			h2 { width:660 / 1728 * 100%; float:left; }
+			.privilege-img-pc { margin-left:1em; float:right; width:622 / 1728 * 100%; }
+			.privilege-txt { clear:left; }
+		}
+		#privilege06 {
+			h2 { width:780 / 1728 * 100%; float:left; }
+			.privilege-img-pc { margin-left:1em; margin-right:-100 / 1728 * 100%; float:right; width:1004 / 1728 * 100%; }
+			.privilege-txt { clear:left; }
+		}
+	}
 /* 
 ====================================================================================================
 ◆ ログイン (.page-login) ./login/

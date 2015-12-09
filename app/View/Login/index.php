@@ -94,7 +94,7 @@
                             </li>
                         </ul>
                         <footer>
-                            <a href="" class="button btn-pk">詳しくはこちら</a>
+                            <a href="<?php echo WEBROOT; ?>pages/privilege/" class="button btn-pk">詳しくはこちら</a>
                         </footer>
                     </div><!-- /.section-body -->
                 </section><!-- /#privilege -->
