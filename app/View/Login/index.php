@@ -5,11 +5,12 @@
                 <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
                 <li>会員ログイン</li>
             </ol><!-- /#breadcrumb -->
-<?php if($errormessage):?>
+            
+            <?php if($errormessage):?>
             <div class="error-msg container">
                 <p><?php echo $errormessage?></p>
             </div><!-- /.error-msg -->
-<?php endif;?>
+            <?php endif;?>
 
             <div id="login-section" class="container">
                 <section id="login-form">
@@ -57,9 +58,6 @@
                     </div><!-- /.section-body -->
                 </section><!-- /#login-social -->
             </div><!-- /#login-section -->
-
-
-
 
             <section id="visitor-section">
                 <h2 class="head-bar ico-arrow">はじめてご利用の方はこちら</h2>

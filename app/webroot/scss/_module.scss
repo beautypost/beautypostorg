@@ -65,6 +65,13 @@
 		cursor:pointer;
 		color:#fff;
 		@include grad($c-gy,$c-gy-dk);
+		@include box-sizing(content-box);
+		&::-moz-focus-inner { 
+			border: 0; 
+			padding: 0; 
+			//margin-top:-2px; 
+			//margin-bottom: -2px; 
+		}
 		&:hover { background:darken($c-gy,20%); }
 		&.btn-block { @include ps(0); display:block; text-align:center; }
 		&.btn-sizeS { padding:0.4em 1.5em; }
@@ -241,6 +248,46 @@
 					@include mqlt($bpL) { @include fz(12); }
 					@include mqmt($bpL) { @include fz(10); }
 				}
+			}
+		}
+	}
+	
+// =================================================================================================
+// ■ フォーム遷移ナビゲーション
+// -------------------------------------------------------------------------------------------------
+	/* --- フォーム遷移ナビゲーション --- */
+	.form-nav {
+		margin-top:1.5em;
+		text-align:center;
+		.button {
+			@include mqlt($bpS) { display:block; width:100%; text-align:center; }
+			@include mqlt($bpL) { margin-bottom:1em; }
+			@include mqmt($bpM) { font-size:18px; }
+		}
+	}
+	.form-nav-confirm {
+		margin-top:1.5em;
+		@include mq($bpS,$bpM) { @include ms(auto); width:60%; }
+		@include mqlt($bpM) { padding-bottom:1em; }
+		@include mqmt($bpM) { @include cf(); }
+		.form-nav-next {
+			display:block;
+			@include mqmt($bpM) {
+				float:right;
+			}
+			.button {
+				@include mqlt($bpM) { margin-bottom:1em; display:block; width:100%; text-align:center; }
+				@include mqmt($bpM) { @include fz(18); }
+			}
+		}
+		.form-nav-back {
+			display:block;
+			@include mqmt($bpM) {
+				float:left;
+			}
+			.button {
+				@include mqlt($bpM) { display:block; width:100%; text-align:center; @include fz(12); }
+				@include mqmt($bpM) { @include fz(18); }
 			}
 		}
 	}
@@ -480,7 +527,7 @@
 			iframe { @include posa(0,null,null,0); width:100% !important; height:100% !important; }
 		}
 	}
-
+	
 // =================================================================================================
 // ■ シャドウボックス
 // -------------------------------------------------------------------------------------------------
@@ -563,8 +610,7 @@
 			}
 		}
 	}
-
-
+	
 // =================================================================================================
 // ■ 定型コンテンツ：box-contents
 // -------------------------------------------------------------------------------------------------
@@ -671,6 +717,24 @@
 		.enquete-txt { padding-bottom:1.5em; }
 		@include mqlt($bpS) {
 			.answer+footer .button { @include fz(14); } // サイドバースマホサイズ縦のみ、ボタンのテキストサイズ調整
+		}
+	}
+	
+// =================================================================================================
+// ■ アイテムタグリスト
+// -------------------------------------------------------------------------------------------------
+	/* --- アイテムタグリスト --- */
+	.item-taglist {
+		vertical-align:middle; @include fz(11); white-space:nowrap;
+		@include inlineblockWrap(){
+			margin-left:4px; padding:1px 8px;
+			@include border-radius(4px);
+			line-height:1.6rem; vertical-align:middle;
+			color:#fff; background:#000; // この背景色は基本的にダミー
+			&.tag-0 { background:#F24364; }
+			&.tag-1 { background:#9F8634; }
+			&.tag-2 { background:#6E56B4; }
+			&.tag-3 { background:#3EB6B4; }
 		}
 	}
 	

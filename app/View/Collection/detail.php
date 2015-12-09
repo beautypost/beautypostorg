@@ -1,11 +1,11 @@
 <div id="page-area">
     <div class="layout">
-
-            <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
-                <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
-                <li><a href="<?php echo WEBROOT?>collection/">美容機器コレクション</a></li>
-                <li><?php echo $Item['Item']['title']?></li>
-            </ol><!-- /#breadcrumb -->
+        <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
+            <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
+            <li><a href="<?php echo WEBROOT?>collection/">美容機器コレクション</a></li>
+            <li><?php echo $Item['Item']['title']?></li>
+        </ol><!-- /#breadcrumb -->
+        
         <div id="main-area" class="layout-main layout-l">
             <section id="collection-detail" class="collection-item">
                 <div class="box-contents">
@@ -13,8 +13,7 @@
                         <div>
                             <h2 class="item-name"><?php echo $Item['Item']['title']?></h2>
                             <ul class="item-taglist">
-            <?php echo $this->Useful->getIco($Icos,$Item['Item']['ico'])?>
-
+                                <?php echo $this->Useful->getIco($Icos,$Item['Item']['ico'])?>
                             </ul>
                         </div>
                     </header>
@@ -46,16 +45,13 @@
                                     <li>
                                         <dl>
                                             <dt>商品種類</dt>
-                            <dd><?php  echo $this->Useful->checkNull($this->Useful->selectOptionValue($GenreKisyu,$Item['Item']['genre_id']))?></dd>
-
-
+                                            <dd><?php  echo $this->Useful->checkNull($this->Useful->selectOptionValue($GenreKisyu,$Item['Item']['genre_id']))?></dd>
                                         </dl>
                                     </li>
                                     <li>
                                         <dl>
                                             <dt>部位</dt>
-                            <dd><?php  echo $this->Useful->checkNull($this->Useful->checkboxvalue($GenrePoints,'Genre','title',$Item['Item']['genres']))?></dd>
-
+                                            <dd><?php  echo $this->Useful->checkNull($this->Useful->checkboxvalue($GenrePoints,'Genre','title',$Item['Item']['genres']))?></dd>
                                         </dl>
                                     </li>
                                     <li>
@@ -67,8 +63,7 @@
                                     <li>
                                         <dl>
                                             <dt>目的・用途</dt>
-                            <dd><?php  echo $this->Useful->checkNull($this->Useful->checkboxvalue($GenrePurposes,'Genre','title',$Item['Item']['genres']))?></dd>
-
+                                            <dd><?php  echo $this->Useful->checkNull($this->Useful->checkboxvalue($GenrePurposes,'Genre','title',$Item['Item']['genres']))?></dd>
                                         </dl>
                                     </li>
                                 </ul>
@@ -161,7 +156,8 @@
                         </div>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-detail -->
-<?php if($Item['Item']['example'] || $Item['Item']['example_url']):?>
+                
+                <?php if($Item['Item']['example'] || $Item['Item']['example_url']):?>
                 <section class="item-howtouse">
                     <h2 class="head-bar ico-arrow">使用方法</h2>
                     <div class="section-body">
@@ -175,7 +171,8 @@
                         </div>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-howtouse -->
-<?php endif;?>
+                <?php endif;?>
+                
                 <?php if(count($Monitors)>0):?>
                 <section class="item-m-review item-review">
                     <h2 class="head-bar ico-arrow">モニター体験レビュー</h2>
@@ -203,9 +200,9 @@
 
                         <div class="item-review-body">
                             <div class="item-chart">
-                            <div style="width:80%">
-                                <canvas id="canvas1" height="450" width="450"></canvas>
-                            </div>
+                                <!-- <div style="width:80%"> -->
+                                    <canvas id="canvas1" height="450" width="450"></canvas>
+                                <!-- </div> -->
                             </div><!-- /.item-chart -->
 
                             <section class="review-topics">
@@ -213,10 +210,9 @@
                                     <h2 class="round-head">モニター体験レビュートピック</h2>
                                     <div class="section-body">
                                         <ul>
-
-<!-- review-->
-<?php foreach($Monitors as $k => $v):?>
-<!-- review-->
+                                            <!-- review-->
+                                            <?php foreach($Monitors as $k => $v):?>
+                                            <!-- review-->
                                             <li>
                                                 <a href="">
                                                     <p class="title"><?php echo $v['ItemsMonitor']['title']?></p>
@@ -229,10 +225,8 @@
                                                     <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsMonitor']['created']))?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
                                                 </a>
                                             </li>
-<!-- review-->
-<?php endforeach;?>
-
-
+                                            <!-- review-->
+                                            <?php endforeach;?>
                                         </ul>
                                         <p class="more"><a href="<?php echo WEBROOT?>Review/monitor/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
                                     </div><!-- /.section-body -->
@@ -240,14 +234,13 @@
                                 <footer><!-- <a href="" class="button btn-pk btn-sizeS">モニター体験レビューを詳しく見る</a> --></footer>
                             </section><!-- /.review-topics -->
                         </div><!-- /.item-review-body -->
-
-
                     </div><!-- /.section-body -->
                 </section><!-- /.item-m-review.item-review -->
-<?php endif;?>
+                <?php endif;?>
+
                 <section class="item-u-review item-review">
                     <h2 class="head-bar ico-arrow">ユーザーレビュー</h2>
-<?php if(count($Reviews)>0):?>
+                    <?php if(count($Reviews)>0):?>
                     <div class="section-body">
                         <table class="table-std user-rate">
                             <tbody>
@@ -263,9 +256,9 @@
 
                         <div class="item-review-body">
                             <div class="item-chart">
-        <div style="width:80%">
-            <canvas id="canvas2" height="450" width="450"></canvas>
-        </div>
+                                <!-- <div style="width:80%"> -->
+                                    <canvas id="canvas2" height="450" width="450"></canvas>
+                                <!-- </div> -->
                             </div><!-- /.item-chart -->
 
                             <section class="review-topics">
@@ -275,8 +268,8 @@
 
                                     <div class="section-body">
                                         <ul>
-<?php foreach($Reviews as $k => $v):?>
-<!-- review-->
+                                            <?php foreach($Reviews as $k => $v):?>
+                                            <!-- review-->
                                             <li>
                                                 <a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>">
                                                     <p class="title"><?php echo $v['ItemsReview']['title']?></p>
@@ -289,32 +282,30 @@
                                                     <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsReview']['created']))?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
                                                 </a>
                                             </li>
-<!-- review-->
-<?php endforeach;?>
+                                            <!-- review-->
+                                            <?php endforeach;?>
                                         </ul>
                                     </div><!-- /.section-body -->
                                     <p class="more"><a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
                                 </div><!-- /.round-thin-contents -->
 
-
                                 <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
                             </section><!-- /.review-topics -->
                         </div><!-- /.item-review-body -->
                     </div><!-- /.section-body -->
-<?php else:?>
+                    <?php else:?>
 
                     <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
-<!-- ここまで　-->
-<?php endif;?>
-
-
+                    <!-- ここまで　-->
+                    <?php endif;?>
                 </section><!-- /.item-u-review.item-review -->
-<?php if(count($Materials) > 0):?>
+                
+                <?php if(count($Materials) > 0):?>
                 <section class="item-relative">
                     <h2 class="head-std ico-arrow">関連商品</h2>
                     <ul class="collection-gallery">
                     <!-- gallary-->
-<?php foreach($Materials as $k => $v):?>
+                        <?php foreach($Materials as $k => $v):?>
                         <li><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $v['Item']['id']?>"><!--
                              --><div class="item-thumbnail">
                                         <div class="imgframe">
@@ -326,20 +317,21 @@
                                     <p class="item-name"><?php echo $v['Item']['title']?></p><!--
                              --></a>
                         </li>
-<?php endforeach;?>
+                        <?php endforeach;?>
                     <!-- gallary-->
                     </ul><!-- /.collection-gallery -->
                     <footer>
                         <a href="./spec/" class="button btn-pk">関連商品をまとめて比較</a>
                     </footer>
                 </section><!-- /.item-relative -->
-            <?php endif;?>
-<?php if(count($Coordinates) > 0):?>
+                <?php endif;?>
+
+                <?php if(count($Coordinates) > 0):?>
                 <section class="item-cordinate">
                     <h2 class="head-std ico-arrow">この商品におすすめコーディネート商品</h2>
                     <ul class="collection-gallery">
 
-<?php foreach($Coordinates as $k => $v):?>
+                    <?php foreach($Coordinates as $k => $v):?>
                     <!-- gallary-->
                         <li><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $v['Item']['id']?>"><!--
                              --><div class="item-thumbnail">
@@ -352,26 +344,24 @@
                                     <p class="item-name"><?php echo $v['Item']['title']?></p><!--
                              --></a></li>
                     <!-- gallary-->
-<?php endforeach;?>
+                    <?php endforeach;?>
                     </ul><!-- /.collection-gallery -->
                     <footer>
                         <a href="./spec/" class="button btn-pk">おすすめ商品をまとめて比較</a>
                     </footer>
                 </section><!-- /.item-cordinate -->
-<?php endif;?>
+                <?php endif;?>
+                
             </section><!-- /#collection-list -->
         </div><!-- /#main-area -->
 
-    <aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
-        <?php echo $this->element('common/cmnSubContent'); ?>
-    </aside>
+        <aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
+            <?php echo $this->element('common/cmnSubContent'); ?>
+        </aside>
     </div>
 </div><!-- /#page-area -->
 
-
-
-    <script>
-
+<script>
     window.onload = function(){
         <?php if(count($Monitors)>0):?>
             var ctx = document.getElementById("canvas1").getContext("2d");
@@ -403,10 +393,6 @@
         window.myRadar = new Chart(ctx).Radar(radarChartData, {
             responsive: true,
             scaleLineColor: "rgba(0,0,0,0.2)",
-
         });
-
     }
-
-
-    </script>
+</script>

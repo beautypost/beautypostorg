@@ -90,7 +90,6 @@
                     </ul><!-- /.formlist -->
 
                     <div class="extra">
-                        <p class="kome">あなたのエリアと肌質に合わせた美容ニュースをお届けしますので、メールマガジンご希望の方は下記もご入力下さい。</p>
                         <ul class="formlist">
                             <li class="required">
                                 <dl>

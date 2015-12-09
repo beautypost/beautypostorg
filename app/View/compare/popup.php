@@ -41,7 +41,7 @@
 							</div>
 						</a>
 					</td>
-				<?php echo $Item['Item']['title']?>
+				<?php //echo $Item['Item']['title']?>
 				<?php endforeach;?>
 			</tr>
 		</tbody>

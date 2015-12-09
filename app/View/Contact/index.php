@@ -39,17 +39,16 @@
 				<h2 class="head-std ico-arrow">お問い合わせ</h2>
 				<div class="section-body">
 
-<?php
-if (isset($validationErrors) && is_array($validationErrors)) {
-    foreach ($validationErrors as $key => $values) {
-        foreach ($values as $value) {
-            echo '<p class="error">'.$value.'</p>';
-        }
-        // echo $this->Form->error('Model.'.$key);
-    }
-}
-?>
-
+				<?php
+				if (isset($validationErrors) && is_array($validationErrors)) {
+				    foreach ($validationErrors as $key => $values) {
+				        foreach ($values as $value) {
+				            echo '<p class="error">'.$value.'</p>';
+				        }
+				        // echo $this->Form->error('Model.'.$key);
+				    }
+				}
+				?>
 
 					<form action="<?php echo WEBROOT.$this->name?>" class="contact-form" method="post">
 						<ul class="formlist">
@@ -94,16 +93,18 @@ if (isset($validationErrors) && is_array($validationErrors)) {
 							<p>上記お問い合わせフォームよりご送信いただく、お客様の個人情報、およびご質問の内容は、当社の個人情報の取り扱いに従い、厳重に取り扱います。詳しくは「個人情報について」のページをご覧ください。<br>
 							お問い合わせフォームをご使用の際は、個人情報保護方針の内容にご了承の上で送信いただくようお願いいたします。</p>
 							<div class="form-nav">
-								<button class="button btn-vpk">送信</button>
-							</div>
-						</div>
+								<button class="button btn-vpk">
+									入力内容確認画面へ <i class="fa fa-angle-right">&#8203;</i>
+								</button>
+							</div><!-- /.form-nav -->
+						</div><!-- /.form-foot -->
 					</form>
 				</div>
 			</section><!-- /#user-form -->
 		</div><!-- /#main-area -->
 
 		<aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
-        <?php echo $this->element('common/cmnSubContent'); ?>
+			<?php echo $this->element('common/cmnSubContent'); ?>
 		</aside><!-- /#sub-area -->
 	</div>
 </div><!-- /#page-area -->

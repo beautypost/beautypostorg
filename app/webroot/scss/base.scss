@@ -465,58 +465,60 @@
 			}
 		}
 	}
-	.item-taglist { // アイテムタグリスト
-		vertical-align:middle;
-		@include fz(11);
-		@include inlineblockWrap(){
-			padding:1px 8px;
-			@include border-radius(4px);
-			line-height:1.6rem; vertical-align:middle;
-			color:#fff; background:#000;
-			&.tag-new { background:#F24364; }
-			&.tag-feature { background:#9F8634; }
-			&.tag-popular { background:#6E56B4; }
-			&.tag-sample { background:#3EB6B4; }
-		}
-	}
 	.collection-item {
 		@include container(24px);
 		.collection-head { // アイテム見出し
 			@include mqmt($bpM) {
-				@include head-bar();
-				margin-bottom:0 !important;
-				//@include pv(0.7rem);
-				@include border-radius(5px 5px 0 0); line-height:2.6rem; @include fz(18);
+				padding:0.7rem 0.5em 0.7rem;
+				@include border-radius(5px 5px 0 0);
+				position:relative;
+				line-height:2.6rem;
+				@include stripe-bk();
+				@include fz(18); font-weight:400;
 			}
-			>div { display:table; width:100%; }
+			
+			>div {
+				@include mqmt($bpM) { display:table; width:100%; }
+			}
+			
 			.item-check { // チェックボックス
 				@include mqlt($bpM) {
 					padding-top:1rem;
-					display:block; position:absolute; left:0; top:0;	
+					display:block; position:absolute; left:0; top:0;
 					width:2em; line-height:2rem; text-align:center;
+					z-index:1; // 次に続くh2.item-name要素よりも上に
 				}
-				@include mqmt($bpM) { display:table-cell; width:1.5em; }
+				@include mqmt($bpM) {
+					display:table-cell; width:1.5em;
+				}
 			}
+			
 			.item-name { // アイテム名
 				vertical-align:middle;
 				@include mqlt($bpM) {
-					@include head-bar();
-					@include pv(1rem); @include border-radius(5px 5px 0 0); display:block;
-					line-height:2rem; @include fz(16);
+					padding:1rem 0.5em 1rem;
+					@include border-radius(5px 5px 0 0);
+					position:relative;
+					display:block;
+					line-height:2rem;
+					@include stripe-bk();
+					@include fz(16); font-weight:400;
 					#collection-list & { padding-left:2em; }
 				}
-				@include mqmt($bpM) { display:table-cell; font-weight:400;}
+				@include mqmt($bpM) {
+					display:table-cell; font-weight:400;
+				}
 				label { display:block; }
 			}
-			.item-taglist {
-				@include mqlt($bpM) { padding:4px (20 / 720 * 100%); }
-				@include mqmt($bpM) { display:table-cell; }
+			
+			.item-taglist { // タグリストのレイアウト調整
+				@include mqlt($bpM) { padding:8px (20 / 720 * 100%); }
 				padding-left:8px;
+				@include mqmt($bpM) { display:table-cell; }
 				text-align:right;
-				white-space:nowrap;
-				li { margin-left:4px; }
 			}
 		}
+		
 		.collection-body {
 			@include mqmt($bpS) { @include cf(); }
 			@include mqlt($bpM) { padding-top:0; }

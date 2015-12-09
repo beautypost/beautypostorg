@@ -1883,6 +1883,13 @@ ul.alp > li, ol.alp > li {
   background-image: linear-gradient(to bottom, #e6e6e6, #999999);
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE6E6E6', endColorstr='#FF999999');
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 .button:hover {
   background: #b3b3b3;
@@ -2308,6 +2315,100 @@ ul.alp > li, ol.alp > li {
   .formlist li.optional dt > .inner:after {
     font-size: 10px;
     font-size: 1rem;
+  }
+}
+
+/* --- フォーム遷移ナビゲーション --- */
+.form-nav {
+  margin-top: 1.5em;
+  text-align: center;
+}
+@media (max-width: 479px) {
+  .form-nav .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1023px) {
+  .form-nav .button {
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .form-nav .button {
+    font-size: 18px;
+  }
+}
+
+.form-nav-confirm {
+  margin-top: 1.5em;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .form-nav-confirm {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+  }
+}
+@media (max-width: 767px) {
+  .form-nav-confirm {
+    padding-bottom: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .form-nav-confirm {
+    zoom: 1;
+  }
+  .form-nav-confirm:before, .form-nav-confirm:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+.form-nav-confirm .form-nav-next {
+  display: block;
+}
+@media (min-width: 768px) {
+  .form-nav-confirm .form-nav-next {
+    float: right;
+  }
+}
+@media (max-width: 767px) {
+  .form-nav-confirm .form-nav-next .button {
+    margin-bottom: 1em;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .form-nav-confirm .form-nav-next .button {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+.form-nav-confirm .form-nav-back {
+  display: block;
+}
+@media (min-width: 768px) {
+  .form-nav-confirm .form-nav-back {
+    float: left;
+  }
+}
+@media (max-width: 767px) {
+  .form-nav-confirm .form-nav-back .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) {
+  .form-nav-confirm .form-nav-back .button {
+    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 
@@ -3118,6 +3219,46 @@ a.photo-frame:hover {
     font-size: 14px;
     font-size: 1.4rem;
   }
+}
+
+/* --- アイテムタグリスト --- */
+.item-taglist {
+  vertical-align: middle;
+  font-size: 11px;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  letter-spacing: -.40em;
+}
+.item-taglist > li {
+  display: inline-block;
+  letter-spacing: normal;
+  margin-left: 4px;
+  padding: 1px 8px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 1.6rem;
+  vertical-align: middle;
+  color: #fff;
+  background: #000;
+}
+.item-taglist > li:first-child {
+  margin-left: 0 !important;
+}
+.item-taglist > li:last-child {
+  margin-right: 0 !important;
+}
+.item-taglist > li.tag-0 {
+  background: #F24364;
+}
+.item-taglist > li.tag-1 {
+  background: #9F8634;
+}
+.item-taglist > li.tag-2 {
+  background: #6E56B4;
+}
+.item-taglist > li.tag-3 {
+  background: #3EB6B4;
 }
 
 @media (min-width: 768px) {
@@ -4028,43 +4169,6 @@ a.photo-frame:hover {
   }
 }
 
-.item-taglist {
-  vertical-align: middle;
-  font-size: 11px;
-  font-size: 1.1rem;
-  letter-spacing: -.40em;
-}
-.item-taglist > li {
-  display: inline-block;
-  letter-spacing: normal;
-  padding: 1px 8px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  line-height: 1.6rem;
-  vertical-align: middle;
-  color: #fff;
-  background: #000;
-}
-.item-taglist > li:first-child {
-  margin-left: 0 !important;
-}
-.item-taglist > li:last-child {
-  margin-right: 0 !important;
-}
-.item-taglist > li.tag-new {
-  background: #F24364;
-}
-.item-taglist > li.tag-feature {
-  background: #9F8634;
-}
-.item-taglist > li.tag-popular {
-  background: #6E56B4;
-}
-.item-taglist > li.tag-sample {
-  background: #3EB6B4;
-}
-
 .collection-item {
   margin-top: 24px;
   margin-bottom: 24px;
@@ -4077,11 +4181,12 @@ a.photo-frame:hover {
 }
 @media (min-width: 768px) {
   .collection-item .collection-head {
-    padding: 0.7rem 0.5em 0.6rem;
+    padding: 0.7rem 0.5em 0.7rem;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     position: relative;
-    -moz-border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    border-radius: 0.5rem;
+    line-height: 2.6rem;
     color: #fff;
     background: #272727 url(../common-img/stripe.png);
     -moz-background-size: 12px;
@@ -4091,73 +4196,13 @@ a.photo-frame:hover {
     font-size: 18px;
     font-size: 1.8rem;
     font-weight: 400;
-    margin-bottom: 0 !important;
-    -moz-border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px;
-    border-radius: 5px 5px 0 0;
-    line-height: 2.6rem;
-    font-size: 18px;
-    font-size: 1.8rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .collection-item .collection-head {
-    margin-bottom: 1.6rem;
-  }
-}
-@media (min-width: 768px) and (min-width: 1024px) {
-  .collection-item .collection-head {
-    margin-bottom: 2rem;
   }
 }
 @media (min-width: 768px) {
-  .collection-item .collection-head:before {
-    margin-left: 0.8rem;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-top: -0.5em;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    line-height: 1em;
-    text-align: center;
-    visibility: hidden;
-    color: #272727;
-    background: #fff;
-    content: '';
-    font-size: 24px;
-    font-size: 2.4rem;
+  .collection-item .collection-head > div {
+    display: table;
+    width: 100%;
   }
-  .collection-item .collection-head.ico-arrow {
-    padding-left: 4rem;
-  }
-  .collection-item .collection-head.ico-arrow:before {
-    visibility: visible;
-    background: url(../common-img/ico-bar-arrow.png) center center no-repeat;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-  .collection-item .collection-head.ico-search {
-    padding-left: 4rem;
-  }
-  .collection-item .collection-head.ico-search:before {
-    visibility: visible;
-    background: url(../common-img/ico-bar-search.png) center center no-repeat;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-}
-.collection-item .collection-head > div {
-  display: table;
-  width: 100%;
 }
 @media (max-width: 767px) {
   .collection-item .collection-head .item-check {
@@ -4169,6 +4214,7 @@ a.photo-frame:hover {
     width: 2em;
     line-height: 2rem;
     text-align: center;
+    z-index: 1;
   }
 }
 @media (min-width: 768px) {
@@ -4182,84 +4228,22 @@ a.photo-frame:hover {
 }
 @media (max-width: 767px) {
   .collection-item .collection-head .item-name {
-    padding: 0.7rem 0.5em 0.6rem;
+    padding: 1rem 0.5em 1rem;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     position: relative;
-    -moz-border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    border-radius: 0.5rem;
+    display: block;
+    line-height: 2rem;
     color: #fff;
     background: #272727 url(../common-img/stripe.png);
     -moz-background-size: 12px;
     -o-background-size: 12px;
     -webkit-background-size: 12px;
     background-size: 12px;
-    font-size: 18px;
-    font-size: 1.8rem;
-    font-weight: 400;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    -moz-border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px;
-    border-radius: 5px 5px 0 0;
-    display: block;
-    line-height: 2rem;
     font-size: 16px;
     font-size: 1.6rem;
-  }
-}
-@media (max-width: 767px) and (max-width: 1023px) {
-  .collection-item .collection-head .item-name {
-    margin-bottom: 1.6rem;
-  }
-}
-@media (max-width: 767px) and (min-width: 1024px) {
-  .collection-item .collection-head .item-name {
-    margin-bottom: 2rem;
-  }
-}
-@media (max-width: 767px) {
-  .collection-item .collection-head .item-name:before {
-    margin-left: 0.8rem;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-top: -0.5em;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    line-height: 1em;
-    text-align: center;
-    visibility: hidden;
-    color: #272727;
-    background: #fff;
-    content: '';
-    font-size: 24px;
-    font-size: 2.4rem;
-  }
-  .collection-item .collection-head .item-name.ico-arrow {
-    padding-left: 4rem;
-  }
-  .collection-item .collection-head .item-name.ico-arrow:before {
-    visibility: visible;
-    background: url(../common-img/ico-bar-arrow.png) center center no-repeat;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-  .collection-item .collection-head .item-name.ico-search {
-    padding-left: 4rem;
-  }
-  .collection-item .collection-head .item-name.ico-search:before {
-    visibility: visible;
-    background: url(../common-img/ico-bar-search.png) center center no-repeat;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+    font-weight: 400;
   }
   #collection-list .collection-item .collection-head .item-name {
     padding-left: 2em;
@@ -4277,20 +4261,16 @@ a.photo-frame:hover {
 .collection-item .collection-head .item-taglist {
   padding-left: 8px;
   text-align: right;
-  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .collection-item .collection-head .item-taglist {
-    padding: 4px 2.77778%;
+    padding: 8px 2.77778%;
   }
 }
 @media (min-width: 768px) {
   .collection-item .collection-head .item-taglist {
     display: table-cell;
   }
-}
-.collection-item .collection-head .item-taglist li {
-  margin-left: 4px;
 }
 @media (min-width: 480px) {
   .collection-item .collection-body {

@@ -25,9 +25,7 @@
         <div id="main-area" class="layout-main layout-r">
             <section id="signup-form">
                 <h2 class="head-bar ico-arrow">登録情報変更</h2>
-
-        <?php echo $this->element('registconfirm'); ?>
-
+                <?php echo $this->element('registconfirm'); ?>
             </section><!-- /#signup-form -->
         </div><!-- /#main-area -->
     </div>

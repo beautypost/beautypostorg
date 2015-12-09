@@ -942,6 +942,12 @@
     left: 0;
   }
 }
+@media (min-width: 480px) and (max-width: 767px) {
+  #review-list .summary .evaluation {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
 @media (min-width: 768px) {
   #review-list .summary .evaluation {
     margin: 0 auto;
@@ -1030,6 +1036,12 @@
 }
 #review-list .review-entry > header .post-date {
   margin-bottom: 0.75em;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  #review-list .review-entry .evaluation {
+    margin: 0 auto;
+    width: 60%;
+  }
 }
 @media (min-width: 768px) {
   #review-list .review-entry .evaluation {
@@ -1881,47 +1893,45 @@
 ====================================================================================================
 ◆ サインアップ (.page-signup) ./signup/
 ---------------------------------------------------------------------------------------------------- */
-#signup-form form {
+#signup-form > form {
   display: block;
 }
 @media (min-width: 768px) {
-  #signup-form form {
+  #signup-form > form {
     margin-right: auto;
     margin-left: auto;
     padding-top: 0.5em;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #signup-form form {
+  #signup-form > form {
     width: 90%;
   }
 }
 @media (min-width: 1024px) {
-  #signup-form form {
+  #signup-form > form {
     width: 86%;
   }
 }
-#signup-form form > footer {
-  border-top: 1px dotted #737373;
-  text-align: center;
+#signup-form > form .head-category {
+  padding: 0.25em 0.5em;
+  position: relative;
+  color: #fff;
+  background: #999999;
 }
-@media (max-width: 767px) {
-  #signup-form form > footer {
+@media (max-width: 479px) {
+  #signup-form > form .head-category {
     margin-top: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
   }
 }
-@media (min-width: 768px) {
-  #signup-form form > footer {
-    margin-top: 3em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    position: relative;
+@media (min-width: 480px) {
+  #signup-form > form .head-category {
+    margin-top: 1.75em;
+    margin-bottom: 1em;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  #signup-form form > footer {
+  #signup-form > form .signup-footer {
     margin-right: -5%;
     margin-left: -5%;
     padding-right: 5%;
@@ -1929,55 +1939,11 @@
   }
 }
 @media (min-width: 1024px) {
-  #signup-form form > footer {
+  #signup-form > form .signup-footer {
     margin-right: -7%;
     margin-left: -7%;
     padding-right: 7%;
     padding-left: 7%;
-  }
-}
-#signup-form form > footer p {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  background: #E6E6E6;
-}
-@media (max-width: 479px) {
-  #signup-form form > footer p {
-    padding: 0.5em 0.5em 0.5em 2.5em;
-    position: relative;
-  }
-  #signup-form form > footer p label {
-    display: block;
-    text-align: left;
-  }
-  #signup-form form > footer p input {
-    margin-top: -0.6em;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0.5em;
-    line-height: 1.2;
-    height: 1.2em;
-  }
-}
-#signup-form form > footer .button {
-  margin-top: 1.5em;
-}
-#signup-form form .head-category {
-  padding: 0.25em 0.5em;
-  position: relative;
-  color: #fff;
-  background: #999999;
-}
-@media (max-width: 479px) {
-  #signup-form form .head-category {
-    margin-top: 1em;
-  }
-}
-@media (min-width: 480px) {
-  #signup-form form .head-category {
-    margin-top: 1.75em;
-    margin-bottom: 1em;
   }
 }
 #signup-form .formlist dd ul {
@@ -2015,6 +1981,62 @@
 @media (min-width: 768px) {
   #signup-form .extra .kome {
     margin-left: 16.5em;
+  }
+}
+
+.signup-footer {
+  border-top: 1px dotted #737373;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .signup-footer {
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .signup-footer {
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .signup-footer {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+@media (min-width: 1024px) {
+  .signup-footer {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+}
+.signup-footer p {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background: #E6E6E6;
+}
+@media (max-width: 479px) {
+  .signup-footer p {
+    padding: 0.5em 0.5em 0.5em 2.5em;
+    position: relative;
+  }
+  .signup-footer p label {
+    display: block;
+    text-align: left;
+  }
+  .signup-footer p input {
+    margin-top: -0.6em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    line-height: 1.2;
+    height: 1.2em;
   }
 }
 
@@ -3337,15 +3359,6 @@
 @media (min-width: 1024px) {
   #user-form .contact-form {
     width: 86%;
-  }
-}
-#user-form .contact-form .form-nav {
-  margin-top: 1.5em;
-  text-align: center;
-}
-@media (min-width: 1024px) {
-  #user-form .contact-form .form-nav button {
-    font-size: 18px;
   }
 }
 

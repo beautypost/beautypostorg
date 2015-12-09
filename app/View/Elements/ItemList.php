@@ -1,11 +1,11 @@
 
 <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-<section id="item-0001" class="collection-item box-contents">
+<section id="item-<?php echo $Item['Item']['id']?>" class="collection-item box-contents">
     <header class="collection-head">
         <div>
             <div class="item-check">
-            <input type="checkbox" id="item-ck-00001" name="item-ck-00001" value="<?php echo $Item['Item']['id']?>" onclick="compareItem(<?php echo $Item['Item']['id']?>)" <?php echo $this->Useful->checked($ItemCompare,$Item['Item']['id'])?>></div>
-            <h2 class="item-name"><label for="item-ck-00001"><?php echo $Item['Item']['title']?></label></h2>
+            <input type="checkbox" id="item-ck-<?php echo $Item['Item']['id']?>" name="item-ck-<?php echo $Item['Item']['id']?>" value="<?php echo $Item['Item']['id']?>" onclick="compareItem(<?php echo $Item['Item']['id']?>)" <?php echo $this->Useful->checked($ItemCompare,$Item['Item']['id'])?>></div>
+            <h2 class="item-name"><label for="item-ck-<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['title']?></label></h2>
             <ul class="item-taglist">
 
             <?php echo $this->Useful->getIco($Icos,$Item['Item']['ico'])?>
@@ -32,16 +32,17 @@
                     <span>（レビュー：<a href="<?php echo WEBROOT?>Monitor/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['monitor']?>件</a>）</span>
                     <p><?php echo $Item['Item']['result']?></p>
                 </dd>
-<?php endif;?>
+                <?php endif;?>
                 <dt>ユーザーレビュー</dt>
                 <dd class="user-rate">
                     <div class="star<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_review']?>"></div>
                     <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
                 </dd>
             </dl><!-- /.item-rate -->
-<script>
-ratystar(<?php echo $Item['Item']['id']?>)
-</script>
+
+            <script>
+            ratystar(<?php echo $Item['Item']['id']?>)
+            </script>
 
             <div class="item-info">
                 <ul>

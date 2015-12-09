@@ -7,36 +7,9 @@
 
 		<div id="main-area" class="layout-main layout-l">
 			<h2 class="head-bar ico-arrow">よくある質問・お問い合わせ</h2>
-			<section id="faq">
-				<h2 class="head-std ico-arrow">よくある質問</h2>
-				<div class="section-body">
-					<ul class="faq-list">
-						<li>
-							<dl class="faq-entry">
-								<dt class="faq-q">BeautyPostメンバーに登録したのですが、退会はできますか？</dt>
-								<dd class="faq-a">お問い合せフォームより、ご登録いただいているメールアドレスとニックネームをお知らせください。<br>退会の手続きをさせて頂きます。</dd>
-							</dl>
-						</li>
-						<li>
-							<dl class="faq-entry">
-								<dt class="faq-q">今届いている美容ニュースの配信先の変更（停止）はできますか？</dt>
-								<dd class="faq-a">ログインいただき、マイページのメールアドレス変更よりお手続きa頂けます。<br>
-								停止についても同様にマイページよりお手続きください。</dd>
-							</dl>
-						</li>
-						<li>
-							<dl class="faq-entry">
-								<dt class="faq-q">モニターに応募するにはどうしたらいいですか？</dt>
-								<dd class="faq-a">モニター応募については、メンバーの方のマイページとBeauty Postメールにてお知らせしています。<br>
-								最新情報をいち早く確認されたい方はBeauty Postメールのご登録をオススメしております。</dd>
-							</dl>
-						</li>
-					</ul>
-				</div>
-			</section><!-- /faq -->
 
 			<section id="user-form">
-				<h2 class="head-std ico-arrow">お問い合わせ</h2>
+				<h2 class="head-std ico-arrow">お問い合わせ内容確認</h2>
 				<div class="section-body">
 
 					<form action="<?php echo WEBROOT.$this->name?>" class="contact-form" method="post">
@@ -68,30 +41,28 @@
 								</dl>
 							</li>
 						</ul><!-- /.formlist -->
+					</form>
 
-						<div class="form-foot container">
-							<p>上記お問い合わせフォームよりご送信いただく、お客様の個人情報、およびご質問の内容は、当社の個人情報の取り扱いに従い、厳重に取り扱います。詳しくは「個人情報について」のページをご覧ください。<br>
-							お問い合わせフォームをご使用の際は、個人情報保護方針の内容にご了承の上で送信いただくようお願いいたします。</p>
-							<div class="form-nav">
+					<div class="form-foot container">
+						<p>上記お問い合わせフォームよりご送信いただく、お客様の個人情報、およびご質問の内容は、当社の個人情報の取り扱いに従い、厳重に取り扱います。詳しくは「個人情報について」のページをご覧ください。<br>
+						お問い合わせフォームをご使用の際は、個人情報保護方針の内容にご了承の上で送信いただくようお願いいたします。</p>
+						<div class="form-nav-confirm">
+							<form method="post" action="<?php echo WEBROOT.$this->name?>/send" class="form-nav-next">
+								<button class="button btn-success btn-vpk btn-next" data-last="Finish" type="submit">
+									この内容で送信する <i class="fa fa-angle-right">&#8203;</i>
+								</button>
+								<input type="hidden" name="data[Contact]" value="<?php echo base64_encode(serialize($data['Contact'])) ?>">
 							</form>
-
-														<form method="post" action="<?php echo WEBROOT.$this->name?>/index">
-																	<button class="btn btn-gray btn-before" data-last="Finish" type="submit">
-																		<i class="ace-icon fa fa-arrow-left"></i>入力画面へ戻る
-																	</button>
-																	<input type="hidden" name="data[Contact]" value="<?php echo base64_encode(serialize($data['Contact'])) ?>">
-																	<input type="hidden" name="back" value="1">
-														</form>
-														<form method="post" action="<?php echo WEBROOT.$this->name?>/send">
-																	<button class="btn btn-success btn-next" data-last="Finish" type="submit">
-																		お問い合せ内容送信<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-																	</button>
-																	<input type="hidden" name="data[Contact]" value="<?php echo base64_encode(serialize($data['Contact'])) ?>">
-														</form>
-
-
-							</div>
-						</div>
+							
+							<form method="post" action="<?php echo WEBROOT.$this->name?>/index" class="form-nav-back">
+								<button class="button btn-nb btn-before" data-last="Finish" type="submit">
+									<i class="fa fa-angle-left">&#8203;</i> 入力画面へ戻り修正する
+								</button>
+								<input type="hidden" name="data[Contact]" value="<?php echo base64_encode(serialize($data['Contact'])) ?>">
+								<input type="hidden" name="back" value="1">
+							</form>
+						</div><!-- /.form-nav-confirm -->
+					</div><!-- /.form-foot -->
 
 				</div>
 			</section><!-- /#user-form -->

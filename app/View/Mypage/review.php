@@ -26,9 +26,10 @@
 				<h2 class="head-std ico-arrow">レビュー商品一覧</h2>
 				<p>直近3か月にレビューを行った商品の一覧です。</p>
 
-<?php foreach($Items as $Item):?>
-<?php echo $this->element('ItemList',array('Item'=>$Item));?>
-<?php endforeach;?>
+				<?php foreach($Items as $Item):?>
+				<?php echo $this->element('ItemList',array('Item'=>$Item));?>
+				<?php endforeach;?>
+
 			</section><!-- /#collection-list -->
 		</div><!-- /#main-area -->
 	</div>

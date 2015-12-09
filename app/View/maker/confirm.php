@@ -14,7 +14,7 @@
 				<p>Beauty Pos tに御社商品を掲載してみませんか？<br>
 				ご興味のあるご担当者の方は、お手数ですが、まずは下記フォームにて必要事項をお送り下さい。</p>
 				<div class="section-body">
-					<form action="<?php echo WEBROOT.$this->name?>/input/" class="Contact-form h-adr" method="post">
+					<form action="<?php echo WEBROOT.$this->name?>/input/" class="contact-form h-adr" method="post">
 						<span class="p-country-name" style="display:none;">Japan</span>
 						<ul class="formlist">
 							<li class="required">
@@ -70,26 +70,29 @@
 								</dl>
 							</li>
 						</ul><!-- /.formlist -->
+					</form>
 
-						<div class="form-foot container">
-							<p>上記お問い合わせフォームよりご送信いただく、お客様の個人情報、およびご質問の内容は、当社の個人情報の取り扱いに従い、厳重に取り扱います。詳しくは「個人情報について」のページをご覧ください。<br>
-							お問い合わせフォームをご使用の際は、個人情報保護方針の内容にご了承の上で送信いただくようお願いいたします。</p>
-							<div class="form-nav">
-								<form method="post" action="<?php echo WEBROOT.$this->name?>/input">
-								<button class="btn btn-gray btn-before" data-last="Finish" type="submit">
-								<i class="ace-icon fa fa-arrow-left"></i>入力画面へ戻る
+					<div class="form-foot container">
+						<p>上記お問い合わせフォームよりご送信いただく、お客様の個人情報、およびご質問の内容は、当社の個人情報の取り扱いに従い、厳重に取り扱います。詳しくは「個人情報について」のページをご覧ください。<br>
+						お問い合わせフォームをご使用の際は、個人情報保護方針の内容にご了承の上で送信いただくようお願いいたします。</p>
+						<div class="form-nav-confirm">
+							<form method="post" action="<?php echo WEBROOT.$this->name?>/send" class="form-nav-next">
+								<button class="button btn-success btn-next btn-vpk" data-last="Finish" type="submit">
+									この内容で送信する <i class="fa fa-angle-right">&#8203;</i>
+								</button>
+								<input type="hidden" name="data[Maker]" value="<?php echo base64_encode(serialize($data['Maker'])) ?>">
+							</form>
+							
+							<form method="post" action="<?php echo WEBROOT.$this->name?>/input" class="form-nav-back">
+								<button class="button btn-nb btn-before" data-last="Finish" type="submit">
+									<i class="fa fa-angle-left">&#8203;</i> 入力画面へ戻り修正する
 								</button>
 								<input type="hidden" name="data[Maker]" value="<?php echo base64_encode(serialize($data['Maker'])) ?>">
 								<input type="hidden" name="back" value="1">
-								</form>
-								<form method="post" action="<?php echo WEBROOT.$this->name?>/send">
-								<button class="btn btn-success btn-next" data-last="Finish" type="submit">
-								お問い合せ内容送信<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-								</button>
-								<input type="hidden" name="data[Maker]" value="<?php echo base64_encode(serialize($data['Maker'])) ?>">
-														</form>							</div>
-						</div>
-					</form>
+							</form>
+						</div><!-- /.form-nav-confirm -->
+					</div><!-- /.form-foot -->
+					
 				</div>
 			</div><!-- /#user-form -->
 		</div><!-- /#main-area -->

@@ -1,12 +1,11 @@
 <div id="page-area">
     <div class="layout">
+        <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
+            <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
+            <li>美容機器の基礎知識</li>
+        </ol><!-- /#breadcrumb -->
 
-            <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
-                <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
-                <li>美容機器の基礎知識</li>
-            </ol><!-- /#breadcrumb -->
         <div id="main-area" class="layout-main layout-l">
-
             <div id="knowledge-section">
                 <h2 class="pagetitle"><img src="<?php echo WEBROOT?>images/knowledge/dummy/knowledge-title.png"
                 width="710" height="90" alt="美容機器の基礎知識 about beautymachine" class="fitimg-w"></h2>

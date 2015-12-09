@@ -39,9 +39,9 @@
                             </tbody>
                         </table><!-- /.table-std -->
                         <div class="item-chart">
-        <div style="width:80%">
-            <canvas id="canvas0" height="450" width="450"></canvas>
-        </div>
+                            <!-- <div style="width:80%"> -->
+                                <canvas id="canvas0" height="450" width="450"></canvas>
+                            <!-- </div> -->
                         </div><!-- /.item-chart -->
                     </div>
 
@@ -74,9 +74,9 @@ ratystar(<?php echo $Item['Item']['id']?>)
                             </tbody>
                         </table><!-- /.table-std -->
                         <div class="item-chart">
-        <div style="width:80%">
-            <canvas id="canvas<?php echo $v['ItemsReview']['id']?>" height="450" width="450"></canvas>
-        </div>
+                            <!-- <div style="width:80%"> -->
+                                <canvas id="canvas<?php echo $v['ItemsReview']['id']?>" height="450" width="450"></canvas>
+                            <!-- </div> -->
                         </div><!-- /.item-chart -->
                     </div><!-- /.evaluation -->
 

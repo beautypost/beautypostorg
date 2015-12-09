@@ -11,10 +11,10 @@
 			<h2 class="head-bar ico-arrow">商品掲載に関するお問い合わせ</h2>
 
 			<div id="user-form">
-				<p>Beauty Pos tに御社商品を掲載してみませんか？<br>
+				<p>Beauty Postに御社商品を掲載してみませんか？<br>
 				ご興味のあるご担当者の方は、お手数ですが、まずは下記フォームにて必要事項をお送り下さい。</p>
 				<div class="section-body">
-					<form action="<?php echo WEBROOT.$this->name?>/input/" class="Contact-form h-adr" method="post">
+					<form action="<?php echo WEBROOT.$this->name?>/input/" class="contact-form h-adr" method="post">
 						<span class="p-country-name" style="display:none;">Japan</span>
 						<ul class="formlist">
 							<li class="required">
@@ -81,9 +81,11 @@
 							<p>上記お問い合わせフォームよりご送信いただく、お客様の個人情報、およびご質問の内容は、当社の個人情報の取り扱いに従い、厳重に取り扱います。詳しくは「個人情報について」のページをご覧ください。<br>
 							お問い合わせフォームをご使用の際は、個人情報保護方針の内容にご了承の上で送信いただくようお願いいたします。</p>
 							<div class="form-nav">
-								<button class="button btn-vpk">送信</button>
-							</div>
-						</div>
+								<button class="button btn-vpk">
+									入力内容確認画面へ <i class="fa fa-angle-right">&#8203;</i>
+								</button>
+							</div><!-- /.form-nav -->
+						</div><!-- /.form-foot -->
 					</form>
 				</div>
 			</div><!-- /#user-form -->

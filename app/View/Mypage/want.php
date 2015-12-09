@@ -27,9 +27,9 @@
 				<h2 class="head-std ico-arrow">Want!商品一覧</h2>
 				<p>直近3か月にWant!した商品の一覧です。</p>
 
-<?php foreach($Items as $Item):?>
-<?php echo $this->element('ItemList',array('Item'=>$Item));?>
-<?php endforeach;?>
+				<?php foreach($Items as $Item):?>
+				<?php echo $this->element('ItemList',array('Item'=>$Item));?>
+				<?php endforeach;?>
 
 			</section><!-- /#collection-list -->
 		</div><!-- /#main-area -->

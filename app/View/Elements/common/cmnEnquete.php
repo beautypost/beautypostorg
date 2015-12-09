@@ -8,12 +8,12 @@
                     <div class="round-contents-body">
                         <p>
                         <?php echo $Questions[0]['Question']['title']?><br /><br />
+                        </p>
                         <ul>
                         <?php foreach($Questions[0]['QuestionValue'] as $k => $v):?>
                             <li><input type="radio" name="data[question_value_id]" value="<?php echo $v['id']?>"><?php echo $v['value']?></li>
                         <?php endforeach;?>
                         </ul>
-                        </p>
                         <footer>
                             <ul class="clearfix">
                                 <li class="fll"><input type="submit" class="button btn-pk" value="投票する"></li>

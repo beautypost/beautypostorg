@@ -34,7 +34,7 @@
 							</li>
 						</ul>
 
-						<footer>
+						<footer class="form-nav">
 							<button type="submit" class="button btn-pk">パスワードの再設定</button>
 						</footer>
 						<input type="hidden" name="data[beautyid]" value="<?php echo $Snsuser['Snsuser']['beautyid']?>">

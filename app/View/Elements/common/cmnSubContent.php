@@ -24,10 +24,10 @@
                          --><img src="<?php echo WEBROOT?>common-img/sbnr-privilege-half.jpg" width="568" height="240" class="fitimg-w hover-fade rsp-xoxx" alt="Beauty Post メンバー会員特典について"><!--
                          --><img src="<?php echo WEBROOT?>common-img/sbnr-privilege.jpg" width="500" height="140" class="fitimg-w hover-fade rsp-xxxo" alt="Beauty Post メンバー会員特典について"><!--
                      --></a></li>
-                    <li><a href="<?php echo WEBROOT?>pages/voice/"><!--
-                         --><img src="<?php echo WEBROOT?>common-img/sbnr-voice-full.jpg" width="990" height="240" class="fitimg-w hover-fade rsp-oxox" alt="体験者の声" ><!--
-                         --><img src="<?php echo WEBROOT?>common-img/sbnr-voice-half.jpg" width="569" height="240" class="fitimg-w hover-fade rsp-xoxx" alt="体験者の声"><!--
-                         --><img src="<?php echo WEBROOT?>common-img/sbnr-voice.jpg" width="500" height="180" class="fitimg-w hover-fade rsp-xxxo" alt="体験者の声"><span class="rsp-xxxo subtxt">美容機器で、本気のスキンケア・ダイエット・アンチエイジングに取り組んでみました。</span><!--
+                    <li><a href="<?php echo WEBROOT?>pages/report/"><!--
+                         --><img src="<?php echo WEBROOT?>common-img/sbnr-report-full.jpg" width="990" height="240" class="fitimg-w hover-fade rsp-oxox" alt="体験者の声" ><!--
+                         --><img src="<?php echo WEBROOT?>common-img/sbnr-report-half.jpg" width="569" height="240" class="fitimg-w hover-fade rsp-xoxx" alt="体験者の声"><!--
+                         --><img src="<?php echo WEBROOT?>common-img/sbnr-report.jpg" width="500" height="180" class="fitimg-w hover-fade rsp-xxxo" alt="体験者の声"><span class="rsp-xxxo subtxt">美容機器で、本気のスキンケア・ダイエット・アンチエイジングに取り組んでみました。</span><!--
                      --></a></li>
                 </ul>
             </div><!-- /.side-bnrs -->

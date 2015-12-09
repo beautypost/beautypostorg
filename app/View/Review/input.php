@@ -44,8 +44,8 @@
                             </footer>
                         </div>
                     </section><!-- /.review-user -->
-<form method="post" action="<?php echo WEBROOT.$this->name?>/input">
-
+                    
+                <form method="post" action="<?php echo WEBROOT.$this->name?>/input">
                     <ul class="review-data formlist">
                         <li class="wide required">
                             <dl>
@@ -109,7 +109,11 @@
 
                     <footer>
                         <p class="mb16"><span class="wsnw"><a href="<?php echo WEBROOT?>pages/guide/" target="_blank">利用規約</a>と<a href="<?php echo WEBROOT?>pages/privacy/" target="_blank">プライバシーポリシー</a>に</span><span class="wsnw">同意いただきレビューをご投稿ください。</span></p>
-                        <button class="button btn-pk btn-sizeM">投稿する</button>
+                        <div class="form-nav">
+                            <button class="button btn-vpk">
+                                投稿内容確認画面へ <i class="fa fa-angle-right">&#8203;</i>
+                            </button>
+                        </div>
                     </footer>
                     <input type="hidden" name="data[item_id]" value="<?php echo $Item['Item']['id']?>">
                 </form>

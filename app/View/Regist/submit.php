@@ -18,7 +18,7 @@
                         ID、パスワードをお忘れの場合は、お問い合わせフォームよりお問い合わせください。</p>
                     </div>
                 </div>
-                <footer>
+                <footer class="form-nav">
                     <ul>
                         <li><a href="<?php echo WEBROOT?>mypage/" class="button btn-vpk">マイページへ</a></li>
                     </ul>
