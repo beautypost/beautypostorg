@@ -1,17 +1,4 @@
-    <script>
 
-    function ratystar(id){
-
-            $('.starrev'+id).raty( {
-             readOnly: true,
-             space:false,
-             score: function() {
-                return $(this).attr('data-score');
-             },
-             path: '<?php echo WEBROOT?>raty/lib/images'
-            });
-    }
-    </script>
 <div id="page-area">
     <div class="layout">
             <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
@@ -32,7 +19,7 @@
                                 <tr>
                                     <th>満足度</th>
                                     <td class="user-rate">
-                    <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_review']?>"></div>
+                    <div class="starrev0" data-score="<?php echo $totalreview['total']?>"></div>
 
                                     </td>
                                 </tr>
@@ -50,7 +37,7 @@
                     </footer>
                 </section><!-- /.summary -->
 <script>
-ratystar(<?php echo $Item['Item']['id']?>)
+ratystar(0)
 </script>
 <?php foreach($Reviews as $k => $v):?>
 

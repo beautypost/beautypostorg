@@ -247,13 +247,15 @@
                                 <tr>
                                     <th>満足度</th>
                                     <td class="user-rate">
-                                        <div class="starrev" data-score="3">
+                                        <div class="starrev0" data-score="<?php echo $totalreview['total']?>">
                                         <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo count($Reviews)?>件</a>）</span>
                                     </td>
                                 </tr>
                             </tbody>
                         </table><!-- /.table-std -->
-
+<script>
+ratystar(0)
+</script>
                         <div class="item-review-body">
                             <div class="item-chart">
                                 <!-- <div style="width:80%"> -->
@@ -264,8 +266,6 @@
                             <section class="review-topics">
                                 <div class="round-thin-contents">
                                     <h2 class="round-head">ユーザーレビュートピック</h2>
-
-
                                     <div class="section-body">
                                         <ul>
                                             <?php foreach($Reviews as $k => $v):?>
@@ -276,14 +276,22 @@
                                                     <dl>
                                                         <dt>満足度</dt>
                                                         <dd class="user-rate">
-                                                        <div class="starrev" data-score="3">
+                                                        <div class="starrev<?php echo $v['ItemsReview']['id']?>" data-score="<?php echo $v['ItemsReview']['total']?>">
                                                         </dd>
                                                     </dl>
                                                     <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsReview']['created']))?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
                                                 </a>
                                             </li>
+<<<<<<< Updated upstream
                                             <!-- review-->
                                             <?php endforeach;?>
+=======
+<script>
+ratystar(<?php echo $v['ItemsReview']['id']?>)
+</script>
+<!-- review-->
+<?php endforeach;?>
+>>>>>>> Stashed changes
                                         </ul>
                                     </div><!-- /.section-body -->
                                     <p class="more"><a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>

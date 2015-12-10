@@ -60,7 +60,7 @@ class ItemController extends AppController {
 		$item = $this->Item->getItemByID($itemID);
 		$this->log('LINKERROR::itemID='.$itemID.':USERID:'.$this->UserC->getUserID());
 		if(!$item){
-			throw new NotFoundException();			
+			throw new NotFoundException();
 		}
 
 		$af = 0;
@@ -82,7 +82,7 @@ class ItemController extends AppController {
 		$this->redirect($url);
 
 // 		if(!$item){
-// 			$this->setMetaData();			
+// 			$this->setMetaData();
 // //			return;
 // 		}
 // 		$this->set('Item',$item);
@@ -120,9 +120,9 @@ class ItemController extends AppController {
 		$this->set('genre',$genre);
 		$title = $genre['name'].'/'.$item['Item']['name'];
 		$keywords = array($genre['name'],$item['Item']['name']);
-		$this->metaData = $this->MetaC->setMetaData($title.ITEMPAGETITLE,$keywords,$title.ITEMPAGEDESCRIPTION);        
+		$this->metaData = $this->MetaC->setMetaData($title.ITEMPAGETITLE,$keywords,$title.ITEMPAGEDESCRIPTION);
 		$breadcrumb[] = array('name'=>$genre['name'],'link'=>WEBROOT.'list/?genreID='.$genre['id']);
-		$breadcrumb[] = array('name'=>$item['Item']['name'],'link'=>WEBROOT.'item/?itemID='.$item['Item']['id']);		
+		$breadcrumb[] = array('name'=>$item['Item']['name'],'link'=>WEBROOT.'item/?itemID='.$item['Item']['id']);
 		$this->breadcrumbs = $breadcrumb;
 	}
 

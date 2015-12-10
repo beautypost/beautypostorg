@@ -42,7 +42,7 @@ class VoteController extends AppController {
 	/**
 	itemをお気に入り登録
 	**/
-	public function ItemReviewInput() {
+	public function itemReviewInput() {
 
 		$itemID = isset($this->params['url']['itemID']) ? $this->params['url']['itemID'] : $this->itemID;
 		$userID = $this->UserC->getUserID();
@@ -57,7 +57,7 @@ class VoteController extends AppController {
 
 		//不正なitemID
 		if(!$item){
-			throw new NotFoundException();	
+			throw new NotFoundException();
 		}
 
 		//GenreTITLEを取得
@@ -91,8 +91,8 @@ class VoteController extends AppController {
 	/**
 	itemに投票をする
 	**/
-	public function ItemReviewConfirm() {
-//		$itemID = isset($this->request->data['Post']['itemID']) ? $this->requestdata->['itemID'] : '';		
+	public function itemReviewConfirm() {
+//		$itemID = isset($this->request->data['Post']['itemID']) ? $this->requestdata->['itemID'] : '';
 		//1回しか投票できない仕組み
 		$itemID = $this->request->data['itemID'];
 		$userID = $this->UserC->getUserID();
@@ -220,7 +220,7 @@ class VoteController extends AppController {
 
 //満足度
 //一人あたりの満足度 (自分が投票したもの * 5) / 投票した値
-//例: 2つの項目のみ投票 A = 3 B = 5 => 合計値8 / 2つの投票 * 5 => 10 ==> 8/10 => 満足度 4/5 
+//例: 2つの項目のみ投票 A = 3 B = 5 => 合計値8 / 2つの投票 * 5 => 10 ==> 8/10 => 満足度 4/5
 //AAさん 満足度 4/5
 //BBさん 満足度 1/5
 //全体の満足度 5/10 => 2.5/5
@@ -240,8 +240,8 @@ class VoteController extends AppController {
 	itemに投票
 	**/
 	public function setStar() {
-		$itemID = isset($this->Request['url']['itemID']) ? $this->Request['url']['itemID'] : '';		
-		$star = isset($this->Request['url']['star']) ? $this->Request['url']['star'] : '';				
+		$itemID = isset($this->Request['url']['itemID']) ? $this->Request['url']['itemID'] : '';
+		$star = isset($this->Request['url']['star']) ? $this->Request['url']['star'] : '';
         //$this->getUserData();
         $data = array('status'=>'success');
 		$this->ViewClass = 'Json';
@@ -258,9 +258,9 @@ class VoteController extends AppController {
 	// 	$this->set('genre',$genre);
 	// 	$title = $genre['name'].'/'.$item['Item']['name'];
 	// 	$keywords = array($genre['name'],$item['Item']['name']);
-	// 	$this->metaData = $this->MetaC->setMetaData($title.ITEMPAGETITLE,$keywords,$title.ITEMPAGEDESCRIPTION);        
+	// 	$this->metaData = $this->MetaC->setMetaData($title.ITEMPAGETITLE,$keywords,$title.ITEMPAGEDESCRIPTION);
 	// 	$breadcrumb[] = array('name'=>$genre['name'],'link'=>WEBROOT.'list/?genreID='.$genre['id']);
-	// 	$breadcrumb[] = array('name'=>$item['Item']['name'],'link'=>WEBROOT.'item/?itemID='.$item['Item']['id']);		
+	// 	$breadcrumb[] = array('name'=>$item['Item']['name'],'link'=>WEBROOT.'item/?itemID='.$item['Item']['id']);
 	// 	$this->breadcrumbs = $breadcrumb;
 	// }
 

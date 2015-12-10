@@ -160,6 +160,14 @@ class ItemsReview extends AppModel {
         return $ret;
     }
 
+    public function getReviewCountByitemID($itemID){
+        $conditions = array(
+            'conditions'=> array('item_id'=>$itemID)
+            );
+        return $this->find('count',$conditions);
+    }
+
+
     public function getTotalReviewByAll($tr){
         $p1 = $p2 = $p3 = $p4 = $p5 = 0;
         foreach($tr as $k=>$v){
@@ -176,6 +184,7 @@ class ItemsReview extends AppModel {
         $r['p3'] = $p3 / $total;
         $r['p4'] = $p4 / $total;
         $r['p5'] = $p5 / $total;
+        $r['total'] = ($p1+$p2+$p3+$p4+$p5) / ($total*5);
         return $r;
     }
 

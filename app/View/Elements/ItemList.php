@@ -21,22 +21,24 @@
                     </div>
                 </a>
             </div><!-- /.item-img -->
+            <?php if($Item['Item']['price'] > 0):?>
             <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
+        <?php endif;?>
         </div><!-- .item-face -->
         <div class="item-summary">
             <dl class="item-rate">
                 <dt>モニター評価</dt>
-                <?php if($Item['Item']['monitor'] > 0):?>
+<?php if($Item['Item']['monitor'] > 0):?>
                 <dd class="monitor-rate">
-                    <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_monitor']?>"></div>
-                    <span>（レビュー：<a href="<?php echo WEBROOT?>Monitor/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['monitor']?>件</a>）</span>
+                    <div class="star<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_monitor']?>"></div>
+                    <span>（レビュー：<a href="<?php echo WEBROOT?>Monitor/index/<?php echo $Item['Item']['id']?>"><?php echo $ItemsReview[$Item['Item']['id']]['count']?>件</a>）</span>
                     <p><?php echo $Item['Item']['result']?></p>
                 </dd>
                 <?php endif;?>
                 <dt>ユーザーレビュー</dt>
                 <dd class="user-rate">
-                    <div class="star<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_review']?>"></div>
-                    <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['review']?>件</a>）</span>
+                    <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $ItemsReview[$Item['Item']['id']]['star']?>"></div>
+                    <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo $ItemsReview[$Item['Item']['id']]['count']?>件</a>）</span>
                 </dd>
             </dl><!-- /.item-rate -->
 

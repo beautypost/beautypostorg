@@ -55,7 +55,7 @@ class AdmincolumnController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 		$Column = $this->Column->getItems();
 //		var_dump($Column);
 		$this->set('Columns',$Column);

@@ -45,7 +45,7 @@ class WebrequestController extends AppController {
         //DATAが入力されていなかった場合(初めて画面が表示された場合)
 	    if (!$this->request->is('post')) {
 
-	    	$Webrequest['Webrequest']['genreID'] = $this->params['url']['genreID'];	    	
+	    	$Webrequest['Webrequest']['genreID'] = $this->params['url']['genreID'];
 	    	$this->set('Webrequest',$Webrequest);
 
 	    	return;
@@ -55,7 +55,7 @@ class WebrequestController extends AppController {
         if(!$this->Webrequest->validates()){
 
 		$genreID = isset($this->request['data']['Webrequest']['genreID']) ? $this->request['data']['Webrequest']['genreID'] : null;
-		$url = isset($this->request['data']['Webrequest']['url']) ? $this->request['data']['Webrequest']['url'] : null;		
+		$url = isset($this->request['data']['Webrequest']['url']) ? $this->request['data']['Webrequest']['url'] : null;
 		$genre = $this->Genre->getGenreByGenreID($genreID);
 
 			$message = $this->WebrequestC->setMessage($url,$genreID,$genre['name']);
@@ -88,7 +88,7 @@ class WebrequestController extends AppController {
 		$this->set('genreID',$genreID);
 
 		$genre = $this->Genre->getStatigGenreByGenreID($genreID);
-		$this->metaData = $this->MetaC->setMetaData($genre['name'],'',$genre['comment']);        
+		$this->metaData = $this->MetaC->setMetaData($genre['name'],'',$genre['comment']);
 
 
 	}

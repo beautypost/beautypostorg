@@ -55,7 +55,7 @@ class AdminquestionController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 		$news = $this->Question->getItems('','');
 //		var_dump($news);
 		$this->set('Questions',$news);

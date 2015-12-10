@@ -55,7 +55,7 @@ class AdminfavoriteController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 		$Favorite = $this->Favorite->getItems();
 //		var_dump($Favorite);
 		$this->set('Favorites',$Favorite);

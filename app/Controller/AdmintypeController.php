@@ -55,7 +55,7 @@ class AdmintypeController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 		$Type = $this->Type->getItems();
 //		var_dump($Type);
 		$this->set('Types',$Type);

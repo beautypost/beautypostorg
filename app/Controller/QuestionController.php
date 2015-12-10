@@ -105,7 +105,7 @@ class QuestionController extends AppController {
     //     $this->set('Question',$question);
     // }
 
-    public function Index(){
+    public function index(){
     //getで受け取ったdataをセット
         $data = '';
         $data = $this->setRequestGetValues($data);

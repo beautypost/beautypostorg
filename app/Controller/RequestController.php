@@ -36,7 +36,7 @@ class RequestController extends AppController {
 	サービス登録TOP
 	**/
 	public function index() {
-		$this->setMetaData();		
+		$this->setMetaData();
 	}
 
 	/**
@@ -59,7 +59,7 @@ class RequestController extends AppController {
      metaDataの設定
     **/
 	public function setMetaData(){
-		$this->metaData = $this->MetaC->setMetaData(REQUESTPAGETITLE,REQUESTKEYWORDS,REQUESTPAGEDESCRIPTION);        
+		$this->metaData = $this->MetaC->setMetaData(REQUESTPAGETITLE,REQUESTKEYWORDS,REQUESTPAGEDESCRIPTION);
 
 	}
 }

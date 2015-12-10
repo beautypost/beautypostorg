@@ -66,7 +66,7 @@ class AdminuserController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
         $sort = array('created'=>'desc');
 		$this->set('Snsusers',$this->Snsuser->getItems('',$sort,1000));
 		return;

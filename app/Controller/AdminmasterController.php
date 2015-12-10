@@ -56,7 +56,7 @@ class AdminmasterController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 
     // // 機器で探す　
      $this->set('GenreKisyu',$this->Genre->getKisyu());

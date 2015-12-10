@@ -56,7 +56,7 @@ class AdminblogController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 		$Blog = $this->Blog->getItems();
 //		var_dump($Blog);
 		$this->set('Blogs',$Blog);

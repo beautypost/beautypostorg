@@ -55,7 +55,7 @@ class AdminattrController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 		$Genre = $this->Genre->getKisyu();
 //		var_dump($Genre);
 		$this->set('Genres',$Genre);

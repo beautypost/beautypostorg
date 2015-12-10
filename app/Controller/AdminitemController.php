@@ -56,7 +56,7 @@ class AdminitemController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
         $sort = array('created'=>'desc');
 		$this->set('Items',$this->Item->getItems('',$sort,100));
 		return;

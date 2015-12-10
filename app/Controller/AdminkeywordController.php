@@ -54,7 +54,7 @@ class AdminkeywordController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function Index() {
+	public function index() {
 		$AdminKeywords = $this->AdminKeyword->getItems();
 //		var_dump($AdminKeywords);
 		$this->set('AdminKeywords',$AdminKeywords);

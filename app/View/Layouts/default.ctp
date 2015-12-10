@@ -35,24 +35,39 @@
             <?php echo $this->Session->flash(); ?>
 
 
-<script>
 
-function wants(id){
+<script type="text/javascript">
+    function ratystar(id){
+            $('.star'+id).raty( {
+             readOnly: true,
+             space:false,
+             score: function() {
+                return $(this).attr('data-score');
+             },
+             path: '<?php echo WEBROOT?>raty/lib/revimages'
+            });
+            $('.starrev'+id).raty( {
+             readOnly: true,
+             space:false,
+             score: function() {
+                return $(this).attr('data-score');
+             },
+             path: '<?php echo WEBROOT?>raty/lib/images'
+            });
+        }
 
-//alert( $( this ).val()); // valueを表示
-        $.ajax({
-                type: "GET",
-                url: "<?php echo WEBROOT?>Ajax/setWant/?itemID="+id,
-                success: function(data){
-                        if(data != '') {
-                            $("#ajwant").html(data)
-                        }
-                }
-
-        });
-}
-</script>
-
+    function wants(id){
+            $.ajax({
+                    type: "GET",
+                    url: "<?php echo WEBROOT?>Ajax/setWant/?itemID="+id,
+                    success: function(data){
+                            if(data != '') {
+                                $("#ajwant"+id).html(data)
+                            }
+                    }
+            });
+    }
+    </script>
 
             <?php echo $this->fetch('content'); ?>
 <!--

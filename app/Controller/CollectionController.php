@@ -89,6 +89,23 @@ class CollectionController extends AppController {
 
 		$items = $this->Item->getItems($conditions,$sort,$limit,$p);
 
+
+		$reviewall = array();
+		foreach($items as $k => $v){
+
+			//レビュー情報
+			$reviews = $this->ItemsReview->getItemsByItemID($v['Item']['id']);
+
+	        $r['total'] = 0;
+	        if(count($reviews) != 0){
+		        $r = $this->ItemsReview->getTotalReviewByAll($reviews);
+	        }
+	        $reviewall[$v['Item']['id']]['star'] = $r['total'];
+	        $reviewall[$v['Item']['id']]['count'] = count($reviews);
+		}
+
+		$this->set('ItemsReview',$reviewall);
+
 		$this->set('Items',$items);
 
 		//検索条件でのmaxcount
@@ -132,8 +149,8 @@ class CollectionController extends AppController {
         if(count($reviews) != 0){
 	        $r = $this->ItemsReview->getTotalReviewByAll($reviews);
         }
-
-	        $this->set('totalreview',$r);
+//var_dump($r);
+        $this->set('totalreview',$r);
 
 
 		//レビュー情報
