@@ -5,7 +5,7 @@
             <li><a href="<?php echo WEBROOT?>collection/">美容機器コレクション</a></li>
             <li><?php echo $Item['Item']['title']?></li>
         </ol><!-- /#breadcrumb -->
-        
+
         <div id="main-area" class="layout-main layout-l">
             <section id="collection-detail" class="collection-item">
                 <div class="box-contents">
@@ -156,7 +156,7 @@
                         </div>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-detail -->
-                
+
                 <?php if($Item['Item']['example'] || $Item['Item']['example_url']):?>
                 <section class="item-howtouse">
                     <h2 class="head-bar ico-arrow">使用方法</h2>
@@ -172,7 +172,7 @@
                     </div><!-- /.section-body -->
                 </section><!-- /.item-howtouse -->
                 <?php endif;?>
-                
+
                 <?php if(count($Monitors)>0):?>
                 <section class="item-m-review item-review">
                     <h2 class="head-bar ico-arrow">モニター体験レビュー</h2>
@@ -282,16 +282,14 @@ ratystar(0)
                                                     <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsReview']['created']))?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
                                                 </a>
                                             </li>
-<<<<<<< Updated upstream
-                                            <!-- review-->
-                                            <?php endforeach;?>
-=======
+
+
 <script>
 ratystar(<?php echo $v['ItemsReview']['id']?>)
 </script>
 <!-- review-->
 <?php endforeach;?>
->>>>>>> Stashed changes
+
                                         </ul>
                                     </div><!-- /.section-body -->
                                     <p class="more"><a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>">more<br><i class="fa fa-caret-down">&#8203;</i></a></p>
@@ -307,7 +305,7 @@ ratystar(<?php echo $v['ItemsReview']['id']?>)
                     <!-- ここまで　-->
                     <?php endif;?>
                 </section><!-- /.item-u-review.item-review -->
-                
+
                 <?php if(count($Materials) > 0):?>
                 <section class="item-relative">
                     <h2 class="head-std ico-arrow">関連商品</h2>
@@ -359,7 +357,7 @@ ratystar(<?php echo $v['ItemsReview']['id']?>)
                     </footer>
                 </section><!-- /.item-cordinate -->
                 <?php endif;?>
-                
+
             </section><!-- /#collection-list -->
         </div><!-- /#main-area -->
 

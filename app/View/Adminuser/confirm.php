@@ -31,7 +31,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">ニックネーム</label>
         <div class="col-sm-10">
-      <?php echo $data['Snsuser']['name']?>
+      <?php echo $data['Snsuser']['username']?>
         </div>
     </div>
 
