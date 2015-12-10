@@ -5,7 +5,7 @@
             <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
             <li><a href="<?php echo WEBROOT.$this->name?>">美容機器コレクション</a></li>
         </ol><!-- /#breadcrumb -->
-        
+
         <div id="main-area" class="layout-main layout-l">
             <section id="collection-list">
                 <h2 class="head-bar ico-search">美容機器 一覧</h2>
