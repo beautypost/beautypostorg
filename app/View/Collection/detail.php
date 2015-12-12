@@ -154,6 +154,7 @@
                                 <iframe width="420" height="315" src="<?php echo $Item['Item']['movie']?>" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
+                        <p class="item-external"><a href="#" target="_blank" class="button btn-nb btn-sizeS">商品PRページ</a></p>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-detail -->
 
@@ -169,6 +170,7 @@
                                 <iframe width="420" height="315" src="<?php echo $Item['Item']['example_url']?>" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
+                        <p class="item-external"><a href="#" target="_blank" class="button btn-pdf btn-sizeS"><i class="fa fa-file-pdf-o">&#8203;</i>　取扱説明書カタログ</a></p>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-howtouse -->
                 <?php endif;?>

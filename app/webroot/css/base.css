@@ -2041,6 +2041,21 @@ ul.alp > li, ol.alp > li {
 .button.btn-nb:hover {
   background: #9692a1;
 }
+.button.btn-pdf {
+  color: #fff;
+  background: #dd2528;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UxNDA0NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q4MGEwYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e14045), color-stop(100%, #d80a0a));
+  background-image: -moz-linear-gradient(top, #e14045, #d80a0a);
+  background-image: -webkit-linear-gradient(top, #e14045, #d80a0a);
+  background-image: linear-gradient(to bottom, #e14045, #d80a0a);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE14045', endColorstr='#FFD80A0A');
+}
+.button.btn-pdf:hover {
+  background: #e86c70;
+}
 .button .subtxt {
   display: block;
   font-size: 60%;
@@ -4570,16 +4585,6 @@ a.photo-frame:hover {
 .collection-item .collection-body .item-gallery ul {
   zoom: 1;
 }
-@media (max-width: 1023px) {
-  .collection-item .collection-body .item-gallery ul {
-    margin-bottom: 16px;
-  }
-}
-@media (min-width: 1024px) {
-  .collection-item .collection-body .item-gallery ul {
-    margin-bottom: 32px;
-  }
-}
 .collection-item .collection-body .item-gallery ul:before, .collection-item .collection-body .item-gallery ul:after {
   content: '';
   display: table;
@@ -4611,22 +4616,24 @@ a.photo-frame:hover {
     width: 11.47059%;
   }
 }
-.collection-item .collection-body .item-external {
+.collection-item .collection-body .item-txt {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dotted #999999;
+}
+.collection-item .item-external {
+  margin-top: 1.5em;
   margin-bottom: 1.5em;
+  text-align: center;
   text-align: center;
 }
 @media (max-width: 479px) {
-  .collection-item .collection-body .item-external .button {
+  .collection-item .item-external .button {
     padding-right: 0;
     padding-left: 0;
     display: block;
     text-align: center;
   }
-}
-.collection-item .collection-body .item-txt {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px dotted #999999;
 }
 @media (max-width: 767px) {
   .collection-item .item-detail .table-std th, .collection-item .item-detail .table-std td {

@@ -657,8 +657,8 @@
 			}
 			.item-gallery { // サムネイルギャラリー
 				ul {
-					@include mqlt($bpL) { margin-bottom:16px; }
-					@include mqmt($bpL) { margin-bottom:32px; }
+					// @include mqlt($bpL) { margin-bottom:16px; }
+					// @include mqmt($bpL) { margin-bottom:32px; }
 					@include horizontalWrap(){
 						@include mqlt($bpL) {
 							margin-left:10 / 438 * 100%; margin-bottom:10 / 438 * 100%; width:102 / 438 * 100%;
@@ -670,13 +670,15 @@
 					}
 				}
 			}
-			.item-external {
-				margin-bottom:1.5em; text-align:center;
-				@include mqlt($bpS) {
-					.button { @include ps(0); display:block; text-align:center; }
-				}
-			}
+			
 			.item-txt { margin-top:16px; padding-top:16px; border-top:1px dotted $c-gy-dk; }
+		}
+		.item-external {
+			@include mv(1.5em); text-align:center;
+			text-align:center;
+			@include mqlt($bpS) {
+				.button { @include ps(0); display:block; text-align:center; }
+			}
 		}
 		.item-detail { // 詳細スペック
 			.table-std {
