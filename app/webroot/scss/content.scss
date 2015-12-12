@@ -1791,3 +1791,306 @@
 ====================================================================================================
 ◆ コラム (.page-column) ./column/
 ---------------------------------------------------------------------------------------------------- */
+	$cc-link: #387BA5;
+	$cc-linkbright: #7DBEDC;
+	$cc-theme: #41B5B4;
+	$cc-theme-lt: #80DBC9;
+	$cc-cream: #F1E9D2;
+	
+	#column-header {
+		border-top:16px solid $cc-theme;
+		background:#F4F4F4 url(../images/column/headbg.jpg) center top no-repeat;
+		@include background-size(contain);
+		h1 {
+			padding-top:1.25em; 
+			@include ps(3%);
+			@include mqlt($bpS) { padding-left:128px; }
+			@include mqmt($bpS) { padding-left:140px; }
+			height:120px;
+			@include fz(24);
+			color:#4D4D4D;
+			background:url(../images/column/h1bg.jpg) left top no-repeat;
+			@include background-size(auto 120px);
+			@include fz(18);
+			font-weight:400;
+			@include box-sizing(border-box);
+			@include text-shadow(0 2px 0 #fff);
+			a {
+				@include link-colors(#4D4D4D);
+			}
+			span {
+				margin-left:-2px; position:relative; display:block; color:#F79AA1;
+				@include mqlt($bpS) { @include fz(30); }
+				@include mqmt($bpS) { @include fz(36); }
+				letter-spacing:2px;
+			}
+		}
+	}
+	#column-footer { color:#fff; background:$cc-theme-lt; }
+	#column-fnav {
+		@include fz(12);
+		ul {
+			@include pv(1em);
+			@include inlineblockWrap() {
+				@include mqlt($bpS) { @include ps(1em); }
+				@include mqmt($bpM) { @include ps(2em); }
+			}
+			text-align:center;
+		}
+		a {
+			@include link-colors($c-txt);
+			line-height:4rem;
+			&:hover { text-decoration:underline; }
+		}
+	}
+	#column-copyright { line-height:3; color:#fff; background:$cc-theme; @include fz(11); text-align:center; }
+	
+	/* 共通 */
+	.column-head {
+		padding:0.5em 1em;
+		color:#fff;
+		background:$cc-theme;
+		@include fz(16);
+		font-weight:700;
+	}
+	.column-sidehead {
+		padding:0.5em 1em;
+		color:#fff;
+		background:$cc-theme;
+	}
+	.column-entrydate {
+		color:$c-txt;
+		@include fz(12);
+	}
+	.column-entryview {
+		color:darken($cc-theme-lt,20%) !important;
+		@include fz(12);
+	}
+	.column-eyecatch {
+		float:left; width:40%; margin-right:2%;
+	}
+	.column-viewmore {
+		text-align:right;
+		>a {
+			padding:0 1em;
+			@include border-radius(0.75em);
+			display:inline-block;
+			color:#fff;
+			background:$cc-theme;
+			&:hover { background:$cc-theme-lt; }
+		}
+	}
+	.column-boxfoot {
+		padding:1% 2%;
+		@include ps(2%);
+		@include mqlt($bpM) { @include pv(2%) }
+		@include mqmt($bpM) { @include pv(1%) }
+		border-top:1px dotted $cc-theme;
+	}
+	
+	/* 記事 */
+	.column-entry {
+		border:1px solid $cc-theme;
+		>.section-body {
+			padding:2%;
+		}
+	}
+	.column-entryhead {
+		margin-bottom:1em; padding-bottom:0.5em;
+		border-bottom:1px dotted $cc-theme;
+	}
+	.column-entrytitle {
+		clear:both;
+		@include mqlt($bpM) { @include pv(0.75em); @include fz(19); }
+		@include mqmt($bpM) { @include pv(0.5em); @include fz(22); }
+		a { @include link-colors($c-txt,$cc-link); }
+	}
+	.column-entrybody {
+		@include cf();
+	}
+	.column-entrytxt {
+		padding-top:2em;
+		li,p { @include container(1em); }
+	}
+	.column-entryinfo { @include cf(); }
+	.column-entrycategory {
+		float:left;
+		a { @include link-colors($cc-link,$cc-linkbright); @include ulLink(); }
+	}
+	.column-entrysns { float:right; }
+	
+	/* トップ */
+	.column-topcategory {
+		border:1px solid $cc-theme;
+		>.section-body {
+			padding:2%;
+		}
+	}
+	.column-entryblocklist {
+		@include mqmt($bpM) {
+			@include horizontalWrap(section);
+		}
+	}
+	.column-entryblock {
+		@include mqmt($bpM) {
+			margin-top:0; margin-left:2%; width:49%;
+			&:nth-child(odd) { margin-left:0; clear:both; }
+		}
+		>a {
+			padding:2%;
+			display:block;
+			@include cf();
+			@include link-colors($c-txt,$cc-link);
+			&:hover {
+				background:rgba($cc-linkbright,0.1);
+			}
+		}
+	}
+	.column-blockbody {
+		overflow:hidden;
+	}
+	.column-entryblocktitle {
+		@include pv(0.25em); @include fz(16);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	#column-sub {
+		@include mqlt($bpL) { margin-top:1.5em; }
+		a {
+			@include link-colors($cc-link,$cc-linkbright);
+		}
+		.entry-views,.entry-date {
+			@include ps(0.75em);
+			display:block;
+			color:#fff;
+		}
+		.entry-date { margin-top:0.5em; margin-bottom:0.5em; background:$c-bk-lt; float:left; }
+		.entry-title { display:block; clear:both; }
+		
+		.column-bnr {
+			@include mqlt($bpL) {
+				margin:0 auto;
+				max-width:300px;
+			}
+			a {
+				padding:3%;
+				border:1px solid #ccc;
+				display:block;
+				&:hover { @include opacity(0.6); }
+			}
+		}
+	}
+	.column-famous {
+		@include mq($bpM,$bpL) {
+			float:left;
+			width:48%;
+		}
+		li {
+			border-bottom:1px dotted $c-bk-lt;
+			&:nth-child(1) { .entry-views { background:$c-gd; } }
+			&:nth-child(2) { .entry-views { background:$c-sv; } }
+			&:nth-child(3) { .entry-views { background:$c-bz; } }
+		}
+		a {
+			@include pv(1em); @include ps(2px); display:block;
+			.entry-title { text-decoration:underline; }
+			&:hover { .entry-title { text-decoration:none; } }
+		}
+		.column-entryview { text-decoration:none; }
+		.rank { margin-top:-8px; position:relative; float:left; width:32px; height:32px; }
+	}
+	.column-recent {
+		@include mq($bpM,$bpL) {
+			margin-top:0;
+			float:right;
+			width:48%;
+		}
+		li {
+			border-bottom:1px dotted $c-bk-lt;
+		}
+		a {
+			@include pv(1em); @include ps(2px); display:block;
+			.entry-title { text-decoration:underline; }
+			&:hover { .entry-title { text-decoration:none; } }
+		}
+	}
+	.column-category {
+		@include mq($bpM,$bpL) {
+			clear:both;
+		}
+		ul {
+			margin-top:1em;
+		}
+		li {
+			@include mq($bpM,$bpL) {
+				padding:0.5em 0.75em;
+				display:inline-block;
+			}
+			a {
+				@include ps(2px);
+				line-height:2;
+				@include ulLink();
+				&:before {
+					margin-right:0.25em;
+					display:inline-block;
+					vertical-align:-4%;
+					@include fz(16);
+					@include fa-chevron-circle-right();
+				}
+			}
+		}
+	}
+	
+	/* ---コラム用ページネーション--- */
+	.column-pagination {
+		text-align:center;
+		li {
+			display:inline-block;
+			@include mqlt($bpS) {
+				line-height:4rem; @include fz(12); font-weight:700;
+				&.sp-hide { display:none; }
+			}
+			@include mqmt($bpS) { line-height:2.4rem; }
+			a { 
+				padding:0 10px;
+				@include link-colors($cc-link,$cc-linkbright);
+				display:block;
+				&:hover { text-decoration:none; }
+			}
+		}
+		ul {
+			@include mqlt($bpS) { @include cf(); }
+		}
+		ul>li {
+			>a { background:$c-gy; }
+			&.nav-prev {
+				@include mqlt($bpS) { float:left; }
+				a:before { @include ms(0.25em); content:'<'; }
+			}
+			&.nav-next {
+				@include mqlt($bpS) { float:right; }
+				a:after { @include ms(0.25em); content:'>'; }
+			}
+		}
+		ol>li {
+			>a { text-decoration:underline; }
+			&.nav-now {
+				color:#fff; background:$cc-theme; text-decoration:none;
+				padding:0 10px;
+			}
+			&.ell {
+				padding:0 10px;
+			}
+		}
+		.nav-back {
+			@include ms(1em);
+			a { @include ps(1.5em); }
+		}
+	}
+	
