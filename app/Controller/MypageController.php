@@ -82,16 +82,16 @@ class MypageController extends AppController {
     function index(){
 
 		//レビューしたアイテム取得
-		$userID = $this->UserC->getUserID();
-            $belongsTo = array(
-                'Item' => array(
-                    'className' => 'Item',
-                    'foreignKey' => 'item_id'
-                ));
-        $this->UserVote->bindModel(array('belongsTo' => $belongsTo));
-        if(!$userID){
-            $this->redirect('/Login');
-        }
+		// $userID = $this->SnsuserData['Snsuser']['id'];
+  //           $belongsTo = array(
+  //               'Item' => array(
+  //                   'className' => 'Item',
+  //                   'foreignKey' => 'item_id'
+  //               ));
+  //       $this->UserVote->bindModel(array('belongsTo' => $belongsTo));
+  //       if(!$userID){
+  //           $this->redirect('/Login');
+  //       }
 
 
         $this->set('Favorites',$this->Favorite->getItems());
@@ -176,14 +176,14 @@ class MypageController extends AppController {
         $_data = (unserialize(base64_decode($messages)));
 //var_dump($_data);
         $da = $this->Snsuser->setData($_data);
-        $da['beautyid'] = uniqid();
-        $da['sns'] = WEBKEY;
-        $data['Snsuser'] = $da;
-        $this->set('data',$data);
+        // $da['beautyid'] = uniqid();
+        // $da['sns'] = WEBKEY;
+        // $data['Snsuser'] = $da;
+//        $this->set('data',$data);
         $this->Snsuser->create();
         $this->Snsuser->save($da,array('validate'=>false));
 
-        $this->set('pagename','派遣者新規登録-登録完了');
+        $this->set('pagename','登録-登録完了');
 
 
     }

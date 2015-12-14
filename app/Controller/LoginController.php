@@ -86,10 +86,16 @@ class LoginController extends AppController {
 			return;
 		}
 
+		$data = $this->setRequestValue($data,'stat');
 
+		$day = 0;
+		if($data['stat'] == '1'){
+			$day = LOGINTIME;
+		}
+		$this->Cookie->write(SESSIONNAME, $beautyid, false, $day);
 
 		//ログイン完了
-	    $this->Session->write(SESSIONNAME,$beautyid);
+//	    $this->Session->write(SESSIONNAME,$beautyid);
 	//            $this->Auth->login($data); //CakePHPのAuthログイン処理
 	    $this->redirect(REDIRECTURL); //ログイン後画面へリダイレクト
 
@@ -99,7 +105,8 @@ class LoginController extends AppController {
 	public function Logout(){
 
 		//ログイン完了
-	    $this->Session->write(SESSIONNAME,'');
+	    $this->Cookie->delete(SESSIONNAME);
+	    $this->Cookie->destroy();
 	//            $this->Auth->login($data); //CakePHPのAuthログイン処理
 	    $this->redirect(REDIRECTURL); //ログイン後画面へリダイレクト
 

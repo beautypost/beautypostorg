@@ -15,17 +15,22 @@
             </tr>
         </thead>
         <tbody>
-        <?php foreach($GenreKisyu as $Item):?>
+        <?php foreach($Attrs as $Item):?>
             <tr>
-            <td><?php echo $Item['Genre']['id']?></td>
-            <td><?php echo $Item['Genre']['title']?></td>
+            <td><?php echo $Item['Attr']['id']?></td>
+            <td><?php echo $Item['Attr']['title']?></td>
             <td>
-            <a class="btn-sm btn-success" href="<?php echo WEBROOT.$this->name?>/edit/?id=<?php echo $Item['Genre']['id']?>">編集</a>
+            <a class="btn-sm btn-success" href="<?php echo WEBROOT.$this->name?>/edit/?id=<?php echo $Item['Attr']['id']?>">編集</a>
             </td>
             </tr>
         <?php endforeach?>
         </tbody>
     </table>
+<h4 class="pink">
+    <i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
+    <a href="<?php echo WEBROOT?>Adminattr/input/">新規作成</a>
+</h4>
+
     </div>
 
 </div>

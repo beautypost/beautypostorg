@@ -5,7 +5,7 @@
                 <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
                 <li>会員ログイン</li>
             </ol><!-- /#breadcrumb -->
-            
+
             <?php if($errormessage):?>
             <div class="error-msg container">
                 <p><?php echo $errormessage?></p>
@@ -27,14 +27,15 @@
                         </div>
                         <div class="form-footer">
                             <p class="remember">
-                                <label><input type="checkbox" name="" value="ログイン状態を保存する（1ヶ月間）">ログイン状態を保存する（1ヶ月間）</label>
+                                <label><input type="checkbox" name="data[stat]" value="1">ログイン状態を保存する（1ヶ月間）</label>
                             </p>
                             <button class="button btn-vpk btn-sizeM">ログイン</button>
                             <ul>
                                 <li><a href="<?php echo WEBROOT?>Forgetpassword/">パスワードを忘れた方</a></li>
-                                <li><a href="<?php echo WEBROOT?>regist/input">まだアカウントをお持ちでない方</a></li>
+                                <li><a href="<?php echo WEBROOT?>Regist/input/?sns=<?php echo WEBKEY?>">まだアカウントをお持ちでない方</a></li>
                             </ul>
                         </div><!-- /.form-footer -->
+                        <input type="hidden" name="sns" value="<?php echo WEBKEY?>">
                     </form>
                 </section><!-- /#login-form -->
                 <section id="login-social">
@@ -45,7 +46,7 @@
                             <a href="<?php echo WEBROOT?>Googlelogin/login/" class="button btn-google"><i class="fa fa-google-plus"></i><span>利用規約に同意して</span>Google経由でログイン</a>
                             </li>
                             <li>
-                            <a href="<?php echo WEBROOT?>fbconnect/facebook/?rurl=<?php echo $redirecturl?>" class="button btn-facebook"><i class="fa fa-facebook-official"></i><span>利用規約に同意して</span>Facebook経由でログイン</a>
+                            <a href="<?php echo WEBROOT?>fbconnect/facebook/" class="button btn-facebook"><i class="fa fa-facebook-official"></i><span>利用規約に同意して</span>Facebook経由でログイン</a>
                             </li>
                             <li>
                             <a href="<?php echo WEBROOT?>TwLogin/twitterLogin" class="button btn-twitter"><i class="fa fa-twitter"></i><span>利用規約に同意して</span>Twitter経由でログイン</a>

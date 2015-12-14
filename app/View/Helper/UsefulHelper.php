@@ -135,6 +135,7 @@ class UsefulHelper extends AppHelper {
             $set = explode(',',$set);
         }
         $ret = '';
+//        var_dump($items);
         foreach($items as $key => $val){
             $ret .= '<input type=checkbox name=data['.$name.'][] value=\''.$key."'";
             if(is_array($set)){

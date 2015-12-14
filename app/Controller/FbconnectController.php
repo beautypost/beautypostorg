@@ -61,41 +61,53 @@ class FbconnectController extends AppController {
 
     //facebookの認証処理部分
     public function facebook(){
-        $rurl = (isset($this->params['url']['rurl']) && $this->params['url']['rurl']) ? $this->params['url']['rurl'] : DOMAIN;
-        if($rurl){
-            $this->Session->write('rurl',$rurl);
-            $redirecturl = $rurl;
-            $this->log($redirecturl);
-        }else{
-            $redirecturl = $this->Session->read('rurl');
-            $this->log($redirecturl);
-        }
+        // $rurl = (isset($this->params['url']['rurl']) && $this->params['url']['rurl']) ? $this->params['url']['rurl'] : DOMAIN;
+        // if($rurl){
+        //     $this->Session->write('rurl',$rurl);
+        //     $redirecturl = $rurl;
+        //     $this->log($redirecturl);
+        // }else{
+        //     $redirecturl = $this->Session->read('rurl');
+        //     $this->log($redirecturl);
+        // }
 
         $this->autoRender = false;
         $this->facebook = $this->UserC->createFacebook();
         $user = $this->facebook->getUser();       //【4】ユーザ情報取得
-//var_dump($user);
         //すでに登録済みか否か
         $asns = $this->Snsuser->getItemBySNSid($user,FACEBOOKKEY);
-//var_dump($asns);
+// var_dump($asns);
+// var_dump($user);
+// exit;
+        //ログインOK
         if($asns){
-            $this->Session->write('BeautyPostUser',$asns['Snsuser']['beautyid']);//【6】ユーザ情報をセッションに保存
-            $this->redirect($redirecturl);
+                    $this->Cookie->write(SESSIONNAME, $asns['Snsuser']['beautyid'], false, LOGINTIME);
+                    $this->redirect(REDIRECTURL);
         }
 
         if($user){//認証後
             $me = $this->facebook->api('/me','GET',array('locale'=>'ja_JP'));  //【5】ユーザ情報を日本語で取得
-            $bid = $this->Snsuser->fbsignin($me);
-//var_dump($bid);
-//return;
+//            $bid = $this->Snsuser->fbsignin($me);
 
-            $this->Session->write('BeautyPostUser',$bid);//【6】ユーザ情報をセッションに保存
-
-            $this->redirect($redirecturl);
+//            $this->Session->write('BeautyPostUser',$bid);//【6】ユーザ情報をセッションに保存
+            $this->redirect(
+                        array(
+                            'controller' => 'Regist',
+                            'action' => 'input',
+                            '?' => array(
+                                'sns_id' => $me['id'],
+                                'sns' => FACEBOOKKEY,
+                                'username'=>$me['name']
+                            )
+                            )
+                        );
 
         }else{//認証前
+
             $url = $this->facebook->getLoginUrl(array('scope' => 'email','canvas' => 1,'fbconnect' => 0));   //【7】スコープの確認
+
             $this->redirect($url);
+
         }
     }
 

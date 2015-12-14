@@ -76,7 +76,7 @@ class CollectionController extends AppController {
 			$data = unserialize(base64_decode($this->params['url']['data']['SearchData']));
 		}
 		//getで受け取ったdataをセット
-		$data = $this->setRequestGetValues($data);
+//		$data = $this->setRequestGetValues($data);
 		$this->set('data',$data);
 
 		//検索用パラメータ作成
@@ -84,8 +84,8 @@ class CollectionController extends AppController {
 
 		//pageing
 		$sort = isset($data['sort']) ? $data['sort'] : '';
-		$limit = isset($data['limit']) ? $data['limit'] : 10;
-		$p = isset($data['p']) ? $data['p'] : 0;
+		$limit = isset($data['limit']) ? $data['limit'] : 5;
+		$p = isset($this->params['url']['p']) ? $this->params['url']['p'] : 0;
 
 		$items = $this->Item->getItems($conditions,$sort,$limit,$p);
 

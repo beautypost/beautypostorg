@@ -114,5 +114,7 @@
                             </li>
                         </ul><!-- /.formlist -->
                     </div>
+<input type="hidden" name="data[sns]" value="<?php echo $data['Snsuser']['sns']?>">
+<input type="hidden" name="data[sns_id]" value="<?php echo $data['Snsuser']['sns_id']?>">
 
 

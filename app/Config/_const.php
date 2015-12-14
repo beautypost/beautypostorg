@@ -8,26 +8,22 @@ if(
 	define('FBDEBUG',1);
 //	define('FBDEBUG',0);
 	define('DOMAIN','http://localhost/beautypost');
-    define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
-    define('UploadImagePathBLOG','/Library/WebServer/Documents/beautypost/app/webroot/images/blogs/');
+
+ define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
+
 
 }else{
 	define('DOMAIN','http://beauty-post.jp');
 	define('WEBROOT','/');
 	define('FBDEBUG',0);
-    define('UploadImagePath','/httpdocs/app/webroot/images/item/');
-    define('UploadImagePathBLOG','/httpdocs/app/webroot/images/blogs/');
-
 }
 
 define('REDIRECTURL',DOMAIN);
-//define('LOGINTIME',1296000);
-define('LOGINTIME',0);
+
 define('TWITTERKEY',1);
 define('FACEBOOKKEY',2);
 define('GOOGLEKEY',3);
 define('SESSIONNAME','BeautyPostUser');
-define('REGISTREDIRECTURL',DOMAIN.'/Regist/input');
 define('WEBKEY',4);
 
 define('QUESTIONSUBLIMIT',2);
@@ -36,7 +32,7 @@ define('BLOGPAGELIMIT',10);
 define('BLOGPAGESUBLIMIT',5);
 define('LIMIT',15);
 define('PAGESTART',0);
-define('PAGERLIMIT',6);
+define('PAGERLIMIT',5);
 
 define('GENREKISYU',1);
 define('GENREPURPOSE',2);
@@ -110,25 +106,26 @@ define("GOOGLE_SITE_NAME", 'http://beauty-post.jp');
 // require_once '../Vendor/Google/src/contrib/Google_Oauth2Service.php';
 
 
+define('PAGETITLE','お問い合わせ');
 
-define('MAILTO','yamamoto@knsc.jp');
-define('MAILFROM','info@beauty-post.jp');
-define('MAILFROMNAME','beauty-post');
-define('MakerSUBJECT','メーカーお問い合わせ');
-
-define('FpasswordSUBJECT','パスワードをお忘れの方');
 
 
 define('REQUESTPAGETITLE','サービスお申込み');
 define('REQUESTPAGEDESCRIPTION','サービスお申込み');
 
+define('ERRORMESSAGEVOTE','必ず一つは投票を行ってください');
+define('WEBREQUESTSUBJECT','URL登録を受け付けました');
 define('DEFUALTSORT',' service.id DESC');
 define('PAGELIMIT',100);
 define('PAGEOFFSET',0);
 define('DEFAULTGENRE',1);
 
+//define('VOTEMAX',5);
+//define('BASICAUTH','bizran:123123@');
 define('BASICAUTH','');
 define('CONTACTSUBJECT','お問い合わせ::');
+define('MAILTO','info2@knsc.jp');
+define('MAILFROM','info@bizran.jp');
 
 define('MYPAGETITLE','マイページ');
 define('MYPAGEKEYWORDS','マイページ');

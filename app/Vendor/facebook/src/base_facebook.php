@@ -599,7 +599,6 @@ abstract class BaseFacebook
         $this->clearAllPersistentData();
       }
     }
-
     return $user;
   }
 

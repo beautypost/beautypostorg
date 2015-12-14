@@ -63,6 +63,9 @@ class TwLoginController extends AppController {
         }
 
 		public function twitterLogin(){//twitterのOAuth用ログインURLにリダイレクト
+//            $this->redirect($this->Twitter->getAuthenticateUrl(null, true));
+            // var_dump(DOMAIN.'TwLogin/oauthCallback');
+            // exit;
             $this->redirect($this->Twitter->getAuthenticateUrl(null, true));
         }
 
@@ -83,22 +86,33 @@ class TwLoginController extends AppController {
             }
             $this->Twitter->setTwitterSource('twitter');//アクセストークンの取得を実施
             $token = $this->Twitter->getAccessToken();
-var_dump($token);
-
+// var_dump($token);
+// exit;
             //すでに登録済みかどうか
             $result = $this->Snsuser->getItemBySNSid($token['user_id'],TWITTERKEY);
 //var_dump($result);
 
             //登録済みログイン
             if(!empty( $result )){
-				$beautyid = $result['beautyid'];
-        	}else{
-            	$beautyid = $this->Snsuser->twsignin($token); //ユーザ登録
-        	}
+                $this->Cookie->write(SESSIONNAME, $result['Snsuser']['beautyid'], false, LOGINTIME);
+                $this->redirect(REDIRECTURL);
+            }else{
+            //新規登録ログイン
+                $this->redirect(
+                            array(
+                                'controller' => 'Regist',
+                                'action' => 'input',
+                                '?' => array(
+                                    'sns_id' => $token['user_id'],
+                                    'sns' => TWITTERKEY,
+                                    'username'=>$token['screen_name'],
+//                                            'email'=>$user['email'],
+                                )
+                                )
+                            );
+            }
 //exit;
-            $this->Session->write(SESSIONNAME,$beautyid);
-//            $this->Auth->login($data); //CakePHPのAuthログイン処理
-            $this->redirect(REDIRECTURL); //ログイン後画面へリダイレクト
+
         }
 
         public function index(){}

@@ -168,6 +168,12 @@ tinyMCE.init({
                        </a>
                     </li>
 
+                    <li class="<?php $this->Beautypost->cssActive('Adminmaster')?>">
+                       <a href="<?php echo WEBROOT?>Adminattr">
+                            <i class="menu-icon fa fa-bookmark"></i><span class="menu-text">詳細マスタ管理</span>
+                       </a>
+                    </li>
+
 <!--
                     <li class="<?php $this->Beautypost->cssActive('Adminmailmagazine')?>">
                        <a href="<?php echo WEBROOT?>Adminmailmagazine">

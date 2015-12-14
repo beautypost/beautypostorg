@@ -112,21 +112,30 @@
                     <nav class="pagination pg-list">
                         <ul>
 <?php if ($Pager['s']):?>
-      <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><span class="rsp-xxoo">Prev</span></a></li>
+      <li class="nav-prev"><a href="?p=<?php echo $Pager['p']-1?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><span class="rsp-xxoo">Prev</span></a></li>
 <?php endif;?>
                             <li>
                                 <ol>
+
+  <li class="sp-hide"><a href="?p=1&data[SearchData]=<?php echo base64_encode(serialize($data))?>">1</a></li>
+                <li class="sp-hide">…</li>
   <?php foreach ($Pager['pager'] as $k =>$v):?>
     <?php if ($Pager['p'] == $v-1):?>
-      <li class="nav-now"><a href="?data[p]=<?php echo $v-1?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><?php echo $v;?></a></li>
+      <li class="nav-now"><a href="?p=<?php echo $v-1?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><?php echo $v;?></a></li>
     <?php else:?>
-      <li><a href="?data[p]=<?php echo $v-1?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><?php echo $v?></a></li>
+
+    <?php if (($Pager['p']+3 > $v-1) && ($Pager['p']-3 < $v-1)):?>
+      <li class="sp-hide"><a href="?p=<?php echo $v-1?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><?php echo $v?></a></li>
+    <?php endif;?>
+
     <?php endif;?>
   <?php endforeach;?>
+                <li class="sp-hide">…</li>
+  <li class="sp-hide"><a href="?p=<?php echo $Pager['pend']?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><?php echo $Pager['pend']?></a></li>
                                 </ol>
                             </li>
 <?php if ($Pager['e']):?>
-      <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
+      <li class="nav-next"><a href="?p=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
 <?php endif;?>
                         </ul>
                     </nav><!-- /.pagination -->

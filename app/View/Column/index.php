@@ -1,104 +1,192 @@
+
+<!--
+====================================================================================================
+ Column Header                                                                       #column-header
+==================================================================================================== -->
+<header id="column-header">
+  <div class="layout">
+    <h1>Beauty Post <span>美活コラム</span></h1>
+  </div>
+</header><!-- /#column-header -->
+<!--
+====================================================================================================
+ Contents                                                                                #page-area
+==================================================================================================== -->
 <div id="page-area">
   <div class="layout">
 
-      <ol id="breadcrumb" class="breadcrumb rsp-xxoo">
-        <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
-        <li>コラム</li>
-      </ol><!-- /#breadcrumb -->
     <div id="main-area" class="layout-main layout-l">
-
-<?php if(count($Columns) >0):?>
-
-      <article id="news-list">
-
-        <h2>コラム</h2>
-
+      <section class="column-topcategory">
+        <h2 class="column-head">カテゴリ</h2>
+        <div class="section-body">
+          <div class="column-entryblocklist">
 
          <?php foreach($Columns as $k => $v):?>
-        <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-        <section class="news-entry">
-          <header>
-            <h2 class="news-title head-bar"><?php echo $v['Column']['title']?></h2>
-            <p class="news-date"><?php echo $v['Column']['created']?></p>
-          </header>
+            <section class="column-entryblock">
+              <a href="./detail.html">
+                <div class="column-eyecatch"><img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w"></div>
+                <div class="column-blockbody">
+                  <p class="column-entrydate"><?php echo $v['Column']['created']?></p>
+                  <h3 class="column-entryblocktitle"><?php echo $v['Column']['title']?></h3>
+                  <p class="column-entryview">100,000 views</p>
+                </div>
+              </a>
+            </section>
 
-          <div class="news-body">
-          <!--
-            <div class="photo">
-              <div class="imgframe">
-                <div class="inner"><img src="http://placehold.jp/128/a1a1a1/cccccc/800x600.png?text=DUMMY" alt=""></div>
-              </div>
-            </div><!-- /.photo -->
-
-            <div class="news-txt">
-              <div class="lead-section">
-              <p><?php echo $v['Column']['comment']?></p>
-              </div>
-              <p class="more"><a href="<?php echo WEBROOT.'Column/detail/'.$v['Column']['id']?>">続きを読む</a></p>
-            </div>
-          </div><!-- /.news-body -->
-
-          <footer>
-            <ul class="news-category">
-              <li><a href=""><?php $v['Column']['tag']?></a></li>
-            </ul><!-- /.news-category -->
-            <div class="sns-btns">
-              sns
-            </div>
-          </footer>
-        </section><!-- /.news-entry -->
     <?php endforeach;?>
 
-      <footer>
-                    <nav class="pagination pg-list">
-                        <ul>
 
-<?php if ($Pager['s']):?>
-      <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
-<?php endif;?>
-                                <ol>
-  <?php foreach ($Pager['pager'] as $k =>$v):?>
-    <?php if ($Pager['p'] == $v-1):?>
-      <li class="nav-now"><a href="?data[p]=<?php echo $v-1?>"><?php echo $v;?></a></li>
-    <?php else:?>
-      <li><a href="?data[p]=<?php echo $v-1?>"><?php echo $v?></a></li>
-    <?php endif;?>
-  <?php endforeach;?>
-                                </ol>
-<?php if ($Pager['e']):?>
-      <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
-<?php endif;?>
-                        </ul>
-                    </nav><!-- /.pagination -->
-      </footer>
-    </article>
+          </div>
+        </div>
+        <div class="column-boxfoot">
+          <p class="column-viewmore">
+            <a href="<?php echo WEBROOT.$this->name?>detail/?id=<?php echo $v['Column']['id']?>">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
+          </p>
+        </div>
+      </section><!-- /.column-topcategory -->
 
-<?php else:?>
+      <section class="column-topcategory">
+        <h2 class="column-head">カテゴリ</h2>
+        <div class="section-body">
+          <div class="column-entryblocklist">
+         <?php foreach($Columns as $k => $v):?>
 
+            <section class="column-entryblock">
+              <a href="./detail.html">
+                <div class="column-eyecatch"><img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w"></div>
+                <div class="column-blockbody">
+                  <p class="column-entrydate"><?php echo $v['Column']['created']?></p>
+                  <h3 class="column-entryblocktitle"><?php echo $v['Column']['title']?></h3>
+                  <p class="column-entryview">100,000 views</p>
+                </div>
+              </a>
+            </section>
+    <?php endforeach;?>
 
+          </div>
+        </div>
+        <div class="column-boxfoot">
+          <p class="column-viewmore">
+            <a href="<?php echo WEBROOT.$this->name?>detail/?id=<?php echo $v['Column']['id']?>">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
+          </p>
+        </div>
+      </section><!-- /.column-topcategory -->
+         <?php foreach($Columns as $k => $v):?>
 
-準備中です。
+      <section class="column-topcategory">
+        <h2 class="column-head">カテゴリ</h2>
+        <div class="section-body">
+          <div class="column-entryblocklist">
 
+            <section class="column-entryblock">
+              <a href="./detail.html">
+                <div class="column-eyecatch"><img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w"></div>
+                <div class="column-blockbody">
+                  <p class="column-entrydate">2015.12.13</p>
+                  <h3 class="column-entryblocktitle">タイトルが入りますタイトルが入りますタイトル</h3>
+                  <p class="column-entryview">100,000 views</p>
+                </div>
+              </a>
+            </section>
+    <?php endforeach;?>
 
-
-
-
-
-
-
-
-<?php endif;?>
-
-
-
-
-
-
+          </div>
+        </div>
+        <div class="column-boxfoot">
+          <p class="column-viewmore">
+            <a href="./list.html">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
+          </p>
+        </div>
+      </section><!-- /.column-topcategory -->
     </div><!-- /#main-area -->
 
-    <aside id="news-menu" class="layout-sub layout-r">
-        <?php echo $this->element('common/cmnSubContent'); ?>
-    </aside><!-- /#sub-area -->
-  </div>
+    <aside id="column-sub" class="layout-sub layout-r">
+      <section class="column-famous container">
+        <h2 class="column-sidehead">人気のコラムランキング</h2>
+        <div class="section-body">
+          <nav>
+            <ul>
+         <?php foreach($Columns as $k => $v):?>
 
+              <li>
+                <a href="./detail.html">
+                  <img src="<?php echo WEBROOT; ?>common-img/ico-key01.png" width="64" height="64" class="rank" alt="1">
+                  <span class="column-entryview">100,999 views</span>
+                  <span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
+                </a>
+              </li>
+    <?php endforeach;?>
+
+
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section class="column-recent container">
+        <h2 class="column-sidehead">新着コラム</h2>
+        <div class="section-body">
+          <nav>
+            <ul>
+
+         <?php foreach($Columns as $k => $v):?>
+
+              <li>
+                <a href="./detail.html">
+                  <span class="column-entrydate">2015/12/66</span>
+                  <span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
+                </a>
+              </li>
+
+
+            </ul>
+          </nav>
+        </div>
+      </section>
+    <?php endforeach;?>
+
+      <section class="column-category container">
+        <h2 class="column-sidehead">カテゴリ</h2>
+        <div class="section-body">
+          <nav>
+            <ul>
+              <li><a href="./list.html">カテゴリ1</a></li>
+              <li><a href="./list.html">カテゴリ2</a></li>
+              <li><a href="./list.html">カテゴリ3</a></li>
+              <li><a href="./list.html">カテゴリ4</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <div class="column-bnr">
+        <a href="<?php echo WEBROOT; ?>"><img src="<?php echo WEBROOT; ?>common-img/logo.png" class="fitimg-w" alt="美容機器コレクション Beauty Post"></a>
+      </div>
+    </aside><!-- /#column-sub -->
+  </div>
 </div><!-- /#page-area -->
+<!--
+====================================================================================================
+ Column Footer                                                                       #column-footer
+==================================================================================================== -->
+<footer id="column-footer">
+  <div class="layout">
+    <nav id="column-fnav">
+      <ul>
+        <li><a href=""><i class="fa fa-home">&#8203;</i> ホーム</a></li>
+        <li><a href=""><i class="fa fa-pencil">&#8203;</i> ライター募集</a></li>
+        <li><a href=""><i class="fa fa-building">&#8203;</i> 運営者会社</a></li>
+        <li><a href=""><i class="fa fa-envelope-o">&#8203;</i> お問い合わせ</a></li>
+      </ul>
+    </nav><!-- /#column-fnav -->
+  </div>
+  <div id="column-copyright">
+    <div class="layout"><p><small>Copyright 2015 Beauty Post. All Rights Reserved.</small></p></div>
+  </div><!-- /#copyright -->
+</footer><!-- /#column-footer -->
+<!--
+==================================================================================================== -->
+</div></div><!-- /#wrapper>/#wrap-inner -->
+<?php  //lastContent(); ?>
+</body>
+</html>

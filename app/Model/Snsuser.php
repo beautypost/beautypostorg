@@ -36,7 +36,7 @@ class Snsuser extends AppModel {
     public $validate = array(
         'email' =>array(
             array('rule'=>array('email',true),'message'=>'正しいメールアドレスを入力してください'),
-            'custom'=>array('rule' => 'CheckEmail','message'=>'すでに使用されているメールアドレスです')
+//            'custom'=>array('rule' => 'CheckEmail','message'=>'すでに使用されているメールアドレスです')
             ),
         'password' =>array(
             'custom'=>array('rule' => 'checkPassword','message'=>'パスワードは半角英数字で入力し、パスワード・パスワード(確認)には同じものを入力してください')
@@ -156,6 +156,8 @@ class Snsuser extends AppModel {
         $ret['email'] = '';
         $ret['skin'] = '';
         $ret['year'] = $ret['month'] = $ret['day'] = '';
+        $ret['sns'] = '';
+        $ret['sns_id'] = '';
 //        $ret['age'] = '';
         $ret['username'] = '';//nickname
         $ret['password'] = '';
@@ -185,7 +187,8 @@ class Snsuser extends AppModel {
             'email'=>$email,
             'year'=>$year,
             'month'=>$month,
-            'day'=>$day
+            'day'=>$day,
+            'sns'=>WEBKEY,
             );
         return $this->find('first',$con);
     }
@@ -269,9 +272,10 @@ class Snsuser extends AppModel {
             if(!$itemID){return;}
             $conditions['conditions'] = array(
                                 'sns_id'=>$itemID,
-                                'sns'=>$sns
-//                                'valid'=>1,
+                                'sns'=>$sns,
+                                'valid'=>1,
                                 );
+//            var_dump($conditions);
             $all = $this->find('first',$conditions);
             return $all;
         }

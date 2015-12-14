@@ -1,7 +1,7 @@
 <div id="mpside-welcome">
 				<span class="user-name"><?php echo $UserData['Snsuser']['username']?></span>さん
 				<ul>
-					<li><a href="<?php echo WEBROOT?>mypage/" class="button btn-block btn-vpk">マイページトップ</a></li>
+					<li><a href="<?php echo WEBROOT?>Mypage/" class="button btn-block btn-vpk">マイページトップ</a></li>
 					<li><a href="<?php echo WEBROOT?>Login/logout" class="button btn-block btn-nb">ログアウト</a></li>
 				</ul>
 			</div><!-- /#mpside-welcome -->

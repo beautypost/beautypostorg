@@ -131,7 +131,7 @@ class Column extends AppModel {
     複数
     * @param sessionITEMS
     **/
-    public function getItems($sort='',$limit='',$offset='',$tag='') {
+    public function getItems($sort='',$limit='',$offset='',$conditions='') {
         $conditions = array();
         // if(!$this->checkAdminID($userID)){
         //     $conditions['conditions'][] = array('valid'=>1,'created <='=>$this->now());
@@ -139,8 +139,8 @@ class Column extends AppModel {
         // if($genreID){
         //     $conditions['conditions'][] = array('genre_id'=>$genreID);
         // }
-        if($tag){
-            $conditions['conditions'][] = array('tag'=>$tag);
+        if($conditions){
+            $conditions['conditions'][] = $conditions;
         }
 
         if($sort){

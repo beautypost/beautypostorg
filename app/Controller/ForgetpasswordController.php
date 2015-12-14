@@ -28,7 +28,7 @@ App::uses('AppController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class ForgetPasswordController extends AppController {
+class ForgetpasswordController extends AppController {
 
 	public $uses = array('Snsuser','Fpassword');
 	public $components = array('MailC','ContactC');

@@ -71,10 +71,21 @@ Class GoogleloginController extends AppController{
                         $bid = $result['Snsuser']['beautyid'];
                     }else{
                     //新規登録ログイン
-                        $bid = $this->Snsuser->googlesignin($user);
+                        $this->redirect(
+                                    array(
+                                        'controller' => 'Regist',
+                                        'action' => 'input',
+                                        '?' => array(
+                                            'sns_id' => $user['id'],
+                                            'sns' => GOOGLEKEY,
+                                            'username'=>$user['name'],
+                                            'email'=>$user['email'],
+                                        )
+                                        )
+                                    );
                     }
 
-                    $this->Session->write(SESSIONNAME,$bid);
+                    $this->Cookie->write(SESSIONNAME, $bid, false, LOGINTIME);
                     $this->redirect(REDIRECTURL);
 
 

@@ -35,9 +35,6 @@
     <td>
         <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminitem/edit/?id=<?php echo $Item['Item']['id']?>">編集</a>
 &nbsp;&nbsp;
-        <a class="btn-sm btn-info" href="<?php echo WEBROOT?>Adminitemattr/edit/?id=<?php echo $Item['Item']['id']?>">編集</a>
-&nbsp;&nbsp;
-
         <a class="btn-sm btn-warning" href="<?php echo WEBROOT.$this->name?>/valid/?id=<?php echo $Item['Item']['id']?>&valid=<?php echo $Item['Item']['valid']?>">表示<?php if($Item['Item']['valid'] == 1):?>不<?php endif;?>可</a>
     </td>
     <td>

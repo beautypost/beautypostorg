@@ -4,7 +4,7 @@
             <li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
             <li>会員登録フォーム</li>
         </ol><!-- /#breadcrumb -->
-        
+
         <div id="main-area" class="layout-main layout-l">
             <section id="signup-form">
                 <h2 class="head-bar ico-arrow">Beauty Postメンバー登録</h2>

@@ -45,7 +45,7 @@ class AppController extends Controller {
 
  public $uses = array('Genre','User','Snsuser','Question','News','Blog','Want');
  public $helpers = array('Useful','Session','Beautypost');
- public $components = array('Pager','Session','UserC','CheckC','MetaC','RequestHandler','NewsC','QuestionC');
+ public $components = array('Cookie','Pager','Session','UserC','CheckC','MetaC','RequestHandler','NewsC','QuestionC');
 
   public function beforeFilter(){
         $this->set('genreID','');
@@ -56,7 +56,9 @@ class AppController extends Controller {
 
 
         //ログイン確認
-        $this->SnsuserData = $this->UserC->getUserData();
+        $id = $this->Cookie->read(SESSIONNAME);
+
+        $this->SnsuserData = $this->UserC->getUserData($id);
 //        var_dump($this->SnsuserData);
         //UserDATAを取得
         $this->set('UserData',$this->SnsuserData);

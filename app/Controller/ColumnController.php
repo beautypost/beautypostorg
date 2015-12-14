@@ -65,8 +65,13 @@ class ColumnController extends AppController {
 
 		//一覧表示
 		$sort['created'] = 'DESC';
-		$items = $this->Column->getItems($sort,BLOGPAGELIMIT,$offset,$tag);
-
+//		$items = $this->Column->getItems($sort,BLOGPAGELIMIT,$offset,$tag);
+		$columnCategory = $this->Genre->getColumn();
+		$items = array();
+		foreach($cokumnCategory as $k => $v){
+			$conditions = array('genre_id'=>$v['Genre']['id']);
+			$items[$v['Genre']['id']] = $this->Column->getItems($conditions);
+		}
 		$this->set('Columns',$items);
 
 		//検索条件でのmaxcount

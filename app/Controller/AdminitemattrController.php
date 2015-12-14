@@ -29,7 +29,7 @@ App::uses('BaseController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class AdminitemController extends BaseController {
+class AdminitemattrController extends BaseController {
 
 
 
@@ -56,11 +56,11 @@ class AdminitemController extends BaseController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function index() {
-        $sort = array('created'=>'desc');
-		$this->set('Items',$this->Item->getItems('',$sort,100));
-		return;
-	}
+	// public function index() {
+ //        $sort = array('created'=>'desc');
+	// 	$this->set('Items',$this->Item->getItems('',$sort,100));
+	// 	return;
+	// }
 
 
 	public function edit(){
@@ -82,6 +82,7 @@ class AdminitemController extends BaseController {
 
         //アイテムが持っている値
         $attr = $this->GenreAttrItem->getItemByItemID($data['Item']['id']);
+        $ar = array();
         foreach($attr as $kk=> $vv){
             $ar[$vv['GenreAttrItem']['genre_attr_id']] = $vv['GenreAttrItem']['value'];
         }
@@ -91,40 +92,37 @@ class AdminitemController extends BaseController {
 		$this->render('input');
 	}
 
-    public function valid(){
-        $id = $this->params['url']['id'];
-        $valid = $this->params['url']['valid'];
-        $this->Item->invalid($id,$valid);
-        $this->Index();
-        $this->render('index');
-        return;
-    }
+    // public function valid(){
+    //     $id = $this->params['url']['id'];
+    //     $valid = $this->params['url']['valid'];
+    //     $this->Item->invalid($id,$valid);
+    //     $this->Index();
+    //     $this->render('index');
+    //     return;
+    // }
 
-    public function delete(){
-        $id = $this->params['url']['id'];
-        $this->Item->delete($id);
-        $this->set('message',$id.'を削除しました');
-        $this->Index();
-        $this->render('index');
-    }
+    // public function delete(){
+    //     $id = $this->params['url']['id'];
+    //     $this->Item->delete($id);
+    //     $this->set('message',$id.'を削除しました');
+    //     $this->Index();
+    //     $this->render('index');
+    // }
 
 	public function input(){
 
         //DATAが入力されていなかった場合(初めて画面が表示された場合)
-	    if (!$this->request->is('post')) {
-	    	$data['Item'] = $this->Item->skel();
-	    	$this->set('data',$data);
-	    	return;
-	    }
+	    // if (!$this->request->is('post')) {
+	    // 	$data['Item'] = $this->Item->skel();
+	    // 	$this->set('data',$data);
+	    // 	return;
+	    // }
 
         $back = 1;
         if(isset($this->params['data']['back'])){
             $this->request->data = (unserialize(base64_decode($this->params['data']['Item'])));
-            $data['Item'] = $this->request->data;
-            if($data['Item']['id']){
-                $attr = $this->Genre->getAttr($data['Item']['genre_id']);
-                $this->set('GenreAttr',$attr);
-            }
+
+            //attr処理
 
             $this->set('data',$data);
             return;
@@ -133,30 +131,10 @@ class AdminitemController extends BaseController {
         $this->Item->set($this->request->data);
         $this->set('Item','');
         //確認画面へ
-        if($this->Item->validates()){
         	$data = $this->Item->data;
-
-
-            if (isset($_FILES['userfile']["error"])) {
-                    foreach ($_FILES['userfile']["error"] as $key => $error) {
-                            $ret = '';
-                            if ($error == UPLOAD_ERR_OK) {
-                                    $ret = $this->ItemC->uploadCheck($errormessages, $_FILES, $key);
-                                    $tmp_file_name[$key] = $ret;
-                                    $name = 'img'.$key.'up';
-                                    $data['Item'][$name] = $ret;
-                            }
-//                            var_dump($key);
-                    }
-            }
-//            $this->set('PostUploadFile', $tmp_file_name);
-//var_dump($data['Item']);
-//var_dump($data['Item']['attrs']);
-
-
             $this->set('data',$data);
-            if($data['Item']['id']){
-
+//            $id = $this->params['url']['id'];
+            $data = $this->Item->getItemByID($data['Item']['id']);
 
                 //アイテムが指定したgenreのIDから、genre+attrのlinktableの情報取得
                 $genreattrs = $this->GenreAttr->getItemsByGenreID($data['Item']['genre_id']);
@@ -170,48 +148,51 @@ class AdminitemController extends BaseController {
                 }
                 //linktableのattrIDから、attrの名前を取得
                 $this->set('AttrNames',$atrs);
-            }
 
 	    	$this->render('confirm');
         	return;
 
-        }else{
 
-	        $errors = $this->Item->invalidFields();
-	        $this->set('errormessages',$errors);
-			$messages = isset($this->params['data']['Item']) ? $this->params['data']['Item'] :null;
-			$_Contact = (unserialize(base64_decode($messages)));
-			$Item['Item'] = $_Contact;
-			$this->set('Item',$Item);
-        }
 
 }
 
     public function Submit() {
         $messages = isset($this->params['data']['Item']) ? $this->params['data']['Item'] :null;
         $_data = (unserialize(base64_decode($messages)));
-        $da = $this->Item->setData($_data);
+//         $da = $this->Item->setData($_data);
 
-        $da['genres'] = ','.implode(',',$da['genres']).',';
-        $da['ico'] = ','.implode(',',$da['ico']).',';
-        $da['img1up'] = ($da['img1up'] === 'true') ? '' : $da['img1up'];
-        $da['img2up'] = ($da['img2up'] === 'true') ? '' : $da['img2up'];
-        $da['img3up'] = ($da['img3up'] === 'true') ? '' : $da['img3up'];
-        $da['img4up'] = ($da['img4up'] === 'true') ? '' : $da['img4up'];
-        $da['img5up'] = ($da['img5up'] === 'true') ? '' : $da['img5up'];
-        $da['img6up'] = ($da['img6up'] === 'true') ? '' : $da['img6up'];
-        $da['img7up'] = ($da['img7up'] === 'true') ? '' : $da['img7up'];
-        $da['img8up'] = ($da['img8up'] === 'true') ? '' : $da['img8up'];
+//         $da['genres'] = ','.implode(',',$da['genres']).',';
+//         $da['ico'] = ','.implode(',',$da['ico']).',';
+//         $da['img1up'] = ($da['img1up'] === 'true') ? '' : $da['img1up'];
+//         $da['img2up'] = ($da['img2up'] === 'true') ? '' : $da['img2up'];
+//         $da['img3up'] = ($da['img3up'] === 'true') ? '' : $da['img3up'];
+//         $da['img4up'] = ($da['img4up'] === 'true') ? '' : $da['img4up'];
+//         $da['img5up'] = ($da['img5up'] === 'true') ? '' : $da['img5up'];
+//         $da['img6up'] = ($da['img6up'] === 'true') ? '' : $da['img6up'];
+//         $da['img7up'] = ($da['img7up'] === 'true') ? '' : $da['img7up'];
+//         $da['img8up'] = ($da['img8up'] === 'true') ? '' : $da['img8up'];
 
-//var_dump($_data);
-//if($_data['img1up']= ''){array_pop($_data,'img1up')}
-//        var_dump($da['genres']);
-        $da['valid'] = 1;
-        $this->Item->create();
-        $this->Item->save($da,array('validate'=>false));
+// //var_dump($_data);
+// //if($_data['img1up']= ''){array_pop($_data,'img1up')}
+// //        var_dump($da['genres']);
+//         $da['valid'] = 1;
+//         $this->Item->create();
+//         $this->Item->save($da,array('validate'=>false));
+
+        $this->GenreAttrItem->deleteAll(array('item_id'=>$_data['id']));
+
+        foreach($_data['attrs'] as $k => $v){
+
+            $gai['genre_attr_id'] = $k;
+            $gai['item_id'] = $_data['id'];
+            $gai['value'] = $v;
+//            var_dump($gai);
+            $this->GenreAttrItem->create();
+            $this->GenreAttrItem->save($gai);
+//        $v['']
 
 
-
+        }
 
 
 

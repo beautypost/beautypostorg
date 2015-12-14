@@ -56,9 +56,19 @@ class RegistController extends AppController {
         $this->set('pagename','新規登録');
         $this->set('errormessages','');
 
+
+
         //DATAが入力されていなかった場合(初めて画面が表示された場合)
         if (!$this->request->is('post')) {
             $data['Snsuser'] = $this->Snsuser->skel();
+
+            if(isset($this->params['url']['sns_id'])){
+                $data['Snsuser']['sns'] = $this->params['url']['sns'];
+                $data['Snsuser']['sns_id'] = $this->params['url']['sns_id'];
+                $data['Snsuser']['username'] = isset($this->params['url']['username']) ? $this->params['url']['username'] : '';
+                $data['Snsuser']['email'] = isset($this->params['url']['email']) ? $this->params['url']['email'] : '';
+            }
+
             $this->set('data',$data);
             return;
         }
@@ -101,17 +111,19 @@ class RegistController extends AppController {
         $da = $this->Snsuser->setData($_data);
         $da['beautyid'] = uniqid();
         $da['birthday'] = $da['year'].$da['month'].$da['day'];
-        $da['sns'] = WEBKEY;
+//        $da['sns'] = WEBKEY;
 
         $da['created'] = $this->Snsuser->now();
+        $da['valid'] = 1;
         $this->Snsuser->create();
         $this->Snsuser->save($da,array('validate'=>false));
 
 
-
-        //ログイン完了
-        $this->Session->write(SESSIONNAME,$da['beautyid']);
-
+        $this->Cookie->write(SESSIONNAME, $da['beautyid'], false, LOGINTIME);
+        $this->SnsuserData = $this->UserC->getUserData($da['beautyid']);
+//        var_dump($this->SnsuserData);
+        //UserDATAを取得
+        $this->set('UserData',$this->SnsuserData);
 
 
         $this->set('pagename','登録-登録完了');

@@ -29,7 +29,7 @@ App::uses('BaseController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class AdminattrController extends BaseController {
+class AdminkeywordController extends BaseController {
 
 
 
@@ -38,13 +38,12 @@ class AdminattrController extends BaseController {
  *
  * @var array
  */
-	public $uses = array('Genre','Attr','GenreAttr');
+	public $uses = array('AdminKeyword');
 
 
 	public function beforeRender(){
-		$this->set('pagetitle','マスタ項目');
-		$this->set('pagecomment','登録・編集を行います');
-        parent::beforeRender();
+		$this->set('pagetitle','AdminKeywords管理');
+		$this->set('pagecomment','AdminKeywordsの登録・編集を行います');
 	}
 
 /**
@@ -56,10 +55,9 @@ class AdminattrController extends BaseController {
  *	or MissingViewException in debug mode.
  */
 	public function index() {
-
-        $attr = $this->Attr->getItems();
-        $this->set('Attrs',$attr);
-//		var_dump($Attr);
+		$AdminKeywords = $this->AdminKeyword->getItems();
+//		var_dump($AdminKeywords);
+		$this->set('AdminKeywords',$AdminKeywords);
 //		$itemID = isset($this->params['url']['itemID']) ? $this->params['url']['itemID'] : '';
 		return;
 	}
@@ -67,62 +65,64 @@ class AdminattrController extends BaseController {
 
 	public function edit(){
 		$id = $this->params['url']['id'];
-        $Attr = $this->Attr->getItemByID($id);
-
-        $GenreAttr = $this->GenreAttr->getItemByAttrID($id);
-
-        foreach($GenreAttr as $k => $v){
-            $ge[] = $v['GenreAttr']['genre_id'];
-        }
-//        var_dump($ge);
-        $Attr['Attr']['genres'] = $ge;
-		// var_dump($Attr);
-		$this->set('data',$Attr);
-
+		$AdminKeywords = $this->AdminKeyword->getItemByID($id);
+//		var_dump($AdminKeywords);
+		$this->set('data',$AdminKeywords);
 		$this->render('input');
 	}
 
+    public function valid(){
+        $id = $this->params['url']['id'];
+        $valid = $this->params['url']['valid'];
+        $this->AdminKeyword->invalid($id,$valid);
+        $this->Index();
+        $this->render('index');
+        return;
+    }
+
+    public function delete(){
+        $id = $this->params['url']['id'];
+        $this->AdminKeyword->delete($id);
+        $this->set('message',$id.'を削除しました');
+        $this->Index();
+        $this->render('index');
+    }
 
 	public function input(){
-        $genres = $this->Genre->getKisyu();
-        $this->set('Genres',$genres);
 
         //DATAが入力されていなかった場合(初めて画面が表示された場合)
 	    if (!$this->request->is('post')) {
-	    	$data['Attr'] = $this->Attr->skel();
-//            $data['GenreAttr'] = $this->GenreAttr->skel();
+	    	$data['AdminKeyword'] = $this->AdminKeyword->skel();
 	    	$this->set('data',$data);
 	    	return;
 	    }
 
         $back = 1;
         if(isset($this->params['data']['back'])){
-            $this->request->data = (unserialize(base64_decode($this->params['data']['Attr'])));
-            $data['Attr'] = $this->request->data;
+            $this->request->data = (unserialize(base64_decode($this->params['data']['AdminKeywords'])));
+            $data['AdminKeyword'] = $this->request->data;
             $this->set('data',$data);
             return;
         }
 
 
-        $this->Attr->set($this->request->data);
-
-        $this->set('Attr','');
+        $this->AdminKeyword->set($this->request->data);
+        $this->set('AdminKeyword','');
         //確認画面へ
-        if($this->Attr->validates()){
-        	$data = $this->Attr->data;
+        if($this->AdminKeyword->validates()){
+        	$data = $this->AdminKeyword->data;
 	        $this->set('data',$data);
-
 	    	$this->render('confirm');
         	return;
 
         }else{
 
-	        $errors = $this->Attr->invalidFields();
+	        $errors = $this->AdminKeyword->invalidFields();
 	        $this->set('errormessages',$errors);
-			$messages = isset($this->params['data']['Attr']) ? $this->params['data']['Attr'] :null;
+			$messages = isset($this->params['data']['AdminKeyword']) ? $this->params['data']['AdminKeyword'] :null;
 			$_Contact = (unserialize(base64_decode($messages)));
-			$Attr['Attr'] = $_Contact;
-			$this->set('Attr',$Attr);
+			$AdminKeywords['AdminKeyword'] = $_Contact;
+			$this->set('AdminKeyword',$AdminKeywords);
         }
 
 
@@ -130,32 +130,12 @@ class AdminattrController extends BaseController {
 	}
 
     public function Submit() {
-        $messages = isset($this->params['data']['Attr']) ? $this->params['data']['Attr'] :null;
+        $messages = isset($this->params['data']['AdminKeyword']) ? $this->params['data']['AdminKeyword'] :null;
         $_data = (unserialize(base64_decode($messages)));
-        $da = $this->Attr->setData($_data);
-//        $da['valid'] = 1;
-        $this->Attr->create();
-        $this->Attr->save($da,array('validate'=>false));
-        if(!$da['id']){
-            $da['id'] = $this->Attr->getLastInsertID();
-        }else{
-
-            $GenreAttr = $this->GenreAttr->getItemByAttrID($da['id']);
-
-            foreach($GenreAttr as $k => $v){
-                $this->GenreAttr->create();
-                $this->GenreAttr->id = $v['GenreAttr']['id'];
-                $this->GenreAttr->delete();
-            }
-        }
-        foreach($_data['genres'] as $k=> $v){
-            $ga['genre_id'] = $v;
-            $ga['attr_id'] = $da['id'];
-            $this->GenreAttr->create();
-            $this->GenreAttr->save($ga);
-        }
-
-
+        $da = $this->AdminKeyword->setData($_data);
+        $da['valid'] = 1;
+        $this->AdminKeyword->create();
+        $this->AdminKeyword->save($da,array('validate'=>false));
 
     }
 

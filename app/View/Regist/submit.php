@@ -20,7 +20,7 @@
                 </div>
                 <footer class="form-nav">
                     <ul>
-                        <li><a href="<?php echo WEBROOT?>mypage/" class="button btn-vpk">マイページへ</a></li>
+                        <li><a href="<?php echo WEBROOT?>Mypage/" class="button btn-vpk">マイページへ</a></li>
                     </ul>
                 </footer>
             </section><!-- /#signup-completion -->

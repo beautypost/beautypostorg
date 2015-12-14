@@ -64,7 +64,7 @@ class IndexController extends AppController {
 	 */
 	public function index() {
 		$this->set('cssname','top');
-		$use = $this->UserC->getUserData();
+//		$use = $this->UserC->getUserData();
 //		var_dump($use);
 
 		//人気のキーワード

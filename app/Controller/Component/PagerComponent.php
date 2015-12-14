@@ -7,7 +7,7 @@ class PagerComponent extends Component {
 
 
 		$pages = intval($pages+0.9);
-
+        $ret['pend'] = $pages;
 
 		$pager = array();
 		//ページ数が5ページ以下の場合はそのまま値を入れて返す
@@ -18,6 +18,7 @@ class PagerComponent extends Component {
 			$ret['s'] = false;
 			$ret['e'] = false;
 			$ret['p'] = false;
+
 			$ret['pager'] = $pager;
 			return $ret;
 		}
@@ -36,15 +37,19 @@ class PagerComponent extends Component {
 		}
 
 		for($x=0;$x<PAGERLIMIT;$x++){
+
 			$pager[$x] = $pagestart;
-			$pagestart++;
+            $pagestart++;
+            if($pages < $pagestart){
+                break;
+            }
 		}
 
 		$ret['s'] = $s;
 		$ret['e'] = $e;
 		$ret['pager'] = $pager;
 		$ret['p'] = $p;
-
+//var_dump($ret['pager']);
 		return $ret;
     }
 

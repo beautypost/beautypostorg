@@ -4,8 +4,8 @@
     <header class="collection-head">
         <div>
             <div class="item-check">
-            <input type="checkbox" id="item-ck-<?php echo $Item['Item']['id']?>" name="item-ck-<?php echo $Item['Item']['id']?>" value="<?php echo $Item['Item']['id']?>" onclick="compareItem(<?php echo $Item['Item']['id']?>)" <?php echo $this->Useful->checked($ItemCompare,$Item['Item']['id'])?>></div>
-            <h2 class="item-name"><label for="item-ck-<?php echo $Item['Item']['id']?>"><?php echo $Item['Item']['title']?></label></h2>
+            <input type="checkbox" id="item-ck-<?php echo $Item['Item']['id']?>" name="item-ck-<?php echo $Item['Item']['id']?>" value="<?php echo $Item['Item']['id']?>" <?php echo $this->Useful->checked($ItemCompare,$Item['Item']['id'])?>></div>
+            <h2 class="item-name"><label for="item-ck-<?php echo $Item['Item']['id']?>" onclick="compareItem(<?php echo $Item['Item']['id']?>)"><?php echo $Item['Item']['title']?></label></h2>
             <ul class="item-taglist">
 
             <?php echo $this->Useful->getIco($Icos,$Item['Item']['ico'])?>
