@@ -15,9 +15,32 @@ if (isset($validationErrors) && is_array($validationErrors)) {
     }
 }
 ?>
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $("#datepicker").datepicker("option", "dateFormat", 'yy-mm-dd');
+    $( "#datepicker" ).datepicker( "setDate", "<?php echo $data['Question']['start']?>" );
+
+  });
+  $(function() {
+    $( "#datepicker2" ).datepicker();
+    $("#datepicker2").datepicker("option", "dateFormat", 'yy-mm-dd');
+    $( "#datepicker2" ).datepicker( "setDate", "<?php echo $data['Question']['end']?>" );
+
+  });
+
+  </script>
+
 <h3 class="header smaller lighter blue">アンケートタイトル</h3>
 <form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input">
     <!-- #section:elements.form -->
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">設問 </label>
+        <div class="col-sm-8">
+<input type="text" name="data[number]" value="<?php echo $data['Question']['number']?>" class="form-control">
+        </div>
+    </div>
+
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
         <div class="col-sm-8">
@@ -25,6 +48,20 @@ if (isset($validationErrors) && is_array($validationErrors)) {
 <input type="text" name="data[title]" value="<?php echo $data['Question']['title']?>" class="form-control">
         </div>
     </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">開始日時 </label>
+        <div class="col-sm-10">
+        <input type="text" name="data[start]" value="<?php echo $data['Question']['start']?>" class="col-xs-6" id="datepicker">
+    </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">終了日時 </label>
+        <div class="col-sm-10">
+        <input type="text" name="data[end]" value="<?php echo $data['Question']['end']?>" class="col-xs-6" id="datepicker2">
+    </div>
+    </div>
+
+
 
 <h3 class="header smaller lighter blue">設問</h3>
 

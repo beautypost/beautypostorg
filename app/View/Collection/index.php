@@ -26,7 +26,7 @@
                                     <dt>表示件数</dt>
                                     <dd>
                                         <select name="data[limit]" id="view-number" onChange="searchform.submit()">
-                                            <?php echo $this->Useful->option($Limits,$data['limit'],1);?>
+                                            <?php echo $this->Useful->option($Limits,$data['limit']);?>
                                         </select>
                                     </dd>
                                 </dl>
@@ -36,7 +36,7 @@
                                     <dt>表示順</dt>
                                     <dd>
                                         <select name="data[sort]" id="view-sort" onChange="searchform.submit()">
-                                            <?php echo $this->Useful->option($Sorts,$data['sort'],1);?>
+                                            <?php echo $this->Useful->option($Sorts,$data['sort']);?>
                                         </select>
                                     </dd>
                                 </dl>
@@ -99,9 +99,10 @@
                             <dl>
                                 <dt>表示件数</dt>
                                 <dd>
-                                    <select name="data[limit]" id="view-number">
+                                        <select name="data[sort]" id="view-sort2" onChange="searchform.submit()">
                                         <?php echo $this->Useful->option($Limits,$data['limit']);?>
-                                    </select>
+                                        </select>
+
                                 </dd>
                             </dl>
                         </li>
@@ -110,13 +111,12 @@
 
                 <footer>
                     <nav class="pagination pg-list">
-                        <ul>
-<?php if ($Pager['s']):?>
+<ul>
+<?php if ($Pager['p'] > 0):?>
       <li class="nav-prev"><a href="?p=<?php echo $Pager['p']-1?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><span class="rsp-xxoo">Prev</span></a></li>
 <?php endif;?>
                             <li>
                                 <ol>
-
   <li class="sp-hide"><a href="?p=1&data[SearchData]=<?php echo base64_encode(serialize($data))?>">1</a></li>
                 <li class="sp-hide">…</li>
   <?php foreach ($Pager['pager'] as $k =>$v):?>
@@ -134,7 +134,7 @@
   <li class="sp-hide"><a href="?p=<?php echo $Pager['pend']?>&data[SearchData]=<?php echo base64_encode(serialize($data))?>"><?php echo $Pager['pend']?></a></li>
                                 </ol>
                             </li>
-<?php if ($Pager['e']):?>
+<?php if ($Pager['p']+1 != $Pager['pend']):?>
       <li class="nav-next"><a href="?p=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
 <?php endif;?>
                         </ul>

@@ -4,7 +4,7 @@
                  --></h2>
                  <form method="post" action="<?php echo WEBROOT?>Question/Vote">
                 <section class="mt0">
-                    <h2 class="enquete-head"><i class="fa fa-chevron-circle-right">&#8203;</i> 第<?php echo $Questions[0]['Question']['id']?>回美容アンケート投票中</h2>
+                    <h2 class="enquete-head"><i class="fa fa-chevron-circle-right">&#8203;</i> 第<?php echo $Questions[0]['Question']['number']?>回美容アンケート投票中</h2>
                     <div class="round-contents-body">
                         <p>
                         <?php echo $Questions[0]['Question']['title']?><br /><br />
@@ -35,7 +35,7 @@
                                 <?php foreach($Questions[1]['QuestionValue'] as $k => $v):?>
                                 <tr>
                                     <th><span><?php echo $v['value']?></span></th>
-                                    <td><span class="bar" style="width:<?php echo floor(($v['points'] / $Questions[1]['Question']['totalpoints']) * 100)?>%">&#8203;</span></td>
+                                    <td><span class="bar" style="width:<?php if($Questions[1]['Question']['totalpoints'] !=0){echo floor(($v['points'] / $Questions[1]['Question']['totalpoints']) * 100);}?>%">&#8203;</span></td>
                                     <td><span><span class="txt-c-pk"><?php echo $v['points']?></span>件</span></td>
                                 </tr>
                                 <?php endforeach;?>

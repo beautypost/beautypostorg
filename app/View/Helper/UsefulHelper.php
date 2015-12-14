@@ -183,14 +183,14 @@ class UsefulHelper extends AppHelper {
         return $ret;
     }
 
-    public function checkboxvalue($items,$objtitle,$setkey,$set){
+    public function checkboxvalue($items,$objtitle,$setkey,$set,$sep='/'){
          $op = $this->createKeyValue($items,$objtitle,$setkey);
          $ret = '';
          if(!is_array($set)){
             $set = explode(',',$set);
         }
          foreach($op as $key => $val){
-             $ret .= in_array((String)$key,$set) ? $val.'/' :'';
+             $ret .= in_array((String)$key,$set) ? $val.$sep :'';
          }
         return $ret;
     }

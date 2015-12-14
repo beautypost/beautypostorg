@@ -61,6 +61,9 @@ class Question extends AppModel {
 //        $ret['created'] = $this->now();
         $ret['id'] = '';
         $ret['title'] = '';
+        $ret['number'] = '';
+        $ret['start'] = '';
+        $ret['end'] = '';
 //        $ret['url'] = '';
     return $ret;
     }

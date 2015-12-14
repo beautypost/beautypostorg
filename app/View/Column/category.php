@@ -16,44 +16,64 @@
   <div class="layout">
 
     <div id="main-area" class="layout-main layout-l">
-      <article class="column-entry">
-        <div class="section-body">
-          <header class="column-entryhead">
-            <p class="column-entrydate fll"><?php echo $Column['Column']['created']?></p>
-            <p class="column-entryview flr"><?php echo $Column['Column']['count']?> views</p>
-            <h2 class="column-entrytitle"><?php echo $Column['Column']['title']?></h2>
+      <h2 class="column-head">カテゴリー名称が入ります</h2>
 
-            <div class="column-entryinfo">
-              <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="./list.html">カテゴリ</a></div>
-              <div class="column-entrysns">SNS</div>
-            </div><!-- /.column-entryinfo -->
+
+    <?php foreach($Columns as $k => $v):?>
+
+
+
+      <section class="column-entry">
+        <div class="section-body">
+          <header>
+            <p class="column-entrydate fll"><?php echo $v['Column']['created']?></p>
+            <p class="column-entryview flr"><?php echo $v['Column']['count']?> views</p>
+            <h2 class="column-entrytitle"><a href="<?php echo WEBROOT.$this->name?>/detail/?id=<?php echo $v['Column']['id']?>"><?php echo $v['Column']['title']?></a></h2>
           </header>
           <div class="column-entrybody">
             <div class="column-eyecatch">
               <img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w">
             </div>
             <div class="column-entrylead">
-              <?php echo $Column['Column']['comment']?>
+              <?php echo $v['Column']['comment']?>
             </div>
-            <div class="column-entrytxt">
-              <p><?php echo $Column['Column']['comment']?></p>
-            </div><!-- /.column-entrytxt -->
+            <p class="column-viewmore">
+              <a href="<?php echo WEBROOT.$this->name?>/detail/?id=<?php echo $v['Column']['id']?>">続きを読む <i class="fa fa-angle-double-right">&#8203;</i></a>
+            </p>
           </div>
         </div><!-- /.section-body -->
 
         <div class="column-boxfoot">
           <div class="column-entryinfo">
-            <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="./list.html">カテゴリ</a></div>
+            <div class="column-entrycategory">
+            <i class="fa fa-folder-open-o"></i> <a href="#">カテゴリ</a>
+            </div>
             <div class="column-entrysns">SNS</div>
           </div><!-- /.column-entryinfo -->
         </div><!-- /.column-boxfoot -->
-      </article><!-- /.column-entry -->
+      </section><!-- /.column-entry -->
+
+    <?php endforeach;?>
+
+
 
       <div class="container">
         <nav class="column-pagination pg-list">
           <ul>
             <li class="nav-prev"><a href="#"><span class="rsp-xxoo">Prev</span></a></li>
-            <li class="nav-back"><a href="./list.html">一覧へ戻る</a></li>
+            <li>
+              <ol>
+                <li class="sp-hide"><a href="#">1</a></li>
+                <li class="sp-hide">…</li>
+                <li><a href="#">498</a></li>
+                <li><a href="#">499</a></li>
+                <li class="nav-now">500</li>
+                <li><a href="#">501</a></li>
+                <li><a href="#">502</a></li>
+                <li class="sp-hide">…</li>
+                <li class="sp-hide"><a href="#">999</a></li>
+              </ol>
+            </li>
             <li class="nav-next"><a href="#"><span class="rsp-xxoo">Next</span></a></li>
           </ul>
         </nav><!-- /.pagination -->

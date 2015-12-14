@@ -8,11 +8,31 @@
 <form class="form-horizontal" role="form" action="<?php echo WEBROOT.$this->name?>/input">
     <!-- #section:elements.form -->
     <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">設問 </label>
+        <div class="col-sm-10">
+           <span class="confirmtext"><?php echo $data['Question']['number']?></span>
+       </div>
+   </div>
+    <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
         <div class="col-sm-10">
            <span class="confirmtext"><?php echo $data['Question']['title']?></span>
        </div>
    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">開始日 </label>
+        <div class="col-sm-10">
+           <span class="confirmtext"><?php echo $data['Question']['start']?></span>
+       </div>
+   </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">終了日 </label>
+        <div class="col-sm-10">
+           <span class="confirmtext"><?php echo $data['Question']['end']?></span>
+       </div>
+   </div>
+
+
 <h3 class="header smaller lighter blue">設問</h3>
 
 <?php for($x=0;$x<=9;$x++):?>

@@ -25,7 +25,7 @@
 <?php foreach($BlogNew as $item):?>
                         <li>
                             <a href="<?php echo WEBROOT?>News/detail/<?php echo $item['Blog']['id']?>">
-                                <span class="entry-date"><?php echo $this->Useful->setdate($item['Blog']['entrydate'],'Y.m.d')?></span>
+                                <span class="entry-date"><?php echo $this->Useful->setdate($item['Blog']['entrydate'],'Y/m/d')?></span>
                                 <span class="entry-title"><?php echo $item['Blog']['title']?></span>
 
                             </a>

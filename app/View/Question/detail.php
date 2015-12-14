@@ -8,7 +8,7 @@
 		<ol id="breadcrumb" class="breadcrumb rsp-xxoo">
 			<li><a href="<?php echo WEBROOT?>">Beauty Post</a></li>
 			<li><a href="<?php echo WEBROOT.$this->name?>">アンケートバックナンバー</a></li>
-			<li>第<?php echo $Question['Question']['id']?>回 美容アンケート</li>
+			<li>第<?php echo $Question['Question']['number']?>回 美容アンケート</li>
 		</ol><!-- /#breadcrumb -->
 
 		<div id="main-area" class="layout-main layout-l">
@@ -33,7 +33,7 @@
 
 			<section class="enquete-section">
 				<header>
-					<h2 class="head-bar ico-arrow"><span class="rsp-xooo"><?php  echo date("Y.m.d",strtotime($Question['Question']['created']))?> </span>第<?php echo $Question['Question']['id']?>回 美容アンケート</h2>
+					<h2 class="head-bar ico-arrow"><span class="rsp-xooo"><?php  echo date("Y年m月d日",strtotime($Question['Question']['created']))?> </span>第<?php echo $Question['Question']['id']?>回 美容アンケート</h2>
 <?php if(isset($message)):?>
             <div class="error-msg container">
                 <p><?php echo $message?></p>

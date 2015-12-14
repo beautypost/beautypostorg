@@ -17,7 +17,7 @@ class PagerComponent extends Component {
 			}
 			$ret['s'] = false;
 			$ret['e'] = false;
-			$ret['p'] = false;
+			$ret['p'] = $p;
 
 			$ret['pager'] = $pager;
 			return $ret;

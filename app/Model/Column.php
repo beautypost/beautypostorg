@@ -131,7 +131,7 @@ class Column extends AppModel {
     複数
     * @param sessionITEMS
     **/
-    public function getItems($sort='',$limit='',$offset='',$conditions='') {
+    public function getItems($sort='',$limit='',$offset='',$condition='') {
         $conditions = array();
         // if(!$this->checkAdminID($userID)){
         //     $conditions['conditions'][] = array('valid'=>1,'created <='=>$this->now());
@@ -139,8 +139,8 @@ class Column extends AppModel {
         // if($genreID){
         //     $conditions['conditions'][] = array('genre_id'=>$genreID);
         // }
-        if($conditions){
-            $conditions['conditions'][] = $conditions;
+        if($condition){
+            $conditions['conditions'][] = $condition;
         }
 
         if($sort){
@@ -163,13 +163,13 @@ class Column extends AppModel {
     }
 
 
-    public function getItemsAllCount($userID,$genreID){
+    public function getItemsAllCount($userID,$tag){
         $conditions = array();
         if(!$this->checkAdminID($userID)){
             $conditions['conditions'][] = array('valid'=>1,'created <='=>$this->now());
         }
-        if($genreID){
-            $conditions['conditions'][] = array('genre_id'=>$genreID);
+        if($tag){
+            $conditions['conditions'][] = array('tag'=>$tag);
         }
 
         $count = $this->find('count',$conditions);

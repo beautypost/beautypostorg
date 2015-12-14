@@ -27,19 +27,20 @@
         </div><!-- .item-face -->
         <div class="item-summary">
             <dl class="item-rate">
+                <?php if($Item['Item']['monitor'] > 0):?>
                 <dt>モニター評価</dt>
-<?php if($Item['Item']['monitor'] > 0):?>
-                <dd class="monitor-rate">
-                    <div class="star<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_monitor']?>"></div>
-                    <span>（レビュー：<a href="<?php echo WEBROOT?>Monitor/index/<?php echo $Item['Item']['id']?>"><?php echo $ItemsReview[$Item['Item']['id']]['count']?>件</a>）</span>
-                    <p><?php echo $Item['Item']['result']?></p>
-                </dd>
+                    <dd class="monitor-rate">
+                        <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $ItemsMonitor[$Item['Item']['id']]['star']?>"></div>
+                        <span>（レビュー：<a href="<?php echo WEBROOT?>Monitor/index/<?php echo $Item['Item']['id']?>"><?php echo $ItemsMonitor[$Item['Item']['id']]['count']?>件</a>）</span>
+                    </dd>
                 <?php endif;?>
-                <dt>ユーザーレビュー</dt>
-                <dd class="user-rate">
-                    <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $ItemsReview[$Item['Item']['id']]['star']?>"></div>
-                    <span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo $ItemsReview[$Item['Item']['id']]['count']?>件</a>）</span>
-                </dd>
+                        <p><?php echo $Item['Item']['result']?></p>
+                <?php if($ItemsReview[$Item['Item']['id']]['count'] > 0):?>
+                    <dt>ユーザーレビュー</dt>
+                    <dd class="user-rate">
+                        <div class="star<?php echo $Item['Item']['id']?>" data-score="<?php echo $ItemsReview[$Item['Item']['id']]['star']?>"></div><span>（レビュー：<a href="<?php echo WEBROOT?>Review/index/<?php echo $Item['Item']['id']?>"><?php echo $ItemsReview[$Item['Item']['id']]['count']?>件</a>）</span>
+                    </dd>
+                <?php endif;?>
             </dl><!-- /.item-rate -->
 
             <script>
@@ -69,7 +70,7 @@
                     <li>
                         <dl>
                             <dt>部位</dt>
-                            <dd><?php  echo $this->Useful->checkboxvalue($GenrePoints,'Genre','title',$Item['Item']['genres'])?></dd>
+                            <dd><?php  echo $this->Useful->checkboxvalue($GenrePoints,'Genre','title',$Item['Item']['genres'],' ')?></dd>
                         </dl>
                     </li>
                 </ul>

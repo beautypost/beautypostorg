@@ -17,12 +17,11 @@
 			 --></h2>
 
 			<p class="lead">Beauty Postで過去に行った 美活アンケートがご覧いただけます。<br class="rsp-xxoo">過去のバックナンバーをご覧になられたい方は、ログインください。</p>
-
 			<ul class="backnumber-list container">
 <?php foreach($Questions as $Item):?>
 				<li>
 					<dl>
-						<dt><?php echo $Item['Question']['start']?><span class="vol">第<?php echo $Item['Question']['id']?>回</span></dt>
+						<dt><?php echo $this->useful->setdate($Item['Question']['start'],'Y年m月d日')?><span class="vol">第<?php echo $Item['Question']['number']?>回</span></dt>
 						<dd>
 							<span class="question">
                             <a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Item['Question']['id']?>">
@@ -40,19 +39,19 @@
                         <ul>
 
 <?php if ($Pager['s']):?>
-      <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
+      <li class="nav-prev"><a href="<?php echo WEBROOT.$this->name?>/?p=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
 <?php endif;?>
                                 <ol>
   <?php foreach ($Pager['pager'] as $k =>$v):?>
     <?php if ($Pager['p'] == $v-1):?>
-      <li class="nav-now"><a href="?data[p]=<?php echo $v-1?>"><?php echo $v;?></a></li>
+      <li class="nav-now"><a href="<?php echo WEBROOT.$this->name?>/?p=<?php echo $v-1?>"><?php echo $v;?></a></li>
     <?php else:?>
-      <li><a href="?data[p]=<?php echo $v-1?>"><?php echo $v?></a></li>
+      <li><a href="<?php echo WEBROOT.$this->name?>/?p=<?php echo $v-1?>"><?php echo $v?></a></li>
     <?php endif;?>
   <?php endforeach;?>
                                 </ol>
 <?php if ($Pager['e']):?>
-      <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
+      <li class="nav-next"><a href="<?php echo WEBROOT.$this->name?>/?p=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
 <?php endif;?>
                         </ul>
                     </nav><!-- /.pagination -->

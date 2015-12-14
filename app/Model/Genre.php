@@ -150,7 +150,12 @@ $genre = '';
 
     public function getColumn(){
         $conditions['conditions'] = array('genre_id'=>GENRECOLUMN);
-        return $this->find('all',$conditions);
+        $ret = $this->find('all',$conditions);
+        $all = array();
+        foreach($ret as $k => $v){
+            $all[$v['Genre']['id']] = $v;
+        }
+        return $all;
     }
 
     public function getPrice(){

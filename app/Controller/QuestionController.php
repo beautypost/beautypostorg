@@ -69,12 +69,20 @@ class QuestionController extends AppController {
         $data = array();
         $this->setRequestValue($data,'question_value_id');
         $this->setRequestValue($data,'question_id');
-        var_dump($data);
+//        var_dump($data);
         $session_id = session_id();
         $ret = $this->QuestionLog->getItemBySessionAndID($data['question_id'],$session_id);
 
         if($ret > 0){
             $message = 'すでに投票済みです';
+            $this->set('message',$message);
+            $this->Detail($data['question_id']);
+            $this->render('detail');
+            return;
+        }
+
+        if(!$data['question_id']){
+            $message = '投票してください';
             $this->set('message',$message);
             $this->Detail($data['question_id']);
             $this->render('detail');
@@ -110,7 +118,7 @@ class QuestionController extends AppController {
         $data = '';
         $data = $this->setRequestGetValues($data);
 
-        $limit = 20;
+        $limit = 10;
         $p = isset($data['p']) ? $data['p'] : 0;
         $question = $this->Question->getItems($limit,$p);
         $this->set('Question',$question);

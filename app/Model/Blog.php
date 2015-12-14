@@ -155,6 +155,10 @@ class Blog extends AppModel {
         }
 
         $all = $this->find('all',$conditions);
+        foreach($all as $k=>$v){
+            $all[$k]['Blog']['tags'] = explode(',',$v['Blog']['tag']);
+        }
+
         return $all;
     }
 

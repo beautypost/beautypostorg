@@ -16,19 +16,20 @@
   <div class="layout">
 
     <div id="main-area" class="layout-main layout-l">
+    <?php foreach($Columns as $kv => $kvv):?>
       <section class="column-topcategory">
-        <h2 class="column-head">カテゴリ</h2>
+        <h2 class="column-head"><?php echo $GenreColumn[$kv]['Genre']['title']?></h2>
         <div class="section-body">
           <div class="column-entryblocklist">
 
-         <?php foreach($Columns as $k => $v):?>
+         <?php foreach($kvv as $k => $v):?>
             <section class="column-entryblock">
               <a href="./detail.html">
                 <div class="column-eyecatch"><img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w"></div>
                 <div class="column-blockbody">
-                  <p class="column-entrydate"><?php echo $v['Column']['created']?></p>
+                  <p class="column-entrydate"><?php echo $this->Useful->setdate($v['Column']['created'],'Y.m.d')?></p>
                   <h3 class="column-entryblocktitle"><?php echo $v['Column']['title']?></h3>
-                  <p class="column-entryview">100,000 views</p>
+                  <p class="column-entryview"><?php echo $v['Column']['count']?> views</p>
                 </div>
               </a>
             </section>
@@ -40,129 +41,16 @@
         </div>
         <div class="column-boxfoot">
           <p class="column-viewmore">
-            <a href="<?php echo WEBROOT.$this->name?>detail/?id=<?php echo $v['Column']['id']?>">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
+            <a href="<?php echo WEBROOT.$this->name?>/category/?tag_id=<?php echo $v['Column']['tag']?>">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
           </p>
         </div>
       </section><!-- /.column-topcategory -->
-
-      <section class="column-topcategory">
-        <h2 class="column-head">カテゴリ</h2>
-        <div class="section-body">
-          <div class="column-entryblocklist">
-         <?php foreach($Columns as $k => $v):?>
-
-            <section class="column-entryblock">
-              <a href="./detail.html">
-                <div class="column-eyecatch"><img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w"></div>
-                <div class="column-blockbody">
-                  <p class="column-entrydate"><?php echo $v['Column']['created']?></p>
-                  <h3 class="column-entryblocktitle"><?php echo $v['Column']['title']?></h3>
-                  <p class="column-entryview">100,000 views</p>
-                </div>
-              </a>
-            </section>
     <?php endforeach;?>
-
-          </div>
-        </div>
-        <div class="column-boxfoot">
-          <p class="column-viewmore">
-            <a href="<?php echo WEBROOT.$this->name?>detail/?id=<?php echo $v['Column']['id']?>">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
-          </p>
-        </div>
-      </section><!-- /.column-topcategory -->
-         <?php foreach($Columns as $k => $v):?>
-
-      <section class="column-topcategory">
-        <h2 class="column-head">カテゴリ</h2>
-        <div class="section-body">
-          <div class="column-entryblocklist">
-
-            <section class="column-entryblock">
-              <a href="./detail.html">
-                <div class="column-eyecatch"><img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w"></div>
-                <div class="column-blockbody">
-                  <p class="column-entrydate">2015.12.13</p>
-                  <h3 class="column-entryblocktitle">タイトルが入りますタイトルが入りますタイトル</h3>
-                  <p class="column-entryview">100,000 views</p>
-                </div>
-              </a>
-            </section>
-    <?php endforeach;?>
-
-          </div>
-        </div>
-        <div class="column-boxfoot">
-          <p class="column-viewmore">
-            <a href="./list.html">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
-          </p>
-        </div>
-      </section><!-- /.column-topcategory -->
     </div><!-- /#main-area -->
 
-    <aside id="column-sub" class="layout-sub layout-r">
-      <section class="column-famous container">
-        <h2 class="column-sidehead">人気のコラムランキング</h2>
-        <div class="section-body">
-          <nav>
-            <ul>
-         <?php foreach($Columns as $k => $v):?>
-
-              <li>
-                <a href="./detail.html">
-                  <img src="<?php echo WEBROOT; ?>common-img/ico-key01.png" width="64" height="64" class="rank" alt="1">
-                  <span class="column-entryview">100,999 views</span>
-                  <span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-                </a>
-              </li>
-    <?php endforeach;?>
+    <?php echo $this->element('common/cmnSubContentColumn'); ?>
 
 
-            </ul>
-          </nav>
-        </div>
-      </section>
-
-      <section class="column-recent container">
-        <h2 class="column-sidehead">新着コラム</h2>
-        <div class="section-body">
-          <nav>
-            <ul>
-
-         <?php foreach($Columns as $k => $v):?>
-
-              <li>
-                <a href="./detail.html">
-                  <span class="column-entrydate">2015/12/66</span>
-                  <span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-                </a>
-              </li>
-
-
-            </ul>
-          </nav>
-        </div>
-      </section>
-    <?php endforeach;?>
-
-      <section class="column-category container">
-        <h2 class="column-sidehead">カテゴリ</h2>
-        <div class="section-body">
-          <nav>
-            <ul>
-              <li><a href="./list.html">カテゴリ1</a></li>
-              <li><a href="./list.html">カテゴリ2</a></li>
-              <li><a href="./list.html">カテゴリ3</a></li>
-              <li><a href="./list.html">カテゴリ4</a></li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-
-      <div class="column-bnr">
-        <a href="<?php echo WEBROOT; ?>"><img src="<?php echo WEBROOT; ?>common-img/logo.png" class="fitimg-w" alt="美容機器コレクション Beauty Post"></a>
-      </div>
-    </aside><!-- /#column-sub -->
   </div>
 </div><!-- /#page-area -->
 <!--

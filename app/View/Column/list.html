@@ -9,114 +9,70 @@
 <?php echo headContent(); ?>
 <?php echo headContent_css('content'); ?>
 </head>
-<!-- 
+<!--
 #################################################################################################### -->
 <body id="pagetop" class="page-column">
 <?php echo gtm(); ?>
 <div class="menu-overlay">&#8203;</div>
 <div id="wrapper"><div id="wrap-inner">
-<!-- 
+<!--
 ====================================================================================================
- Column Header                                                                       #column-header 
+ Column Header                                                                       #column-header
 ==================================================================================================== -->
 <header id="column-header">
 	<div class="layout">
-		<h1><a href="./">Beauty Post <span>美活コラム</span></a></h1>
+		<h1><a href="<?php echo WEBROOT?>">Beauty Post <span>美活コラム</span></a></h1>
 	</div>
 </header><!-- /#column-header -->
-<!-- 
+<!--
 ====================================================================================================
- Contents                                                                                #page-area 
+ Contents                                                                                #page-area
 ==================================================================================================== -->
 <div id="page-area">
 	<div class="layout">
-		
+
 		<div id="main-area" class="layout-main layout-l">
 			<h2 class="column-head">カテゴリー名称が入ります</h2>
+
+
+    <?php foreach($Columns as $k => $v):?>
+
+
+
 			<section class="column-entry">
 				<div class="section-body">
 					<header>
-						<p class="column-entrydate fll">2015/15/85</p>
-						<p class="column-entryview flr">123,456 views</p>
-						<h2 class="column-entrytitle"><a href="./detail.html">タイトルタイトルタイトル</a></h2>
+						<p class="column-entrydate fll">$v['Column']['created']?></p>
+						<p class="column-entryview flr"><?php echo $v['Column']['count']?> views</p>
+						<h2 class="column-entrytitle"><a href="./detail.html"><?php echo $v['Column']['title']?></a></h2>
 					</header>
 					<div class="column-entrybody">
 						<div class="column-eyecatch">
 							<img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w">
 						</div>
 						<div class="column-entrylead">
-							リード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入ります
+							<?php echo $v['Column']['comment']?>
 						</div>
 						<p class="column-viewmore">
-							<a href="detail.html">続きを読む <i class="fa fa-angle-double-right">&#8203;</i></a>
+							<a href="<?php echo WEBROOT.$this->name?>detail/?id=<?php echo $v['Column']['id']?>">続きを読む <i class="fa fa-angle-double-right">&#8203;</i></a>
 						</p>
 					</div>
 				</div><!-- /.section-body -->
-				
+
 				<div class="column-boxfoot">
 					<div class="column-entryinfo">
-						<div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="#">カテゴリ</a></div>
+						<div class="column-entrycategory">
+						<i class="fa fa-folder-open-o"></i> <a href="#">カテゴリ</a>
+						</div>
 						<div class="column-entrysns">SNS</div>
 					</div><!-- /.column-entryinfo -->
 				</div><!-- /.column-boxfoot -->
 			</section><!-- /.column-entry -->
-			
-			<section class="column-entry">
-				<div class="section-body">
-					<header>
-						<p class="column-entrydate fll">2015/15/85</p>
-						<p class="column-entryview flr">123,456 views</p>
-						<h2 class="column-entrytitle"><a href="./detail.html">タイトルタイトルタイトル</a></h2>
-					</header>
-					<div class="column-entrybody">
-						<div class="column-eyecatch">
-							<img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w">
-						</div>
-						<div class="column-entrylead">
-							リード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入ります
-						</div>
-						<p class="column-viewmore">
-							<a href="detail.html">続きを読む <i class="fa fa-angle-double-right">&#8203;</i></a>
-						</p>
-					</div>
-				</div><!-- /.section-body -->
-				
-				<div class="column-boxfoot">
-					<div class="column-entryinfo">
-						<div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="#">カテゴリ</a></div>
-						<div class="column-entrysns">SNS</div>
-					</div><!-- /.column-entryinfo -->
-				</div><!-- /.column-boxfoot -->
-			</section><!-- /.column-entry -->
-			
-			<section class="column-entry">
-				<div class="section-body">
-					<header>
-						<p class="column-entrydate fll">2015/15/85</p>
-						<p class="column-entryview flr">123,456 views</p>
-						<h2 class="column-entrytitle"><a href="./detail.html">タイトルタイトルタイトル</a></h2>
-					</header>
-					<div class="column-entrybody">
-						<div class="column-eyecatch">
-							<img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w">
-						</div>
-						<div class="column-entrylead">
-							リード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入りますリード文章が入ります
-						</div>
-						<p class="column-viewmore">
-							<a href="detail.html">続きを読む <i class="fa fa-angle-double-right">&#8203;</i></a>
-						</p>
-					</div>
-				</div><!-- /.section-body -->
-				
-				<div class="column-boxfoot">
-					<div class="column-entryinfo">
-						<div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="#">カテゴリ</a></div>
-						<div class="column-entrysns">SNS</div>
-					</div><!-- /.column-entryinfo -->
-				</div><!-- /.column-boxfoot -->
-			</section><!-- /.column-entry -->
-			
+
+    <?php endforeach;?>
+
+
+
 			<div class="container">
 				<nav class="column-pagination pg-list">
 					<ul>
@@ -139,116 +95,16 @@
 				</nav><!-- /.pagination -->
 			</div>
 		</div><!-- /#main-area -->
-		
-		<aside id="column-sub" class="layout-sub layout-r">
-			<section class="column-famous container">
-				<h2 class="column-sidehead">人気のコラムランキング</h2>
-				<div class="section-body">
-					<nav>
-						<ul>
-							<li>
-								<a href="./detail.html">
-									<img src="<?php echo WEBROOT; ?>common-img/ico-key01.png" width="64" height="64" class="rank" alt="1">
-									<span class="column-entryview">100,999 views</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<img src="<?php echo WEBROOT; ?>common-img/ico-key02.png" width="64" height="64" class="rank" alt="2">
-									<span class="column-entryview">100,999 views</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<img src="<?php echo WEBROOT; ?>common-img/ico-key03.png" width="64" height="64" class="rank" alt="3">
-									<span class="column-entryview">100,999 views</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<img src="<?php echo WEBROOT; ?>common-img/ico-key04.png" width="64" height="64" class="rank" alt="4">
-									<span class="column-entryview">100,999 views</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<img src="<?php echo WEBROOT; ?>common-img/ico-key05.png" width="64" height="64" class="rank" alt="5">
-									<span class="column-entryview">100,999 views</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-			
-			<section class="column-recent container">
-				<h2 class="column-sidehead">新着コラム</h2>
-				<div class="section-body">
-					<nav>
-						<ul>
-							<li>
-								<a href="./detail.html">
-									<span class="column-entrydate">2015/12/66</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<span class="column-entrydate">2015/12/66</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<span class="column-entrydate">2015/12/66</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<span class="column-entrydate">2015/12/66</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-							<li>
-								<a href="./detail.html">
-									<span class="column-entrydate">2015/12/66</span>
-									<span class="entry-title">タイトルタイトルタイトルタイトルタイトルタイトル</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-			
-			<section class="column-category container">
-				<h2 class="column-sidehead">カテゴリ</h2>
-				<div class="section-body">
-					<nav>
-						<ul>
-							<li><a href="./list.html">カテゴリ1</a></li>
-							<li><a href="./list.html">カテゴリ2</a></li>
-							<li><a href="./list.html">カテゴリ3</a></li>
-							<li><a href="./list.html">カテゴリ4</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-			
-			<div class="column-bnr">
-				<a href="<?php echo WEBROOT; ?>"><img src="<?php echo WEBROOT; ?>common-img/logo.png" class="fitimg-w" alt="美容機器コレクション Beauty Post"></a>
-			</div>
-		</aside><!-- /#column-sub -->
+
+
+    <?php echo $this->element('common/cmnSubContentColumn'); ?>
+
+
 	</div>
 </div><!-- /#page-area -->
-<!-- 
+<!--
 ====================================================================================================
- Column Footer                                                                       #column-footer 
+ Column Footer                                                                       #column-footer
 ==================================================================================================== -->
 <footer id="column-footer">
 	<div class="layout">
@@ -265,7 +121,7 @@
 		<div class="layout"><p><small>Copyright 2015 Beauty Post. All Rights Reserved.</small></p></div>
 	</div><!-- /#copyright -->
 </footer><!-- /#column-footer -->
-<!-- 
+<!--
 ==================================================================================================== -->
 </div></div><!-- /#wrapper>/#wrap-inner -->
 <?php echo lastContent(); ?>

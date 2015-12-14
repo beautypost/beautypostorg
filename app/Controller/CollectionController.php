@@ -74,20 +74,27 @@ class CollectionController extends AppController {
 		$data = '';
 		if(isset($this->params['url']['data']['SearchData'])){
 			$data = unserialize(base64_decode($this->params['url']['data']['SearchData']));
+		}else{
+			$data = $this->setRequestGetValues($data);
 		}
+
+//var_dump($data);
+		//pageing
+		$data['sort'] = $sort = isset($data['sort']) ? $data['sort'] : '';
+		$data['limit'] = $limit = isset($data['limit']) ? $data['limit'] : 10;
+
 		//getで受け取ったdataをセット
-//		$data = $this->setRequestGetValues($data);
+
+
+
 		$this->set('data',$data);
 
 		//検索用パラメータ作成
 		$conditions = $this->ItemC->setItemValueSearch($data);
 
-		//pageing
-		$sort = isset($data['sort']) ? $data['sort'] : '';
-		$limit = isset($data['limit']) ? $data['limit'] : 5;
 		$p = isset($this->params['url']['p']) ? $this->params['url']['p'] : 0;
 
-		$items = $this->Item->getItems($conditions,$sort,$limit,$p);
+		$items = $this->Item->getItems($conditions,$data['sort'],$data['limit'],$p);
 
 
 		$reviewall = array();
@@ -111,7 +118,7 @@ class CollectionController extends AppController {
 		//検索条件でのmaxcount
 		$total = $this->Item->getItemsCount($conditions);
 		//pagerを作成
-		$pager = $this->Pager->getPager($total,$p,$limit);
+		$pager = $this->Pager->getPager($total,$p,$data['limit']);
 
 		$this->set('totalcount',$total);
 
@@ -149,13 +156,17 @@ class CollectionController extends AppController {
         if(count($reviews) != 0){
 	        $r = $this->ItemsReview->getTotalReviewByAll($reviews);
         }
-//var_dump($r);
+
         $this->set('totalreview',$r);
 
-
-		//レビュー情報
+		//モニター情報
 		$reviews = $this->ItemsMonitor->getItemsByItemID($id);
 		$this->set('Monitors',$reviews);
+        $r = array();
+        if(count($reviews) != 0){
+	        $r = $this->ItemsMonitor->getTotalReviewByAll($reviews);
+        }
+
 
 
 		//関連商品

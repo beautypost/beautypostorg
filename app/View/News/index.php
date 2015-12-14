@@ -19,14 +19,14 @@
         <section class="news-entry">
           <header>
             <h2 class="news-title head-bar"><?php echo $v['Blog']['title']?></h2>
-            <p class="news-date"><?php echo $v['Blog']['created']?></p>
+            <p class="news-date"><?php echo $this->Useful->setdate($v['Blog']['created'],'Y/m/d')?></p>
           </header>
 
           <div class="news-body">
-          <!--
+
             <div class="photo">
               <div class="imgframe">
-                <div class="inner"><img src="http://placehold.jp/128/a1a1a1/cccccc/800x600.png?text=DUMMY" alt=""></div>
+                <div class="inner"><?php echo $this->Useful->ItemImg($v['Blog']['img1up'],'300','blogs')?></div>
               </div>
             </div><!-- /.photo -->
 
@@ -37,10 +37,11 @@
               <p class="more"><a href="<?php echo WEBROOT.'News/detail/'.$v['Blog']['id']?>">続きを読む</a></p>
             </div>
           </div><!-- /.news-body -->
-
           <footer>
             <ul class="news-category">
-              <li><a href=""><?php $v['Blog']['tag']?></a></li>
+            <?php foreach($v['Blog']['tags'] as $kk => $vv):?>
+              <li><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $vv?>"><?php echo $this->Useful->selectOptionValue($GenreBlogs,$vv)?></a></li>
+            <?php endforeach;?>
             </ul><!-- /.news-category -->
             <div class="sns-btns">
               sns

@@ -47,35 +47,85 @@ class ColumnController extends AppController {
 	}
 
 	public function beforeRender(){
-        //マスタ
-        $this->set('AllGenreNames',$this->Genre->getAllGenreName());
-        //部位マスタ
-        $this->set('PointGenres',$this->Genre->getPointGenre());
+
+        $this->set('GenreColumn',$this->Genre->getColumn());
+        $p=0;
+  		$limit = 5;
+  		$conditions = array();
+		/**
+		人気のコラムランキング
+		**/
+		$sort['count'] = 'DESC';
+
+		$this->set('RankingColumns',$this->Column->getItems($sort,$limit,$p,$conditions));
+
+		/**
+		新着コラム
+		**/
+		$sort['created'] = 'DESC';
+
+		$this->set('NewColumns',$this->Column->getItems($sort,$limit,$p,$conditions));
+
 
 
 		parent::beforeRender();
 	}
 
-	public function index($tag='',$offset=''){
+	public function index(){
 
 		//pageing
 		$sort = isset($data['sort']) ? $data['sort'] : '';
-		$limit = isset($data['limit']) ? $data['limit'] : 10;
+		$limit = isset($data['limit']) ? $data['limit'] : 4;
 		$p = isset($data['p']) ? $data['p'] : 0;
 
-		//一覧表示
-		$sort['created'] = 'DESC';
-//		$items = $this->Column->getItems($sort,BLOGPAGELIMIT,$offset,$tag);
+		//ジャンル一覧
 		$columnCategory = $this->Genre->getColumn();
+		/**
+		アイテム取得
+		**/
+		$sort['created'] = 'DESC';
 		$items = array();
-		foreach($cokumnCategory as $k => $v){
-			$conditions = array('genre_id'=>$v['Genre']['id']);
-			$items[$v['Genre']['id']] = $this->Column->getItems($conditions);
+		foreach($columnCategory as $k => $v){
+			$conditions = array('tag'=>$v['Genre']['id']);
+			$items[$v['Genre']['id']] = $this->Column->getItems($sort,$limit,$p,$conditions);
 		}
 		$this->set('Columns',$items);
 
+
+
+		// //検索条件でのmaxcount
+		// $total = $this->Column->getItemsAllCount('','');
+		// //pagerを作成
+		// $pager = $this->Pager->getPager($total,$p,$limit);
+
+		// $this->set('totalcount',$total);
+
+		// $this->set('Pager',$pager);
+
+
+	}
+
+
+	public function category(){
+
+		//pageing
+		$tag_id = isset($this->params['url']['tag_id']) ? $this->params['url']['tag_id'] : '';
+		$limit = isset($data['limit']) ? $data['limit'] : 10;
+		$p = isset($data['p']) ? $data['p'] : 0;
+
+
+		/**
+		アイテム取得
+		**/
+		$sort['created'] = 'DESC';
+		$conditions = array('tag'=>$tag_id);
+		$items = $this->Column->getItems($sort,$limit,$p,$conditions);
+
+		$this->set('Columns',$items);
+
+
 		//検索条件でのmaxcount
-		$total = $this->Column->getItemsAllCount('','');
+		$total = $this->Column->getItemsAllCount('',$tag_id);
 		//pagerを作成
 		$pager = $this->Pager->getPager($total,$p,$limit);
 
@@ -86,7 +136,9 @@ class ColumnController extends AppController {
 
 	}
 
-	public function detail($id){
+
+	public function detail(){
+		$id = isset($this->params['url']['id']) ? $this->params['url']['id'] : '';
 
 		$item = $this->Column->getItemByID($id,'');
 
