@@ -3374,6 +3374,138 @@
 ====================================================================================================
 ■ 使い方ガイド (.page-guide) ./guide/
 ---------------------------------------------------------------------------------------------------- */
+/* 美容機器探し */
+#guide-search .flowbox {
+  margin-top: 40px;
+  padding: 1.62602%;
+  border: 8px solid #E6E6E6;
+  position: relative;
+  background: #F5F5F5;
+  -moz-box-shadow: 0 0 0 1px #fff inset;
+  -webkit-box-shadow: 0 0 0 1px #fff inset;
+  box-shadow: 0 0 0 1px #fff inset;
+}
+@media (min-width: 768px) {
+  #guide-search .flowbox {
+    zoom: 1;
+  }
+  #guide-search .flowbox:before, #guide-search .flowbox:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+#guide-search .flowbox > h2 {
+  border-top: 2px solid #CFCECE;
+  -moz-border-radius: 0.5rem 0.5rem 0 0;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: absolute;
+  top: -3.8rem;
+  left: -8px;
+  background: #E6E6E6;
+  width: 160px;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+  text-align: center;
+}
+#guide-search .flowbox > section {
+  background: #fff;
+}
+#guide-search .flowbox > section > h2 .rsp-ooxx {
+  max-width: 432px;
+}
+#guide-search .flowbox footer {
+  clear: both;
+  padding-top: 1.2rem;
+  text-align: right;
+}
+@media (max-width: 479px) {
+  #guide-search .flowbox footer .button {
+    display: block;
+    text-align: center;
+  }
+}
+#guide-search .flownext {
+  text-align: center;
+}
+#guide-search .flownext .fitimg-w {
+  max-width: 464px;
+}
+@media (min-width: 768px) {
+  #guide-search .flowtxt {
+    line-height: 2;
+  }
+}
+@media (max-width: 767px) {
+  #guide-search .flowimg {
+    text-align: center;
+  }
+}
+#guide-search .flowimg .rsp-ooxx {
+  max-width: 287px;
+}
+#guide-search .flow01 {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  #guide-search .flow01 .flowtxt {
+    padding: 2.38095%;
+  }
+}
+@media (min-width: 768px) {
+  #guide-search .flow01 .flowtxt {
+    margin-left: -9.66387%;
+    padding: 1.2605%;
+    position: relative;
+    float: right;
+    width: 37.39496%;
+  }
+}
+@media (min-width: 768px) {
+  #guide-search .flow01 .flowimg {
+    width: 69.7479%;
+  }
+}
+#guide-search .flow02 {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  #guide-search .flow02 {
+    float: left;
+    width: 52.94118%;
+  }
+}
+#guide-search .flow02 .flowtxt {
+  padding: 2.38095%;
+}
+#guide-search .flow03 {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  #guide-search .flow03 {
+    margin-top: 0;
+    float: right;
+    width: 45.37815%;
+  }
+}
+#guide-search .flow03 .flowtxt {
+  padding: 2.77778%;
+}
+#guide-search .flow04 {
+  margin: 0;
+}
+#guide-search .flow04 .flowtxt {
+  padding: 1.2605%;
+}
+
+/* 最終キャッチ */
+#guide-last {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
 /* 
 ====================================================================================================
 ■ サイトマップ (.page-sitemap) ./sitemap/

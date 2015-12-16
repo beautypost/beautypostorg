@@ -1756,7 +1756,102 @@
 ====================================================================================================
 ■ 使い方ガイド (.page-guide) ./guide/
 ---------------------------------------------------------------------------------------------------- */
-
+	/* 美容機器探し */
+	#guide-search {
+		.flowbox {
+			margin-top:40px;
+			@include mqmt($bpM) { @include cf(); }
+			padding:32 / 1968 * 100%;
+			border:8px solid $c-gy;
+			position:relative;
+			background:$c-gy-lt;
+			@include box-shadow(0 0 0 1px #fff inset);
+			>h2 {
+				border-top:2px solid #CFCECE;
+				@include border-radius(0.5rem 0.5rem 0 0);
+				@include posa(-3.8rem,null,null,-8px);
+				background:$c-gy;
+				width:160px;
+				@include fz(16);
+				line-height:2;
+				text-align:center;
+			}
+			>section {
+				background:#fff;
+				>h2 {
+					.rsp-ooxx { max-width:432px; }
+				}
+			}
+			footer {
+				clear:both;
+				padding-top:1.2rem;
+				text-align:right;
+				.button {
+					@include mqlt($bpS) { display:block; text-align:center; }
+				}
+			}
+		}
+		.flownext {
+			text-align:center;
+			.fitimg-w { max-width: 464px; }
+		}
+		.flowtxt {
+			@include mqmt($bpM) { line-height:2; }
+		}
+		.flowimg {
+			@include mqlt($bpM) { text-align:center; }
+			.rsp-ooxx { max-width:287px; }
+		}
+		.flow01 {
+			margin:0;
+			.flowtxt {
+				@include mqlt($bpM) {
+					padding:24 / 1008 * 100%;
+				}
+				@include mqmt($bpM) {
+					margin-left:-184 / 1904 * 100%;
+					padding:24 / 1904 * 100%;
+					position:relative;
+					float:right;
+					width:712 / 1904 * 100%;
+				}
+			}
+			.flowimg {
+				@include mqmt($bpM) { width:1328 / 1904 * 100%; }
+			}
+		}
+		.flow02 {
+			margin:0;
+			@include mqmt($bpM) {
+				float:left;
+				width:1008 / 1904 * 100%;
+			}
+			.flowtxt {
+				padding:24 / 1008 * 100%;
+			}
+		}
+		.flow03 {
+			margin-bottom:0;
+			@include mqmt($bpM) {
+				margin-top:0;
+				float:right;
+				width:864 / 1904 * 100%;
+			}
+			.flowtxt {
+				padding:24 / 864 * 100%;
+			}
+		}
+		.flow04 {
+			margin:0;
+			.flowtxt {
+				padding:24 / 1904 * 100%;
+			}
+		}
+	}
+	/* 最終キャッチ */
+	#guide-last {
+		@include pv(1.5em);
+	}
 /* 
 ====================================================================================================
 ■ サイトマップ (.page-sitemap) ./sitemap/
