@@ -47,6 +47,9 @@
                         </div><!-- /.section-body -->
                     </section><!-- /.advisory-sunburn -->
                 </div>
+                <footer>
+                    <p class="tar"><small>&#169; Craid &amp; Yuka Natsumi </small></p>
+                </footer>
             </section><!-- /#mp-advisory -->
 
             <section id="mp-news">

@@ -2306,6 +2306,11 @@
     clear: both;
   }
 }
+#mp-advisory > footer {
+  color: #999999;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
 
 .advisory-head {
   padding-left: 4rem;

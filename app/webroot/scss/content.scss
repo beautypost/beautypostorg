@@ -1176,6 +1176,10 @@
 				@include cf();
 			}
 		}
+		>footer {
+			color:$c-gy-dk;
+			@include fz(12);
+		}
 	}
 	.advisory-head {
 		padding-left:4rem;

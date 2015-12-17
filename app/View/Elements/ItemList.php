@@ -22,7 +22,7 @@
                 </a>
             </div><!-- /.item-img -->
             <?php if($Item['Item']['price'] > 0):?>
-            <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
+            <dl class="item-price"><dt>最安値（税別）</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
         <?php endif;?>
         </div><!-- .item-face -->
         <div class="item-summary">

@@ -76,7 +76,7 @@
                             <?php endif;?>
                             <a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
                             <?php if($Item['Item']['price']):?>
-                                <dl class="item-price"><dt>小売希望価格</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
+                                <dl class="item-price"><dt>最安値（税別）</dt><dd><span><?php echo number_format($Item['Item']['price'])?></span>円</dd></dl>
                             <?php endif;?>
                         </div><!-- /.item-summary -->
 
