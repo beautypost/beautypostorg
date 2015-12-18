@@ -149,8 +149,10 @@
 		@include mq($bpS,$bpM) { margin-left:238 / 440 * -100%;}
 		@include mqmt($bpS) { float:left; }
 		color:#fff;
+		cursor:default;
 		.num,a { @include pv(0.5em); display:table-cell; text-align:center; }
 		a {
+			cursor:pointer;
 			@include mqlt($bpM) { @include ps(1.5em); }
 			@include mqmt($bpM) { @include ps(2em); }
 			border-right:1px solid darken(#3EB6B4,15%);

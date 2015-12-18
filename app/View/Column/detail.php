@@ -24,7 +24,12 @@
             <h2 class="column-entrytitle"><?php echo $Column['Column']['title']?></h2>
             <div class="column-entryinfo">
             <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="<?php echo WEBROOT.$this->name?>/category/<?php echo $Column['Column']['tag']?>"><?php echo $this->Useful->selectOptionValue($GenreColumns,$Column['Column']['tag'])?></a></div>
-              <div class="column-entrysns">SNS</div>
+              <div class="column-entrysns">
+                <ul>
+                  <li><div class="g-plusone" data-size="medium"></div></li>
+                  <li><div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+                </ul>
+              </div>
             </div><!-- /.column-entryinfo -->
           </header>
           <div class="column-entrybody">
@@ -42,7 +47,12 @@
         <div class="column-boxfoot">
           <div class="column-entryinfo">
             <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="<?php echo WEBROOT.$this->name?>/category/<?php echo $Column['Column']['tag']?>"><?php echo $this->Useful->selectOptionValue($GenreColumns,$Column['Column']['tag'])?></a></div>
-            <div class="column-entrysns">SNS</div>
+            <div class="column-entrysns">
+              <ul>
+                <li><div class="g-plusone" data-size="medium"></div></li>
+                <li><div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+              </ul>
+            </div>
           </div><!-- /.column-entryinfo -->
         </div><!-- /.column-boxfoot -->
       </article><!-- /.column-entry -->

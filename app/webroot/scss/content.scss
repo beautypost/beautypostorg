@@ -1406,6 +1406,8 @@
 			}
 			.sns-btns {
 				@include mqmt($bpM) { float:right; }
+				li { display:inline-block; vertical-align:middle; }
+				li>div { vertical-align:middle !important; }
 			}
 		}
 	}
@@ -2016,7 +2018,11 @@
 		float:left;
 		a { @include link-colors($cc-link,$cc-linkbright); @include ulLink(); }
 	}
-	.column-entrysns { float:right; }
+	.column-entrysns {
+		float:right;
+		li { display:inline-block; vertical-align:middle; }
+		li>div { vertical-align:middle !important; }
+	}
 	
 	/* トップ */
 	.column-topcategory {

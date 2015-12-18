@@ -11,6 +11,14 @@
 <!--
 #################################################################################################### -->
 <body id="pagetop"  <?php if($bodyclass):?>class="<?php echo $bodyclass?>"<?php endif;?>>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=176047709119503";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <?php echo $this->element('common/googleAnalytics')?>
 <div class="menu-overlay">&#8203;</div>
 <div id="wrapper"><div id="wrap-inner">
@@ -49,6 +57,9 @@
 ==================================================================================================== -->
 
 </div></div><!-- /#wrapper>/#wrapper -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'ja'}
+</script>
 </body>
 </html>
             <?php echo $this->element('sql_dump'); ?>

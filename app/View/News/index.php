@@ -44,7 +44,10 @@
             <?php endforeach;?>
             </ul><!-- /.news-category -->
             <div class="sns-btns">
-              sns
+              <ul class="horizontal">
+                <li><div class="g-plusone" data-size="medium" data-href="<?php echo WEBROOT.'News/detail/'.$v['Blog']['id']?>"></div></li>
+                <li><div class="fb-like" data-href="<?php echo WEBROOT.'News/detail/'.$v['Blog']['id']?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+              </ul>
             </div>
           </footer>
         </section><!-- /.news-entry -->

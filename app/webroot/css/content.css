@@ -2701,6 +2701,13 @@
     float: right;
   }
 }
+.news-entry footer .sns-btns li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.news-entry footer .sns-btns li > div {
+  vertical-align: middle !important;
+}
 
 .news-body {
   zoom: 1;
@@ -3835,6 +3842,13 @@
 
 .column-entrysns {
   float: right;
+}
+.column-entrysns li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.column-entrysns li > div {
+  vertical-align: middle !important;
 }
 
 /* トップ */

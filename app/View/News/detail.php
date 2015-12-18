@@ -45,7 +45,10 @@
             <?php endforeach;?>
             </ul><!-- /.news-category -->
             <div class="sns-btns">
-              SNS用のタグを設置
+              <ul>
+                <li><div class="g-plusone" data-size="medium"></div></li>
+                <li><div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+              </ul>
             </div>
           </footer>
         </section><!-- /.news-entry -->

@@ -2070,6 +2070,7 @@ ul.alp > li, ol.alp > li {
   overflow: hidden;
   display: table;
   color: #fff;
+  cursor: default;
 }
 @media (min-width: 480px) {
   .btn-want {
@@ -2102,6 +2103,7 @@ ul.alp > li, ol.alp > li {
   text-align: center;
 }
 .btn-want a {
+  cursor: pointer;
   border-right: 1px solid #2b7d7c;
   color: #fff;
   background: #38a3a1;
