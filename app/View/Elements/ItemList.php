@@ -75,13 +75,15 @@
                     </li>
                 </ul>
             </div><!-- /.item-info -->
-        <?php if($this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
-             <div class="btn-want is-wanted" id="ajwant<?php echo $Item['Item']['id']?>"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+        <?php if($UserData['Snsuser']['id']):?>
+            <?php if($this->Useful->checkwant($UserData['Snsuser']['id'],$Item['Item']['id'],$Wants)):?>
+                 <div class="btn-want is-wanted" id="ajwant<?php echo $Item['Item']['id']?>"><a href=""><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
+            <?php else:?>
+                <div id="ajwant<?php echo $Item['Item']['id']?>"><div class="btn-want"><a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div></div>
+            <?php endif;?>
         <?php else:?>
-            <div id="ajwant<?php echo $Item['Item']['id']?>"><div class="btn-want"><a onclick="wants(<?php echo $Item['Item']['id']?>)"><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div></div>
+                 <div class="btn-want" id="ajwant<?php echo $Item['Item']['id']?>"><a><i class="fa fa-heart">&#8203;</i> Want!</a><span class="num"><?php echo $Item['Item']['wants']?></span></div>
         <?php endif;?>
-
-
             <p class="more"><a href="<?php echo WEBROOT?>collection/detail/<?php echo $Item['Item']['id']?>" class="button btn-vpk">詳細を見る<i class="fa fa-chevron-circle-right">&#8203;</i></a></p>
         </div><!-- /.item-summary -->
     </div><!-- /.box-contents-body -->

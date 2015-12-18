@@ -90,6 +90,7 @@ class AppController extends Controller {
 
         //アンケート
         $this->set('Questions',$this->Question->getItems(QUESTIONSUBLIMIT,''));
+        $this->set('GenreColumns',$this->Genre->getColumn());
 
         //NEWS
         $sort['CREATED'] ='DESC';

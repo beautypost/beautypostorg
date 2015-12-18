@@ -16,7 +16,7 @@
   <div class="layout">
 
     <div id="main-area" class="layout-main layout-l">
-      <h2 class="column-head">カテゴリー名称が入ります</h2>
+      <h2 class="column-head"><?php echo $this->Useful->selectOptionValue($GenreColumns,$tag_id)?></h2>
 
 
     <?php foreach($Columns as $k => $v):?>
@@ -26,19 +26,19 @@
       <section class="column-entry">
         <div class="section-body">
           <header>
-            <p class="column-entrydate fll"><?php echo $v['Column']['created']?></p>
+            <p class="column-entrydate fll"><?php echo $this->Useful->setdate($v['Column']['entrydate'],'Y/m/d')?></p>
             <p class="column-entryview flr"><?php echo $v['Column']['count']?> views</p>
             <h2 class="column-entrytitle"><a href="<?php echo WEBROOT.$this->name?>/detail/?id=<?php echo $v['Column']['id']?>"><?php echo $v['Column']['title']?></a></h2>
           </header>
           <div class="column-entrybody">
             <div class="column-eyecatch">
-              <img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w">
+                <div class="column-eyecatch"><?php echo $this->Useful->ItemImg($v['Column']['img1up'],'','Column','fitimg-w');?></div>
             </div>
             <div class="column-entrylead">
               <?php echo $v['Column']['comment']?>
             </div>
             <p class="column-viewmore">
-              <a href="<?php echo WEBROOT.$this->name?>/detail/?id=<?php echo $v['Column']['id']?>">続きを読む <i class="fa fa-angle-double-right">&#8203;</i></a>
+              <a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $v['Column']['id']?>">続きを読む <i class="fa fa-angle-double-right">&#8203;</i></a>
             </p>
           </div>
         </div><!-- /.section-body -->
@@ -46,7 +46,7 @@
         <div class="column-boxfoot">
           <div class="column-entryinfo">
             <div class="column-entrycategory">
-            <i class="fa fa-folder-open-o"></i> <a href="#">カテゴリ</a>
+            <i class="fa fa-folder-open-o"></i> <a href="<?php echo WEBROOT.$this->name?>/category/?tag_id=<?php echo $v['Column']['tag']?>"><?php echo $this->Useful->selectOptionValue($GenreColumns,$tag_id)?></a>
             </div>
             <div class="column-entrysns">SNS</div>
           </div><!-- /.column-entryinfo -->
@@ -59,24 +59,24 @@
 
       <div class="container">
         <nav class="column-pagination pg-list">
-          <ul>
-            <li class="nav-prev"><a href="#"><span class="rsp-xxoo">Prev</span></a></li>
-            <li>
-              <ol>
-                <li class="sp-hide"><a href="#">1</a></li>
-                <li class="sp-hide">…</li>
-                <li><a href="#">498</a></li>
-                <li><a href="#">499</a></li>
-                <li class="nav-now">500</li>
-                <li><a href="#">501</a></li>
-                <li><a href="#">502</a></li>
-                <li class="sp-hide">…</li>
-                <li class="sp-hide"><a href="#">999</a></li>
-              </ol>
-            </li>
-            <li class="nav-next"><a href="#"><span class="rsp-xxoo">Next</span></a></li>
-          </ul>
-        </nav><!-- /.pagination -->
+                        <ul>
+                        <?php if ($Pager['s']):?>
+                              <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
+                        <?php endif;?>
+                                                        <ol>
+                          <?php foreach ($Pager['pager'] as $k =>$v):?>
+                            <?php if ($Pager['p'] == $v-1):?>
+                              <li class="nav-now"><a href="?data[p]=<?php echo $v-1?>"><?php echo $v;?></a></li>
+                            <?php else:?>
+                              <li><a href="?data[p]=<?php echo $v-1?>"><?php echo $v?></a></li>
+                            <?php endif;?>
+                          <?php endforeach;?>
+                                                        </ol>
+                        <?php if ($Pager['e']):?>
+                              <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
+                        <?php endif;?>
+                        </ul>
+                    </nav><!-- /.pagination -->
       </div>
     </div><!-- /#main-area -->
 
@@ -87,28 +87,4 @@
   </div>
 </div><!-- /#page-area -->
 
-<!--
-====================================================================================================
- Column Footer                                                                       #column-footer
-==================================================================================================== -->
-<footer id="column-footer">
-  <div class="layout">
-    <nav id="column-fnav">
-      <ul>
-        <li><a href=""><i class="fa fa-home">&#8203;</i> ホーム</a></li>
-        <li><a href=""><i class="fa fa-pencil">&#8203;</i> ライター募集</a></li>
-        <li><a href=""><i class="fa fa-building">&#8203;</i> 運営者会社</a></li>
-        <li><a href=""><i class="fa fa-envelope-o">&#8203;</i> お問い合わせ</a></li>
-      </ul>
-    </nav><!-- /#column-fnav -->
-  </div>
-  <div id="column-copyright">
-    <div class="layout"><p><small>Copyright 2015 Beauty Post. All Rights Reserved.</small></p></div>
-  </div><!-- /#copyright -->
-</footer><!-- /#column-footer -->
-<!--
-==================================================================================================== -->
-</div></div><!-- /#wrapper>/#wrap-inner -->
-<?php  //lastContent(); ?>
-</body>
-</html>
+

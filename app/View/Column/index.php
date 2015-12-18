@@ -24,10 +24,10 @@
 
          <?php foreach($kvv as $k => $v):?>
             <section class="column-entryblock">
-              <a href="./detail.html">
-                <div class="column-eyecatch"><img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w"></div>
+              <a href="<?php echo WEBROOT.$this->name?>/detail/?id=<?php echo $v['Column']['id']?>">
+                <div class="column-eyecatch"><?php echo $this->Useful->ItemImg($v['Column']['img1up'],'','Column','fitimg-w');?></div>
                 <div class="column-blockbody">
-                  <p class="column-entrydate"><?php echo $this->Useful->setdate($v['Column']['created'],'Y.m.d')?></p>
+                  <p class="column-entrydate"><?php echo $this->Useful->setdate($v['Column']['entrydate'],'Y.m.d')?></p>
                   <h3 class="column-entryblocktitle"><?php echo $v['Column']['title']?></h3>
                   <p class="column-entryview"><?php echo $v['Column']['count']?> views</p>
                 </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="column-boxfoot">
           <p class="column-viewmore">
-            <a href="<?php echo WEBROOT.$this->name?>/category/?tag_id=<?php echo $v['Column']['tag']?>">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
+            <a href="<?php echo WEBROOT.$this->name?>/category/<?php echo $v['Column']['tag']?>">もっと見る <i class="fa fa-angle-double-right">&#8203;</i></a>
           </p>
         </div>
       </section><!-- /.column-topcategory -->
@@ -53,28 +53,4 @@
 
   </div>
 </div><!-- /#page-area -->
-<!--
-====================================================================================================
- Column Footer                                                                       #column-footer
-==================================================================================================== -->
-<footer id="column-footer">
-  <div class="layout">
-    <nav id="column-fnav">
-      <ul>
-        <li><a href=""><i class="fa fa-home">&#8203;</i> ホーム</a></li>
-        <li><a href=""><i class="fa fa-pencil">&#8203;</i> ライター募集</a></li>
-        <li><a href=""><i class="fa fa-building">&#8203;</i> 運営者会社</a></li>
-        <li><a href=""><i class="fa fa-envelope-o">&#8203;</i> お問い合わせ</a></li>
-      </ul>
-    </nav><!-- /#column-fnav -->
-  </div>
-  <div id="column-copyright">
-    <div class="layout"><p><small>Copyright 2015 Beauty Post. All Rights Reserved.</small></p></div>
-  </div><!-- /#copyright -->
-</footer><!-- /#column-footer -->
-<!--
-==================================================================================================== -->
-</div></div><!-- /#wrapper>/#wrap-inner -->
-<?php  //lastContent(); ?>
-</body>
-</html>
+

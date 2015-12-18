@@ -74,24 +74,24 @@ class BaseController extends AppController{
     }
 
     public function beforeRender(){
-    $this->set('GenreKisyu',$this->Genre->getKisyu());
-    // // 目的で探す
-     $this->set('GenrePurposes',$this->Genre->getPurpose());
-    // // 部位で探す
-    $this->set('GenrePoints',$this->Genre->getPoint());
-    //メーカー
-    $this->set('GenreMakers',$this->Genre->getMaker());
+        $this->set('GenreKisyu',$this->Genre->getKisyu());
+        // // 目的で探す
+         $this->set('GenrePurposes',$this->Genre->getPurpose());
+        // // 部位で探す
+        $this->set('GenrePoints',$this->Genre->getPoint());
+        //メーカー
+        $this->set('GenreMakers',$this->Genre->getMaker());
 
-    // // 価格
-    $this->set('GenreBlogs',$this->Genre->getBlog());
-    $this->set('GenreColumns',$this->Genre->getColumn());
-    $this->set('GenreTypes',$this->Genre->getType());
+        // // 価格
+        $this->set('GenreBlogs',$this->Genre->getBlog());
+        $this->set('GenreColumns',$this->Genre->getColumn());
+        $this->set('GenreTypes',$this->Genre->getType());
 
-    $this->set('GenreIcons',$this->Genre->getItemIcon());
+        $this->set('GenreIcons',$this->Genre->getItemIcon());
 
-    $this->set('GenreValid',$this->Genre->getValid());
+        $this->set('GenreValid',$this->Genre->getValid());
 
-    $this->set('AllGenreNames',$this->Genre->getAllGenreName());
+        $this->set('AllGenreNames',$this->Genre->getAllGenreName());
     }
 
 }

@@ -47,7 +47,7 @@ class ColumnController extends AppController {
 	}
 
 	public function beforeRender(){
-
+		$this->layout = 'column';
         $this->set('GenreColumn',$this->Genre->getColumn());
         $p=0;
   		$limit = 5;
@@ -56,17 +56,13 @@ class ColumnController extends AppController {
 		人気のコラムランキング
 		**/
 		$sort['count'] = 'DESC';
-
 		$this->set('RankingColumns',$this->Column->getItems($sort,$limit,$p,$conditions));
 
 		/**
 		新着コラム
 		**/
 		$sort['created'] = 'DESC';
-
 		$this->set('NewColumns',$this->Column->getItems($sort,$limit,$p,$conditions));
-
-
 
 		parent::beforeRender();
 	}
@@ -106,14 +102,14 @@ class ColumnController extends AppController {
 	}
 
 
-	public function category(){
+	public function category($tag_id){
 
 		//pageing
-		$tag_id = isset($this->params['url']['tag_id']) ? $this->params['url']['tag_id'] : '';
+//		$tag_id = isset($this->params['url']['tag_id']) ? $this->params['url']['tag_id'] : '';
 		$limit = isset($data['limit']) ? $data['limit'] : 10;
 		$p = isset($data['p']) ? $data['p'] : 0;
 
-
+		$this->set('tag_id',$tag_id);
 		/**
 		アイテム取得
 		**/
@@ -122,7 +118,6 @@ class ColumnController extends AppController {
 		$items = $this->Column->getItems($sort,$limit,$p,$conditions);
 
 		$this->set('Columns',$items);
-
 
 		//検索条件でのmaxcount
 		$total = $this->Column->getItemsAllCount('',$tag_id);
@@ -137,8 +132,8 @@ class ColumnController extends AppController {
 	}
 
 
-	public function detail(){
-		$id = isset($this->params['url']['id']) ? $this->params['url']['id'] : '';
+	public function detail($id){
+//		$id = isset($this->params['url']['id']) ? $this->params['url']['id'] : '';
 
 		$item = $this->Column->getItemByID($id,'');
 

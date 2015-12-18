@@ -16,11 +16,14 @@ if (isset($validationErrors) && is_array($validationErrors)) {
 }
 ?>
 <script type="text/javascript">
-$(function(){
-　$("#datepicker").datepicker({dateFormat: 'yy-mm-dd',});
-});
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $("#datepicker").datepicker("option", "dateFormat", 'yy-mm-dd');
+    $( "#datepicker" ).datepicker( "setDate", "<?php echo $data['Column']['entrydate']?>" );
+
+  });
 </script>
-<form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input">
+<form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input" enctype="multipart/form-data">
     <!-- #section:elements.form -->
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
@@ -53,6 +56,19 @@ $(function(){
     </select></div>
     </div>
 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像1</label>
+                    <div class="col-sm-10">
+
+<?php if($data['Column']['img1up']):?>
+<?php echo $this->Useful->ItemImg($data['Column']['img1up'],300,'Column');?>
+<input type="hidden" name="data[img1up]" value="<?php echo $data['Column']['img1up']?>">
+<input type="file" name="userfile[1]" />
+削除<input type="checkbox" value="" name="data[img1up]">
+<?php else:?>
+<input type="file" name="userfile[1]" />
+<?php endif;?>
+                </div></div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">内容 </label>

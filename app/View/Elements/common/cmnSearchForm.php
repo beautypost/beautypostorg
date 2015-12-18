@@ -42,13 +42,13 @@
                                 </dl>
                             </li>
 
-                            <li class="price">
+                            <li class="price w-full">
                                 <dl>
                                     <dt><i class="fa fa-plus-circle">&#8203;</i>価格</dt>
                                     <dd>
-<select name="data[GenrePrices]">
-<?php echo $this->Useful->option($GenrePrices,$data['GenrePrices'])?>
-</select>
+                                    <input type="number" name="data[GenrePriceLow]" id="sq-pricefrom" step="500" value="<?php echo $data['GenrePriceLow']?>">
+                                    <span class="fromto">〜</span>
+                                    <input type="number" name="data[GenrePriceHigh]" id="sq-pricefrom" step="500" value="<?php echo $data['GenrePriceHigh']?>">
                                     </dd>
                                 </dl>
                             </li>

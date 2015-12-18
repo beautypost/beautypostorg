@@ -39,7 +39,7 @@
 
 
 	Router::connect('/Column/detail/:id', array('controller' => 'column', 'action' => 'detail'),array('pass'=>array('id')));
-	Router::connect('/Column/:tag/:offset', array('controller' => 'column', 'action' => 'index'),array('pass'=>array('tag','offset')));
+	Router::connect('/Column/category/:tag/:offset', array('controller' => 'column', 'action' => 'category'),array('pass'=>array('tag','offset')));
 
 	Router::connect('/Question/detail/:id', array('controller' => 'question', 'action' => 'detail'),array('pass'=>array('id')));
 

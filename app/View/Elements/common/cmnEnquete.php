@@ -35,7 +35,7 @@
                                 <?php foreach($Questions[1]['QuestionValue'] as $k => $v):?>
                                 <tr>
                                     <th><span><?php echo $v['value']?></span></th>
-                                    <td><span class="bar" style="width:<?php if($Questions[1]['Question']['totalpoints'] !=0){echo floor(($v['points'] / $Questions[1]['Question']['totalpoints']) * 100);}?>%">&#8203;</span></td>
+                                    <td><span class="bar" style="width:<?php if($Questions[1]['Question']['totalpoints'] !=0){echo floor(($v['points'] / $Questions[1]['Question']['totalpoints']) * 100);}else{echo '0';}?>%">&#8203;</span></td>
                                     <td><span><span class="txt-c-pk"><?php echo $v['points']?></span>件</span></td>
                                 </tr>
                                 <?php endforeach;?>

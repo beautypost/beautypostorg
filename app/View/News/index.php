@@ -53,22 +53,21 @@
       <footer>
                     <nav class="pagination pg-list">
                         <ul>
-
-<?php if ($Pager['s']):?>
-      <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
-<?php endif;?>
-                                <ol>
-  <?php foreach ($Pager['pager'] as $k =>$v):?>
-    <?php if ($Pager['p'] == $v-1):?>
-      <li class="nav-now"><a href="?data[p]=<?php echo $v-1?>"><?php echo $v;?></a></li>
-    <?php else:?>
-      <li><a href="?data[p]=<?php echo $v-1?>"><?php echo $v?></a></li>
-    <?php endif;?>
-  <?php endforeach;?>
-                                </ol>
-<?php if ($Pager['e']):?>
-      <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
-<?php endif;?>
+                        <?php if ($Pager['s']):?>
+                              <li class="nav-prev"><a href="?data[p]=<?php echo $Pager['p']-1?>"><span class="rsp-xxoo">Prev</span></a></li>
+                        <?php endif;?>
+                                                        <ol>
+                          <?php foreach ($Pager['pager'] as $k =>$v):?>
+                            <?php if ($Pager['p'] == $v-1):?>
+                              <li class="nav-now"><a href="?data[p]=<?php echo $v-1?>"><?php echo $v;?></a></li>
+                            <?php else:?>
+                              <li><a href="?data[p]=<?php echo $v-1?>"><?php echo $v?></a></li>
+                            <?php endif;?>
+                          <?php endforeach;?>
+                                                        </ol>
+                        <?php if ($Pager['e']):?>
+                              <li class="nav-next"><a href="?data[p]=<?php echo $Pager['p']+1?>"><span class="rsp-xxoo">Next</span></a></li>
+                        <?php endif;?>
                         </ul>
                     </nav><!-- /.pagination -->
       </footer>

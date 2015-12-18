@@ -31,9 +31,23 @@
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1">カテゴリ</label>
                     <div class="col-sm-10"><span class="confirmtext"><?php echo $this->Useful->selectOptionValue($GenreColumns,$data['Column']['tag'])?></span></div>
                 </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像1</label>
+                    <div class="col-sm-10">
 
+
+                    <span class="confirmtext">
+                    <?php if($data['Column']['img1up']):?>
+                        <br>
+                    <img src="<?php echo WEBROOT.'images/Column/'.$data['Column']['img1up']?>" width="300"></span>
+                    <?php else:?>
+                        登録なし
+                    <?php endif;?>
+
+                    </div>
+                </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">コメント </label>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">内容 </label>
         <div class="col-sm-9">
             <span class="confirmtext"><?php echo $data['Column']['comment']?></span>
         </div>

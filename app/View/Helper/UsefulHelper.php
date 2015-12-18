@@ -103,11 +103,11 @@ class UsefulHelper extends AppHelper {
         return $options[$set];
     }
 
-    public function ItemImg($name,$width,$path='item'){
+    public function ItemImg($name,$width,$path='item',$class=''){
         if(!$name){
             return;
         }
-        return '<img src="'.WEBROOT.'images/'.$path.'/'.$name.'"width='.$width.'>';
+        return '<img src="'.WEBROOT.'images/'.$path.'/'.$name.'"width="'.$width.'" class="'.$class.'">';
     }
 
 

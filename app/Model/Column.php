@@ -59,6 +59,8 @@ class Column extends AppModel {
         $ret['valid'] = '';
         $ret['created'] = '';
         $ret['entrydate'] = '';
+        $ret['img1'] = '';
+        $ret['img1up'] = '';
 //        $ret['url'] = '';
     return $ret;
     }

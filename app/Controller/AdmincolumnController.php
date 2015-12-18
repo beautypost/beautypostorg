@@ -39,6 +39,7 @@ class AdmincolumnController extends BaseController {
  * @var array
  */
 	public $uses = array('Column');
+    public $components = array('ItemC');
 
 
 	public function beforeRender(){
@@ -112,6 +113,21 @@ class AdmincolumnController extends BaseController {
         //確認画面へ
         if($this->Column->validates()){
         	$data = $this->Column->data;
+
+            if (isset($_FILES['userfile']["error"])) {
+                    foreach ($_FILES['userfile']["error"] as $key => $error) {
+                            $ret = '';
+                            if ($error == UPLOAD_ERR_OK) {
+                                    $ret = $this->ItemC->uploadCheck($errormessages, $_FILES, $key,UploadImagePathColumn);
+                                    $tmp_file_name[$key] = $ret;
+                                    $name = 'img'.$key.'up';
+                                    $data['Column'][$name] = $ret;
+                            }
+
+                    }
+            }
+
+
 	        $this->set('data',$data);
 	    	$this->render('confirm');
         	return;
@@ -134,6 +150,8 @@ class AdmincolumnController extends BaseController {
         $messages = isset($this->params['data']['Column']) ? $this->params['data']['Column'] :null;
         $_data = (unserialize(base64_decode($messages)));
         $da = $this->Column->setData($_data);
+        $da['img1up'] = ($da['img1up'] === 'true') ? '' : $da['img1up'];
+
 //        $da['valid'] = 1;
         $this->Column->create();
         $this->Column->save($da,array('validate'=>false));

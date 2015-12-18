@@ -42,6 +42,11 @@ class MailmagazineController extends AppController {
         $this->set('cssname','content');
         $this->set('bodyclass','page-magazine');
 
+        if(!$this->SnsuserData){
+            $this->redirect('/Login/');
+        }
+
+
     }
 
 

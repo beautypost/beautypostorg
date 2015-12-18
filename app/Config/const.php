@@ -10,6 +10,7 @@ if(
 	define('DOMAIN','http://localhost/beautypost');
     define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
     define('UploadImagePathBLOG','/Library/WebServer/Documents/beautypost/app/webroot/images/blogs/');
+    define('UploadImagePathColumn','/Library/WebServer/Documents/beautypost/app/webroot/images/column/');
 
 }else{
 	define('DOMAIN','http://beauty-post.jp');
@@ -17,6 +18,7 @@ if(
 	define('FBDEBUG',0);
     define('UploadImagePath','/httpdocs/app/webroot/images/item/');
     define('UploadImagePathBLOG','/httpdocs/app/webroot/images/blogs/');
+    define('UploadImagePathColumn','/httpdocs/app/webroot/images/column/');
 
 }
 

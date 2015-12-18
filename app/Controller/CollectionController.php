@@ -94,7 +94,6 @@ class CollectionController extends AppController {
 
 		$items = $this->Item->getItems($conditions,$data['sort'],$data['limit'],$p);
 
-
 		$reviewall = array();
 		foreach($items as $k => $v){
 
@@ -110,7 +109,7 @@ class CollectionController extends AppController {
 
 
 	        //attr情報
-	        //genre_id でgenre_attr取得　/sort
+	        //genre_id でgenre_attr取得/sort
 //	        $genreAttr = $this->GenreAttr->getItemsByGenreID($v['Item']['genre_id']);
 	        //genre_attr_id と item_id で値を取得
 

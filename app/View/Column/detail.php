@@ -19,19 +19,17 @@
       <article class="column-entry">
         <div class="section-body">
           <header class="column-entryhead">
-            <p class="column-entrydate fll"><?php echo $Column['Column']['created']?></p>
+            <p class="column-entrydate fll"><?php echo $this->Useful->setdate($Column['Column']['entrydate'],'Y/m/d')?></p>
             <p class="column-entryview flr"><?php echo $Column['Column']['count']?> views</p>
             <h2 class="column-entrytitle"><?php echo $Column['Column']['title']?></h2>
-
             <div class="column-entryinfo">
-              <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="./list.html">カテゴリ</a></div>
+            <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="<?php echo WEBROOT.$this->name?>/category/<?php echo $Column['Column']['tag']?>"><?php echo $this->Useful->selectOptionValue($GenreColumns,$Column['Column']['tag'])?></a></div>
               <div class="column-entrysns">SNS</div>
             </div><!-- /.column-entryinfo -->
           </header>
           <div class="column-entrybody">
-            <div class="column-eyecatch">
-              <img src="http://lorempixel.com/400/300/people/1" alt="" class="fitimg-w">
-            </div>
+                <div class="column-eyecatch"><?php echo $this->Useful->ItemImg($Column['Column']['img1up'],'','Column','fitimg-w');?></div>
+
             <div class="column-entrylead">
               <?php echo $Column['Column']['comment']?>
             </div>
@@ -43,7 +41,7 @@
 
         <div class="column-boxfoot">
           <div class="column-entryinfo">
-            <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="./list.html">カテゴリ</a></div>
+            <div class="column-entrycategory"><i class="fa fa-folder-open-o"></i> <a href="<?php echo WEBROOT.$this->name?>/category/<?php echo $Column['Column']['tag']?>"><?php echo $this->Useful->selectOptionValue($GenreColumns,$Column['Column']['tag'])?></a></div>
             <div class="column-entrysns">SNS</div>
           </div><!-- /.column-entryinfo -->
         </div><!-- /.column-boxfoot -->
@@ -52,9 +50,13 @@
       <div class="container">
         <nav class="column-pagination pg-list">
           <ul>
-            <li class="nav-prev"><a href="#"><span class="rsp-xxoo">Prev</span></a></li>
-            <li class="nav-back"><a href="./list.html">一覧へ戻る</a></li>
-            <li class="nav-next"><a href="#"><span class="rsp-xxoo">Next</span></a></li>
+<?php if ($Pager['s']):?>
+      <li class="nav-prev"><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Pager['s']?>"><span class="rsp-xxoo">Prev</span></a></li>
+<?php endif;?>
+      <li class="nav-back"><a href="<?php echo WEBROOT.$this->name?>"><span class="rsp-xxoo">一覧へ戻る</span></a></li>
+<?php if ($Pager['e']):?>
+      <li class="nav-next"><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Pager['e']?>"><span class="rsp-xxoo">Next</span></a></li>
+<?php endif;?>
           </ul>
         </nav><!-- /.pagination -->
       </div>
@@ -67,28 +69,4 @@
   </div>
 </div><!-- /#page-area -->
 
-<!--
-====================================================================================================
- Column Footer                                                                       #column-footer
-==================================================================================================== -->
-<footer id="column-footer">
-  <div class="layout">
-    <nav id="column-fnav">
-      <ul>
-        <li><a href=""><i class="fa fa-home">&#8203;</i> ホーム</a></li>
-        <li><a href=""><i class="fa fa-pencil">&#8203;</i> ライター募集</a></li>
-        <li><a href=""><i class="fa fa-building">&#8203;</i> 運営者会社</a></li>
-        <li><a href=""><i class="fa fa-envelope-o">&#8203;</i> お問い合わせ</a></li>
-      </ul>
-    </nav><!-- /#column-fnav -->
-  </div>
-  <div id="column-copyright">
-    <div class="layout"><p><small>Copyright 2015 Beauty Post. All Rights Reserved.</small></p></div>
-  </div><!-- /#copyright -->
-</footer><!-- /#column-footer -->
-<!--
-==================================================================================================== -->
-</div></div><!-- /#wrapper>/#wrap-inner -->
-<?php  //lastContent(); ?>
-</body>
-</html>
+

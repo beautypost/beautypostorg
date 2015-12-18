@@ -96,6 +96,11 @@ class QuestionController extends AppController {
         $this->QuestionLog->save($data);
 
         $val = $this->QuestionValue->getItemByID($data['question_value_id']);
+
+        if(!$val){
+            return;
+        }
+
         $val['QuestionValue']['points']++;
         $this->QuestionValue->save($val);
 
