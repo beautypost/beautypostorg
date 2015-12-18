@@ -58,9 +58,21 @@ class AdminattrController extends BaseController {
 	public function index() {
 
         $attr = $this->Attr->getItems();
-        $this->set('Attrs',$attr);
-//		var_dump($Attr);
+
+
 //		$itemID = isset($this->params['url']['itemID']) ? $this->params['url']['itemID'] : '';
+
+        foreach($attr as $k => $v){
+            $GenreAttr = $this->GenreAttr->getItemByAttrID($v['Attr']['id']);
+            $ge = array();
+            foreach($GenreAttr as $kk => $vb){
+                $ge[] = $vb['GenreAttr']['genre_id'];
+            }
+
+            $attr[$k]['Attr']['genres'] = $ge;
+        }
+
+        $this->set('Attrs',$attr);
 		return;
 	}
 

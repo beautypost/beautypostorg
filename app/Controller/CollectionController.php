@@ -85,8 +85,6 @@ class CollectionController extends AppController {
 
 		//getで受け取ったdataをセット
 
-
-
 		$this->set('data',$data);
 
 		//検索用パラメータ作成
@@ -109,6 +107,13 @@ class CollectionController extends AppController {
 	        }
 	        $reviewall[$v['Item']['id']]['star'] = $r['total'];
 	        $reviewall[$v['Item']['id']]['count'] = count($reviews);
+
+
+	        //attr情報
+	        //genre_id でgenre_attr取得　/sort
+//	        $genreAttr = $this->GenreAttr->getItemsByGenreID($v['Item']['genre_id']);
+	        //genre_attr_id と item_id で値を取得
+
 		}
 
 		$this->set('ItemsReview',$reviewall);

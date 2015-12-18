@@ -9,7 +9,7 @@
             <form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input">
                 <!-- #section:elements.form -->
                 <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">商品名 </label>
                     <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['title']?></span></div>
                 </div>
                 <div class="form-group">
@@ -29,7 +29,7 @@
                     <div class="col-sm-10"><span class="confirmtext"><?php echo number_format($data['Item']['price'])?></span></div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品種類</label>
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 機種</label>
                     <div class="col-sm-10"><span class="confirmtext"><?php  echo $this->Useful->checkboxvalue($GenreKisyu,'Genre','title',$data['Item']['genre_id'])?></span></div>
                 </div>
                 <div class="form-group">
@@ -47,9 +47,22 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品番号・JANコード</label>
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品番号</label>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['code']?></span></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> JANコード</label>
                     <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['jancode']?></span></div>
                 </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> POSコード</label>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['poscode']?></span></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 製造国</label>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['country']?></span></div>
+                </div>
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品説明</label>
                     <div class="col-sm-10"><?php echo $data['Item']['comment']?></div>
@@ -85,8 +98,17 @@
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 使用方法動画URL</label>
-                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['example']?></span></div>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['example_url']?></span></div>
                 </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品PRページ</label>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['pr_site']?></span></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 取扱説明書　カタログ</label>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['catalog']?></span></div>
+                </div>
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像1</label>
                     <div class="col-sm-10">

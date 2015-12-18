@@ -11,6 +11,7 @@
             <tr>
                 <th class="center">ID</th>
                 <th>タイトル</th>
+                <th>登録ジャンル</th>
                 <th>設定</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@
             <tr>
             <td><?php echo $Item['Attr']['id']?></td>
             <td><?php echo $Item['Attr']['title']?></td>
+            <td><?php  echo $this->Useful->checkboxvalue($GenreKisyu,'Genre','title',$Item['Attr']['genres'])?></td>
             <td>
             <a class="btn-sm btn-success" href="<?php echo WEBROOT.$this->name?>/edit/?id=<?php echo $Item['Attr']['id']?>">編集</a>
             </td>

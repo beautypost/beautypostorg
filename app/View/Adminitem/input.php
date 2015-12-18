@@ -19,7 +19,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
             <form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input" enctype="multipart/form-data">
                 <!-- #section:elements.form -->
                 <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">商品名 </label>
                     <div class="col-sm-10"><input type="text" name="data[title]" value="<?php echo $data['Item']['title']?>" class="col-xs-10"></div>
                 </div>
                 <div class="form-group">
@@ -69,9 +69,22 @@ if (isset($validationErrors) && is_array($validationErrors)) {
                 </div>
             </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品番号・JANコード</label>
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品番号</label>
+                    <div class="col-sm-10"><input type="text" name="data[code]" value="<?php echo $data['Item']['code']?>" class="col-xs-10"></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> JANコード</label>
                     <div class="col-sm-10"><input type="text" name="data[jancode]" value="<?php echo $data['Item']['jancode']?>" class="col-xs-10"></div>
                 </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> POSコード</label>
+                    <div class="col-sm-10"><input type="text" name="data[poscode]" value="<?php echo $data['Item']['poscode']?>" class="col-xs-10"></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 製造国</label>
+                    <div class="col-sm-10"><input type="text" name="data[country]" value="<?php echo $data['Item']['country']?>" class="col-xs-10"></div>
+                </div>
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品説明</label>
                     <div class="col-sm-10"><textarea name="data[comment]" class="col-xs-10" rows="10"><?php echo $data['Item']['comment']?></textarea></div>
@@ -109,6 +122,18 @@ if (isset($validationErrors) && is_array($validationErrors)) {
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 使用方法動画URL</label>
                     <div class="col-sm-10"><input type="text" name="data[example_url]" value="<?php echo $data['Item']['example_url']?>" class="col-xs-10"></div>
                 </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商品PRページ</label>
+                    <div class="col-sm-10"><input type="text" name="data[pr_site]" value="<?php echo $data['Item']['pr_site']?>" class="col-xs-10"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 取扱説明書 カタログ</label>
+                    <div class="col-sm-10"><input type="text" name="data[catalog]" value="<?php echo $data['Item']['catalog']?>" class="col-xs-10"></div>
+                </div>
+
+
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像1</label>
                     <div class="col-sm-10"><input type="text" name="data[img1]" value="<?php echo $data['Item']['img1']?>" class="col-xs-10">
