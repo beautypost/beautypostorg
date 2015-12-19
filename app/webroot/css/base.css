@@ -3152,6 +3152,7 @@ a.photo-frame:hover {
   background: #fdfbfb;
 }
 .enquete-section .side-head {
+  background: #FDFBFB;
   text-align: center;
 }
 .enquete-section .side-head img {
@@ -3181,6 +3182,11 @@ a.photo-frame:hover {
 }
 .enquete-section section {
   margin: 0;
+}
+.enquete-section .question {
+  margin-bottom: 0.5em;
+  color: #f61d54;
+  font-weight: 700;
 }
 .enquete-section .answer {
   padding-top: 8px;

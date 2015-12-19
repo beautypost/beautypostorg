@@ -35,7 +35,7 @@
                         <li class="required">
                             <dl>
                                 <dt><label for="user-name" class="inner">ニックネーム</label></dt>
-                                <dd><input type="text" name="data[username]" value="<?php echo $data['Snsuser']['username']?>"></dd>
+                                <dd><input type="text" name="data[username]" value="<?php echo $data['Snsuser']['username']?>" required></dd>
                             </dl>
                         </li>
                         <li class="required">
@@ -52,15 +52,15 @@
                             <dl>
                                 <dt><span class="inner">生年月日</span></dt>
                                 <dd>
-                                <select name="data[year]" tabindex="1" style="width:80px">
+                                <select name="data[year]" tabindex="1" style="width:80px" required>
                                     <?php echo $this->Useful->option($Year['year'],$data['Snsuser']['year'])?>
                                 </select>
                                 <span class="unit">年</span>
-                                <select name="data[month]" tabindex="1" style="width:80px">
+                                <select name="data[month]" tabindex="1" style="width:80px" required>
                                     <?php echo $this->Useful->option($Month['month'],$data['Snsuser']['month'])?>
                                 </select>
                                 <span class="unit">月</span>
-                                <select name="data[day]" tabindex="1" style="width:80px">
+                                <select name="data[day]" tabindex="1" style="width:80px" required>
                                     <?php echo $this->Useful->option($Day['day'],$data['Snsuser']['day'])?>
                                 </select>
                                 <span class="unit">日</span>
@@ -71,7 +71,7 @@
                             <dl>
                                 <dt><label for="user-cluster" class="inner">種別</label></dt>
                                 <dd>
-                                <select name="data[job]" tabindex="1" style="width:80px">
+                                <select name="data[job]" tabindex="1" style="width:80px" required>
                                     <?php echo $this->Useful->option($Job['job'],$data['Snsuser']['job'])?>
                                 </select>
                                 </dd>
@@ -95,10 +95,10 @@
                                 <dl>
                                     <dt><label for="user-address" class="inner">住んでいるエリア</label></dt>
                                     <dd>
-                                    <select name="data[pref]" tabindex="1" style="width:80px">
+                                    <select name="data[pref]" tabindex="1" style="width:80px" required>
                                         <?php echo $this->Useful->option($Pref['pref'],$data['Snsuser']['pref'])?>
                                     </select>
-                                    <input type="text" name="data[address]" value="<?php echo $data['Snsuser']['address']?>">
+                                    <input type="text" name="data[address]" value="<?php echo $data['Snsuser']['address']?>" required>
                                     </dd>
                                 </dl>
                             </li>
@@ -106,7 +106,7 @@
                                 <dl>
                                     <dt><label for="user-skintype" class="inner">肌質</label></dt>
                                     <dd>
-                                    <select name="data[skin]" tabindex="1" style="width:80px">
+                                    <select name="data[skin]" tabindex="1" style="width:80px" required>
                                         <?php echo $this->Useful->option($Skin['skin'],$data['Snsuser']['skin'])?>
                                     </select>
                                     </dd>

@@ -108,7 +108,7 @@
                     </ul>
 
                     <footer>
-                        <p class="mb16"><span class="wsnw"><a href="<?php echo WEBROOT?>pages/guide/" target="_blank">利用規約</a>と<a href="<?php echo WEBROOT?>pages/privacy/" target="_blank">プライバシーポリシー</a>に</span><span class="wsnw">同意いただきレビューをご投稿ください。</span></p>
+                        <p class="mb16"><span class="wsnw"><a href="<?php echo WEBROOT?>pages/rules/" target="_blank">利用規約</a>と<a href="<?php echo WEBROOT?>pages/privacy/" target="_blank">プライバシーポリシー</a>に</span><span class="wsnw">同意いただきレビューをご投稿ください。</span></p>
                         <div class="form-nav">
                             <button class="button btn-vpk">
                                 投稿内容確認画面へ <i class="fa fa-angle-right">&#8203;</i>

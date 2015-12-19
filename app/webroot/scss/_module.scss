@@ -684,6 +684,7 @@
 	.enquete-section {
 		#sub-area & { background:#fdfbfb; } // サイドバーの中の時のみ
 		.side-head { // サイドバーの中でしか出力されない。
+			background:#FDFBFB;
 			text-align:center;
 			img { max-width:441px; }
 		}
@@ -697,6 +698,7 @@
 			font-weight:700;
 		}
 		section { margin:0; }
+		.question { margin-bottom:0.5em; color:$c-vpk; font-weight:700; }
 		.answer { // サイド・詳細共通利用
 			padding-top:8px;
 			.total { padding:3px 8px; background:$c-gy; display:inline-block; }

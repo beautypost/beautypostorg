@@ -11,8 +11,8 @@
 		</ol><!-- /#breadcrumb -->
 		<div id="main-area" class="layout-main layout-l">
 			<h2 class="pagetitle"><!--
-				 --><img src="<?php echo WEBROOT?>images/pagetitle-full.jpg" width="1984" height="256" class="fitimg-w rsp-xooo" alt="美容機器用語集 glosary"><!--
-				 --><img src="<?php echo WEBROOT?>images/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="美容機器用語集 glosary"><!--
+				 --><img src="<?php echo WEBROOT?>images/glossary/pagetitle-full.jpg" width="1984" height="256" class="fitimg-w rsp-xooo" alt="美容機器用語集 glosary"><!--
+				 --><img src="<?php echo WEBROOT?>images/glossary/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="美容機器用語集 glosary"><!--
 			 --></h2>
 			<p>基本用語から専門用語まで、美容機器に関する用語を幅広く集めました。</p>
 			<section id="glossary-index">

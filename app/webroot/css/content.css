@@ -2573,6 +2573,23 @@
     margin-left: 1em;
   }
 }
+.backnumber-list dd {
+  padding-right: 5em;
+}
+.backnumber-list dd:before {
+  margin-right: -5rem;
+  display: block;
+  float: right;
+  width: 5em;
+  background: #E6E6E6;
+  content: '投票終了';
+  text-align: center;
+}
+.backnumber-list li:first-child dd:before {
+  color: #fff;
+  background: #f38291;
+  content: '投票中';
+}
 .backnumber-list a {
   color: #272727;
 }

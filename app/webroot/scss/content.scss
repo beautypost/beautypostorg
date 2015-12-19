@@ -1340,6 +1340,27 @@
 				font-weight:700;
 			}
 		}
+		dd {
+			padding-right:5em;
+			&:before {
+				margin-right:-5rem;
+				display:block;
+				float:right;
+				width:5em;
+				background:$c-gy;
+				content:'投票終了';
+				text-align:center;
+			}
+		}
+		li:first-child {
+			dd {
+				&:before {
+					color:#fff;
+					background:$c-pk;
+					content:'投票中';
+				}
+			}
+		}
 		a {
 			@include link-colors($c-txt,$c-link);
 			&:link { text-decoration:underline; }
