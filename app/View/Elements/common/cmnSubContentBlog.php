@@ -1,5 +1,5 @@
             <section id="news-famous">
-                <h2 class="head-bar ico-arrow">人気のnews</h2>
+                <h2 class="head-bar ico-arrow">人気の記事</h2>
                 <nav>
                     <ul>
                     <?php $i=1;?>
@@ -18,7 +18,7 @@
             </section><!-- /#news-famous -->
 
             <section id="news-recent">
-                <h2 class="head-bar ico-arrow">新着news</h2>
+                <h2 class="head-bar ico-arrow">新着記事</h2>
                 <nav>
                     <ul>
 
