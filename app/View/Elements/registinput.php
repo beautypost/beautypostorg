@@ -18,7 +18,10 @@
                         <li class="required">
                             <dl>
                                 <dt><label for="user-pass-confirm" class="inner">パスワード（確認）</label></dt>
-                                <dd><input name="data[password2]" id="user-pass-confirm" type="password" required></dd>
+                                <dd>
+                                    <input name="data[password2]" id="user-pass-confirm" type="password" required>
+                                    <p>※6文字以上12文字以内のパスワードを入力してください。</p>
+                                </dd>
                             </dl>
                         </li>
                     </ul><!-- /.formlist -->

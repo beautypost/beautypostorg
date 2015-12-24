@@ -26,7 +26,10 @@
                     <?php echo $this->element('registinput'); ?>
 
                     <footer class="signup-footer">
-                        <p><label><input type="checkbox" name="data[policy]" required>利用規約及び個人情報の取扱いについてに同意する</label></p>
+                        <p class="label_wrap"><label><input type="checkbox" name="data[policy]" required>利用規約及びプライバシーポリシーに同意する</label></p>
+                        <p class="link_rules"><a href="<?php echo WEBROOT; ?>pages/rules/" target="_blank">利用規約はこちら <i class="fa fa-chevron-circle-right">&#8203;</i></a>
+                        <span class="rsp-xxoo">　</span><br class="rsp-ooxx">
+                        <a href="<?php echo WEBROOT; ?>pages/privacy/" target="_blank">プライバシーポリシーはこちら <i class="fa fa-chevron-circle-right">&#8203;</i></a></p>
                         <div class="form-nav">
                             <button type="submit" class="button btn-vpk">
                                 登録内容確認画面へ <i class="fa fa-angle-right">&#8203;</i>

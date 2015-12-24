@@ -1032,7 +1032,7 @@
 		@include mq($bpM,$bpL) { @include ps(5%); }
 			@include mqmt($bpL) { @include ps(7%); }
 		text-align:center;
-		p {
+		.label_wrap {
 			@include pv(1.5em); background:$c-gy;
 			@include mqlt($bpS) {
 				padding:0.5em 0.5em 0.5em 2.5em; position:relative;
@@ -1044,6 +1044,7 @@
 				}
 			}
 		}
+		.link_rules { a { line-height:40px; @include ulLink(); } }
 	}
 	
 	#signup-completion {
@@ -1765,6 +1766,9 @@
 			@include mqmt($bpM) { @include ms(auto); padding-top:0.5em; }
 			@include mq($bpM,$bpL) { width:90%; }
 			@include mqmt($bpL) { width:86%; }
+			.form-foot {
+				.ullink { @include ulLink(); }
+			}
 		}
 	}
 /* 
