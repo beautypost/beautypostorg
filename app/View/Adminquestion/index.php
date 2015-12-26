@@ -15,7 +15,8 @@
                                             <thead>
                                                 <tr>
                                                     <th class="center">ID</th>
-                                                    <th>日付</th>
+                                                    <th>投票期間</th>
+                                                    <th>状態</th>
                                                     <th>アンケートタイトル</th>
                                                     <th>合計投票数</th>
                                                     <th>status</th>
@@ -27,7 +28,8 @@
 <?php foreach($Questions as $Item):?>
 <tr>
     <td><?php echo $Item['Question']['id']?></td>
-    <td><?php echo $Item['Question']['created']?></td>
+    <td><?php echo $this->Useful->setdate($Item['Question']['start'])?>〜<?php echo $this->Useful->setdate($Item['Question']['end'])?></td>
+    <td><?php echo $this->Useful->checktime($Item['Question']['start'],$Item['Question']['end'])?></td>
     <td><?php echo $Item['Question']['title']?></td>
     <td><?php echo $Item['Question']['total']?></td>
     <td>

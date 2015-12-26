@@ -49,6 +49,12 @@ class MypageController extends AppController {
         $this->set('cssname','content');
         $this->set('bodyclass','page-mypage');
 
+
+        $rurl = isset($this->params['url']['rurl']) ? $this->params['url']['rurl']:$this->Session->read('rurl');
+        if($rurl){
+            $this->Session->write('rurl',$rurl);
+            $this->set('rurl',$rurl);
+        }
     }
 
     public function beforeRender(){

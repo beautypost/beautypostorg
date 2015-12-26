@@ -7,9 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta charset="utf-8" />
         <title>BeautyPost</title>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="<?php echo WEBROOT?>js/jquery.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <meta name="description" content="overview &amp; stats" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
@@ -174,13 +174,12 @@ tinyMCE.init({
                        </a>
                     </li>
 
-<!--
                     <li class="<?php $this->Beautypost->cssActive('Adminmailmagazine')?>">
                        <a href="<?php echo WEBROOT?>Adminmailmagazine">
                             <i class="menu-icon fa fa-envelope"></i><span class="menu-text">メルマガ管理</span>
                        </a>
                     </li>
--->
+
 
     </ul>
 

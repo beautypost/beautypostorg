@@ -85,7 +85,7 @@
                                 <dt><span class="inner">Beauty Postメール</span></dt>
                                 <dd>
                                     <ul>
-                                    <?php echo $this->Useful->radio('data[mailmagazine]',$Mailmagazine['mailmagazine'],$data['Snsuser']['mailmagazine'])?>
+                                    <?php echo $this->Useful->radio('data[mailmagazine]',$Mailmagazine['mailmagazine'],$data['Snsuser']['mailmagazine'],'required')?>
                                     </ul>
                                 </dd>
                             </dl>

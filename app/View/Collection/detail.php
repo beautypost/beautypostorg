@@ -255,9 +255,9 @@
                                 </tr>
                             </tbody>
                         </table><!-- /.table-std -->
-<script>
-ratystar(0)
-</script>
+                        <script>
+                        ratystar(0)
+                        </script>
                         <div class="item-review-body">
                             <div class="item-chart">
                                 <!-- <div style="width:80%"> -->
@@ -285,12 +285,11 @@ ratystar(0)
                                                 </a>
                                             </li>
 
-
-<script>
-ratystar(<?php echo $v['ItemsReview']['id']?>)
-</script>
-<!-- review-->
-<?php endforeach;?>
+                                            <script>
+                                            ratystar(<?php echo $v['ItemsReview']['id']?>)
+                                            </script>
+                                            <!-- review-->
+                                            <?php endforeach;?>
 
                                         </ul>
                                     </div><!-- /.section-body -->
@@ -303,7 +302,7 @@ ratystar(<?php echo $v['ItemsReview']['id']?>)
                     </div><!-- /.section-body -->
                     <?php else:?>
 
-                    <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
+                    <footer><a href="<?php echo WEBROOT?>Review/input/?itemID=<?php echo $Item['Item']['id']?>&rurl=" class="button btn-gd btn-sizeS"><i class="fa fa-pencil-square-o">&#8203;</i> ユーザーレビューを書く</a></footer>
                     <!-- ここまで　-->
                     <?php endif;?>
                 </section><!-- /.item-u-review.item-review -->

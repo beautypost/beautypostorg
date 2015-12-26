@@ -40,11 +40,11 @@
                                 </li>
                             </ul>
                             <footer>
-                                <a href="<?php echo WEBROOT?>mypage/input" class="button btn-pk">登録情報を変更</a>
+                                <a href="<?php echo WEBROOT?>mypage/input/?rurl=<?php echo urlencode('Review/input/?itemID='.$Item['Item']['id'])?>" class="button btn-pk">登録情報を変更</a>
                             </footer>
                         </div>
                     </section><!-- /.review-user -->
-                    
+
                 <form method="post" action="<?php echo WEBROOT.$this->name?>/input">
                     <ul class="review-data formlist">
                         <li class="wide required">

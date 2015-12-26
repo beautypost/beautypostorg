@@ -22,7 +22,7 @@
 <?php foreach($Mailmagazine as $Item):?>
                 <li>
                     <dl>
-                        <dt><?php echo $Item['Mailmagazine']['send_date']?><span class="vol">第<?php echo $Item['Mailmagazine']['id']?>回</span></dt>
+                        <dt><?php echo $this->Useful->setdate($Item['Mailmagazine']['send_date'],'Y/m/d')?><span class="vol">第<?php echo $Item['Mailmagazine']['number']?>回</span></dt>
                         <dd>
                             <span class="question">
                             <a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $Item['Mailmagazine']['id']?>">

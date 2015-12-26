@@ -68,7 +68,8 @@ class CompareController extends AppController {
 	 * @param genreID sort limit offset
 	 */
 	public function index() {
-$all = $this->Session->read('ItemCompare');
+        $all = $this->Session->read('ItemCompare');
+        var_dump($all);
 //		$all = array(111,177,185);
 		$items = $this->Item->getItemByInId($all);
 //var_dump(count($items));

@@ -89,7 +89,7 @@ class CollectionController extends AppController {
 
 		//検索用パラメータ作成
 		$conditions = $this->ItemC->setItemValueSearch($data);
-
+//var_dump($conditions);
 		$p = isset($this->params['url']['p']) ? $this->params['url']['p'] : 0;
 
 		$items = $this->Item->getItems($conditions,$data['sort'],$data['limit'],$p);

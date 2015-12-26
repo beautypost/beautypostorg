@@ -46,9 +46,9 @@
                                 <dl>
                                     <dt><i class="fa fa-plus-circle">&#8203;</i>価格</dt>
                                     <dd>
-                                    <input type="number" name="data[GenrePriceLow]" id="sq-pricefrom" step="500" value="<?php echo $data['GenrePriceLow']?>">
+                                    <input type="number" name="data[GenrePriceLow]" id="sq-pricefrom" step="500" value="<?php echo isset($data['GenrePriceLow'])?$data['GenrePriceLow']:''?>">
                                     <span class="fromto">〜</span>
-                                    <input type="number" name="data[GenrePriceHigh]" id="sq-pricefrom" step="500" value="<?php echo $data['GenrePriceHigh']?>">
+                                    <input type="number" name="data[GenrePriceHigh]" id="sq-pricefrom" step="500" value="<?php echo isset($data['GenrePriceHigh'])?$data['GenrePriceHigh']:''?>">
                                     </dd>
                                 </dl>
                             </li>

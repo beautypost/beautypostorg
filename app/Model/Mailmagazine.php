@@ -50,7 +50,8 @@ $ret['send_date'] = '';
 $ret['send_flag'] = '';
 $ret['title'] = '';
 $ret['body'] = '';
-$ret['send_time'] = '';
+$ret['comment'] = '';
+$ret['number'] = '';
 $ret['send_exec_date'] = '';
 
 //        $ret['url'] = '';

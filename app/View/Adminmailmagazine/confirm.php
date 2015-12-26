@@ -8,48 +8,30 @@
 <form class="form-horizontal" role="form" action="<?php echo WEBROOT.$this->name?>/input">
     <!-- #section:elements.form -->
     <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">番号 </label>
+        <div class="col-sm-10">
+        <span class="confirmtext"><?php echo $data['Mailmagazine']['number']?></span>
+        </div>
+    </div>
+    <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
-        <div class="col-sm-10">
-        <span class="confirmtext"><?php echo $data['Column']['title']?></span>
+        <div class="col-sm-5">
+        <span class="confirmtext"><?php echo $data['Mailmagazine']['title']?></span>
         </div>
     </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">表時日付 </label>
-        <div class="col-sm-10">
-        <span class="confirmtext"><?php echo $data['Column']['entrydate']?></span>
-        </div>
-    </div>
+
 
     <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">表示/非表示 </label>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">送信日付 </label>
         <div class="col-sm-10">
-        <span class="confirmtext"><?php echo $GenreValid['valid'][$data['Column']['valid']]?></span>
+        <span class="confirmtext"><?php echo $data['Mailmagazine']['send_date']?></span>
         </div>
     </div>
 
-                <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">カテゴリ</label>
-                    <div class="col-sm-10"><span class="confirmtext"><?php echo $this->Useful->selectOptionValue($GenreColumns,$data['Column']['tag'])?></span></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像1</label>
-                    <div class="col-sm-10">
-
-
-                    <span class="confirmtext">
-                    <?php if($data['Column']['img1up']):?>
-                        <br>
-                    <img src="<?php echo WEBROOT.'images/column/'.$data['Column']['img1up']?>" width="300"></span>
-                    <?php else:?>
-                        登録なし
-                    <?php endif;?>
-
-                    </div>
-                </div>
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">内容 </label>
         <div class="col-sm-9">
-            <span class="confirmtext"><?php echo $data['Column']['comment']?></span>
+            <span class="confirmtext"><?php echo $data['Mailmagazine']['comment']?></span>
         </div>
     </div>
     </form>
@@ -62,14 +44,14 @@
                                                 入力画面へ戻る
                                             </button>
     <input type="hidden" name="data[back]" value="true">
-    <input type="hidden" name="data[Column]" value="<?php echo base64_encode(serialize($data['Column'])) ?>">
+    <input type="hidden" name="data[Mailmagazine]" value="<?php echo base64_encode(serialize($data['Mailmagazine'])) ?>">
     </form>
 <form class="col-xs-5" method="post" action="<?php echo WEBROOT.$this->name?>/Submit" display:inline>
                                             <button class="btn btn-info" type="submit">
                                                 <i class="ace-icon fa fa-check bigger-110"></i>
                                                 登録する
                                             </button>
-    <input type="hidden" name="data[Column]" value="<?php echo base64_encode(serialize($data['Column'])) ?>">
+    <input type="hidden" name="data[Mailmagazine]" value="<?php echo base64_encode(serialize($data['Mailmagazine'])) ?>">
 </form>
                                         </div>
                                     </div>

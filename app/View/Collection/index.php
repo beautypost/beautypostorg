@@ -83,6 +83,7 @@
                             type: "GET",
                             url: "<?php echo WEBROOT?>Ajax/setCompare/?itemID="+id,
                             success: function(data){
+                                alert(data);
                             }
                         });
                     }

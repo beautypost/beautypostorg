@@ -73,9 +73,18 @@ class Question extends AppModel {
     複数
     **/
     public function getItems($limit='',$offset=0,$order='') {
+        $date =date('Y-m-d 00:00:00');
+//        var_dump($date);
         $conditions = array(
 //            'conditions'=> array('item_id'=>$id),
-            'order'     => array('created')
+            'order'     => array('start DESC'),
+            'conditions'=>array(
+                'and'=>array(
+                array('start <='=>$date,
+//                    'end >='=>$date
+                    ),
+                ),
+            )
             );
 
         if($limit){
@@ -130,7 +139,7 @@ class Question extends AppModel {
     public function getNewQuestion() {
         $conditions = array(
 //            'conditions'=> array('valid'=>1),
-            'order'     => array('created'),
+            'order'     => array('start DESC'),
             );
 
         $all = $this->find('first',$conditions);

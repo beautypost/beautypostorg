@@ -31,7 +31,11 @@
                 </div>
                 <footer class="form-nav">
                     <ul>
+                    <?php if($rurl):?>
+                        <li><a href="<?php echo WEBROOT.$rurl?>" class="button btn-vpk">入力ページへ戻る</a></li>
+                    <?php else:?>
                         <li><a href="<?php echo WEBROOT?>Mypage/" class="button btn-vpk">マイページへ</a></li>
+                    <?php endif;?>
                     </ul>
                 </footer>
             </section><!-- /#signup-completion -->

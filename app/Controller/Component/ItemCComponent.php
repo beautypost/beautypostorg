@@ -50,15 +50,20 @@ class ItemCComponent extends Component {
 			$con[]['maker'] = $data['GenreMakers'];
 		}
 
-		if(isset($data['GenrePriceLow']) || isset($data['GenrePriceHigh'])){
+        if(isset($data['GenrePriceLow'])){
+		if($data['GenrePriceLow'] || $data['GenrePriceHigh']){
 			$con[]['price >='] = (integer)($data['GenrePriceLow']);
 			$con[]['price <='] = (integer)($data['GenrePriceHigh']);
 		}
-
+        }
 		$conditions['AND'] = $con;
 
 		if(isset($data['keyword']) && $data['keyword']){
 			$conditions['OR']['title like'] = '%'.$data['keyword'].'%';
+            $conditions['OR']['comment like'] = '%'.$data['keyword'].'%';
+            $conditions['OR']['jancode like'] = '%'.$data['keyword'].'%';
+            $conditions['OR']['poscode like'] = '%'.$data['keyword'].'%';
+
 		}
 
 

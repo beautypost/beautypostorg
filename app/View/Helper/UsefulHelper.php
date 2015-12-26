@@ -147,12 +147,15 @@ class UsefulHelper extends AppHelper {
 
     }
 
-    public function radio($name,$items,$selected){
+    public function radio($name,$items,$selected,$required=''){
         $ret = '';
         foreach($items as $key => $val){
             $ret .="<li><input type='radio' name='".$name."' value='".$key."'";
             if(isset($selected)){
              $ret .= ($key == $selected) ? ' checked ' :'';
+            }
+            if(isset($required)){
+                $ret .= ' required';
             }
             $ret .='>'.$val.'</li>';
         }
@@ -288,6 +291,24 @@ class UsefulHelper extends AppHelper {
 	public function setdate($time,$enc='Y/m/d H時i分'){
 		return date($enc,strtotime($time));
 	}
+
+    public function checktime($start,$end){
+
+        $s = strtotime($start);
+        $d = strtotime($end);
+
+        $v = strtotime('now');
+
+        if($s > $v){
+            return '投票前';
+        }
+        if($d < $v){
+            return '投票終了';
+        }
+        return '投票中';
+
+    }
+
 
 	public function pagetitle($title,$comment){
 		echo '

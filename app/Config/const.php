@@ -16,9 +16,9 @@ if(
 	define('DOMAIN','http://beauty-post.jp');
 	define('WEBROOT','/');
 	define('FBDEBUG',0);
-    define('UploadImagePath','/httpdocs/app/webroot/images/item/');
-    define('UploadImagePathBLOG','/httpdocs/app/webroot/images/blogs/');
-    define('UploadImagePathColumn','/httpdocs/app/webroot/images/column/');
+    define('UploadImagePath','/var/www/vhosts/beauty-post.jp/httpdocs/app/webroot/images/item/');
+    define('UploadImagePathBLOG','/var/www/vhosts/beauty-post.jp/httpdocs/app/webroot/images/blogs/');
+    define('UploadImagePathColumn','/var/www/vhosts/beauty-post.jp/httpdocs/app/webroot/images/column/');
 
 }
 

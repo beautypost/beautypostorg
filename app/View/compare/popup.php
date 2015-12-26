@@ -104,12 +104,31 @@
 				<td><?php echo $Item['Item']['set']?></td>
 				<?php endforeach;?>
 			</tr>
-			<tr>
-				<th>項目01</th>
-				<?php foreach($Items as $Item):?>
-				<td>***</td>
-				<?php endforeach;?>
-			</tr>
+
+            <?php foreach($genres as $genre):?>
+                <?php foreach($genre as $val):?>
+    			<tr>
+    				<th><?php echo $val?></th>
+                </tr>
+                <?php endforeach;?>
+            <?php endforeach;?>
+
+            <?php foreach($Items as $Item):?>
+                <?php foreach($genres as $genre):?>
+                    <?php foreach($genre as $val):?>
+                    <tr>
+                        <td>
+                            <?php if($Item['genre_id'] == $genre['id']):?>
+                                <?php echo $Item['ite']?>
+                            <?php endif;?>
+                        </td>
+                    </tr>
+                <?php endforeach;?>
+            <?php endforeach;?>
+
+
+
+
 		</tbody>
 		<tbody class="table-head">
 			<tr><td><span>ユーザーレビュー評価</span></td></tr>

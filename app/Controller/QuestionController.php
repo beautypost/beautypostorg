@@ -146,6 +146,18 @@ class QuestionController extends AppController {
         $this->set('Pager',$pager);
 
         $question = $this->Question->getItemByID($id);
+
+        //ログインしていない状態で、最新のアンケート以外のアンケートIDを指定されるとリダイレクト
+        $q = $this->Question->getNewQuestion();
+        if(!isset($this->SnsuserData['Snsuser']['id'])){
+            if($id != $q['Question']['id']){
+                $this->redirect('/Login');
+            }
+
+        }
+
+
+
         $this->set('Question',$question);
     }
 

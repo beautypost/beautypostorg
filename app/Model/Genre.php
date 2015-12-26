@@ -131,6 +131,7 @@ $genre = '';
 
     public function getPoint(){
         $conditions['conditions'] = array('genre_id'=>GENREPOINT);
+        $conditions['order'] = array('group_id');
         $all = $this->find('all',$conditions);
 
 

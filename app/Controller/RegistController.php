@@ -68,7 +68,7 @@ class RegistController extends AppController {
                 $data['Snsuser']['username'] = isset($this->params['url']['username']) ? $this->params['url']['username'] : '';
                 $data['Snsuser']['email'] = isset($this->params['url']['email']) ? $this->params['url']['email'] : '';
             }
-
+            $data['Snsuser']['mailmagazine'] = '1';
             $this->set('data',$data);
             return;
         }

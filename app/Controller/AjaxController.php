@@ -71,8 +71,19 @@ class AjaxController extends AppController {
 
 	public function setCompare(){
 		$itemID = isset($this->params['url']['itemID']) ? $this->params['url']['itemID'] : '';
+//echo 'yama';
 		$r = $this->Session->read('ItemCompare');
-		$r[$itemID] = $itemID;
+		if(!$r){$r = array();}
+		if(array_key_exists($itemID,$r)){
+			unset($r[$itemID]);
+			echo 'unset'.$itemID;
+
+		}else{
+			$r[$itemID] = $itemID;
+			echo 'set'.$itemID;
+
+		}
+
 		$this->Session->write('ItemCompare',$r);
 		echo 'OK';
 		exit;
