@@ -42,7 +42,7 @@ class AdminfavoriteController extends BaseController {
 
 
 	public function beforeRender(){
-		$this->set('pagetitle','BeautyPostおすすめ情報');
+		$this->set('pagetitle','BeautyPostからのお知らせ');
 		$this->set('pagecomment','登録・編集を行います');
         parent::beforeRender();
 	}

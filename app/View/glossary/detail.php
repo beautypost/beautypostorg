@@ -20,15 +20,15 @@
 				<h2 class="head-bar ico-arrow"><?php echo $Item['Type']['title']?></h2>
 
 				<div class="section-body">
-				<!--
+<?php if($Item['Type']['img1up']):?>
 					<div class="item-img">
 						<div class="imgframe">
 							<div class="inner">
-								<img src="http://placehold.jp/e0b8dd/ffffff/800x600.png" class="fitimg-w" alt="">
+							<?php echo $this->Useful->ItemImg($Item['Type']['img1up'],'','types','fitimg-w');?>
 							</div>
 						</div>
 					</div><!-- /.item-img -->
-
+<?php endif;?>
 					<div class="user-text">
 						<p><?php echo $Item['Type']['comment']?></p>
 					</div>

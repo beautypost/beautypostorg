@@ -143,7 +143,7 @@ tinyMCE.init({
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Adminfavorite')?>">
                        <a href="<?php echo WEBROOT?>Adminfavorite">
-                            <i class="menu-icon fa fa-chevron-left"></i><span class="menu-text">BeautyPostおすすめ</span>
+                       <i class="menu-icon fa fa-chevron-left"></i><span class="menu-text"><font size=-2>BeautyPostからのお知らせ</font></span>
                        </a>
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Admintype')?>">

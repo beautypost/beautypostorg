@@ -58,7 +58,7 @@ class AdminitemController extends BaseController {
  */
 	public function index() {
         $sort = array('created'=>'desc');
-		$this->set('Items',$this->Item->getItems('',$sort,100));
+		$this->set('Items',$this->Item->getItems('',$sort,1000));
 		return;
 	}
 
@@ -81,6 +81,7 @@ class AdminitemController extends BaseController {
         $this->set('AttrNames',$atrs);
 
         //アイテムが持っている値
+        $ar = array();
         $attr = $this->GenreAttrItem->getItemByItemID($data['Item']['id']);
         foreach($attr as $kk=> $vv){
             $ar[$vv['GenreAttrItem']['genre_attr_id']] = $vv['GenreAttrItem']['value'];

@@ -39,6 +39,7 @@ class AdmintypeController extends BaseController {
  * @var array
  */
 	public $uses = array('Type');
+    public $components = array('ItemC');
 
 
 	public function beforeRender(){
@@ -103,6 +104,22 @@ class AdmintypeController extends BaseController {
         //確認画面へ
         if($this->Type->validates()){
         	$data = $this->Type->data;
+
+            if (isset($_FILES['userfile']["error"])) {
+                    foreach ($_FILES['userfile']["error"] as $key => $error) {
+                            $ret = '';
+                            if ($error == UPLOAD_ERR_OK) {
+                                    $ret = $this->ItemC->uploadCheck($errormessages, $_FILES, $key,UploadImagePathType);
+                                    $tmp_file_name[$key] = $ret;
+                                    $name = 'img'.$key.'up';
+                                    $data['Type'][$name] = $ret;
+                            }
+//                            var_dump($key);
+                    }
+            }
+
+
+
 	        $this->set('data',$data);
 	    	$this->render('confirm');
         	return;

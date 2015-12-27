@@ -15,7 +15,7 @@
     <div class="box-contents-body collection-body">
         <div class="item-face">
             <div class="item-img">
-                <a href="<?php echo WEBROOT?>Collection/detail/?id=<?php echo $Item['Item']['id']?>" class="imgframe">
+                <a href="<?php echo WEBROOT?>Collection/detail/<?php echo $Item['Item']['id']?>" class="imgframe">
                     <div class="inner">
                         <img src="<?php echo $Item['Item']['img1']?>" class="hover-fade" alt="">
                     </div>

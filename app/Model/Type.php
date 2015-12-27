@@ -57,6 +57,8 @@ class Type extends AppModel {
         $ret['tag'] = '';
         $ret['valid'] = '';
         $ret['created'] = '';
+        $ret['img1'] = '';
+        $ret['img1up'] ='';
         //        $ret['url'] = '';
     return $ret;
     }

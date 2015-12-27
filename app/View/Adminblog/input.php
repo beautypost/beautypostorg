@@ -51,7 +51,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
     </div>
 
     <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">TAG</label>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タグ</label>
         <div class="col-sm-10">
         <?php echo $this->Useful->checkbox($GenreBlogs,'Genre','title',$data['Blog']['tag'],'tag')?>
         </div>

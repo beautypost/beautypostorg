@@ -146,7 +146,7 @@
 
     <!-- PAGE CONTENT BEGINS -->
     <div class="col-xs-12">
-        <h4>ブログジャンルマスタ&nbsp;&nbsp;
+        <h4>美容通信タグマスタ&nbsp;&nbsp;
             <i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
             <a href="<?php echo WEBROOT?>Adminmaster/input/?genreID=5&groupID=10">新規作成</a>
         </h4>

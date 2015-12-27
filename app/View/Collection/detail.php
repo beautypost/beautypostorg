@@ -140,14 +140,6 @@
                                 <td><?php echo $Item['Item']['color']?></td>
                             </tr>
                         <?php endif;?>
-                        <?php for($x=1;$x<11;$x++):?>
-                            <?php if($Item['Item']['attr'.$x]):?>
-                            <tr>
-                                <th><?php echo $GenreAttr['Genre']['attr'.$x]?></th>
-                                <td><?php echo $Item['Item']['attr'.$x]?></td>
-                            </tr>
-                        <?php endif;?>
-                        <?php endfor;?>
                         </table>
                         <div class="youtube">
                             <div class="inner">
@@ -367,7 +359,7 @@
         </aside>
     </div>
 </div><!-- /#page-area -->
-
+    </div>
 <script>
     window.onload = function(){
         <?php if(count($Monitors)>0):?>

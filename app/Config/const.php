@@ -11,6 +11,7 @@ if(
     define('UploadImagePath','/Library/WebServer/Documents/beautypost/app/webroot/images/item/');
     define('UploadImagePathBLOG','/Library/WebServer/Documents/beautypost/app/webroot/images/blogs/');
     define('UploadImagePathColumn','/Library/WebServer/Documents/beautypost/app/webroot/images/column/');
+    define('UploadImagePathType','/Library/WebServer/Documents/beautypost/app/webroot/images/types/');
 
 }else{
 	define('DOMAIN','http://beauty-post.jp');
@@ -19,6 +20,7 @@ if(
     define('UploadImagePath','/var/www/vhosts/beauty-post.jp/httpdocs/app/webroot/images/item/');
     define('UploadImagePathBLOG','/var/www/vhosts/beauty-post.jp/httpdocs/app/webroot/images/blogs/');
     define('UploadImagePathColumn','/var/www/vhosts/beauty-post.jp/httpdocs/app/webroot/images/column/');
+    define('UploadImagePathType','/var/www/vhosts/beauty-post.jp/httpdocs/app/webroot/images/types/');
 
 }
 
@@ -59,7 +61,7 @@ define('GENREKISYUNAME','機種');
 define('GENREPURPOSENAME','目的');
 define('GENREPOINTNAME','部位');
 define('GENREMAKERNAME','メーカー');
-define('GENREBLOGNAME','ブログ');
+define('GENREBLOGNAME','美容通信タグ');
 define('GENRECOLUMNNAME','コラム');
 
 
@@ -87,8 +89,8 @@ define('BLOGIMAGEPATH',WEBROOT.'img/blog/');
 
 define('NOWPRINTING','assets/img/screenshot/nowprinting.png');
 
-define('FBAPPID','517655641733289');
-define('FBSECRET','084291de7eff7e242d43c394b9cb7027');
+define('FBAPPID','822330827810513');
+define('FBSECRET','2da12af1829cbafdef8805b62973736b');
 
 
 //twitter api

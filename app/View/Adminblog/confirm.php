@@ -32,8 +32,6 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 画像1</label>
                     <div class="col-sm-10">
-
-
                     <span class="confirmtext">
                     <?php if($data['Blog']['img1up']):?>
                         <br>
