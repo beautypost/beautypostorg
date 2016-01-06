@@ -18,7 +18,7 @@
 
 			<p class="lead">Beauty Post メンバーに登録いただいた皆様に、美容に役立つ美容ニュースをメルマガでお送りしております。<br class="rsp-xxxo">過去のバックナンバーをご覧になられたい方は、ログインください。</p>
 
-			<ul class="backnumber-list container">
+			<ul class="backnumber-list magazine-list container">
 <?php foreach($Mailmagazine as $Item):?>
                 <li>
                     <dl>

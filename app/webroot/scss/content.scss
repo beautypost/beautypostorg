@@ -1367,6 +1367,11 @@
 			&:link { text-decoration:underline; }
 			&:hover { text-decoration:none; }
 		}
+		&.magazine-list {
+			dd {
+				&:before { display:none !important; }
+			}
+		}
 	}
 	
 	//  詳細ページについてはサイドバーの表示と共通。moduleに。
