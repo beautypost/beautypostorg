@@ -434,12 +434,12 @@ $ret[8] ='ネイルケア';
     public function getJob(){
         $Items['job'][0] = '主婦';
         $Items['job'][1] = 'パート/アルバイト';
-        $Items['job'][3] = '会社員（販売）';
-        $Items['job'][4] = '会社員（事務）';
-        $Items['job'][5] = '会社員（営業）';
-        $Items['job'][6] = '会社員（専門職）';
-        $Items['job'][7] = '会社員（美容関係）';
-        $Items['job'][8] = 'その他';
+        $Items['job'][2] = '会社員（販売）';
+        $Items['job'][3] = '会社員（事務）';
+        $Items['job'][4] = '会社員（営業）';
+        $Items['job'][5] = '会社員（専門職）';
+        $Items['job'][6] = '会社員（美容関係）';
+        $Items['job'][7] = 'その他';
     return $Items;
     }
 
