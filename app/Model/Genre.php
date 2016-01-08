@@ -432,11 +432,14 @@ $ret[8] ='ネイルケア';
 
     //契約形態
     public function getJob(){
-        $Items['job'][0] = 'OL';
-        $Items['job'][1] = '会社員';
-        $Items['job'][3] = 'アルバイト/パート';
-        $Items['job'][4] = '化粧品販売員';
-        $Items['job'][5] = 'その他';
+        $Items['job'][0] = '主婦';
+        $Items['job'][1] = 'パート/アルバイト';
+        $Items['job'][3] = '会社員（販売）';
+        $Items['job'][4] = '会社員（事務）';
+        $Items['job'][5] = '会社員（営業）';
+        $Items['job'][6] = '会社員（専門職）';
+        $Items['job'][7] = '会社員（美容関係）';
+        $Items['job'][8] = 'その他';
     return $Items;
     }
 
@@ -488,7 +491,7 @@ $ret[8] ='ネイルケア';
         $Items['pref']['26'] = '京都府';
         $Items['pref']['27'] = '大阪府';
         $Items['pref']['28'] = '兵庫県';
-        $Items['pref']['29'] = '良県';
+        $Items['pref']['29'] = '奈良県';
         $Items['pref']['30'] = '和歌山県';
         $Items['pref']['31'] = '鳥取県';
         $Items['pref']['32'] = '島根県';

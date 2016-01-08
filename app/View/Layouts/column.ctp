@@ -42,10 +42,9 @@
   <div class="layout">
     <nav id="column-fnav">
       <ul>
-        <li><a href="<?php echo WEBROOT?>"><i class="fa fa-home">&#8203;</i> ホーム</a></li>
-        <li><a href="<?php echo WEBROOT?>"><i class="fa fa-pencil">&#8203;</i> ライター募集</a></li>
+        <li><a href="<?php echo WEBROOT?>Column/"><i class="fa fa-home">&#8203;</i> ホーム</a></li>
         <li><a href="<?php echo WEBROOT?>"><i class="fa fa-building">&#8203;</i> 運営者会社</a></li>
-        <li><a href="<?php echo WEBROOT?>"><i class="fa fa-envelope-o">&#8203;</i> お問い合わせ</a></li>
+        <li><a href="<?php echo WEBROOT?>Contact/"><i class="fa fa-envelope-o">&#8203;</i> お問い合わせ</a></li>
       </ul>
     </nav><!-- /#column-fnav -->
   </div>

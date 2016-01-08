@@ -5,7 +5,7 @@
 ==================================================================================================== -->
 <header id="column-header">
   <div class="layout">
-    <h1><a href="<?php echo WEBROOT?>">Beauty Post <span>美活コラム</span></a></h1>
+    <h1><a href="<?php echo WEBROOT?>Column/">Beauty Post <span>美活コラム</span></a></h1>
   </div>
 </header><!-- /#column-header -->
 <!--

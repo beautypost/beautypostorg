@@ -1937,6 +1937,7 @@
 			@include ps(3%);
 			@include mqlt($bpS) { padding-left:128px; }
 			@include mqmt($bpS) { padding-left:140px; }
+			display:inline-block;
 			height:120px;
 			@include fz(24);
 			color:#4D4D4D;
@@ -2087,13 +2088,6 @@
 	.column-entryblocktitle {
 		@include pv(0.25em); @include fz(16);
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	#column-sub {
 		@include mqlt($bpL) { margin-top:1.5em; }
