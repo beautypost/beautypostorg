@@ -51,6 +51,7 @@ class Attr extends AppModel {
         $ret['valid'] = '';
         $ret['sort'] = '';
         $ret['genre_id']= '';
+        $ret['genres'] = '';
 //        $ret['url'] = '';
     return $ret;
     }
@@ -96,11 +97,10 @@ class Attr extends AppModel {
 //                            'valid'=>1
                             );
         $all = $this->find('first',array('conditions'=>$conditions));
-        return $all;
-    }
+        return $all; }
 
     public function getItemsByID($id){
-        if(!$id){return;}
+        if(!$id){return array();}
         $conditions = array(
                             'id'=>$id,
 //                            'toprecommend'=>1,

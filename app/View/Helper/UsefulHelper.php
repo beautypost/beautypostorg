@@ -150,14 +150,14 @@ class UsefulHelper extends AppHelper {
     public function radio($name,$items,$selected,$required=''){
         $ret = '';
         foreach($items as $key => $val){
-            $ret .="<li><input type='radio' name='".$name."' value='".$key."'";
+            $ret .="<input type='radio' name='".$name."' value='".$key."'";
             if(isset($selected)){
              $ret .= ($key == $selected) ? ' checked ' :'';
             }
             if(isset($required)){
                 $ret .= ' required';
             }
-            $ret .='>'.$val.'</li>';
+            $ret .=' >'.$val.'&nbsp;';
         }
         return $ret;
     }

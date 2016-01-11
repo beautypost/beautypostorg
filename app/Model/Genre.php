@@ -446,8 +446,8 @@ $ret[8] ='ネイルケア';
     public function getSkin(){
         $Items['skin'][1] = '敏感肌';
         $Items['skin'][2] = '乾燥肌';
-        $Items['skin'][4] = '混合肌';
         $Items['skin'][3] = '脂性肌';
+        $Items['skin'][4] = '混合肌';
 
     return $Items;
     }
@@ -469,8 +469,8 @@ $ret[8] ='ネイルケア';
         $Items['pref']['4'] = '宮城県';
         $Items['pref']['5'] = '秋田県';
         $Items['pref']['6'] = '山形県';
-        $Items['pref']['8'] = '茨城県';
         $Items['pref']['7'] = '福島県';
+        $Items['pref']['8'] = '茨城県';
         $Items['pref']['9'] = '栃木県';
         $Items['pref']['10'] = '群馬県';
         $Items['pref']['11'] = '埼玉県';

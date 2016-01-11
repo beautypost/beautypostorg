@@ -27,6 +27,9 @@ App::import('Vendor','facebook',array('file' => 'facebook'.DS.'src'.DS.'facebook
 //twitter login
 //App::import('Vendor','twitter',array('file' => 'twitter'.DS.'lib'.DS.'twitteroauth'.DS.'twitteroauth.php'));
 
+if(!defined('ADMINCONTROLLER')){
+  define('ADMINCONTROLLER',0);
+}
 
 /**
  * Application Controller

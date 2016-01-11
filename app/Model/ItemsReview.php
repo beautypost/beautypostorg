@@ -33,7 +33,7 @@ class ItemsReview extends AppModel {
     public $name = 'ItemsReview';
     public $belongsTo = array(
         'SnsUser' => array(
-            'className' => 'SnsUser',
+            'className' => 'Snsuser',
             'foreignKey' => 'user_id',
 //            'conditions'=>array(),
 //            'dependent' => true,
@@ -66,8 +66,14 @@ class ItemsReview extends AppModel {
         $ret['point3'] ='';
         $ret['point4'] ='';
         $ret['point5'] ='';
-
+        $ret['valid'] = '';
     return $ret;
+    }
+
+    public function invalid($id,$ret){
+            $this->id = $id;
+            $ret = ($ret == 0) ? 1: 0;
+            $this->saveField('valid',$ret);
     }
 
 
@@ -92,7 +98,7 @@ class ItemsReview extends AppModel {
         if(!$itemID){return;}
         $conditions = array(
                             'id'=>$itemID,
-//                            'valid'=>1
+                           'ItemsReview.valid'=>1
                             );
         $all = $this->find('first',array('conditions'=>$conditions));
         return $all;
@@ -107,7 +113,7 @@ class ItemsReview extends AppModel {
     **/
     public function getItems($sort='',$limit=100,$offset=0) {
         $conditions = array(
-                            'conditions'=> array('valid'=>1),
+//                            'conditions'=> array('ItemsReview.valid'=>1),
                             'limit'     => $limit,
                             'offset'    => $offset
                             );
@@ -144,11 +150,15 @@ class ItemsReview extends AppModel {
     **/
     public function getItemsByItemID($itemID) {
         $conditions = array(
-            'conditions'=> array('item_id'=>$itemID),
+            'conditions'=> array('item_id'=>$itemID,'itemsReview.valid'=>1),
             // 'order'     => array($sort['key']=>$sort['value']),
             // 'limit'     => $limit,
             // 'offset'    => $offset
             );
+
+        if(ADMINCONTROLLER){
+            $conditions['conditions']['itemsReview.valid'] = '';
+        }
 
         $all = $this->find('all',$conditions);
         $ret = array();

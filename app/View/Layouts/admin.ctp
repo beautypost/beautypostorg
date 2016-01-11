@@ -19,7 +19,7 @@
 
         <script src="<?php echo WEBROOT;?>js/tinymce/tinymce.min.js"></script>
 
-
+<?php if(!isset($tinymce)):?>
 <script language="javascript" type="text/javascript">
 tinyMCE.init({
     mode : "textareas",
@@ -39,8 +39,7 @@ tinyMCE.init({
     content_css : "styles.css",
 });
 </script>
-
-
+<?php endif;?>
 <script type="text/javascript"><!--
    function dispCheck(uri) {
      // 選択結果で分岐
@@ -138,12 +137,12 @@ tinyMCE.init({
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Admincolumn')?>">
                        <a href="<?php echo WEBROOT?>Admincolumn">
-                            <i class="menu-icon fa fa-chevron-right"></i><span class="menu-text">コラム</span>
+                            <i class="menu-icon fa fa-comment"></i><span class="menu-text">コラム</span>
                        </a>
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Adminfavorite')?>">
                        <a href="<?php echo WEBROOT?>Adminfavorite">
-                       <i class="menu-icon fa fa-chevron-left"></i><span class="menu-text"><font size=-2>BeautyPostからのお知らせ</font></span>
+                       <i class="menu-icon fa fa-info"></i><span class="menu-text"><font size=-2>BeautyPostからのお知らせ</font></span>
                        </a>
                     </li>
                     <li class="<?php $this->Beautypost->cssActive('Admintype')?>">
@@ -162,6 +161,17 @@ tinyMCE.init({
                             <i class="menu-icon fa fa-users"></i><span class="menu-text">ユーザー管理</span>
                        </a>
                     </li>
+                    <li class="<?php $this->Beautypost->cssActive('Adminreview')?>">
+                       <a href="<?php echo WEBROOT?>Adminreview">
+                            <i class="menu-icon fa fa-file"></i><span class="menu-text">レビュー管理</span>
+                       </a>
+                    </li>
+                    <li class="<?php $this->Beautypost->cssActive('Adminmonitor')?>">
+                       <a href="<?php echo WEBROOT?>Adminmonitor">
+                            <i class="menu-icon fa fa-pencil"></i><span class="menu-text">モニター管理</span>
+                       </a>
+                    </li>
+
                     <li class="<?php $this->Beautypost->cssActive('Adminmaster')?>">
                        <a href="<?php echo WEBROOT?>Adminmaster">
                             <i class="menu-icon fa fa-book"></i><span class="menu-text">マスタ管理</span>

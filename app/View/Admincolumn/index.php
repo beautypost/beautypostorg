@@ -45,13 +45,13 @@
 <?php endforeach?>
     </tbody>
     </table>
+                </div>
+            </div>
+
 <h4 class="pink">
     <i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
     <a href="<?php echo WEBROOT?>Admincolumn/input/">新規作成</a>
 </h4>
-                </div>
-            </div>
-
 
 
 

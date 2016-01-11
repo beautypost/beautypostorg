@@ -172,7 +172,6 @@ class CollectionController extends AppController {
         }
 
 
-
 		//関連商品
 		$materials = $this->Item->getItemByInId($item['Item']['materials']);
 		$this->set('Materials',$materials);

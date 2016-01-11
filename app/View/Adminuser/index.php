@@ -45,6 +45,13 @@
 <?php endforeach?>
     </tbody>
     </table>
+
+<h4 class="pink">
+    <i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
+    <a href="<?php echo WEBROOT.$this->name?>/csvoutput">CSVダウンロード</a>
+</h4>
+
+
                 </div>
             </div>
 

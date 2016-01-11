@@ -23,7 +23,8 @@
 			<tr>
 				<th>商品名</th>
 				<?php foreach($Items as $Item):?>
-					<td><?php echo $Item['Item']['title']?></td>
+
+					<td><?php echo $Item['Item']['id']?><?php echo $Item['Item']['title']?></td>
 				<?php endforeach;?>
 			</tr>
 		</thead>
@@ -105,28 +106,22 @@
 				<?php endforeach;?>
 			</tr>
 
-            <?php foreach($genres as $genre):?>
-                <?php foreach($genre as $val):?>
+            <?php foreach($genres as $k => $genre):?>
+                <?php foreach($genre as $kk=>$val):?>
     			<tr>
-    				<th><?php echo $val?></th>
+    				<th><?php echo $kk.$val?></th>
+
+                        <?php foreach($itemGenreValues[$kk] as $k => $v):?>
+                            <td>&nbsp;
+                            <?php if(isset($v[0]['genreAttrItem']['value'])):?>
+                                <?php echo $v[0]['genreAttrItem']['value']?>
+                            <?php endif;?>
+                            </td>
+                        <?php endforeach;?>
+
                 </tr>
                 <?php endforeach;?>
             <?php endforeach;?>
-
-            <?php foreach($Items as $Item):?>
-                <?php foreach($genres as $genre):?>
-                    <?php foreach($genre as $val):?>
-                    <tr>
-                        <td>
-                            <?php if($Item['genre_id'] == $genre['id']):?>
-                                <?php echo $Item['ite']?>
-                            <?php endif;?>
-                        </td>
-                    </tr>
-                <?php endforeach;?>
-            <?php endforeach;?>
-
-
 
 
 		</tbody>
@@ -136,46 +131,47 @@
 		<tbody>
 			<tr>
 				<th>ユーザーレビュー件数</th>
-				<?php foreach($Items as $Item):?>
-				<td>12</td>
+				<?php foreach($totalreview['count'] as $r):?>
+				<td><?php echo $r?></td>
 				<?php endforeach;?>
 			</tr>
 			<tr>
 				<th>満足度</th>
-				<?php foreach($Items as $Item):?>
-				<td>12</td>
+				<?php foreach($totalreview['total'] as $r):?>
+				<td><?php echo $r?></td>
 				<?php endforeach;?>
 			</tr>
 			<tr>
 				<th>価格</th>
-				<?php foreach($Items as $Item):?>
-				<td>12</td>
+				<?php foreach($totalreview['p1'] as $r):?>
+				<td><?php echo $r?></td>
 				<?php endforeach;?>
 			</tr>
 			<tr>
 				<th>使いやすさ</th>
-				<?php foreach($Items as $Item):?>
-				<td>12</td>
+				<?php foreach($totalreview['p2'] as $r):?>
+				<td><?php echo $r?></td>
 				<?php endforeach;?>
 			</tr>
 			<tr>
 				<th>デザイン</th>
-				<?php foreach($Items as $Item):?>
-				<td>12</td>
+				<?php foreach($totalreview['p3'] as $r):?>
+				<td><?php echo $r?></td>
 				<?php endforeach;?>
 			</tr>
 			<tr>
-				<th>性能</th>
-				<?php foreach($Items as $Item):?>
-				<td>12</td>
+				<th>機能</th>
+				<?php foreach($totalreview['p4'] as $r):?>
+				<td><?php echo $r?></td>
 				<?php endforeach;?>
 			</tr>
-			<tr>
-				<th>継続性</th>
-				<?php foreach($Items as $Item):?>
-				<td>12</td>
-				<?php endforeach;?>
-			</tr>
+            <tr>
+                <th>継続性</th>
+                <?php foreach($totalreview['p5'] as $r):?>
+                <td><?php echo $r?></td>
+                <?php endforeach;?>
+            </tr>
+
 		</tbody>
 	</table>
 </div>

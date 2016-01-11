@@ -51,6 +51,7 @@ class GenreAttrItem extends AppModel {
 //        $ret['tag'] = '';
         $ret['valid'] = '';
         $ret['sort'] = '';
+        $ret['attr_id'];
 //        $ret['url'] = '';
     return $ret;
     }
@@ -109,6 +110,19 @@ class GenreAttrItem extends AppModel {
         $all = $this->find('all',array('conditions'=>$conditions));
         return $all;
     }
+
+    public function getItemByItemIDAndAttrID($itemid,$attrid){
+//        if(!$id){return;}
+        $conditions = array(
+                            'item_id'=>$itemid,
+                            'attr_id'=>$attrid
+//                            'toprecommend'=>1,
+//                            'valid'=>1
+                            );
+        $all = $this->find('all',array('conditions'=>$conditions));
+        return $all;
+    }
+
 
     public function invalid($id,$ret){
             $this->id = $id;

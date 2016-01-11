@@ -122,9 +122,22 @@ class GenreAttr extends AppModel {
 //                            'toprecommend'=>1,
 //                            'valid'=>1
                             );
+
         $all = $this->find('all',array('conditions'=>$conditions));
         return $all;
     }
+
+    public function getItemBygenreID($id){
+        if(!$id){return;}
+        $conditions = array(
+                            'genre_id'=>$id,
+//                            'toprecommend'=>1,
+//                            'valid'=>1
+                            );
+        $all = $this->find('all',array('conditions'=>$conditions));
+        return $all;
+    }
+
 
     public function invalid($id,$ret){
             $this->id = $id;

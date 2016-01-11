@@ -76,16 +76,16 @@ class AjaxController extends AppController {
 		if(!$r){$r = array();}
 		if(array_key_exists($itemID,$r)){
 			unset($r[$itemID]);
-			echo 'unset'.$itemID;
+//			echo 'unset'.$itemID;
 
 		}else{
 			$r[$itemID] = $itemID;
-			echo 'set'.$itemID;
+//			echo 'set'.$itemID;
 
 		}
 
 		$this->Session->write('ItemCompare',$r);
-		echo 'OK';
+//		echo 'OK';
 		exit;
 	}
 

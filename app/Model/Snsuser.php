@@ -35,7 +35,7 @@ class Snsuser extends AppModel {
 
     public $validate = array(
         'email' =>array(
-            array('rule'=>array('email',true),'message'=>'正しいメールアドレスを入力してください'),
+            array('rule'=>array('email',true)   ,'message'=>'正しいメールアドレスを入力してください'),
 //            'custom'=>array('rule' => 'CheckEmail','message'=>'すでに使用されているメールアドレスです')
             ),
         'password' =>array(
@@ -324,6 +324,11 @@ class Snsuser extends AppModel {
                             'valid'=>1,
 //                            'otherid'=>1,
                             );
+        if(ADMINCONTROLLER){
+            $conditions['conditions']['valid'] = '';
+        }
+
+
         if($fields){
             $conditions['fields'] = $fields;
         }

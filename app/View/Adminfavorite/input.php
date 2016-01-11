@@ -21,7 +21,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル </label>
         <div class="col-sm-10">
-        <input type="text" name="data[title]" value="<?php echo $data['Favorite']['title']?>" class="col-xs-10">
+        <input type="text" name="data[title]" value="<?php echo $data['Favorite']['title']?>" class="col-xs-10" required>
         </div>
     </div>
   <div class="form-group">

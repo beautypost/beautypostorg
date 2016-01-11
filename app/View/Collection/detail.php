@@ -141,12 +141,16 @@
                             </tr>
                         <?php endif;?>
                         </table>
+                        <?php if($Item['Item']['movie']):?>
                         <div class="youtube">
                             <div class="inner">
                                 <iframe width="420" height="315" src="<?php echo $Item['Item']['movie']?>" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
-                        <p class="item-external"><a href="#" target="_blank" class="button btn-nb btn-sizeS">商品PRページ</a></p>
+                    <?php endif;?>
+                        <?php if($Item['Item']['pr_site']):?>
+                        <p class="item-external"><a href="<?php echo $Item['Item']['pr_site']?>" target="_blank" class="button btn-nb btn-sizeS">商品PRページ</a></p>
+                        <?php endif;?>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-detail -->
 
@@ -157,12 +161,16 @@
                         <div>
                             <p><?php echo $Item['Item']['example']?></p>
                         </div>
+                        <?php if($Item['Item']['example_url']):?>
                         <div class="youtube">
                             <div class="inner">
                                 <iframe width="420" height="315" src="<?php echo $Item['Item']['example_url']?>" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
-                        <p class="item-external"><a href="#" target="_blank" class="button btn-pdf btn-sizeS"><i class="fa fa-file-pdf-o">&#8203;</i>　取扱説明書カタログ</a></p>
+                    <?php endif;?>
+                        <?php if($Item['Item']['catalog']): ?>
+                        <p class="item-external"><a href="<?php echo $Item['Item']['catalog']?>" target="_blank" class="button btn-pdf btn-sizeS"><i class="fa fa-file-pdf-o">&#8203;</i>　取扱説明書カタログ</a></p>
+                    <?php endif;?>
                     </div><!-- /.section-body -->
                 </section><!-- /.item-howtouse -->
                 <?php endif;?>

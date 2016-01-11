@@ -31,15 +31,15 @@ App::uses('Model', 'Model');
  */
 class ItemsMonitor extends AppModel {
     public $name = 'ItemsMonitor';
-    public $belongsTo = array(
-        'SnsUser' => array(
-            'className' => 'SnsUser',
-            'foreignKey' => 'user_id',
-//            'conditions'=>array(),
-//            'dependent' => true,
-            'order' => 'ItemsMonitor.created'
-        )
-    );
+//     public $belongsTo = array(
+//         'SnsUser' => array(
+//             'className' => 'SnsUser',
+//             'foreignKey' => 'user_id',
+// //            'conditions'=>array(),
+// //            'dependent' => true,
+//             'order' => 'ItemsMonitor.created'
+//         )
+//     );
 
     public function setData($Item){
         $all = $this->skel();
@@ -58,7 +58,12 @@ class ItemsMonitor extends AppModel {
 //        $ret['created'] = $this->now();
         $ret['id'] = '';
         $ret['item_id'] ='';
-        $ret['user_id'] ='';
+        $ret['user_username'] ='';
+        $ret['user_gender'] ='';
+        $ret['user_year'] ='';
+        $ret['user_month'] ='';
+        $ret['user_day'] ='';
+        $ret['user_job'] ='';
         $ret['title'] = '';
         $ret['comment'] ='';
         $ret['point1'] ='';
@@ -66,7 +71,7 @@ class ItemsMonitor extends AppModel {
         $ret['point3'] ='';
         $ret['point4'] ='';
         $ret['point5'] ='';
-
+        $ret['valid'] = '';
     return $ret;
     }
 
@@ -144,11 +149,14 @@ class ItemsMonitor extends AppModel {
     **/
     public function getItemsByItemID($itemID) {
         $conditions = array(
-            'conditions'=> array('item_id'=>$itemID),
+            'conditions'=> array('item_id'=>$itemID,'valid'=>1),
             // 'order'     => array($sort['key']=>$sort['value']),
             // 'limit'     => $limit,
             // 'offset'    => $offset
             );
+        if(defined(ADMINCONTROLLER)){
+            $conditions['conditions']['itemsMonitor.valid'] = '';
+        }
 
         $all = $this->find('all',$conditions);
         $ret = array();

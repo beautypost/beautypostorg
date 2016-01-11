@@ -186,6 +186,8 @@ class AdminitemattrController extends BaseController {
             $gai['genre_attr_id'] = $k;
             $gai['item_id'] = $_data['id'];
             $gai['value'] = $v;
+            $atr = $this->GenreAttr->getItemByID($k);
+            $gai['attr_id'] = $atr['GenreAttr']['attr_id'];
 //            var_dump($gai);
             $this->GenreAttrItem->create();
             $this->GenreAttrItem->save($gai);

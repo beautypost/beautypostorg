@@ -18,6 +18,9 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+require_once '../Vendor/lib/HttpSample.class.php';
+
+
 App::uses('AppController', 'Controller');
 
 //facebook login
@@ -105,9 +108,18 @@ class MypageController extends AppController {
 //		$HistoryItems = $this->UserVote->getUserVoteHistory($userID);
 
 //		$this->set('HistoryItems',$HistoryItems);
-
+        $areaCode = $this->SnsuserData['Snsuser']['pref'];
+        $skinCode = $this->SnsuserData['Snsuser']['skin'];
 		//metaDATA設定
 //		$this->setMetaData();
+        //乾燥肌注意報
+        $hada = $this->Tenki->getTenki($areaCode,$skinCode,4);
+
+        //日焼け
+        $hiyake = $this->Tenki->getTenki($areaCode,$skinCode,6);
+        $this->set('hada',$hada);
+        $this->set('hiyake',$hiyake);
+
     }
 
 

@@ -38,7 +38,7 @@ class CompareController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Item','RecommendItem','Webrequest','Blog','UserVote');
+	public $uses = array('ItemsReview','GenreAttrItem','Attr','GenreAttr','Item','RecommendItem','Webrequest','Blog','UserVote');
 
 
 	public function beforeFilter() {
@@ -69,11 +69,82 @@ class CompareController extends AppController {
 	 */
 	public function index() {
         $all = $this->Session->read('ItemCompare');
-        var_dump($all);
+//        var_dump($all);
 //		$all = array(111,177,185);
 		$items = $this->Item->getItemByInId($all);
 //var_dump(count($items));
 		$this->set('Items',$items);
+
+        foreach($items as $item){
+            $itemgenre[$item['Item']['genre_id']] = $item['Item']['genre_id'];
+            $reviews[$item['Item']['id']] = $this->ItemsReview->getItemsByItemID($item['Item']['id']);
+        }
+
+    $attrs = $this->GenreAttr->getItemBygenreID($itemgenre);
+    $ats = $atrs = $rr = $ats2 = $itemGenreValues = array();
+    foreach($attrs as $at){
+        $atrs[$at['genreAttr']['genre_id']][] = $at['genreAttr']['attr_id'];
+        $ats[] = $at['genreAttr']['attr_id'];
+        $atss[$at['genreAttr']['id']] = $at['genreAttr']['attr_id'];
+        $ats2[$at['genreAttr']['attr_id']] = $at['genreAttr']['attr_id'];
+    }
+    //var_dump($atss);
+    //var_dump($atrs);
+    $atItems = $this->Attr->getItemsByID($ats);
+
+    foreach($atItems as $i){
+        $r[$i['Attr']['id']] =$i['Attr']['title'];
+    }
+
+    //var_dump($r);
+
+    //var_dump($atItems);
+    foreach($atrs as $k => $v){
+        foreach($v as $vv){
+            $rr[$k][$vv] = $r[$vv];
+        }
+    //$atrs['key'] = $ats$v
+    }
+
+    $this->set('genres',$rr);
+    //var_dump($ats2);
+    foreach($ats2 as $k => $v){
+        foreach($items as $item){
+            $itemGenreValues[$v][$item['Item']['id']] = $this->GenreAttrItem->getItemByItemIDAndAttrID($item['Item']['id'],$v);
+        }
+    }
+
+    $this->set('itemGenreValues',$itemGenreValues);
+
+
+
+//レビュー情報
+$this->set('Reviews',$reviews);
+
+$r = array();
+foreach($reviews as $k => $rev){
+
+if(count($rev) != 0){
+    $r[$k] = $this->ItemsReview->getTotalReviewByAll($rev);
+    $r[$k]['count'] = count($rev);
+}
+}
+
+
+foreach($items as $item){
+    $rvr['count'][$item['Item']['id']]  = isset($r[$item['Item']['id']]['count']) ?$r[$item['Item']['id']]['count']:'';
+    $rvr['total'][$item['Item']['id']] = isset($r[$item['Item']['id']]['total']) ? $r[$item['Item']['id']]['total'] : '';
+    $rvr['p1'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p1']) ? $r[$item['Item']['id']]['p1']:'';
+    $rvr['p2'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p2']) ? $r[$item['Item']['id']]['p2']:'';
+    $rvr['p3'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p3']) ? $r[$item['Item']['id']]['p3']:'';
+    $rvr['p4'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p4']) ? $r[$item['Item']['id']]['p4']:'';
+    $rvr['p5'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p5']) ? $r[$item['Item']['id']]['p5']:'';
+
+}
+
+$this->set('totalreview',$rvr);
+//var_dump($rvr);
+
 
 		if(!$this->RequestHandler->isMobile()){
 			$this->layout = null;

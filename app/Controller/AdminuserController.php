@@ -39,7 +39,7 @@ class AdminuserController extends BaseController {
  * @var array
  */
 	public $uses = array('Snsuser');
-
+    public $helpers = array('Csv');
 
 	public function beforeRender(){
 		$this->set('pagetitle','ユーザー管理');
@@ -73,9 +73,13 @@ class AdminuserController extends BaseController {
 	}
 
 
+
+
 	public function edit(){
 		$id = $this->params['url']['id'];
+
 		$data = $this->Snsuser->getItemByID($id);
+
 		$this->set('data',$data);
 		$this->render('input');
 	}
@@ -117,19 +121,19 @@ class AdminuserController extends BaseController {
         $this->Snsuser->set($this->request->data);
         $this->set('Snsuser','');
         //確認画面へ
-        if($this->Snsuser->validates()){
-        	$data = $this->Snsuser->data;
-	        $this->set('data',$data);
+//        if($this->Snsuser->validates()){
+
+	        $this->set('data',$this->Snsuser->data);
 	    	$this->render('confirm');
-        	return;
+        // 	return;
 
-        }else{
+        // }else{
 
-	        $errors = $this->Snsuser->invalidFields();
-            $this->set('validationErrors',$errors);
-            $data = $this->Snsuser->data;
-            $this->set('data',$data);
-        }
+	       //  $errors = $this->Snsuser->invalidFields();
+        //     $this->set('validationErrors',$errors);
+        //     $data = $this->Snsuser->data;
+        //     $this->set('data',$data);
+        // }
 
 
 
@@ -148,6 +152,24 @@ class AdminuserController extends BaseController {
 
     }
 
+
+    public function Csvoutput(){
+        $sort = array('created'=>'desc');
+        $Snsusers = $this->Snsuser->getItems('',$sort,1000);
+        $this -> layout = false;
+        $filename = 'ダウンロードテスト' . date('YmdHis');
+
+        // 表の一行目を作成
+        $th = array('ID','メールアドレス','パスワード','名前','ニックネーム','性別','生年月日:年','生年月日:月','生年月日:日','種別','Beautypostメール','住んでいるエリア:県','住んでいるエリア:住所','肌質');
+        // 表の内容を取得
+        // $column = array('id', 'username', 'mail_address')
+        // $td = $this->Test->find('all', array('fields' => $column));
+        // $this -> set(compact('filename', 'th', 'td'));
+        $this->set('filename',$filename);
+        $this->set('th',$th);
+        $this->set('Snsusers',$Snsusers);
+
+    }
 
 
 }
