@@ -928,6 +928,7 @@
 					font-weight:700;
 					@include mqlt($bpS) { margin-left:3px; }
 				}
+				>a { @include ulLink(); }
 			}
 			>.button {
 				letter-spacing:2px;

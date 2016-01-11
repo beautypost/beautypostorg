@@ -9,7 +9,7 @@ if($this->name == 'Index'){
         <h1 id="site-title"><span class="rsp-xxxo">美容機器・美顔器をはじめとする美容機器比較サイト 美容機器コレクション<br></span><?php echo $logo?></h1>
 
         <div class="head-body rsp-xxoo">
-            <p class="rsp-xxoo"><span class="attention">今日の紫外線度数</span><span class="attention">美容の最新ニュース</span><br class="rsp-oxxx">をお届け！<span class="wsnw">他にも特典が満載！</span></p>
+            <p class="rsp-xxoo"><span class="attention">会員限定！！</span>美容機器がもらえるチャンスも♪ <a href="<?php echo WEBROOT?>pages/privilege/">詳細はこちら</a></p>
 <?php if(!isset($UserData['Snsuser']['id'])):?>
             <a href="<?php echo $this->webroot?>Login/" class="button btn-rich-vpk"><span>Beauty Post メンバー登録</span></a>
 <?php else:?>

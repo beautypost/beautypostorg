@@ -11,8 +11,7 @@
 			<h2 class="head-bar ico-arrow">商品掲載に関するお問い合わせ</h2>
 
 			<div id="user-form">
-				<p>Beauty Postに御社商品を掲載してみませんか？<br>
-				ご興味のあるご担当者の方は、お手数ですが、まずは下記フォームにて必要事項をお送り下さい。</p>
+				<p>Beauty Postに御社商品を掲載してみませんか？お手数ですが、まずは下記フォームにて必要事項をお送りください。</p>
 				<div class="section-body">
 					<form action="<?php echo WEBROOT.$this->name?>/input/" class="contact-form h-adr" method="post">
 						<span class="p-country-name" style="display:none;">Japan</span>

@@ -15,8 +15,8 @@
 				 --><img src="<?php echo WEBROOT?>/images/maker/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="美容機器メーカーの方へ"><!--
 			 --></h2>
 			<p class="tac"><!--
-				 --><img src="<?php echo WEBROOT?>/images/maker/catch-full.png" class="fitimg-w rsp-xooo" alt="Beauty Postは美容機器に興味のある消費者と企業をつなぎます。"><!--
-				 --><img src="<?php echo WEBROOT?>/images/maker/catch-half.png" class="fitimg-w rsp-oxxx" alt="Beauty Postは美容機器に興味のある消費者と企業をつなぎます。"><!--
+				 --><img src="<?php echo WEBROOT?>/images/maker/catch-full.png" class="fitimg-w rsp-xooo" alt="Beauty Postは美容機器に興味のある消費者と美容機器メーカーの皆様をつなぎます。"><!--
+				 --><img src="<?php echo WEBROOT?>/images/maker/catch-half.png" class="fitimg-w rsp-oxxx" alt="Beauty Postは美容機器に興味のある消費者と美容機器メーカーの皆様をつなぎます。"><!--
 			 --></p>
 
 			<section id="maker-lead">

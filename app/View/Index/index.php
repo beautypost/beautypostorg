@@ -32,9 +32,9 @@
     <div class="layout">
         <div id="main-area" class="layout-main layout-r">
             <section id="top-collection" class="rsp-xxoo">
-                <h2 class="head-std ico-arrow"><span class="wsnw">美容機器コレクション</span><span class="subtitle wsnw">～自分にあった美容機器を探す～</span></h2>
+                <h2 class="head-std ico-arrow"><span class="wsnw">美容機器コレクション</span><span class="subtitle wsnw">～自分に合った美容機器を探す～</span></h2>
                 <div class="section-body">
-                    <p>Beauty Postは、国内最大の美容機器の情報（比較）サイトです。フェイシャルエステやクリニック、脱毛にリラクゼーション、美容院、デンタルクリニック、ネイル…。美活は好きだけど、気が付くと「超多忙」「寝不足で悪循環？」なんてことがよくあります。忙しいヒトにとって、必要不可欠である美容機器の“正しい選択”をお手伝いすることで、働く女性から子育てに追われるママさん、エステ後のホームケアや、エステに行きづらいメンズまで、忙しいヒトの”美活”を応援しています。</p>
+                    <p>Beauty Postは、国内最大級の美容機器の情報比較サイトとして、国内で販売されいる美容機器情報を分かりやすくご紹介。 フェイシャルエステやクリニック、脱毛にリラクゼーション、美容院、デンタルクリニック、ネイル…。“美活”は好きだけど、なかなか行けない、と諦めている方でも、ご家庭で気軽に美容ケアを行える美容機器を比較・検討していただけます。働く女性から子育てを頑張るママさん、さらにはエステに行きづらい男性まで、 美活が好きな方、興味のある方、すべてを応援していけるよう、 日々美容機器に関する上質な情報収集に努めています。</p>
                 </div><!-- /.section-body -->
                 <img src="<?php echo $this->webroot;?>images/top-lead-img.png" width="360" height="360" alt="">
             </section><!-- /#top-Collection/-->
@@ -127,7 +127,7 @@
             </section><!-- /top-enquete -->
 
             <section id="topsearch-machine">
-                <h2 class="head-std ico-search">機器で探す</h2>
+                <h2 class="head-std ico-search">機種で探す</h2>
                 <div class="section-body">
                     <ul class="search-category-list">
                         <?php foreach($GenreKisyu as $Item):?>

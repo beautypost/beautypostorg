@@ -14,7 +14,7 @@
 				 --><img src="<?php echo WEBROOT?>images/glossary/pagetitle-full.jpg" width="1984" height="256" class="fitimg-w rsp-xooo" alt="美容機器用語集 glosary"><!--
 				 --><img src="<?php echo WEBROOT?>images/glossary/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="美容機器用語集 glosary"><!--
 			 --></h2>
-			<p>基本用語から専門用語まで、美容機器に関する用語を幅広く集めました。</p>
+			<p>基本用語から専門用語まで、美容機器に関する用語を解説します。</p>
 			<section id="glossary-index">
 			<?php foreach($GenreTypes as $k => $v):?>
 				<?php if(!isset($Items[$k])){continue;}?>

@@ -5105,6 +5105,12 @@ section:last-child, .container:last-child {
     margin-left: 3px;
   }
 }
+#site-header .head-body p > a {
+  text-decoration: underline;
+}
+#site-header .head-body p > a:hover {
+  text-decoration: none;
+}
 #site-header .head-body > .button {
   letter-spacing: 2px;
 }
