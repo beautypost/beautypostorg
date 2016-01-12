@@ -99,7 +99,7 @@ $ret['poscode'] = '';
 $ret['code'] = '';
 $ret['pr_site'] = '';
 $ret['catalog'] = '';
-
+$ret['top'] = '';
 //        $ret['url'] = '';
     return $ret;
     }
@@ -108,12 +108,12 @@ $ret['catalog'] = '';
     GENRETOP (アイテム一覧)　のTOPで表示されるアイテム
     単数
     **/
-    function getPointItems($genreID='',$limit=5) {
+    function getPointItems($genreID='',$limit=10) {
         $conditions['conditions'] = array(
-                            'review >='=>1,
+                            'top >'=>0,
                             'valid'=>1,
                             );
-        $conditions['order'] = array('review DESC');
+        $conditions['order'] = array('top DESC');
         $conditions['limit'] = $limit;
         $all = $this->find('all',$conditions);
         return $all;

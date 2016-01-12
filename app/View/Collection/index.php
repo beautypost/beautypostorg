@@ -79,6 +79,7 @@
                     }
 
                     function compareItem(id){
+
                         $.ajax({
                             type: "GET",
                             url: "<?php echo WEBROOT?>Ajax/setCompare/?itemID="+id,

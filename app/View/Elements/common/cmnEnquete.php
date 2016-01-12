@@ -2,7 +2,7 @@
                      --><img src="<?php echo $this->webroot?>common-img/side-enquete-head-full.png" width="882" height="192" class="fitimg-w rsp-ooox" alt="美活アンケート実施中！"><!--
                      --><img src="<?php echo $this->webroot?>common-img/side-enquete-head.png" width="480" height="128" class="fitimg-w rsp-xxxo" alt="美活アンケート実施中！"><!--
                  --></h2>
-                 <form method="post" action="<?php echo WEBROOT?>Question/Vote">
+                 <form method="post" action="<?php echo WEBROOT?>Question/input">
                 <section class="mt0">
                     <h2 class="enquete-head"><i class="fa fa-chevron-circle-right">&#8203;</i> 第<?php echo $Questions[0]['Question']['number']?>回美容アンケート投票中</h2>
                     <div class="round-contents-body">

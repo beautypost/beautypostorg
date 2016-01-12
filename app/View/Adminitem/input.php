@@ -19,6 +19,11 @@ if (isset($validationErrors) && is_array($validationErrors)) {
             <form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input" enctype="multipart/form-data">
                 <!-- #section:elements.form -->
                 <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">TOP表示 </label>
+                    <div class="col-sm-10"><input type="text" name="data[top]" value="<?php echo $data['Item']['top']?>" class="col-xs-10"></div>
+                </div>
+
+                <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1">商品名 </label>
                     <div class="col-sm-10"><input type="text" name="data[title]" value="<?php echo $data['Item']['title']?>" class="col-xs-10"></div>
                 </div>

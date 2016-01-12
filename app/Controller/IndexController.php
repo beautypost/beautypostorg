@@ -69,7 +69,6 @@ class IndexController extends AppController {
 
 		//人気のキーワード
 		$this->set('AdminKeywords',$this->AdminKeyword->getItems());
-
 		//注目の美容機器
 		$this->set('PointItems',$this->Item->getPointItems());
 

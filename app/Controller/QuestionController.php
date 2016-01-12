@@ -57,6 +57,22 @@ class QuestionController extends AppController {
             $message = 'すでに投票済みです';
         }else{
 
+            $data['session'] = $session_id;
+            $this->setRequestValue($data,'question_value_id');
+            $this->setRequestValue($data,'question_id');
+
+            $this->QuestionLog->save($data);
+
+            $val = $this->Question->getItemByID($question['Question']['id']);
+            $val['Question']['total']++;
+            $this->Question->save($val);
+
+            $val = $this->QuestionValue->getItemByID($data['question_value_id']);
+
+            $val['QuestionValue']['points']++;
+            $this->QuestionValue->save($val);
+
+
             $message = '投票ありがとうございました';
         }
             $this->set('message',$message);
@@ -94,7 +110,6 @@ class QuestionController extends AppController {
 
         $data['session'] = $session_id;
         $this->QuestionLog->save($data);
-
         $val = $this->QuestionValue->getItemByID($data['question_value_id']);
 
         if(!$val){
@@ -146,6 +161,7 @@ class QuestionController extends AppController {
         $this->set('Pager',$pager);
 
         $question = $this->Question->getItemByID($id);
+
 
         //ログインしていない状態で、最新のアンケート以外のアンケートIDを指定されるとリダイレクト
         $q = $this->Question->getNewQuestion();

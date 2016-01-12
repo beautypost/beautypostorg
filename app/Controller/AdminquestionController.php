@@ -146,8 +146,13 @@ class AdminquestionController extends BaseController {
         $_data = (unserialize(base64_decode($messages)));
         $da = $this->Question->setData($_data);
         $da['valid'] = 1;
+        //新規アンケート作成
         $this->Question->create();
+        $da['end'] = NULL;
         $this->Question->save($da,array('validate'=>false));
+
+        //アンケートIDを用い、項目を追加
+        //登録済みの場合は、項目を削除
 //var_dump($_data);
         if($_data['id']){
             $id = $_data['id'];
@@ -164,6 +169,10 @@ class AdminquestionController extends BaseController {
                 $this->QuestionValue->save($_qa);
         }
 
+        $da['start'];
+        $qe = $this->Question->getNoEnd();
+        $qe['Question']['end'] = $da['start'];
+        $this->Question->save($qe);
 
     }
 

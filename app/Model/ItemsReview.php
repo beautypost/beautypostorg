@@ -150,14 +150,14 @@ class ItemsReview extends AppModel {
     **/
     public function getItemsByItemID($itemID) {
         $conditions = array(
-            'conditions'=> array('item_id'=>$itemID,'itemsReview.valid'=>1),
+            'conditions'=> array('item_id'=>$itemID,'ItemsReview.valid'=>1),
             // 'order'     => array($sort['key']=>$sort['value']),
             // 'limit'     => $limit,
             // 'offset'    => $offset
             );
 
         if(ADMINCONTROLLER){
-            $conditions['conditions']['itemsReview.valid'] = '';
+            $conditions['conditions']['ItemsReview.valid'] = '';
         }
 
         $all = $this->find('all',$conditions);

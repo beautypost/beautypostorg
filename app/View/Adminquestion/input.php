@@ -35,7 +35,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
 <form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input">
     <!-- #section:elements.form -->
     <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">設問 </label>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">実施回数 </label>
         <div class="col-sm-8">
 <input type="text" name="data[number]" value="<?php echo $data['Question']['number']?>" class="form-control">
         </div>
@@ -54,12 +54,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
         <input type="text" name="data[start]" value="<?php echo $data['Question']['start']?>" class="col-xs-6" id="datepicker">
     </div>
     </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">終了日時 </label>
-        <div class="col-sm-10">
-        <input type="text" name="data[end]" value="<?php echo $data['Question']['end']?>" class="col-xs-6" id="datepicker2">
-    </div>
-    </div>
+
 
 
 

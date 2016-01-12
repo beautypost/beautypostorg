@@ -36,22 +36,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
 
     </div>
 </div>
-<?php if($data['Genre']['genre_id'] == GENREKISYU):?>
-<?php for($x=1;$x<11;$x++):?>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> <?php echo $x?></label>
-                    <div class="col-sm-10"><input type="text" name="data[attr<?php echo $x?>]" value="<?php echo $data['Genre']['attr'.$x]?>" class="col-xs-10"></div>
-                </div>
-<?php endfor;?>
-<?php else:?>
 
-<?php for($x=1;$x<11;$x++):?>
-                 <input type="hidden" name="data[attr<?php echo $x?>]" value="<?php echo $data['Genre']['attr'.$x]?>" class="col-xs-10">
-
-<?php endfor;?>
-
-
-<?php endif;?>
 </div>
 
                                     <div class="clearfix form-actions">

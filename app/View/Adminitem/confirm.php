@@ -9,6 +9,11 @@
             <form class="form-horizontal" role="form" method="post" action="<?php echo WEBROOT.$this->name?>/input">
                 <!-- #section:elements.form -->
                 <div class="form-group">
+                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1">TOP表示 </label>
+                    <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['top']?></span></div>
+                </div>
+
+                <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1">商品名 </label>
                     <div class="col-sm-10"><span class="confirmtext"><?php echo $data['Item']['title']?></span></div>
                 </div>

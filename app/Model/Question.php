@@ -133,8 +133,8 @@ class Question extends AppModel {
     }
 
     /**
-    ITEMIDを利用して、リコメンドITEMを取得
-    複数
+    最新の1つを取得
+
     **/
     public function getNewQuestion() {
         $conditions = array(
@@ -145,5 +145,19 @@ class Question extends AppModel {
         $all = $this->find('first',$conditions);
         return $all;
     }
+
+    public function getNoEnd(){
+
+        $conditions['conditions'] = array(
+            'end'     => null
+            );
+
+        $all = $this->find('first',$conditions);
+        return $all;
+
+
+
+    }
+
 
 }

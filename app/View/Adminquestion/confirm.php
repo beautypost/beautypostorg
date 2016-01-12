@@ -8,7 +8,7 @@
 <form class="form-horizontal" role="form" action="<?php echo WEBROOT.$this->name?>/input">
     <!-- #section:elements.form -->
     <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">設問 </label>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">実施回数 </label>
         <div class="col-sm-10">
            <span class="confirmtext"><?php echo $data['Question']['number']?></span>
        </div>
@@ -25,12 +25,7 @@
            <span class="confirmtext"><?php echo $data['Question']['start']?></span>
        </div>
    </div>
-    <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">終了日 </label>
-        <div class="col-sm-10">
-           <span class="confirmtext"><?php echo $data['Question']['end']?></span>
-       </div>
-   </div>
+
 
 
 <h3 class="header smaller lighter blue">設問</h3>

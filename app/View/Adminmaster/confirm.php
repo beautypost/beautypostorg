@@ -22,14 +22,6 @@
 <?php echo $data['Genre']['title']?></span>
        </div>
    </div>
-<?php if($data['Genre']['genre_id'] == GENREKISYU):?>
-<?php for($x=1;$x<11;$x++):?>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> <?php echo $x?></label>
-                    <div class="col-sm-10"><?php echo $data['Genre']['attr'.$x]?></div>
-                </div>
-<?php endfor;?>
-<?php endif;?>
 </form>
                                     <div class="clearfix form-actions">
                                         <div class="col-md-offset-3 col-md-5">

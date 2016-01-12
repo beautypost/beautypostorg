@@ -297,11 +297,18 @@ class UsefulHelper extends AppHelper {
         $s = strtotime($start);
         $d = strtotime($end);
 
+
         $v = strtotime('now');
 
         if($s > $v){
             return '投票前';
         }
+
+        if($end == NULL){
+            return '投票中';
+        }
+
+
         if($d < $v){
             return '投票終了';
         }

@@ -28,7 +28,7 @@
     <td><?php echo $Item['Favorite']['title']?></td>
 
     <td>
-        <a class="btn-sm btn-success" href="<?php echo WEBROOT?>AdminFavorite/edit/?id=<?php echo $Item['Favorite']['id']?>">編集</a>
+        <a class="btn-sm btn-success" href="<?php echo WEBROOT?>Adminfavorite/edit/?id=<?php echo $Item['Favorite']['id']?>">編集</a>
 &nbsp;&nbsp;
         <a class="btn-sm btn-warning" href="<?php echo WEBROOT.$this->name?>/valid/?id=<?php echo $Item['Favorite']['id']?>&valid=<?php echo $Item['Favorite']['valid']?>">表示<?php if($Item['Favorite']['valid'] == 1):?>不<?php endif;?>可</a>
     </td>
