@@ -26,7 +26,6 @@ jQuery(function($){
 													</tr>
 												</thead>
 												</table>
-
   </div>
 </div>
 
@@ -120,7 +119,7 @@ jQuery(function($){
 															<?php $this->Bizran->voteAverageStarView($value,'vote1',4,8,$tooltip);?><br>
 <?php $tooltip = '<a href="#" rel="tooltip" data-toggle="tooltip" title="'.$GenreTitle[2]['title'].'"><i class="ace-icon glyphicon glyphicon-question-sign"></i></a>';?>
 															<?php $this->Bizran->voteAverageStarView($value,'vote2',4,8,$tooltip);?><br>
-<?php $tooltip = '<a href="#" rel="tooltip" data-toggle="tooltip" title="'.$GenreTitle[3]['title'].'"><i class="ace-icon glyphicon glyphicon-question-sign"></i></a>';?>															
+<?php $tooltip = '<a href="#" rel="tooltip" data-toggle="tooltip" title="'.$GenreTitle[3]['title'].'"><i class="ace-icon glyphicon glyphicon-question-sign"></i></a>';?>
 															<?php $this->Bizran->voteAverageStarView($value,'vote3',4,8,$tooltip);?><br>
 <?php $tooltip = '<a href="#" rel="tooltip" data-toggle="tooltip" title="'.$GenreTitle[4]['title'].'"><i class="ace-icon glyphicon glyphicon-question-sign"></i></a>';?>
 															<?php $this->Bizran->voteAverageStarView($value,'vote4',4,8,$tooltip);?><br>
@@ -262,7 +261,7 @@ $('#voteModal').on('hidden.bs.modal', function () {
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
 			jQuery(function($) {
-				var oTable1 = 
+				var oTable1 =
 				$('#list-table-2')
 				//.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
 				.dataTable( {
@@ -288,7 +287,7 @@ $('#voteModal').on('hidden.bs.modal', function () {
 					//,
 					//"sScrollY": "200px",
 					"bPaginate": false,
-			
+
 					//"sScrollX": "100%",
 					//"sScrollXInner": "120%",
 					//"bScrollCollapse": true,
@@ -299,7 +298,7 @@ $('#voteModal').on('hidden.bs.modal', function () {
 					    info:" _TOTAL_ 件中 _START_ から _END_ まで表示",
 					    infoEmpty: "登録はありません",
 					    lengthMenu:"_MENU_件表示",
-					    zeroRecords:"登録はありません",					    
+					    zeroRecords:"登録はありません",
 					    paginate:{
 					    	first:"先頭へ",
 					    	previous:"前へ",
@@ -307,7 +306,7 @@ $('#voteModal').on('hidden.bs.modal', function () {
 					    	last:"最後へ",
 					    }
 
-				    }	
+				    }
 			    } );
 				/**
 				var tableTools = new $.fn.dataTable.TableTools( oTable1, {
@@ -322,10 +321,10 @@ $('#voteModal').on('hidden.bs.modal', function () {
 			    } );
 			    $( tableTools.fnContainer() ).insertBefore('#sample-table-2');
 				*/
-			
-			
 
-			
+
+
+
 			})
 		</script>
 

@@ -42,7 +42,11 @@
                                 </dl>
                             </li>
                         </ul>
+<?php if(isset($UserData['Snsuser']['id'])):?>
                         <a href="<?php echo WEBROOT?>Compare/" class="button btn-rich-pk" target="_new"><span><i class="fa fa-check-square-o">&#8203;</i> チェックした商品を比較</span></a>
+<?php else:?>
+                        <a href="<?php echo WEBROOT?>Login/?message=<?php echo NOLOGINMESSAGE?>" class="button btn-rich-pk"><span><i class="fa fa-check-square-o">&#8203;</i> チェックした商品を比較</span></a>
+                        <?php endif;?>
                     </div><!-- /.results-sort -->
                 </form>
 

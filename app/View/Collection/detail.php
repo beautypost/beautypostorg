@@ -224,7 +224,7 @@
                                                         <div class="starrev" data-score="3">
                                                         </dd>
                                                     </dl>
-                                                    <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsMonitor']['created']))?> <?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?>）</p>
+                                                    <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsMonitor']['created']))?> <?php echo $this->Useful->age($v['ItemsMonitor']['user_year'],$v['ItemsMonitor']['user_month'],$v['ItemsMonitor']['user_day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['ItemsMonitor']['user_job'])?>）</p>
                                                 </a>
                                             </li>
                                             <!-- review-->

@@ -22,6 +22,7 @@
                 </section>
                 <input type="hidden" name="data[question_id]" value="<?php echo $Questions[0]['Question']['id']?>">
             </form>
+            <?php if(isset($UserData['Snsuser']['id'])):?>
             <?php if(isset($Questions[1])):?>
                 <section>
                     <h2 class="enquete-head"><i class="fa fa-chevron-circle-right">&#8203;</i> 第<?php echo $Questions[1]['Question']['id']?>回美容アンケート結果発表</h2>
@@ -44,4 +45,5 @@
                         </footer>
                     </div><!-- /.round-contents-body -->
                 </section>
+                <?php endif;?>
                 <?php endif;?>

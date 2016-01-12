@@ -23,7 +23,7 @@
                     <div class="advisory-status">
                         <ul>
                             <li><dl><dt>登録地域</dt><dd><?php echo $this->Useful->ViewselectValue($Pref['pref'],$UserData['Snsuser']['pref'])?></dd></dl></li>
-                            <li><dl><dt>肌質</dt><dd><?php echo $this->Useful->ViewselectValue($Skin,$UserData['Snsuser']['skin'])?></dd></dl></li>
+                            <li><dl><dt>肌質</dt><dd><?php echo $this->Useful->ViewselectValue($Skin['skin'],$UserData['Snsuser']['skin'])?></dd></dl></li>
                         </ul>
                     </div><!-- /.advisory-status -->
                 </header>

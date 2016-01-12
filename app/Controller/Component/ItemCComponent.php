@@ -52,8 +52,9 @@ class ItemCComponent extends Component {
 
         if(isset($data['GenrePriceLow'])){
 		if($data['GenrePriceLow'] || $data['GenrePriceHigh']){
-			$con[]['price >='] = (integer)($data['GenrePriceLow']);
-			$con[]['price <='] = (integer)($data['GenrePriceHigh']);
+			// $con[]['price >='] = (int)($data['GenrePriceLow']);
+			// $con[]['price <='] = (int)($data['GenrePriceHigh']);
+            $con[]['price between ? AND ?'] = array((integer)$data['GenrePriceLow'],(integer)$data['GenrePriceHigh']);
 		}
         }
 		$conditions['AND'] = $con;

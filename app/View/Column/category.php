@@ -28,7 +28,7 @@
           <header>
             <p class="column-entrydate fll"><?php echo $this->Useful->setdate($v['Column']['entrydate'],'Y/m/d')?></p>
             <p class="column-entryview flr"><?php echo $v['Column']['count']?> views</p>
-            <h2 class="column-entrytitle"><a href="<?php echo WEBROOT.$this->name?>/detail/?id=<?php echo $v['Column']['id']?>"><?php echo $v['Column']['title']?></a></h2>
+            <h2 class="column-entrytitle"><a href="<?php echo WEBROOT.$this->name?>/detail/<?php echo $v['Column']['id']?>"><?php echo $v['Column']['title']?></a></h2>
           </header>
           <div class="column-entrybody">
             <div class="column-eyecatch">
@@ -46,7 +46,7 @@
         <div class="column-boxfoot">
           <div class="column-entryinfo">
             <div class="column-entrycategory">
-            <i class="fa fa-folder-open-o"></i> <a href="<?php echo WEBROOT.$this->name?>/category/?tag_id=<?php echo $v['Column']['tag']?>"><?php echo $this->Useful->selectOptionValue($GenreColumns,$tag_id)?></a>
+            <i class="fa fa-folder-open-o"></i> <a href="<?php echo WEBROOT.$this->name?>/category/<?php echo $v['Column']['tag']?>"><?php echo $this->Useful->selectOptionValue($GenreColumns,$tag_id)?></a>
             </div>
             <div class="column-entrysns">
               <ul>

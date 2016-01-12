@@ -65,6 +65,7 @@ define('GENREBLOGNAME','美容通信タグ');
 define('GENRECOLUMNNAME','コラム');
 
 
+define('NOLOGINMESSAGE','こちらのコンテンツを閲覧するには、会員登録が必要です');
 
 define('NEWSADD',1);
 define('NEWSSALE',2);

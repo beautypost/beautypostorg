@@ -82,6 +82,9 @@ class AdminuserController extends BaseController {
 
 		$this->set('data',$data);
 		$this->render('input');
+
+//var_dump($data);
+
 	}
 
 	public function valid(){

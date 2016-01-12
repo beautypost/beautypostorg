@@ -80,7 +80,9 @@ class UsefulHelper extends AppHelper {
     }
 
     public function age($year,$month,$day){
+
         $month = sprintf('%02d',$month);
+        $day = sprintf('%02d',$day);
         $age = (int) ((date('Ymd')-($year.$month.$day))/10000);
         return $age;
     }
@@ -241,6 +243,7 @@ class UsefulHelper extends AppHelper {
 	html select 用 option 生成
 	**/
 	public function option($options,$selected,$nu=''){
+
         if(!is_array($selected)){
             if($selected !== ''){
             $selected = explode(',',$selected);

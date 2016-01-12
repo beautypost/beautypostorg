@@ -56,7 +56,7 @@ $apiDirectory = $apis[$apiCode]['directory'];
 $uri = "http://{$serverId}.b-10.net/v1/{$userDirectory}/beauty/{$apiDirectory}/?area={$areaCode}";
 $uri .= "&skin={$skinCode}";
 
-var_dump($uri);
+//var_dump($uri);
 
 $dom = new DOMDocument();
 $http = new HttpSample();

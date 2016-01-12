@@ -42,10 +42,6 @@ class MailmagazineController extends AppController {
         $this->set('cssname','content');
         $this->set('bodyclass','page-magazine');
 
-        if(!$this->SnsuserData){
-            $this->redirect('/Login/');
-        }
-
 
     }
 
@@ -73,6 +69,18 @@ class MailmagazineController extends AppController {
     }
 
     public function Detail($id){
+
+
+
+        //ログインしていない状態で、最新のアンケート以外のアンケートIDを指定されるとリダイレクト
+        $q = $this->Mailmagazine->getNewItem();
+        if(!isset($this->SnsuserData['Snsuser']['id'])){
+            if($id != $q['Mailmagazine']['id']){
+                $this->redirect('/Login/?message='.NOLOGINMESSAGE);
+            }
+        }
+
+
         $total = $this->Mailmagazine->getItemsCount('');
         $p = isset($data['p']) ? $data['p'] : 0;
 
@@ -80,6 +88,9 @@ class MailmagazineController extends AppController {
         $this->set('Pager',$pager);
 
         $Mailmagazine = $this->Mailmagazine->getItemByID($id);
+
+
+
         $this->set('Mailmagazine',$Mailmagazine);
     }
 

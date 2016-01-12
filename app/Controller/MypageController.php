@@ -42,7 +42,7 @@ class MypageController extends AppController {
  *
  * @var array
  */
-	public $uses = array('UserVote','ItemsReview','Favorite');
+	public $uses = array('Tenki','UserVote','ItemsReview','Favorite');
 
 
     public $name = 'Mypage';

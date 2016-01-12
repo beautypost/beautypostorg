@@ -128,7 +128,7 @@ class GenreAttr extends AppModel {
     }
 
     public function getItemBygenreID($id){
-        if(!$id){return;}
+        if(!$id){return array();}
         $conditions = array(
                             'genre_id'=>$id,
 //                            'toprecommend'=>1,

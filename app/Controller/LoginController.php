@@ -63,6 +63,10 @@ class LoginController extends AppController {
 	        );
 		}
 		$this->set('redirecturl','');
+		$message = $this->setRequestGetValue('message');
+		if($message){
+			$this->set('errormessage',$message);
+		}
 	}
 
 

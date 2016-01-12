@@ -120,4 +120,20 @@ $ret['send_exec_date'] = '';
         $this->save($data);
     }
 
+
+    /**
+    最新の1つを取得
+
+    **/
+    public function getNewItem() {
+        $conditions = array(
+//            'conditions'=> array('valid'=>1),
+            'order'     => array('send_date DESC'),
+            );
+
+        $all = $this->find('first',$conditions);
+        return $all;
+    }
+
+
 }

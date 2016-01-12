@@ -34,13 +34,12 @@ class ReviewController extends AppController {
 //	public $components = array('MailC');
 
 
+
     public function beforeFilter(){
 
         parent::beforeFilter();
         if(!isset($this->SnsuserData)){
-            return $this->redirect(
-            array('controller' => 'Login', 'action' => 'index')
-            );
+                $this->redirect('/Login/?message='.NOLOGINMESSAGE);
         }
 
     }

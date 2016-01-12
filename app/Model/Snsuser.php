@@ -190,6 +190,7 @@ class Snsuser extends AppModel {
             'day'=>$day,
             'sns'=>WEBKEY,
             );
+//        var_dump($con);
         return $this->find('first',$con);
     }
 
@@ -325,13 +326,14 @@ class Snsuser extends AppModel {
 //                            'otherid'=>1,
                             );
         if(ADMINCONTROLLER){
-            $conditions['conditions']['valid'] = '';
+            $conditions['conditions']['valid > '] = '0';
         }
-
 
         if($fields){
             $conditions['fields'] = $fields;
         }
+
+//var_dump($conditions);
 
         $all = $this->find('first',$conditions);
         return $all;

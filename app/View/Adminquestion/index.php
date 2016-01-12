@@ -14,7 +14,7 @@
                                         <table id="sample-table-1" class="table table-striped table-bordered table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th class="center">ID</th>
+                                                    <th class="center">実施回数</th>
                                                     <th>投票期間</th>
                                                     <th>状態</th>
                                                     <th>アンケートタイトル</th>
@@ -27,7 +27,7 @@
 
 <?php foreach($Questions as $Item):?>
 <tr>
-    <td><?php echo $Item['Question']['id']?></td>
+    <td class="center"><?php echo $Item['Question']['number']?></td>
     <td><?php echo $this->Useful->setdate($Item['Question']['start'])?>〜<?php echo $this->Useful->setdate($Item['Question']['end'])?></td>
     <td><?php echo $this->Useful->checktime($Item['Question']['start'],$Item['Question']['end'])?></td>
     <td><?php echo $Item['Question']['title']?></td>

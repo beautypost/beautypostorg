@@ -430,6 +430,30 @@ $ret[8] ='ネイルケア';
         return $Items;
     }
 
+
+    public function getCompareTitle(){
+        $Items[0] = '小売り希望価格';
+        $Items[1] = 'メーカー名';
+        $Items[2] = '発売日';
+        $Items[3] = 'カラーバリエーション';
+        $Items[4] = 'サイズ';
+        $Items[5] = '重量';
+        $Items[6] = '保証期間';
+        return $Items;
+    }
+
+    public function getCompareKey(){
+        $Items[0] = 'price';
+        $Items[1] = 'maker';
+        $Items[2] = 'salesdate';
+        $Items[3] = 'color';
+        $Items[4] = 'size';
+        $Items[5] = 'weight';
+        $Items[6] = 'warranty';
+        return $Items;
+    }
+
+
     //契約形態
     public function getJob(){
         $Items['job'][0] = '主婦';

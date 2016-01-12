@@ -104,9 +104,11 @@ class AppController extends Controller {
         $this->set('Icos',$this->Genre->getItemIcon());
 
 
-        if($this->RequestHandler->isMobile()){
-          $this->set('mobile',true);
-        }
+//        if($this->RequestHandler->isMobile()){
+//          $this->set('mobile',true);
+//        var_dump($this->name);
+
+//        }
 
 
   }

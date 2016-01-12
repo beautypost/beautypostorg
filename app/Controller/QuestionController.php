@@ -60,6 +60,12 @@ class QuestionController extends AppController {
             $data['session'] = $session_id;
             $this->setRequestValue($data,'question_value_id');
             $this->setRequestValue($data,'question_id');
+//var_dump($data);
+            if(!$data['question_value_id'] || !$data['question_id']){
+                $this->set('message','もう一度投票をやり直してください');
+                $this->render('/pages/error');
+                return;
+            }
 
             $this->QuestionLog->save($data);
 
@@ -167,9 +173,8 @@ class QuestionController extends AppController {
         $q = $this->Question->getNewQuestion();
         if(!isset($this->SnsuserData['Snsuser']['id'])){
             if($id != $q['Question']['id']){
-                $this->redirect('/Login');
+                $this->redirect('/Login/?message='.NOLOGINMESSAGE);
             }
-
         }
 
 

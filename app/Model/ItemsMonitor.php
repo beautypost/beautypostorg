@@ -154,11 +154,13 @@ class ItemsMonitor extends AppModel {
             // 'limit'     => $limit,
             // 'offset'    => $offset
             );
+
         if(defined(ADMINCONTROLLER)){
             $conditions['conditions']['itemsMonitor.valid'] = '';
         }
 
         $all = $this->find('all',$conditions);
+
         $ret = array();
         foreach($all as $k => $v){
 
@@ -182,6 +184,28 @@ class ItemsMonitor extends AppModel {
 
         $all = $this->find('all',$conditions);
         return $all;
+    }
+
+
+
+    public function getTotalReviewByAll($tr){
+        $p1 = $p2 = $p3 = $p4 = $p5 = 0;
+        foreach($tr as $k=>$v){
+            $p1 +=$v['ItemsMonitor']['point1'];
+            $p2 +=$v['ItemsMonitor']['point2'];
+            $p3 +=$v['ItemsMonitor']['point3'];
+            $p4 +=$v['ItemsMonitor']['point4'];
+            $p5 +=$v['ItemsMonitor']['point5'];
+        }
+        $total = count($tr);
+
+        $r['p1'] = $p1 / $total;
+        $r['p2'] = $p2 / $total;
+        $r['p3'] = $p3 / $total;
+        $r['p4'] = $p4 / $total;
+        $r['p5'] = $p5 / $total;
+        $r['total'] = ($p1+$p2+$p3+$p4+$p5) / ($total*5);
+        return $r;
     }
 
 

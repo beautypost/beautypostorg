@@ -55,6 +55,8 @@ class CompareController extends AppController {
         $this->set('PointGenres',$this->Genre->getPointGenre());
         //アイコンマスタ
         $this->set('Icos',$this->Genre->getItemIcon());
+        $this->set('Compare',$this->Genre->getCompareTitle());
+        $this->set('CompareKey',$this->Genre->getCompareKey());
 
         //検索box用マスタ
         $this->setSearchMaster();
@@ -68,13 +70,21 @@ class CompareController extends AppController {
 	 * @param genreID sort limit offset
 	 */
 	public function index() {
+
+
+        $compare = $this->setRequestGetValue('compare');
+        if(!$compare){
+            $compare = 0;
+        }
+        $this->set('compare',$compare);
+
         $all = $this->Session->read('ItemCompare');
 //        var_dump($all);
 //		$all = array(111,177,185);
 		$items = $this->Item->getItemByInId($all);
 //var_dump(count($items));
 		$this->set('Items',$items);
-
+        $itemgenre = $reviews = array();
         foreach($items as $item){
             $itemgenre[$item['Item']['genre_id']] = $item['Item']['genre_id'];
             $reviews[$item['Item']['id']] = $this->ItemsReview->getItemsByItemID($item['Item']['id']);
@@ -118,36 +128,36 @@ class CompareController extends AppController {
 
 
 
-//レビュー情報
-$this->set('Reviews',$reviews);
+    //レビュー情報
+    $this->set('Reviews',$reviews);
 
-$r = array();
-foreach($reviews as $k => $rev){
+    $r = $rvr = array();
+    foreach($reviews as $k => $rev){
 
-if(count($rev) != 0){
-    $r[$k] = $this->ItemsReview->getTotalReviewByAll($rev);
-    $r[$k]['count'] = count($rev);
-}
-}
+    if(count($rev) != 0){
+        $r[$k] = $this->ItemsReview->getTotalReviewByAll($rev);
+        $r[$k]['count'] = count($rev);
+    }
+    }
 
 
-foreach($items as $item){
-    $rvr['count'][$item['Item']['id']]  = isset($r[$item['Item']['id']]['count']) ?$r[$item['Item']['id']]['count']:'';
-    $rvr['total'][$item['Item']['id']] = isset($r[$item['Item']['id']]['total']) ? $r[$item['Item']['id']]['total'] : '';
-    $rvr['p1'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p1']) ? $r[$item['Item']['id']]['p1']:'';
-    $rvr['p2'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p2']) ? $r[$item['Item']['id']]['p2']:'';
-    $rvr['p3'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p3']) ? $r[$item['Item']['id']]['p3']:'';
-    $rvr['p4'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p4']) ? $r[$item['Item']['id']]['p4']:'';
-    $rvr['p5'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p5']) ? $r[$item['Item']['id']]['p5']:'';
+    foreach($items as $item){
+        $rvr['count'][$item['Item']['id']]  = isset($r[$item['Item']['id']]['count']) ?$r[$item['Item']['id']]['count']:'';
+        $rvr['total'][$item['Item']['id']] = isset($r[$item['Item']['id']]['total']) ? $r[$item['Item']['id']]['total'] : '';
+        $rvr['p1'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p1']) ? $r[$item['Item']['id']]['p1']:'';
+        $rvr['p2'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p2']) ? $r[$item['Item']['id']]['p2']:'';
+        $rvr['p3'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p3']) ? $r[$item['Item']['id']]['p3']:'';
+        $rvr['p4'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p4']) ? $r[$item['Item']['id']]['p4']:'';
+        $rvr['p5'][$item['Item']['id']] = isset($r[$item['Item']['id']]['p5']) ? $r[$item['Item']['id']]['p5']:'';
 
-}
+    }
 
-$this->set('totalreview',$rvr);
-//var_dump($rvr);
+    $this->set('totalreview',$rvr);
+    //var_dump($rvr);
 
 
 		if(!$this->RequestHandler->isMobile()){
-			$this->layout = null;
+            $this->layout = null;
 			$this->render('popup');
 		}
 

@@ -85,7 +85,7 @@ class Question extends AppModel {
                     ),
                 ),
             )
-            );
+     );
 
         if($limit){
             $conditions['limit'] = $limit;
@@ -95,8 +95,9 @@ class Question extends AppModel {
             $conditions['offset'] = $offset;
         }
 
-        if(!defined('ADMINCONTROLLER')){
-            $conditions['conditions']['valid'] = 1;
+        if(ADMINCONTROLLER == 1){
+//            $conditions['conditions']['valid'] = 1;
+            $conditions['conditions']['and'] = array();
         }
 
         $all = $this->find('all',$conditions);

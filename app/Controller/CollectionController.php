@@ -166,6 +166,7 @@ class CollectionController extends AppController {
 		//モニター情報
 		$reviews = $this->ItemsMonitor->getItemsByItemID($id);
 		$this->set('Monitors',$reviews);
+
         $r = array();
         if(count($reviews) != 0){
 	        $r = $this->ItemsMonitor->getTotalReviewByAll($reviews);
