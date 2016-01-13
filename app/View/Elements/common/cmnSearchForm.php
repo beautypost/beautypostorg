@@ -1,7 +1,7 @@
 <ul class="search-form-list">
   <li>
     <dl>
-      <dt><i class="fa fa-plus-circle">&#8203;</i>カテゴリ</dt>
+      <dt><i class="fa fa-plus-circle">&#8203;</i>機種</dt>
       <dd>
         <select name="data[GenreKisyu]">
           <?php echo $this->Useful->option2($GenreKisyu,'Genre','title',$data['GenreKisyu'])?>
