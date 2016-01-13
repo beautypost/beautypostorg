@@ -66,8 +66,8 @@
                     <li class="bnr-qr rsp-xxxo">
                         <img src="<?php echo WEBROOT?>common-img/side-qr-head.png" width="500" height="116" class="fitimg-w" alt="モバイルサイトはこちら">
                         <div class="clearfix">
-                            <img src="http://placehold.jp/48/c9c9c9/171717/128x128.png?text=QR" width="128" height="128" class="fll" alt="QR">
-                            <p>テキストテキストテキストテキストテキストテキスト</p>
+                            <img src="<?php echo WEBROOT?>images/qr.png" width="64" height="64" class="fll" alt="QR">
+                            <p>BeautyPostはスマートフォンからもご覧いただけます。</p>
                         </div><!-- /.clearfix -->
                     </li><!-- /.bnr-qr -->
                 </ul>

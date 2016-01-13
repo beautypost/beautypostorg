@@ -30,7 +30,7 @@
 
                 <div class="section-body">
                     <section class="advisory-dryair level<?php echo $hada['level']?>">
-                        <h2><img src="<?php echo WEBROOT; ?>images/mypage/dryair1.png" alt="" class="fitimg-w"></h2>
+                        <h2><img src="<?php echo WEBROOT; ?>images/mypage/dryair<?php echo $hada['level']?>.png" alt="" class="fitimg-w"></h2>
                         <div class="section-body">
                             <img src="<?php echo WEBROOT; ?>images/mypage/advisory-boxtop.png" alt="" class="fitimg-w">
                             <p class="js-ah-xooo"><?php echo $hada['comment']?></p>
@@ -39,7 +39,7 @@
                     </section><!-- /.advisory-dryair -->
 
                     <section class="advisory-sunburn level<?php echo $hiyake['level']?>">
-                        <h2><img src="<?php echo WEBROOT; ?>images/mypage/sunburn2.png" alt="" class="fitimg-w"></h2>
+                        <h2><img src="<?php echo WEBROOT; ?>images/mypage/sunburn<?php echo $hada['level']?>.png" alt="" class="fitimg-w"></h2>
                         <div class="section-body">
                             <img src="<?php echo WEBROOT; ?>images/mypage/advisory-boxtop.png" alt="" class="fitimg-w">
                             <p class="js-ah-xooo"><?php echo $hiyake['comment']?></p>
