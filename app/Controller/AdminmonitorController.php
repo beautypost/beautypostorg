@@ -57,6 +57,8 @@ class AdminmonitorController extends BaseController {
         $this->set('Day',$this->Genre->getDayRange());
 
 
+
+
         parent::beforeRender();
 	}
 
@@ -77,30 +79,17 @@ class AdminmonitorController extends BaseController {
 
 
 	public function edit(){
+        $items = $this->Item->getItems('','','');
+
+        foreach($items as $key => $val){
+            $ret[$val['Item']['id']] = $val['Item']['id'].':'.$val['Item']['title'];
+        }
+
+        $this->set('Items',$ret);
 		$id = $this->params['url']['id'];
-		$data = $this->Item->getItemByID($id);
+		$data = $this->ItemsMonitor->getItemByID($id);
 
-        //アイテムが指定したgenreのIDから、genre+attrのlinktableの情報取得
-        $genreattrs = $this->GenreAttr->getItemsByGenreID($data['Item']['genre_id']);
-        $atrs = array();
-//        var_dump($genreattrs);
-        foreach($genreattrs as $k=>$v){
-            $atrs[$v['GenreAttr']['id']]['id'] = $v['GenreAttr']['id'];
-            $atrs[$v['GenreAttr']['id']]['attr_id'] = $v['GenreAttr']['attr_id'];
-            $AttrName = $this->Attr->getItemByID($v['GenreAttr']['attr_id']);
-            $atrs[$v['GenreAttr']['id']]['attr_title'] = $AttrName['Attr']['title'];
-        }
-        //linktableのattrIDから、attrの名前を取得
-        $this->set('AttrNames',$atrs);
-
-        //アイテムが持っている値
-        $ar = array();
-        $attr = $this->GenreAttrItem->getItemByItemID($data['Item']['id']);
-        foreach($attr as $kk=> $vv){
-            $ar[$vv['GenreAttrItem']['genre_attr_id']] = $vv['GenreAttrItem']['value'];
-        }
-        $this->set('Attrs',$ar);
-
+//var_dump($data);
         $this->set('data',$data);
 		$this->render('input');
 	}
@@ -123,18 +112,15 @@ class AdminmonitorController extends BaseController {
     }
 
 	public function input(){
-
-        $this->set('pagename','登録');
-        $this->set('errormessages','');
         $items = $this->Item->getItems('','','');
 
         foreach($items as $key => $val){
             $ret[$val['Item']['id']] = $val['Item']['id'].':'.$val['Item']['title'];
         }
 
-
         $this->set('Items',$ret);
-
+        $this->set('pagename','登録');
+        $this->set('errormessages','');
 
         //DATAが入力されていなかった場合(初めて画面が表示された場合)
         if (!$this->request->is('post')) {

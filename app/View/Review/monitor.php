@@ -32,15 +32,14 @@
                                 <tr>
                                     <th>満足度</th>
                                     <td class="user-rate">
-                    <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $Item['Item']['rate_review']?>"></div>
-
+                    <div class="starrev<?php echo $Item['Item']['id']?>" data-score="<?php echo $totalreview['total']?>"></div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table><!-- /.table-std -->
                         <div class="item-chart">
         <div style="width:80%">
-            <canvas id="canvas2" height="450" width="450"></canvas>
+            <canvas id="canvas" height="450" width="450"></canvas>
         </div>
                         </div><!-- /.item-chart -->
                     </div>
@@ -54,7 +53,7 @@ ratystar(<?php echo $Item['Item']['id']?>)
                 <section class="review-entry">
                     <header>
                         <h2><?php echo $v['ItemsMonitor']['title']?></h2>
-                        <p class="user-data"><?php echo $this->Useful->age($v['SnsUser']['year'],$v['SnsUser']['month'],$v['SnsUser']['day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['SnsUser']['job'])?> <?php echo $v['SnsUser']['username']?><br class="rsp-oxxx"></p>
+                        <p class="user-data"><?php echo $this->Useful->age($v['ItemsMonitor']['user_year'],$v['ItemsMonitor']['user_month'],$v['ItemsMonitor']['user_day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['ItemsMonitor']['user_job'])?> <?php echo $v['ItemsMonitor']['user_username']?><br class="rsp-oxxx"></p>
                         <p class="post-date"><?php echo date("Y.m.d",strtotime($v['ItemsMonitor']['created']))?></p>
                     </header>
 
@@ -103,7 +102,7 @@ ratystar(<?php echo $v['ItemsMonitor']['id']?>)
     window.onload = function(){
 
 
-        var ctx = document.getElementById("canvas2").getContext("2d");
+        var ctx = document.getElementById("canvas").getContext("2d");
         var data =[<?php echo $totalreview['p1']?>,<?php echo $totalreview['p2']?>,<?php echo $totalreview['p3']?>,<?php echo $totalreview['p4']?>,<?php echo $totalreview['p5']?>];
         rt(ctx,data);
 

@@ -113,8 +113,8 @@
 
                         <?php foreach($itemGenreValues[$kk] as $k => $v):?>
                             <td>&nbsp;
-                            <?php if(isset($v[0]['genreAttrItem']['value'])):?>
-                                <?php echo $v[0]['genreAttrItem']['value']?>
+                            <?php if(isset($v[0]['GenreAttrItem']['value'])):?>
+                                <?php echo $v[0]['GenreAttrItem']['value']?>
                             <?php endif;?>
                             </td>
                         <?php endforeach;?>

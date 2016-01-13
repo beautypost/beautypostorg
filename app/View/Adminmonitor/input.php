@@ -117,16 +117,15 @@
     <div class="form-group">
         <label class="col-sm-2 control-label no-padding-right" for="form-field-1">タイトル</label>
         <div class="col-sm-10">
-                                    <input type="text" name="data[title]" value="<?php echo $data['ItemsMonitor']['title']?>" required>
+                                    <input class="col-sm-8" type="text" name="data[title]" value="<?php echo $data['ItemsMonitor']['title']?>" required>
                                 </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">
-    レビューコメント</label>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">レビューコメント</label>
 
 
         <div class="col-sm-10">
-                                    <textarea name="data[comment]" id="" cols="30" rows="10"><?php echo $data['ItemsMonitor']['title']?></textarea>
+                                    <textarea name="data[comment]" id="" cols="80" rows="10"><?php echo $data['ItemsMonitor']['title']?></textarea>
 </div>
     </div>
                                     <div class="clearfix form-actions">

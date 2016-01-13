@@ -64,6 +64,7 @@ class ItemsMonitor extends AppModel {
         $ret['user_month'] ='';
         $ret['user_day'] ='';
         $ret['user_job'] ='';
+        $ret['user_skin']= '';
         $ret['title'] = '';
         $ret['comment'] ='';
         $ret['point1'] ='';

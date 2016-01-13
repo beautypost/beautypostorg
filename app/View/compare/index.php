@@ -39,7 +39,13 @@
 							</div>
 							<div class="info">
 								<p class="item-name"><?php echo $item['Item']['id']?><?php echo $item['Item']['title']?></p>
-								<p class="compare-info"><?php echo $this->Useful->selectValue($Compare,$compare)?>：<?php echo $item['Item'][$this->Useful->selectValue($CompareKey,$compare)]?></p>
+								<p class="compare-info"><?php echo $this->Useful->selectValue($Compare,$compare)?>：
+								<?php
+								if(isset($itemGenreValues[$compare][$item['Item']['id']][0]['GenreAttrItem']['value'])){
+									echo $itemGenreValues[$compare][$item['Item']['id']][0]['GenreAttrItem']['value'];
+								}
+								?>
+								</p>
 							</div>
 						</a>
 					</li>

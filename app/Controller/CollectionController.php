@@ -167,11 +167,14 @@ class CollectionController extends AppController {
 		$reviews = $this->ItemsMonitor->getItemsByItemID($id);
 		$this->set('Monitors',$reviews);
 
+//var_dump($reviews);
+
         $r = array();
         if(count($reviews) != 0){
 	        $r = $this->ItemsMonitor->getTotalReviewByAll($reviews);
         }
-
+//        var_dump($r);
+        $this->set('totalMonitors',$r);
 
 		//関連商品
 		$materials = $this->Item->getItemByInId($item['Item']['materials']);

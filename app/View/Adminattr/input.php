@@ -27,7 +27,7 @@ if (isset($validationErrors) && is_array($validationErrors)) {
                 <div class="form-group">
                     <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 機種</label>
                     <div class="col-sm-8">
-                    <?php echo $this->Useful->checkbox($GenreKisyu,'Genre','title',$data['Attr']['genres'],'genres')?>
+                    <?php echo $this->Useful->checkbox($GenreKisyu,'Genre','title',$data['Attr']['genres'],'genres','<br>')?>
                     </div>
                 </div>
 

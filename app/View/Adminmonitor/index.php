@@ -44,6 +44,9 @@
     </td>
 
     <td>
+            <a class="btn-sm btn-success" href="<?php echo WEBROOT.$this->name?>/edit/?id=<?php echo $Item['ItemsMonitor']['id']?>">編集</a>
+&nbsp;&nbsp;
+
         <a class="btn-sm btn-warning" href="<?php echo WEBROOT.$this->name?>/valid/?id=<?php echo $Item['ItemsMonitor']['id']?>&valid=<?php echo $Item['ItemsMonitor']['valid']?>">表示<?php if($Item['ItemsMonitor']['valid'] == 1):?>不<?php endif;?>可</a>
     </td>
     <td>

@@ -189,8 +189,8 @@
                                 <tr>
                                     <th>満足度</th>
                                     <td class="monitor-rate">
-                                        <div class="starrev" data-score="3"></div>
-                                        <span>（レビュー：<a href="<?php echo WEBROOT?>review/"><?php echo $Item['Item']['monitor']?>件</a>）</span>
+                                        <div class="starrev" data-score="<?php echo $totalMonitors['total']?>"></div>
+                                        <span>（レビュー：<a href="<?php echo WEBROOT?>review/monitor/<?php echo $Item['Item']['id']?>"><?php echo count($Monitors)?>件</a>）</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -221,7 +221,7 @@
                                                     <dl>
                                                         <dt>満足度</dt>
                                                         <dd class="user-rate">
-                                                        <div class="starrev" data-score="3">
+                                                        <div class="starrev<?php echo $v['ItemsMonitor']['id']?>" data-score="<?php echo $v['ItemsMonitor']['total']?>">
                                                         </dd>
                                                     </dl>
                                                     <p class="author">（<?php echo date("Y.m.d",strtotime($v['ItemsMonitor']['created']))?> <?php echo $this->Useful->age($v['ItemsMonitor']['user_year'],$v['ItemsMonitor']['user_month'],$v['ItemsMonitor']['user_day'])?>才 <?php echo $this->Useful->ViewselectValue($Job['job'],$v['ItemsMonitor']['user_job'])?>）</p>
@@ -371,8 +371,8 @@
 <script>
     window.onload = function(){
         <?php if(count($Monitors)>0):?>
-            var ctx = document.getElementById("canvas1").getContext("2d");
-            var data =[5,4,5,5,4];
+        var ctx = document.getElementById("canvas1").getContext("2d");
+        var data =[<?php echo $totalMonitors['p1']?>,<?php echo $totalMonitors['p2']?>,<?php echo $totalMonitors['p3']?>,<?php echo $totalMonitors['p4']?>,<?php echo $totalMonitors['p5']?>];
             rt(ctx,data);
         <?php endif;?>
         <?php if(count($totalreview) > 0):?>

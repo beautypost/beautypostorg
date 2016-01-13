@@ -55,7 +55,7 @@ class CompareController extends AppController {
         $this->set('PointGenres',$this->Genre->getPointGenre());
         //アイコンマスタ
         $this->set('Icos',$this->Genre->getItemIcon());
-        $this->set('Compare',$this->Genre->getCompareTitle());
+//        $this->set('Compare',$this->Genre->getCompareTitle());
         $this->set('CompareKey',$this->Genre->getCompareKey());
 
         //検索box用マスタ
@@ -89,14 +89,17 @@ class CompareController extends AppController {
             $itemgenre[$item['Item']['genre_id']] = $item['Item']['genre_id'];
             $reviews[$item['Item']['id']] = $this->ItemsReview->getItemsByItemID($item['Item']['id']);
         }
-
-    $attrs = $this->GenreAttr->getItemBygenreID($itemgenre);
     $ats = $atrs = $rr = $ats2 = $itemGenreValues = array();
+    $attrs = $this->GenreAttr->getItemBygenreID($itemgenre);
+
     foreach($attrs as $at){
-        $atrs[$at['genreAttr']['genre_id']][] = $at['genreAttr']['attr_id'];
-        $ats[] = $at['genreAttr']['attr_id'];
-        $atss[$at['genreAttr']['id']] = $at['genreAttr']['attr_id'];
-        $ats2[$at['genreAttr']['attr_id']] = $at['genreAttr']['attr_id'];
+
+//        if(isset($at['genreAttr'])){
+        $atrs[$at['GenreAttr']['genre_id']][] = $at['GenreAttr']['attr_id'];
+        $ats[] = $at['GenreAttr']['attr_id'];
+        $atss[$at['GenreAttr']['id']] = $at['GenreAttr']['attr_id'];
+        $ats2[$at['GenreAttr']['attr_id']] = $at['GenreAttr']['attr_id'];
+//    }
     }
     //var_dump($atss);
     //var_dump($atrs);
@@ -159,7 +162,20 @@ class CompareController extends AppController {
 		if(!$this->RequestHandler->isMobile()){
             $this->layout = null;
 			$this->render('popup');
-		}
+		}else{
+
+            $compare = array();
+            foreach($rr as $k => $genre){
+                foreach($genre as $kk=>$val){
+                    $compare[$kk] =$val;
+                }
+            }
+
+
+            $this->set('Compare',$compare);
+
+
+        }
 
 		return;
 	}

@@ -113,7 +113,7 @@ class UsefulHelper extends AppHelper {
     }
 
 
-    public function checkbox($items,$objtitle,$setkey,$set,$name){
+    public function checkbox($items,$objtitle,$setkey,$set,$name,$sep=''){
         $op = $this->createKeyValue($items,$objtitle,$setkey);
 //var_dump($op);
 //        var_dump($set);
@@ -127,7 +127,7 @@ class UsefulHelper extends AppHelper {
             if(is_array($set)){
              $ret .= (in_array($key,$set)) ? ' checked ' :'';
             }
-            $ret .='>'.$val;
+            $ret .='>'.$val.$sep;
         }
         return $ret;
     }

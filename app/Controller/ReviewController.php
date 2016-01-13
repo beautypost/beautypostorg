@@ -99,22 +99,8 @@ class ReviewController extends AppController {
             return;
         }
         $this->set('Monitors',$tr);
-        $p1 = $p2 = $p3 = $p4 = $p5 = 0;
 
-        foreach($tr as $k=>$v){
-            $p1 +=$v['ItemsMonitor']['point1'];
-            $p2 +=$v['ItemsMonitor']['point2'];
-            $p3 +=$v['ItemsMonitor']['point3'];
-            $p4 +=$v['ItemsMonitor']['point4'];
-            $p5 +=$v['ItemsMonitor']['point5'];
-        }
-        $total = count($tr);
-
-        $r['p1'] = $p1 / $total;
-        $r['p2'] = $p2 / $total;
-        $r['p3'] = $p3 / $total;
-        $r['p4'] = $p4 / $total;
-        $r['p5'] = $p5 / $total;
+        $r = $this->ItemsMonitor->getTotalReviewByAll($tr);
 
         $this->set('totalreview',$r);
 
