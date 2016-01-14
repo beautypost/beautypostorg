@@ -74,7 +74,7 @@
                             <dl>
                                 <dt><label for="user-cluster" class="inner">種別</label></dt>
                                 <dd>
-                                <select name="data[job]" tabindex="1" style="width:80px" required>
+                                <select name="data[job]" tabindex="1" required>
                                     <?php echo $this->Useful->option($Job['job'],$data['Snsuser']['job'])?>
                                 </select>
                                 </dd>
@@ -98,7 +98,7 @@
                                 <dl>
                                     <dt><label for="user-address" class="inner">住んでいるエリア</label></dt>
                                     <dd>
-                                    <select name="data[pref]" tabindex="1" style="width:80px" required>
+                                    <select name="data[pref]" tabindex="1" class="mb8" style="width:80px" required>
                                         <?php echo $this->Useful->option($Pref['pref'],$data['Snsuser']['pref'])?>
                                     </select>
                                     <input type="text" name="data[address]" value="<?php echo $data['Snsuser']['address']?>" required>
@@ -109,7 +109,7 @@
                                 <dl>
                                     <dt><label for="user-skintype" class="inner">肌質</label></dt>
                                     <dd>
-                                    <select name="data[skin]" tabindex="1" style="width:80px" required>
+                                    <select name="data[skin]" tabindex="1" required>
                                         <?php echo $this->Useful->option($Skin['skin'],$data['Snsuser']['skin'])?>
                                     </select>
                                     </dd>
