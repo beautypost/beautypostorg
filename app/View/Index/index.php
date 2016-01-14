@@ -222,6 +222,15 @@
                         </ul>
                     </div><!-- /.box-contents-body -->
                 </section><!-- /#tsp06 -->
+                    
+                <section id="tsp07" class="box-contents">
+                    <h2 class="box-head">その他</h2>
+                    <div class="box-contents-body">
+                        <ul class="search-category-list">
+                            <li><a href="<?php echo $this->webroot;?>Collection/">その他<span class="num">（999）</span></a></li>
+                        </ul>
+                    </div><!-- /.box-contents-body -->
+                </section><!-- /#tsp07 -->
             </section><!-- /#topsearch-parts -->
         <form method="get" action="<?php echo WEBROOT?>Collection/" name="searchform">
             <section id="topsearch-detail">
