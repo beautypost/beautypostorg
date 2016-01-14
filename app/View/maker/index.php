@@ -11,12 +11,12 @@
 
 		<div id="main-area" class="layout-main layout-l">
 			<h2 class="pagetitle"><!--
-				 --><img src="<?php echo WEBROOT?>/images/maker/pagetitle-full.jpg" width="1984" height="256" class="fitimg-w rsp-xooo" alt="美容機器メーカーの方へ"><!--
-				 --><img src="<?php echo WEBROOT?>/images/maker/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="美容機器メーカーの方へ"><!--
+				 --><img src="<?php echo WEBROOT?>images/maker/pagetitle-full.jpg" width="1984" height="256" class="fitimg-w rsp-xooo" alt="美容機器メーカーの方へ"><!--
+				 --><img src="<?php echo WEBROOT?>images/maker/pagetitle-half.jpg" width="768" height="184" class="fitimg-w rsp-oxxx" alt="美容機器メーカーの方へ"><!--
 			 --></h2>
 			<p class="tac"><!--
-				 --><img src="<?php echo WEBROOT?>/images/maker/catch-full.png" class="fitimg-w rsp-xooo" alt="Beauty Postは美容機器に興味のある消費者と美容機器メーカーの皆様をつなぎます。"><!--
-				 --><img src="<?php echo WEBROOT?>/images/maker/catch-half.png" class="fitimg-w rsp-oxxx" alt="Beauty Postは美容機器に興味のある消費者と美容機器メーカーの皆様をつなぎます。"><!--
+				 --><img src="<?php echo WEBROOT?>images/maker/catch-full.png" class="fitimg-w rsp-xooo" alt="Beauty Postは美容機器に興味のある消費者と美容機器メーカーの皆様をつなぎます。"><!--
+				 --><img src="<?php echo WEBROOT?>images/maker/catch-half.png" class="fitimg-w rsp-oxxx" alt="Beauty Postは美容機器に興味のある消費者と美容機器メーカーの皆様をつなぎます。"><!--
 			 --></p>
 
 			<section id="maker-lead">
@@ -40,7 +40,7 @@
 					メーカー様ごとの管理画面をご用意しております。<br class="rsp-xxxo">
 					商品についてのご説明やサンプルのご提供、モニター募集等、商品に関する情報をご自由に発信いただけます。<br class="rsp-xxxo">
 					また、商品ページがどのように閲覧されているかが分かるアクセス解析機能もご利用いただけます。<br>
-					<span class="photo"><img src="<?php echo WEBROOT?>/images/maker/appeal-img01.jpg" class="fitimg-w" alt="管理画面イメージ"></span></p>
+					<span class="photo"><img src="<?php echo WEBROOT?>images/maker/appeal-img01.jpg" class="fitimg-w" alt="管理画面イメージ"></span></p>
 				</div>
 				<footer class="tac">
 					<p class="kome mb16">料金体系等、詳細はこちらからお問い合わせください。</p>
