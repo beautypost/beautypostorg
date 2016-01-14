@@ -39,7 +39,7 @@
                     </section><!-- /.advisory-dryair -->
 
                     <section class="advisory-sunburn level<?php echo $hiyake['level']?>">
-                        <h2><img src="<?php echo WEBROOT; ?>images/mypage/sunburn<?php echo $hada['level']?>.png" alt="" class="fitimg-w"></h2>
+                        <h2><img src="<?php echo WEBROOT; ?>images/mypage/sunburn<?php echo $hiyake['level']?>.png" alt="" class="fitimg-w"></h2>
                         <div class="section-body">
                             <img src="<?php echo WEBROOT; ?>images/mypage/advisory-boxtop.png" alt="" class="fitimg-w">
                             <p class="js-ah-xooo"><?php echo $hiyake['comment']?></p>

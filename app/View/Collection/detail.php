@@ -44,7 +44,7 @@
                                     </li>
                                     <li>
                                         <dl>
-                                            <dt>商品種類</dt>
+                                            <dt>機種</dt>
                                             <dd><?php  echo $this->Useful->checkNull($this->Useful->selectOptionValue($GenreKisyu,$Item['Item']['genre_id']))?></dd>
                                         </dl>
                                     </li>
