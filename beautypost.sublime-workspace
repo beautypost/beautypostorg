@@ -475,7 +475,7 @@
 			"file": "app/View/Elements/ItemList.php",
 			"settings":
 			{
-				"buffer_size": 5390,
+				"buffer_size": 5389,
 				"line_ending": "Unix"
 			}
 		},
@@ -515,7 +515,7 @@
 			"file": "app/View/Mypage/index.php",
 			"settings":
 			{
-				"buffer_size": 4252,
+				"buffer_size": 4306,
 				"line_ending": "Unix"
 			}
 		},
@@ -709,7 +709,7 @@
 			"file": "app/View/Collection/detail.php",
 			"settings":
 			{
-				"buffer_size": 23619,
+				"buffer_size": 23617,
 				"line_ending": "Unix"
 			}
 		},
@@ -783,6 +783,22 @@
 			{
 				"buffer_size": 2808,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/View/Maker/index.php",
+			"settings":
+			{
+				"buffer_size": 4552,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/View/glossary/index.php",
+			"settings":
+			{
+				"buffer_size": 1721,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -1274,7 +1290,7 @@
 	"groups":
 	[
 		{
-			"selected": 43,
+			"selected": 39,
 			"sheets":
 			[
 				{
@@ -1368,7 +1384,7 @@
 						"translation.y": 6703.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 32,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
@@ -1461,7 +1477,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 83,
+					"stack_index": 86,
 					"type": "text"
 				},
 				{
@@ -1554,7 +1570,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 82,
+					"stack_index": 85,
 					"type": "text"
 				},
 				{
@@ -1648,7 +1664,7 @@
 						"translation.y": 1857.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 51,
+					"stack_index": 54,
 					"type": "text"
 				},
 				{
@@ -1741,7 +1757,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 50,
+					"stack_index": 53,
 					"type": "text"
 				},
 				{
@@ -1834,7 +1850,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 62,
+					"stack_index": 65,
 					"type": "text"
 				},
 				{
@@ -1927,7 +1943,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 64,
+					"stack_index": 67,
 					"type": "text"
 				},
 				{
@@ -2020,7 +2036,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -2110,7 +2126,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 40,
+					"stack_index": 43,
 					"type": "text"
 				},
 				{
@@ -2202,7 +2218,7 @@
 						"translation.y": 711.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 66,
+					"stack_index": 69,
 					"type": "text"
 				},
 				{
@@ -2295,7 +2311,7 @@
 						"translation.y": 383.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 59,
+					"stack_index": 62,
 					"type": "text"
 				},
 				{
@@ -2388,7 +2404,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 58,
+					"stack_index": 61,
 					"type": "text"
 				},
 				{
@@ -2480,7 +2496,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 65,
+					"stack_index": 68,
 					"type": "text"
 				},
 				{
@@ -2572,7 +2588,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 70,
+					"stack_index": 73,
 					"type": "text"
 				},
 				{
@@ -2661,7 +2677,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 75,
+					"stack_index": 78,
 					"type": "text"
 				},
 				{
@@ -2755,7 +2771,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 81,
+					"stack_index": 84,
 					"type": "text"
 				},
 				{
@@ -2849,7 +2865,7 @@
 						"translation.y": 303.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 63,
+					"stack_index": 66,
 					"type": "text"
 				},
 				{
@@ -2943,7 +2959,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 104,
+					"stack_index": 106,
 					"type": "text"
 				},
 				{
@@ -3035,7 +3051,7 @@
 						"translation.y": 714.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 113,
+					"stack_index": 115,
 					"type": "text"
 				},
 				{
@@ -3128,7 +3144,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 111,
+					"stack_index": 113,
 					"type": "text"
 				},
 				{
@@ -3221,7 +3237,7 @@
 						"translation.y": 597.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 112,
+					"stack_index": 114,
 					"type": "text"
 				},
 				{
@@ -3316,7 +3332,7 @@
 						"translation.y": 1130.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
@@ -3409,7 +3425,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 106,
+					"stack_index": 108,
 					"type": "text"
 				},
 				{
@@ -3501,7 +3517,7 @@
 						"translation.y": 340.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 105,
+					"stack_index": 107,
 					"type": "text"
 				},
 				{
@@ -3595,7 +3611,7 @@
 						"translation.y": 551.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 74,
+					"stack_index": 77,
 					"type": "text"
 				},
 				{
@@ -3688,7 +3704,7 @@
 						"translation.y": 1683.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 100,
+					"stack_index": 102,
 					"type": "text"
 				},
 				{
@@ -3780,7 +3796,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 101,
+					"stack_index": 103,
 					"type": "text"
 				},
 				{
@@ -3874,7 +3890,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 99,
+					"stack_index": 101,
 					"type": "text"
 				},
 				{
@@ -3967,7 +3983,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 110,
+					"stack_index": 112,
 					"type": "text"
 				},
 				{
@@ -4061,7 +4077,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 107,
+					"stack_index": 109,
 					"type": "text"
 				},
 				{
@@ -4156,7 +4172,7 @@
 						"translation.y": 1207.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -4249,7 +4265,7 @@
 						"translation.y": 1121.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 109,
+					"stack_index": 111,
 					"type": "text"
 				},
 				{
@@ -4343,7 +4359,7 @@
 						"translation.y": 1345.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 108,
+					"stack_index": 110,
 					"type": "text"
 				},
 				{
@@ -4436,7 +4452,7 @@
 						"translation.y": 288.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 96,
+					"stack_index": 98,
 					"type": "text"
 				},
 				{
@@ -4528,7 +4544,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 95,
+					"stack_index": 97,
 					"type": "text"
 				},
 				{
@@ -4621,7 +4637,7 @@
 						"translation.y": 524.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 94,
+					"stack_index": 96,
 					"type": "text"
 				},
 				{
@@ -4714,7 +4730,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 93,
+					"stack_index": 95,
 					"type": "text"
 				},
 				{
@@ -4807,7 +4823,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 92,
+					"stack_index": 94,
 					"type": "text"
 				},
 				{
@@ -4901,7 +4917,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 91,
+					"stack_index": 93,
 					"type": "text"
 				},
 				{
@@ -4910,15 +4926,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5390,
+						"buffer_size": 5389,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2270,
-								2270
+								640,
+								640
 							]
 						],
 						"settings":
@@ -4990,11 +5006,11 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": 296.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 90,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -5086,7 +5102,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 88,
+					"stack_index": 91,
 					"type": "text"
 				},
 				{
@@ -5179,7 +5195,7 @@
 						"translation.y": 3533.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -5285,7 +5301,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 86,
+					"stack_index": 89,
 					"type": "text"
 				},
 				{
@@ -5379,7 +5395,7 @@
 						"translation.y": 103.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -5388,15 +5404,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4252,
+						"buffer_size": 4306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1218,
-								1218
+								0,
+								0
 							]
 						],
 						"settings":
@@ -5472,7 +5488,7 @@
 						"translation.y": 80.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 71,
+					"stack_index": 74,
 					"type": "text"
 				},
 				{
@@ -5564,7 +5580,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 102,
+					"stack_index": 104,
 					"type": "text"
 				},
 				{
@@ -5658,7 +5674,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 103,
+					"stack_index": 105,
 					"type": "text"
 				},
 				{
@@ -5752,7 +5768,7 @@
 						"translation.y": 698.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 73,
+					"stack_index": 76,
 					"type": "text"
 				},
 				{
@@ -5845,7 +5861,7 @@
 						"translation.y": 2449.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 98,
+					"stack_index": 100,
 					"type": "text"
 				},
 				{
@@ -5939,7 +5955,7 @@
 						"translation.y": 246.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 97,
+					"stack_index": 99,
 					"type": "text"
 				},
 				{
@@ -6032,7 +6048,7 @@
 						"translation.y": 871.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 52,
+					"stack_index": 55,
 					"type": "text"
 				},
 				{
@@ -6125,7 +6141,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -6218,7 +6234,7 @@
 						"translation.y": 2904.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 68,
+					"stack_index": 71,
 					"type": "text"
 				},
 				{
@@ -6311,7 +6327,7 @@
 						"translation.y": 249.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 36,
+					"stack_index": 39,
 					"type": "text"
 				},
 				{
@@ -6405,7 +6421,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 89,
+					"stack_index": 92,
 					"type": "text"
 				},
 				{
@@ -6498,7 +6514,7 @@
 						"translation.y": -0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 87,
+					"stack_index": 90,
 					"type": "text"
 				},
 				{
@@ -6591,7 +6607,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 85,
+					"stack_index": 88,
 					"type": "text"
 				},
 				{
@@ -6683,7 +6699,7 @@
 						"translation.y": 1448.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 84,
+					"stack_index": 87,
 					"type": "text"
 				},
 				{
@@ -6776,7 +6792,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 78,
+					"stack_index": 81,
 					"type": "text"
 				},
 				{
@@ -6869,7 +6885,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 79,
+					"stack_index": 82,
 					"type": "text"
 				},
 				{
@@ -6963,7 +6979,7 @@
 						"translation.y": 807.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 80,
+					"stack_index": 83,
 					"type": "text"
 				},
 				{
@@ -7057,7 +7073,7 @@
 						"translation.y": 914.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 56,
+					"stack_index": 59,
 					"type": "text"
 				},
 				{
@@ -7162,7 +7178,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 55,
+					"stack_index": 58,
 					"type": "text"
 				},
 				{
@@ -7255,7 +7271,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 54,
+					"stack_index": 57,
 					"type": "text"
 				},
 				{
@@ -7347,7 +7363,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 76,
+					"stack_index": 79,
 					"type": "text"
 				},
 				{
@@ -7440,7 +7456,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 77,
+					"stack_index": 80,
 					"type": "text"
 				},
 				{
@@ -7534,7 +7550,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 47,
+					"stack_index": 50,
 					"type": "text"
 				},
 				{
@@ -7628,7 +7644,7 @@
 						"translation.y": 297.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 43,
+					"stack_index": 46,
 					"type": "text"
 				},
 				{
@@ -7719,7 +7735,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 37,
+					"stack_index": 40,
 					"type": "text"
 				},
 				{
@@ -7811,7 +7827,7 @@
 						"translation.y": -0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 61,
+					"stack_index": 64,
 					"type": "text"
 				},
 				{
@@ -7904,7 +7920,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
@@ -7997,7 +8013,7 @@
 						"translation.y": 1078.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 69,
+					"stack_index": 72,
 					"type": "text"
 				},
 				{
@@ -8090,7 +8106,7 @@
 						"translation.y": 2091.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -8195,7 +8211,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 35,
+					"stack_index": 38,
 					"type": "text"
 				},
 				{
@@ -8287,7 +8303,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
@@ -8380,7 +8396,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
@@ -8474,7 +8490,7 @@
 						"translation.y": 694.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
@@ -8563,10 +8579,10 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1292.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -9879,7 +9895,7 @@
 						"translation.y": 31115.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 38,
+					"stack_index": 41,
 					"type": "text"
 				},
 				{
@@ -9973,7 +9989,7 @@
 						"translation.y": 2364.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -9982,28 +9998,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23619,
+						"buffer_size": 23617,
 						"regions":
 						{
-							"TagLint":
-							{
-								"flags": 2356,
-								"icon": "dot",
-								"regions":
-								[
-									[
-										1,
-										4
-									]
-								],
-								"scope": "variable.parameter"
-							}
 						},
 						"selection":
 						[
 							[
-								11149,
-								11162
+								564,
+								564
 							]
 						],
 						"settings":
@@ -10077,10 +10080,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3096.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -10173,7 +10176,7 @@
 						"translation.y": 606.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -10267,7 +10270,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 72,
+					"stack_index": 75,
 					"type": "text"
 				},
 				{
@@ -10360,7 +10363,7 @@
 						"translation.y": 431.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 67,
+					"stack_index": 70,
 					"type": "text"
 				},
 				{
@@ -10453,7 +10456,7 @@
 						"translation.y": 4899.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 53,
+					"stack_index": 56,
 					"type": "text"
 				},
 				{
@@ -10544,7 +10547,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 49,
+					"stack_index": 52,
 					"type": "text"
 				},
 				{
@@ -10636,7 +10639,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 48,
+					"stack_index": 51,
 					"type": "text"
 				},
 				{
@@ -10730,7 +10733,7 @@
 						"translation.y": 1821.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 45,
+					"stack_index": 48,
 					"type": "text"
 				},
 				{
@@ -10824,7 +10827,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 57,
+					"stack_index": 60,
 					"type": "text"
 				},
 				{
@@ -10917,7 +10920,7 @@
 						"translation.y": 904.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
@@ -11009,7 +11012,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
@@ -11103,7 +11106,7 @@
 						"translation.y": 1715.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -11196,7 +11199,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -11289,7 +11292,7 @@
 						"translation.y": 2853.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
@@ -11379,11 +11382,11 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 6717.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
@@ -11476,7 +11479,7 @@
 						"translation.y": 1158.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 33,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
@@ -11581,7 +11584,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 60,
+					"stack_index": 63,
 					"type": "text"
 				},
 				{
@@ -11675,7 +11678,7 @@
 						"translation.y": 1500.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 44,
+					"stack_index": 47,
 					"type": "text"
 				},
 				{
@@ -11769,7 +11772,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 41,
+					"stack_index": 44,
 					"type": "text"
 				},
 				{
@@ -11862,7 +11865,7 @@
 						"translation.y": 99.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 39,
+					"stack_index": 42,
 					"type": "text"
 				},
 				{
@@ -11956,7 +11959,7 @@
 						"translation.y": 361.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 42,
+					"stack_index": 45,
 					"type": "text"
 				},
 				{
@@ -12049,7 +12052,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 46,
+					"stack_index": 49,
 					"type": "text"
 				},
 				{
@@ -12140,7 +12143,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
@@ -12234,7 +12237,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
@@ -12327,15 +12330,9 @@
 						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 23,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 6,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 25,
 					"file": "app/Controller/CollectionController.php",
@@ -12423,10 +12420,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2081.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -12435,28 +12432,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23619,
+						"buffer_size": 23617,
 						"regions":
 						{
-							"TagLint":
-							{
-								"flags": 2356,
-								"icon": "dot",
-								"regions":
-								[
-									[
-										1,
-										4
-									]
-								],
-								"scope": "variable.parameter"
-							}
 						},
 						"selection":
 						[
 							[
-								21695,
-								21695
+								0,
+								0
 							]
 						],
 						"settings":
@@ -12533,7 +12517,7 @@
 						"translation.y": 5609.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -12626,7 +12610,7 @@
 						"translation.y": 807.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -12718,7 +12702,7 @@
 						"translation.y": 82.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -12811,7 +12795,7 @@
 						"translation.y": 1309.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -12905,7 +12889,7 @@
 						"translation.y": 969.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -12921,8 +12905,8 @@
 						"selection":
 						[
 							[
-								1729,
-								1729
+								354,
+								354
 							]
 						],
 						"settings":
@@ -12997,7 +12981,190 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 77,
+					"file": "app/View/Maker/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2477,
+								2477
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 17.0,
+						"translation.y": 553.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 78,
+					"file": "app/View/glossary/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": false,
+							"WordCountSyntax": "php",
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -13090,15 +13257,9 @@
 						"translation.y": 2345.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 17,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 64,
 					"file": "app/Controller/CompareController.php",
@@ -13190,7 +13351,7 @@
 						"translation.y": 1784.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -13213,25 +13374,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
-			],
-			[
-				2,
-				0,
-				3,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.295572235839,
-			0.828453839869,
 			1.0
 		],
 		"rows":
@@ -13262,6 +13409,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"itemlist",
+				"app/View/Elements/ItemList.php"
+			],
+			[
+				"collection/detail",
+				"app/View/Collection/detail.php"
+			],
+			[
+				"glossary",
+				"app/View/glossary/index.php"
+			],
+			[
+				"maker/inde",
+				"app/View/Maker/index.php"
+			],
 			[
 				"usercc",
 				"app/Controller/Component/UserCComponent.php"
@@ -13313,10 +13476,6 @@
 			[
 				"review/monitor",
 				"app/View/Review/monitor.php"
-			],
-			[
-				"collection/detail",
-				"app/View/Collection/detail.php"
 			],
 			[
 				"collectioncont",
@@ -13563,10 +13722,6 @@
 				"app/Controller/IndexController.php"
 			],
 			[
-				"itemlist",
-				"app/View/Elements/ItemList.php"
-			],
-			[
 				"adminfavorite/input",
 				"app/View/Adminfavorite/input.php"
 			],
@@ -13765,14 +13920,6 @@
 			[
 				"usefule",
 				"app/View/Helper/UsefulHelper.php"
-			],
-			[
-				"adminattrco",
-				"app/Controller/AdminattrController.php"
-			],
-			[
-				"adminitemcont",
-				"app/Controller/AdminitemController.php"
 			]
 		],
 		"width": 0.0
@@ -13795,7 +13942,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
