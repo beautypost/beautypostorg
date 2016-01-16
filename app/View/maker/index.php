@@ -1,7 +1,3 @@
-<!--
-====================================================================================================
- Contents                                                                                #page-area
-==================================================================================================== -->
 <div id="page-area">
 	<div class="layout">
 		<ol id="breadcrumb" class="breadcrumb rsp-xxoo">
@@ -22,7 +18,7 @@
 			<section id="maker-lead">
 				<h2 class="head-bar ico-arrow">Beauty Postに、商品を掲載しませんか？（掲載無料）</h2>
 				<div class="section-body">
-					<p>Beauty Post では、美容機器の写真や特徴などをユーザー様にご紹介する商品ページを商品ごとにご用意しています。<br class="rsp-xxxo">
+					<p>Beauty Postでは、美容機器の写真や特徴などをユーザー様にご紹介する商品ページをご用意しています。<br class="rsp-xxxo">
 					詳細情報の登録は、商品販売元であるメーカー様よりいただいた情報を元に、Beauty Post が掲載を行っています。<br class="rsp-xxxo">
 					情報掲載をご希望のメーカー様は<a href="<?php echo WEBROOT.$this->name?>/input/">こちら</a>からお問い合わせください。</p>
 					<p><span class="photo"><img src="<?php echo WEBROOT?>images/maker/lead-img01.jpg" class="fitimg-w" alt=""></span>
@@ -37,9 +33,7 @@
 				<h2 class="head-bar ico-arrow">貴社から直接ユーザー様にアピールすることも可能！</h2>
 				<div class="section-body">
 					<p>Beauty Post では、ユーザー様に向けて、より深い情報をメーカー様から直接発信していただけるよう、<br class="rsp-xxxo">
-					メーカー様ごとの管理画面をご用意しております。<br class="rsp-xxxo">
-					商品についてのご説明やサンプルのご提供、モニター募集等、商品に関する情報をご自由に発信いただけます。<br class="rsp-xxxo">
-					また、商品ページがどのように閲覧されているかが分かるアクセス解析機能もご利用いただけます。<br>
+					メーカー様ごとの管理画面をご用意しております。<br>
 					<span class="photo"><img src="<?php echo WEBROOT?>images/maker/appeal-img01.jpg" class="fitimg-w" alt="管理画面イメージ"></span></p>
 				</div>
 				<footer class="tac">
@@ -77,7 +71,7 @@
 						</div>
 						<div class="section-body">
 							<h2 class="head-std ico-check head-sizeS">モニターサービス</h2>
-							<p>実際に商品サンプルをご提供いただき、Beauty Postメンバーが体験させていただきます。正しく商品の使用方法をレクチャーしていただいたり、本音を聞き出せる座談会もセッティングいたします。正しく使用した本当の感想や効果を掲載していくことも可能です。是非、お気軽にご活用ください。</p>
+							<p>実際に商品サンプルをご提供いただき、Beauty Postメンバーが体験させていただきます。正しく商品の使用方法をレクチャーしていただいたり、本音を聞き出せる座談会もセッティングいたします。モニターの様子は<a href="<?php echo WEBROOT?>pages/report/">こちらより</a></p>
 						</div><!-- /.section-body -->
 					</section>
 				</div><!-- /.section-body -->
@@ -85,9 +79,7 @@
 		</div><!-- /#main-area -->
 
 		<aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
-        <?php echo $this->element('common/cmnSubContent'); ?>
-
+			<?php echo $this->element('common/cmnSubContent'); ?>
 		</aside><!-- /#sub-area -->
 	</div>
 </div><!-- /#page-area -->
-

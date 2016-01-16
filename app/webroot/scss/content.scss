@@ -3,29 +3,29 @@
 ====================================================================================================
 ■ common
 ■ ブランクページ (.page-blank) ./blank/
-■ Beauty Postとは？ (.page-about) ./about/
-■ 美容機器の基礎知識 (.page-knowladge) ./knowledge/
-◆ 美容機器用語集 (.page-glossary) ./glossary/
-◆ 美容機器コレクション (.page-collection) ./collection/
+■ Beauty Postとは？ (.page-about) ./pages/about/
+■ 美容機器の基礎知識 (.page-knowladge) ./pages/knowledge/
+◆ 美容機器用語集 (.page-glossary) ./Glossary/
+◆ 美容機器コレクション (.page-collection) ./Collection/
  ◆ レビュー (.page-review) ./collection/review/
   ◇ レビュー入力
   ◇ レビュー表示
  ◆ 商品比較 (.page-compare) ./collection/compare/
-■ 会員特典の説明 (.page-privilege) ./privilege/
-◆ ログイン (.page-login) ./login/
-◆ サインアップ (.page-signup) ./signup/
+■ 会員特典の説明 (.page-privilege) ./pages/privilege/
+◆ ログイン (.page-login) ./Login/
+◆ サインアップ (.page-signup) ./regist/
 ◆ マイページ (.page-mypage) ./mypage/
 ◆ パスワード再設定 (.page-forgetpass) ./forgetpass/
 ◆ メルマガバックナンバー (.page-magazine) ./magazine/
 ◆ アンケートバックナンバー (.page-enquete) ./enquete/
-◆ お役立ち美容通信 (.page-news) ./news/
-■ 美容機器メーカーの方へ (.page-maker) ./maker/
-■ モニター体験レポート (.page-report) ./report/
-◆ よくある質問・お問い合わせ (.page-contact) ./contact/
-■ プライバシーポリシー (.page-privacy) ./privacy/
-■ 利用規約 (.page-rules) ./rules/
-■ 使い方ガイド (.page-guide) ./guide/
-■ サイトマップ (.page-sitemap) ./sitemap/
+◆ お役立ち美容通信 (.page-news) ./News/
+■ 美容機器メーカーの方へ (.page-maker) ./Maker/
+■ モニター体験レポート (.page-report) ./pages/report/
+◆ よくある質問・お問い合わせ (.page-contact) ./Contact/
+■ プライバシーポリシー (.page-privacy) ./pages/privacy/
+■ 利用規約 (.page-rules) ./pages/rules/
+■ 使い方ガイド (.page-guide) ./pages/guide/
+■ サイトマップ (.page-sitemap) ./pages/sitemap/
 ◆ コラム (.page-column) ./column/
 ==================================================================================================== */
 @import "import"; // Compass,変数定義,各種mixin
@@ -43,13 +43,15 @@
 
 /* 
 ====================================================================================================
-■ Beauty Postとは？ (.page-about) ./about/
+■ Beauty Postとは？ (.page-about) ./pages/about/
 ---------------------------------------------------------------------------------------------------- */
 	.page-about {
 		#main-area {
 			section { @include container(gz(2)); }
 		}
 	}
+
+	/* --- リードコンテンツ --- */
 	#about-lead {
 		>p {
 			margin-bottom:2.4rem;
@@ -73,7 +75,8 @@
 			@include mqmt($bpL) { @include fz(14); }
 		}
 	}
-	
+
+	/* --- Beauty Postは こんな方にオススメ！ --- */
 	#about-recommend {
 		.section-body {
 			@include border-radius(10px);
@@ -110,7 +113,8 @@
 			}
 		}
 	}
-	
+
+	/* --- Beauty Post 運営コンセプト --- */
 	#about-concept {
 		p,dd {
 			@include mqmt($bpL) { line-height:2; }
@@ -156,14 +160,14 @@
 	}
 /* 
 ====================================================================================================
-■ 美容機器の基礎知識 (.page-knowladge) ./knowledge/
+■ 美容機器の基礎知識 (.page-knowladge) ./pages/knowledge/
 ---------------------------------------------------------------------------------------------------- */
 	.page-knowledge {
 		#main-area {
 			//section { @include container(gz(2)); }
 		}
 	}
-	
+
 	/* --- 美容機器とは --- */
 	#knowledge-about {
 		.eyecatch {
@@ -193,7 +197,7 @@
 			p { @include mqmt($bpL) { line-height:2; } }
 		}
 	}
-	
+
 	/* --- エステサロンと美容機器の歴史 --- */
 	#knowledge-history {
 		.sub-txt { padding-bottom:0.75em; text-align:right; }
@@ -252,7 +256,7 @@
 			}
 		}
 	}
-	
+
 	/* --- 美容機器のメリット --- */
 	#knowledge-merit {
 		ul { margin-top:2em; }
@@ -322,20 +326,20 @@
 			@include mqlt($bpS) { padding-left:0; }
 		}
 	}
-	
+
 	/* --- 美容機器の今後 --- */
 	#knowledge-future {
 		.section-body { line-height:2; }
 	}
-	
 /* 
 ====================================================================================================
-◆ 美容機器用語集 (.page-glossary) ./glossary/
+◆ 美容機器用語集 (.page-glossary) ./Glossary/
 ---------------------------------------------------------------------------------------------------- */
-	.page-glossary {}
-	
+	// .page-glossary {}
+
+	/* --- 美容機器用語集：一覧 --- */
 	#glossary-index {
-		.index-group {  }
+		.index-group { /* null */ }
 		.index-list {
 			@include mqlt($bpS) {
 				li {
@@ -379,6 +383,8 @@
 			}
 		}
 	}
+
+	/* --- 美容機器用語集：詳細 --- */
 	#glossary-detail {
 		.section-body {
 			@include mqmt($bpS) { @include cf(); }
@@ -459,16 +465,19 @@
 	}
 /* 
 ====================================================================================================
-◆ 美容機器コレクション (.page-collection) ./collection/
+◆ 美容機器コレクション (.page-collection) ./Collection/
 ---------------------------------------------------------------------------------------------------- */
-	.page-collection {}
-	
+	// .page-collection {}
+
+	/* --- 美容機器コレクション：一覧 --- */
 	#collection-list {
 		>footer {
 			margin-top:16px; padding-top:24px;
 			border-top:1px dotted $c-txt;
 		}
 	}
+
+	/* --- 美容機器コレクション：詳細 --- */
 	#collection-detail {
 		>section {
 			@include container(3em);
@@ -479,7 +488,7 @@
  ◆ レビュー (.page-review) ./collection/review/
 ---------------------------------------------------------------------------------------------------- */
 	.page-review {}
-	
+
 	/* 
 	--------------------------------------------------------------------------------------------------
   ◇ レビュー入力
@@ -755,8 +764,9 @@
 	}
 /* 
 ====================================================================================================
-■ 会員特典の説明 (.page-privilege) ./privilege/
+■ 会員特典の説明 (.page-privilege) ./pages/privilege/
 ---------------------------------------------------------------------------------------------------- */
+	/* --- リード文 --- */
 	.privilege-lead {
 		margin-bottom:2em;
 		line-height:2;
@@ -838,14 +848,16 @@
 	}
 /* 
 ====================================================================================================
-◆ ログイン (.page-login) ./login/
+◆ ログイン (.page-login) ./Login/
 ---------------------------------------------------------------------------------------------------- */
-	.page-login {}
-	
+	// .page-login {}
+
+	/* ログインセクション
+	------------------------------------------------------------------------------ */
 	#login-section {
 		@include mqmt($bpM) { @include cf(); }
 	}
-	
+	/* --- 通常ログイン --- */
 	#login-form {
 		@include mqmt($bpM) { width:48.5%; float:left; }
 		form { @include formset(); }
@@ -869,7 +881,7 @@
 			}
 		}
 	}
-	
+	/* --- ソーシャル連携で登録／ログイン --- */
 	#login-social {
 		@include mqmt($bpM) { margin-top:0; float:right; width:48.5%; }
 		.section-body {
@@ -932,6 +944,8 @@
 		}
 	}
 	
+	/* 初めてご利用の方はこちら
+	------------------------------------------------------------------------------ */
 	#visitor-section {
 		>.section-body {
 			@include mqlt($bpM) { @include mv(0.5em); }
@@ -984,10 +998,10 @@
 	}
 /* 
 ====================================================================================================
-◆ サインアップ (.page-signup) ./signup/
+◆ サインアップ (.page-signup) ./regist/
 ---------------------------------------------------------------------------------------------------- */
-	.page-signup {}
-	
+	// .page-signup {}
+
 	#signup-form {
 		>form {
 			display:block;
@@ -1088,7 +1102,7 @@
 	#mypage-menu {
 		@include mqlt($bpL) { @include mv(1em); }
 	}
-	/* ようこそ */
+	/* --- ようこそ --- */
 	#mpside-welcome {
 		.user-name { margin-right:0.5em; color:$c-pk; font-weight:700; font-size:200%; }
 		ul {
@@ -1102,7 +1116,7 @@
 			@include mqlt($bpS) { margin-bottom:0.5em; @include fz(13); }
 		}
 	}
-	/* マイページナビゲーション */
+	/* --- マイページナビゲーション --- */
 	#mpside-nav {
 		ul {
 			@include mqlt($bpL) {
@@ -1227,7 +1241,6 @@
 			text-align:right;
 		}
 	}
-	
 	.advisory-dryair, .advisory-sunburn {
 		border-style:solid;
 		@include border-radius(6px);
@@ -1378,15 +1391,16 @@
 	
 /* 
 ====================================================================================================
-◆ お役立ち美容通信 (.page-news) ./news/
+◆ お役立ち美容通信 (.page-news) ./News/
 ---------------------------------------------------------------------------------------------------- */
-	.page-news {}
-	
+	// .page-news {}
+
+	/* --- お役立ち美容通信：一覧 --- */
 	#news-list {
 		>h2 { position:relative; }
 		>footer { padding-top:3em; }
 	}
-	
+
 	.news-entry {
 		@include container(2.5em);
 		header {
@@ -1465,8 +1479,8 @@
 			}
 		}
 	}
-	
-	/* --- WP用サイドナビ --- */
+
+	/* --- お役立ち美容通信：サイドナビ --- */
 	#news-menu {
 		a {
 			@include link-colors($c-txt,darken($c-pk,10%));
@@ -1532,16 +1546,13 @@
 			}
 		}
 	}
-	
 /* 
 ====================================================================================================
-■ 美容機器メーカーの方へ (.page-maker) ./maker/
+■ 美容機器メーカーの方へ (.page-maker) ./Maker/
 ---------------------------------------------------------------------------------------------------- */
-	.page-maker {
-		.pagetitle {
-		}
-	}
-	
+	// .page-maker {}
+
+	/* --- 商品を掲載しませんか？ ／ 貴社から直接ユーザー様にアピール --- */
 	#maker-lead, #maker-appeal {
 		p {
 			@include mqmt($bpL) { line-height:2; }
@@ -1560,8 +1571,10 @@
 		}
 	}
 	
+	/* --- その他、各種サービスのご案内 --- */
 	#maker-service {
 		p { @include mqmt($bpL) { line-height:2; } }
+		a { @include ulLink(); }
 		.section-body {
 			@include mqlt($bpM) {
 				section {
@@ -1589,13 +1602,14 @@
 	}
 /* 
 ====================================================================================================
-■ モニター体験レポート (.page-report) ./report/
+■ モニター体験レポート (.page-report) ./pages/report/
 ---------------------------------------------------------------------------------------------------- */
 	.report-box {
 		padding:112 / 2000 * 100%;
 		@include border-radius(16px);
 		background:#F1ECE6 url(../images/report/texture.png);
 	}
+	/* --- リードセクション --- */
 	#report-lead {
 		.width-adjuster {
 			@include mqmt($bpM) {
@@ -1629,11 +1643,15 @@
 			}
 		}
 	}
+	
+	/* --- 体験会レポートセクション --- */
 	#report-report{
 		>.section-body {
 			padding-top:56 / 2000 * 100%;
 		}
 	}
+	
+	/* --- モニター結果 --- */
 	#report-result {
 		.section-body {
 			@include mqlt($bpM) { margin-bottom:1em; }
@@ -1721,8 +1739,9 @@
 	
 /* 
 ====================================================================================================
-◆ よくある質問・お問い合わせ (.page-contact) ./contact/
+◆ よくある質問・お問い合わせ (.page-contact) ./Contact/
 ---------------------------------------------------------------------------------------------------- */
+	/* --- よくある質問 --- */
 	.faq-list {
 		counter-reset:faqlist;
 		li {
@@ -1764,6 +1783,7 @@
 		}
 	}
 	
+	/* --- お問い合わせ --- */
 	#user-form {
 		@include formset();
 		.contact-form {
@@ -1778,21 +1798,21 @@
 	}
 /* 
 ====================================================================================================
-■ プライバシーポリシー (.page-privacy) ./privacy/
+■ プライバシーポリシー (.page-privacy) ./pages/privacy/
 ---------------------------------------------------------------------------------------------------- */
-
+	/* --- プライバシーポリシー --- */
+	#privacy-document {}
 /* 
 ====================================================================================================
-■ 利用規約 (.page-rules) ./rules/
+■ 利用規約 (.page-rules) ./pages/rules/
 ---------------------------------------------------------------------------------------------------- */
-	#rules-document {
-		
-	}
+	/* --- ご利用規約 --- */
+	#rules-document {}
 /* 
 ====================================================================================================
-■ 使い方ガイド (.page-guide) ./guide/
+■ 使い方ガイド (.page-guide) ./pages/guide/
 ---------------------------------------------------------------------------------------------------- */
-	/* 美容機器探し */
+	/* --- 美容機器探し --- */
 	#guide-search {
 		.flowbox {
 			margin-top:40px;
@@ -1884,13 +1904,13 @@
 			}
 		}
 	}
-	/* 最終キャッチ */
+	/* --- 最終キャッチ --- */
 	#guide-last {
 		@include pv(1.5em);
 	}
 /* 
 ====================================================================================================
-■ サイトマップ (.page-sitemap) ./sitemap/
+■ サイトマップ (.page-sitemap) ./pages/sitemap/
 ---------------------------------------------------------------------------------------------------- */
 	.pagelist {
 		@include mqmt($bpM) {

@@ -1,4 +1,3 @@
-
 <div id="page-area">
 	<div class="layout">
 		<ol id="breadcrumb" class="breadcrumb rsp-xxoo">
@@ -11,7 +10,8 @@
 			<h2 class="head-bar ico-arrow">商品掲載に関するお問い合わせ</h2>
 
 			<div id="user-form">
-				<p>Beauty Postに御社商品を掲載してみませんか？お手数ですが、まずは下記フォームにて必要事項をお送りください。</p>
+				<p>Beauty Postに御社商品を掲載してみませんか？<br>
+				お手数ですが、まずは下記フォームにて必要事項をお送りください。</p>
 				<div class="section-body">
 					<form action="<?php echo WEBROOT.$this->name?>/input/" class="contact-form h-adr" method="post">
 						<span class="p-country-name" style="display:none;">Japan</span>
@@ -91,8 +91,7 @@
 		</div><!-- /#main-area -->
 
 		<aside id="sub-area" class="layout-sub layout-r rsp-xxxo">
-        <?php echo $this->element('common/cmnSubContent'); ?>
+			<?php echo $this->element('common/cmnSubContent'); ?>
 		</aside><!-- /#sub-area -->
 	</div>
 </div><!-- /#page-area -->
-

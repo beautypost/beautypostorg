@@ -6,7 +6,7 @@
                 <img src="<?php echo WEBROOT?>common-img/logo.png" width="576" height="144" alt="美容機器コレクション Beauty Post" class="logo rsp-xxxo">
                 <ul>
                     <li><a href="<?php echo WEBROOT?>">ホーム</a></li>
-                    <li><a href="<?php echo WEBROOT?>pages/company/">運営会社</a></li>
+                    <li><a href="http://womens-post.co.jp/" target="_blank">運営会社</a></li>
                     <li><a href="<?php echo WEBROOT?>pages/sitemap/">サイトマップ</a></li>
                 </ul>
             </div><!-- /#fhead -->
